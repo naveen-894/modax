@@ -4,10 +4,10 @@ export default function CTA() {
       <div className="container-max">
         <div className="text-center">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-            Ready to Transform Your Fashion Business?
+            Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-primary-100 mb-8 max-w-3xl mx-auto">
-            Join hundreds of fashion brands that have successfully moved from social media selling to professional e-commerce.
+            Join hundreds of businesses that have successfully transformed with our custom software solutions.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">

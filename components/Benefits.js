@@ -6,17 +6,17 @@ export default function Benefits() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       ),
-      title: "Launch Faster",
-      description: "Get your professional online store live in just 7-10 days with our streamlined setup process."
+      title: "Rapid Development",
+      description: "Get your custom software solution delivered quickly with our agile development process and proven methodologies."
     },
     {
       icon: (
         <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M8 11h8l.64 5.12a2 2 0 01-1.96 2.38H9.32a2 2 0 01-1.96-2.38L8 11z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
         </svg>
       ),
-      title: "Sell Directly to Customers",
-      description: "Build direct relationships with your customers through your own branded online store."
+      title: "Innovative Solutions",
+      description: "Transform your business ideas into cutting-edge digital solutions using the latest technologies and best practices."
     },
     {
       icon: (
@@ -24,17 +24,17 @@ export default function Benefits() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
         </svg>
       ),
-      title: "Manage Orders Easily",
-      description: "Handle payments, orders, and customer service through one comprehensive dashboard."
+      title: "Scalable Architecture",
+      description: "Build software that grows with your business using modern, scalable architectures and cloud-native solutions."
     },
     {
       icon: (
         <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
         </svg>
       ),
-      title: "Full Control Over Business",
-      description: "Manage your inventory, pricing, and customer data with complete control and ownership."
+      title: "Expert Team",
+      description: "Work with experienced developers, designers, and project managers who understand your business needs."
     }
   ]
 
@@ -43,10 +43,10 @@ export default function Benefits() {
       <div className="container-max">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Why Fashion Brands Choose Modax
+            Why Businesses Choose Modax
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-            Transform your direct-to-consumer business with a platform designed specifically for fashion and retail brands.
+            From startups to enterprises, we deliver software solutions that drive digital transformation and business growth.
           </p>
         </div>
 
