@@ -65,7 +65,7 @@ export default function Contact() {
             Get Started Today
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to transform your fashion business? Let's discuss how Modax can help you create the perfect online store.
+            Ready to transform your business with software? Let's discuss how Modax can help you build the perfect digital solution.
           </p>
         </div>
 

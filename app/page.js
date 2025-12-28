@@ -2,7 +2,7 @@ import Navigation from '../components/Navigation'
 import Hero from '../components/Hero'
 import Benefits from '../components/Benefits'
 import Features from '../components/Features'
-import HowItWorks from '../components/HowItWorks'
+import Products from '../components/Products'
 import Pricing from '../components/Pricing'
 import WhyChoose from '../components/WhyChoose'
 import CTA from '../components/CTA'
@@ -17,7 +17,7 @@ export default function Home() {
         <Hero />
         <Benefits />
         <Features />
-        <HowItWorks />
+        <Products />
         {/* <Pricing /> */}
         <WhyChoose />
         <CTA />

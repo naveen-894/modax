@@ -9,8 +9,8 @@ export default function Footer() {
               Modax
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
-              Complete D2C e-commerce platform built specifically for fashion and retail brands.
-              Transform your Instagram/WhatsApp selling into a professional online store.
+              Software development company specializing in e-commerce platforms, web applications, and digital solutions.
+              Transform your business with innovative technology solutions.
             </p>
            
           </div>
@@ -21,8 +21,9 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><a href="#home" className="text-gray-400 hover:text-white transition-colors">Home</a></li>
               <li><a href="#benefits" className="text-gray-400 hover:text-white transition-colors">Benefits</a></li>
-              <li><a href="#features" className="text-gray-400 hover:text-white transition-colors">Features</a></li>
-              <li><a href="#how-it-works" className="text-gray-400 hover:text-white transition-colors">How It Works</a></li>
+              <li><a href="#features" className="text-gray-400 hover:text-white transition-colors">Services</a></li>
+              <li><a href="#products" className="text-gray-400 hover:text-white transition-colors">Products</a></li>
+              <li><a href="/rawnn" className="text-gray-400 hover:text-white transition-colors">Rawnn</a></li>
             </ul>
           </div>
 
@@ -49,7 +50,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 Modax. All rights reserved. Built for fashion brands that want to succeed online.
+            © 2024 Modax. All rights reserved. Empowering businesses with software solutions.
           </p>
         </div>
       </div>
