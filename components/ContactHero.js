@@ -24,8 +24,8 @@ export default function ContactHero() {
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Email Us</h3>
               <p className="text-gray-600 text-sm mb-3">Get detailed responses to your questions</p>
-              <a href="mailto:hello@modax.dev" className="text-primary-600 hover:text-primary-700 font-medium">
-                hello@modax.dev
+              <a href="mailto:modaxecommerce@gmail.com" className="text-primary-600 hover:text-primary-700 font-medium">
+                modaxecommerce@gmail.com
               </a>
             </div>
 

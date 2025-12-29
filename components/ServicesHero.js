@@ -32,7 +32,7 @@ export default function ServicesHero() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <a href="#contact" className="btn-primary text-lg px-8 py-4 w-full sm:w-auto">
+            <a href="/contact" className="btn-primary text-lg px-8 py-4 w-full sm:w-auto">
               Start Your Project
             </a>
             <a href="#services" className="btn-secondary text-lg px-8 py-4 w-full sm:w-auto">
