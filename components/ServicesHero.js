@@ -35,7 +35,7 @@ export default function ServicesHero() {
             <a href="/contact" className="btn-primary text-lg px-8 py-4 w-full sm:w-auto">
               Start Your Project
             </a>
-            <a href="#services" className="btn-secondary text-lg px-8 py-4 w-full sm:w-auto">
+            <a href="#services-list" className="btn-secondary text-lg px-8 py-4 w-full sm:w-auto">
               View Services
             </a>
           </div>

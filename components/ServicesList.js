@@ -64,7 +64,7 @@ export default function ServicesList() {
   ]
 
   return (
-    <section className="section-padding bg-gray-50">
+    <section id="services-list" className="section-padding bg-gray-50">
       <div className="container-max">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
