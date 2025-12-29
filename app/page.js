@@ -1,12 +1,9 @@
 import Navigation from '../components/Navigation'
 import Hero from '../components/Hero'
-import Benefits from '../components/Benefits'
-import Features from '../components/Features'
-import Products from '../components/Products'
-import Pricing from '../components/Pricing'
-import WhyChoose from '../components/WhyChoose'
+import Services from '../components/Services'
+import ProductHighlight from '../components/ProductHighlight'
+import WhyModax from '../components/WhyModax'
 import CTA from '../components/CTA'
-import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 
 export default function Home() {
@@ -15,13 +12,10 @@ export default function Home() {
       <Navigation />
       <main>
         <Hero />
-        <Benefits />
-        <Features />
-        <Products />
-        {/* <Pricing /> */}
-        <WhyChoose />
+        <Services />
+        <ProductHighlight />
+        <WhyModax />
         <CTA />
-        <Contact />
       </main>
       <Footer />
     </div>

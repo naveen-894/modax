@@ -1,6 +1,6 @@
 export default function RawnnHero() {
   return (
-    <section className="bg-gradient-to-br from-primary-50 to-white min-h-screen flex items-center pt-16">
+    <section className="bg-gradient-to-br from-primary-50 to-white min-h-screen flex items-center pt-16 px-3 sm:px-4 lg:px-6">
       <div className="container-max">
         <div className="text-center max-w-5xl mx-auto">
           {/* Main Headline */}
