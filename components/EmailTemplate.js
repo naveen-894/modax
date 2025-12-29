@@ -1,4 +1,15 @@
-export default function EmailTemplate({ name, email, phone, company, message }) {
+export default function EmailTemplate({ name, email, phone, company, message, inquiryType }) {
+  const getInquiryTypeLabel = (type) => {
+    switch (type) {
+      case 'services':
+        return 'Custom Software Development';
+      case 'product':
+        return 'Rawnn E-commerce Platform';
+      default:
+        return 'General Inquiry';
+    }
+  };
+
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', maxWidth: '600px', margin: '0 auto', padding: '20px' }}>
       <h1 style={{ color: '#2563eb', marginBottom: '20px' }}>New Demo Request from Modax Website</h1>
@@ -9,6 +20,7 @@ export default function EmailTemplate({ name, email, phone, company, message }) 
         <p><strong>Email:</strong> {email || 'Not provided'}</p>
         <p><strong>Phone:</strong> {phone || 'Not provided'}</p>
         <p><strong>Company:</strong> {company || 'Not provided'}</p>
+        <p><strong>What can we help you with?:</strong> {getInquiryTypeLabel(inquiryType) || 'Not specified'}</p>
       </div>
 
       <div style={{ backgroundColor: '#ffffff', padding: '20px', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
