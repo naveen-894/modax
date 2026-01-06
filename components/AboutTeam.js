@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function AboutTeam() {
   return (
     <section className="section-padding bg-white">
@@ -51,9 +53,9 @@ export default function AboutTeam() {
               We're always looking for talented individuals who are passionate about building great software and products.
               If you're interested in working on challenging projects and making an impact, we'd love to hear from you.
             </p>
-            <a href="/contact" className="btn-primary">
+            <Link href="/contact" className="btn-primary">
               View Opportunities
-            </a>
+            </Link>
           </div>
         </div>
       </div>

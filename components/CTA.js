@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function CTA() {
   return (
     <section className="section-padding bg-primary-600">
@@ -11,12 +13,12 @@ export default function CTA() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-            <a href="/contact" className="bg-white text-primary-600 hover:bg-gray-50 font-semibold px-8 py-4 rounded-lg text-lg transition-colors duration-200 shadow-lg">
+            <Link href="/contact" className="bg-white text-primary-600 hover:bg-gray-50 font-semibold px-8 py-4 rounded-lg text-lg transition-colors duration-200 shadow-lg">
               Book Your Free Demo
-            </a>
-            <a href="/contact" className="border-2 border-white text-white hover:bg-white hover:text-primary-600 font-semibold px-8 py-4 rounded-lg text-lg transition-colors duration-200">
+            </Link>
+            <Link href="/contact" className="border-2 border-white text-white hover:bg-white hover:text-primary-600 font-semibold px-8 py-4 rounded-lg text-lg transition-colors duration-200">
               Talk to Our Team
-            </a>
+            </Link>
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-primary-100">

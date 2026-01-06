@@ -106,9 +106,9 @@ export default function RawnnProductBenefits() {
             </div>
 
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary-600 mb-2">24hrs</div>
+              <div className="text-4xl font-bold text-primary-600 mb-2">1 week</div>
               <div className="text-gray-700 mb-4">Average store setup time</div>
-              <p className="text-sm text-gray-600">"From idea to live store in just one day. Incredible platform."</p>
+              <p className="text-sm text-gray-600">"From idea to live store in just one week. Incredible platform."</p>
             </div>
           </div>
         </div>

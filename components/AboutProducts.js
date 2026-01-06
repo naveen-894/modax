@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function AboutProducts() {
   return (
     <section className="section-padding bg-gray-50">
@@ -65,12 +67,12 @@ export default function AboutProducts() {
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <a href="/products/rawnn" className="btn-primary text-center">
+                    <Link href="/products/rawnn" className="btn-primary text-center">
                       Learn About Rawnn
-                    </a>
-                    <a href="/products/rawnn#demo" className="btn-secondary text-center">
+                    </Link>
+                    <Link href="/products/rawnn#demo" className="btn-secondary text-center">
                       Request Demo
-                    </a>
+                    </Link>
                   </div>
                 </div>
 
