@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -40,38 +41,38 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="text-2xl font-bold text-primary-600">
+            <Link href="/" className="text-2xl font-bold text-primary-600">
               Modax
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <a href={navLinks.home} className="text-gray-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors">
+              <Link href={navLinks.home} className="text-gray-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors">
                 Home
-              </a>
-              <a href={navLinks.services} className="text-gray-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors">
+              </Link>
+              <Link href={navLinks.services} className="text-gray-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors">
                 Services
-              </a>
-              <a href={navLinks.products} className="text-gray-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors">
+              </Link>
+              <Link href={navLinks.products} className="text-gray-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors">
                 Products
-              </a>
-              <a href={navLinks.about} className="text-gray-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors">
+              </Link>
+              <Link href={navLinks.about} className="text-gray-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors">
                 About
-              </a>
-              <a href={navLinks.contact} className="text-gray-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors">
+              </Link>
+              <Link href={navLinks.contact} className="text-gray-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors">
                 {isRawnnPage ? 'Get Demo' : 'Contact'}
-              </a>
+              </Link>
             </div>
           </div>
 
           {/* Desktop CTA Buttons */}
           {!isRawnnPage && (
             <div className="hidden md:flex items-center space-x-4">
-              <a href={navLinks.contact} className="btn-primary">
+              <Link href={navLinks.contact} className="btn-primary">
                 Talk to Us
-              </a>
+              </Link>
             </div>
           )}
 
@@ -107,27 +108,27 @@ export default function Navigation() {
       {/* Mobile menu */}
       <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
-          <a href={navLinks.home} className="text-gray-700 hover:text-primary-600 block px-3 py-2 text-base font-medium">
+          <Link href={navLinks.home} className="text-gray-700 hover:text-primary-600 block px-3 py-2 text-base font-medium">
             Home
-          </a>
-          <a href={navLinks.services} className="text-gray-700 hover:text-primary-600 block px-3 py-2 text-base font-medium">
+          </Link>
+          <Link href={navLinks.services} className="text-gray-700 hover:text-primary-600 block px-3 py-2 text-base font-medium">
             Services
-          </a>
-          <a href={navLinks.products} className="text-gray-700 hover:text-primary-600 block px-3 py-2 text-base font-medium">
+          </Link>
+          <Link href={navLinks.products} className="text-gray-700 hover:text-primary-600 block px-3 py-2 text-base font-medium">
             Products
-          </a>
-          <a href={navLinks.about} className="text-gray-700 hover:text-primary-600 block px-3 py-2 text-base font-medium">
+          </Link>
+          <Link href={navLinks.about} className="text-gray-700 hover:text-primary-600 block px-3 py-2 text-base font-medium">
             About
-          </a>
-          <a href={navLinks.contact} className="text-gray-700 hover:text-primary-600 block px-3 py-2 text-base font-medium">
+          </Link>
+          <Link href={navLinks.contact} className="text-gray-700 hover:text-primary-600 block px-3 py-2 text-base font-medium">
             {isRawnnPage ? 'Get Demo' : 'Contact'}
-          </a>
+          </Link>
           {!isRawnnPage && (
             <div className="pt-4 pb-3 border-t border-gray-200">
               <div className="flex flex-col space-y-3 px-3">
-                <a href={navLinks.contact} className="btn-primary w-full text-center">
+                <Link href={navLinks.contact} className="btn-primary w-full text-center">
                   Get Demo
-                </a>
+                </Link>
               </div>
             </div>
           )}

@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function ServicesHero() {
   return (
     <section className="bg-gradient-to-br from-primary-50 to-white min-h-screen flex items-center pt-16 px-3 sm:px-4 lg:px-6">
@@ -17,7 +19,7 @@ export default function ServicesHero() {
           {/* Key Stats */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12">
             <div className="bg-white rounded-lg p-6 shadow-sm">
-              <div className="text-3xl font-bold text-primary-600 mb-2">50+</div>
+              <div className="text-3xl font-bold text-primary-600 mb-2">20+</div>
               <div className="text-gray-600">Projects Delivered</div>
             </div>
             <div className="bg-white rounded-lg p-6 shadow-sm">
@@ -32,9 +34,9 @@ export default function ServicesHero() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <a href="/contact" className="btn-primary text-lg px-8 py-4 w-full sm:w-auto">
+            <Link href="/contact" className="btn-primary text-lg px-8 py-4 w-full sm:w-auto">
               Start Your Project
-            </a>
+            </Link>
             <a href="#services-list" className="btn-secondary text-lg px-8 py-4 w-full sm:w-auto">
               View Services
             </a>

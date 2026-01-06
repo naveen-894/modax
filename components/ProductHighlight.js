@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function ProductHighlight() {
   return (
     <section className="section-padding bg-white">
@@ -26,12 +28,12 @@ export default function ProductHighlight() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <a href="/products/rawnn" className="bg-white text-primary-600 hover:bg-gray-50 font-semibold px-6 py-3 rounded-lg text-center transition-colors duration-200">
+                  <Link href="/products/rawnn" className="bg-white text-primary-600 hover:bg-gray-50 font-semibold px-6 py-3 rounded-lg text-center transition-colors duration-200">
                     Learn About Rawnn
-                  </a>
-                  <a href="/products/rawnn#demo" className="border-2 border-white text-white hover:bg-white hover:text-primary-600 font-semibold px-6 py-3 rounded-lg text-center transition-colors duration-200">
+                  </Link>
+                  <Link href="/products/rawnn#demo" className="border-2 border-white text-white hover:bg-white hover:text-primary-600 font-semibold px-6 py-3 rounded-lg text-center transition-colors duration-200">
                     Request Demo
-                  </a>
+                  </Link>
                 </div>
               </div>
 

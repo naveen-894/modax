@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function ContactInfo() {
   return (
     <section className="section-padding bg-white">
@@ -42,9 +44,9 @@ export default function ContactInfo() {
                 <span className="text-sm">Integration Solutions</span>
               </div>
             </div>
-            <a href="/services" className="btn-primary inline-block">
+            <Link href="/services" className="btn-primary inline-block">
               View Services
-            </a>
+            </Link>
           </div>
 
           <div className="bg-gradient-to-br from-primary-50 to-primary-100 rounded-xl p-8 text-center">
@@ -77,9 +79,9 @@ export default function ContactInfo() {
                 <span className="text-sm">Built & Owned by Modax</span>
               </div>
             </div>
-            <a href="/products/rawnn" className="btn-primary inline-block">
+            <Link href="/products/rawnn" className="btn-primary inline-block">
               View Product
-            </a>
+            </Link>
           </div>
         </div>
       </div>

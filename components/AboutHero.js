@@ -22,7 +22,7 @@ export default function AboutHero() {
               <div className="text-gray-600">Founded</div>
             </div>
             <div className="bg-white rounded-lg p-6 shadow-sm">
-              <div className="text-3xl font-bold text-primary-600 mb-2">50+</div>
+              <div className="text-3xl font-bold text-primary-600 mb-2">20+</div>
               <div className="text-gray-600">Projects</div>
             </div>
           </div>

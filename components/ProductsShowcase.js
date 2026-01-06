@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function ProductsShowcase() {
   const products = [
     {
@@ -19,7 +21,7 @@ export default function ProductsShowcase() {
       benefits: [
         "Increase direct-to-consumer sales by 300%",
         "Reduce operational costs by 50%",
-        "Launch professional online stores in 7-10 days",
+        "Launch professional online stores in 1 week",
         "Maintain complete control over branding and customer data",
         "Scale operations without technical complexity"
       ],
@@ -122,12 +124,12 @@ export default function ProductsShowcase() {
 
                     {/* CTA Buttons */}
                     <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                      <a href={product.cta.primaryLink} className="btn-primary text-center flex-1">
+                      <Link href={product.cta.primaryLink} className="btn-primary text-center flex-1">
                         {product.cta.primary}
-                      </a>
-                      <a href={product.cta.secondaryLink} className="btn-secondary text-center flex-1">
+                      </Link>
+                      <Link href={product.cta.secondaryLink} className="btn-secondary text-center flex-1">
                         {product.cta.secondary}
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

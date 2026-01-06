@@ -7,7 +7,7 @@ export default function RawnnBenefits() {
         </svg>
       ),
       title: "Rapid Setup & Deployment",
-      description: "Get your fashion store live in just 7-10 days with our streamlined setup process. Pre-built templates and automated configuration save you weeks of development time."
+      description: "Get your fashion store live in just 1 week with our streamlined setup process. Pre-built templates and automated configuration save you weeks of development time."
     },
     {
       icon: (
