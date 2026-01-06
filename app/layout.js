@@ -1,6 +1,7 @@
 import './globals.css'
 
 export const metadata = {
+  metadataBase: new URL('https://modax.in'),
   title: 'Modax - Custom Software Development & Digital Solutions Company',
   description: 'Leading software development company specializing in custom web applications, mobile apps, e-commerce solutions, and business automation. Transform your business with scalable digital solutions.',
   keywords: ['software development', 'custom software', 'web development', 'mobile app development', 'e-commerce solutions', 'business automation', 'digital transformation', 'software company'],
@@ -10,7 +11,7 @@ export const metadata = {
   openGraph: {
     title: 'Modax - Custom Software Development & Digital Solutions',
     description: 'Leading software development company specializing in custom web applications, mobile apps, e-commerce solutions, and business automation.',
-    url: 'https://modax.com',
+    url: 'https://modax.in',
     siteName: 'Modax',
     locale: 'en_US',
     type: 'website',
@@ -48,8 +49,8 @@ export default function RootLayout({ children }) {
     "@type": "SoftwareDevelopmentCompany",
     "name": "Modax",
     "description": "Leading software development company specializing in custom web applications, mobile apps, e-commerce solutions, and business automation.",
-    "url": "https://modax.com",
-    "logo": "https://modax.com/images/logo.png",
+    "url": "https://modax.in",
+    "logo": "https://modax.in/images/logo.png",
     "sameAs": [
       "https://www.linkedin.com/company/modax-ecommerce/",
       "https://wa.me/919164579092"

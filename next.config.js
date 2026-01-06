@@ -8,14 +8,14 @@ const nextConfig = {
 
   // Image optimization for better SEO
   images: {
-    domains: ['modax.com'],
+    domains: ['modax.in'],
     formats: ['image/webp', 'image/avif'],
   },
 
   // Enable experimental features for better SEO
-  experimental: {
-    optimizeCss: true,
-  },
+  // experimental: {
+  //   optimizeCss: true,
+  // },
 
   // Security headers for better SEO trust signals
   async headers() {
