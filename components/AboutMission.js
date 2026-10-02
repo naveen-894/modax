@@ -42,10 +42,10 @@ export default function AboutMission() {
     <section className="section-padding bg-white">
       <div className="container-max">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 mb-4">
             Our Mission
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+          <p className="text-lg sm:text-xl text-ink-500 max-w-3xl mx-auto mb-12">
             To empower businesses with scalable software solutions and innovative products that drive growth and efficiency.
             We believe technology should solve real problems and create lasting value.
           </p>
@@ -54,8 +54,8 @@ export default function AboutMission() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             <div className="bg-gradient-to-br from-primary-50 to-primary-100 rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">What We Do</h3>
-              <ul className="space-y-3 text-gray-700">
+              <h3 className="text-2xl font-bold text-ink-900 mb-4">What We Do</h3>
+              <ul className="space-y-3 text-ink-700">
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-primary-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -83,9 +83,9 @@ export default function AboutMission() {
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Why We Do It</h3>
-              <div className="space-y-4 text-gray-700">
+            <div className="bg-gradient-to-br from-ink-50 to-ink-100 rounded-xl p-8">
+              <h3 className="text-2xl font-bold text-ink-900 mb-4">Why We Do It</h3>
+              <div className="space-y-4 text-ink-700">
                 <p>
                   We believe that great software can transform businesses and improve lives.
                   Every project we undertake and every product we build is designed to create real value.
@@ -99,20 +99,20 @@ export default function AboutMission() {
           </div>
 
           <div className="text-center mb-12">
-            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Our Values</h3>
-            <p className="text-lg text-gray-600">The principles that guide everything we do</p>
+            <h3 className="text-2xl sm:text-3xl font-bold text-ink-900 mb-4">Our Values</h3>
+            <p className="text-lg text-ink-500">The principles that guide everything we do</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <div key={index} className="text-center p-6 rounded-xl hover:shadow-lg transition-shadow duration-300 bg-gray-50">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-100 rounded-full mb-4">
+              <div key={index} className="text-center p-6 rounded-xl hover:shadow-lg transition-shadow duration-300 bg-ink-50">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-50 rounded-lg mb-4">
                   {value.icon}
                 </div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-3">
+                <h4 className="text-lg font-semibold text-ink-900 mb-3">
                   {value.title}
                 </h4>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-ink-500 text-sm leading-relaxed">
                   {value.description}
                 </p>
               </div>

@@ -1,20 +1,20 @@
 import PageHero from './PageHero'
 
-export default function RawnnProductHero() {
+export default function AiResumeMatcherHero() {
   return (
     <PageHero
-      eyebrow="AI-assisted D2C platform for fashion brands"
+      eyebrow="AI-powered resume & job description matching"
       title="Meet "
-      accent="Rawnn"
-      description="A two-sided platform for fashion brands: an AI-assisted retailer dashboard that drafts your product listings, paired with a location-aware customer app that gets you discovered by shoppers nearby."
+      accent="Resume Matcher"
+      description="Find the right fit, faster. Give it a job description and a resume — in about 15 seconds it reads both, compares them, and returns a clear match score with a plain-English explanation of why."
       stats={[
-        { value: 'AI', label: 'Drafted listings' },
-        { value: '2', label: 'Connected apps' },
+        { value: '~15s', label: 'Per match' },
+        { value: '0-100%', label: 'Explainable score' },
       ]}
     >
       <div className="flex flex-col sm:flex-row gap-4 mt-10">
         <a href="#demo" className="btn-primary">
-          Start free trial
+          Request a demo
         </a>
         <a href="#features" className="btn-secondary">
           Explore features

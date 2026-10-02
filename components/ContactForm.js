@@ -59,14 +59,14 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="section-padding bg-gray-50">
+    <section className="section-padding bg-ink-50">
       <div className="container-max">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 mb-4">
               Send Us a Message
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-ink-500">
               Have questions about our services or products? Want to discuss your project?
               We'd love to hear from you.
             </p>
@@ -76,7 +76,7 @@ export default function ContactForm() {
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Inquiry Type */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-3">
+                <label className="block text-sm font-medium text-ink-700 mb-3">
                   What can we help you with?
                 </label>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -89,14 +89,14 @@ export default function ContactForm() {
                       onChange={handleChange}
                       className="sr-only peer"
                     />
-                    <div className="p-4 border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:border-primary-500 peer-checked:bg-primary-50 hover:border-primary-300 transition-colors">
+                    <div className="p-4 border-2 border-ink-200 rounded-lg cursor-pointer peer-checked:border-primary-500 peer-checked:bg-primary-50 hover:border-primary-300 transition-colors">
                       <div className="flex items-center">
                         <svg className="w-5 h-5 text-primary-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
                         </svg>
                         <div>
-                          <div className="font-medium text-gray-900">Custom Software Development</div>
-                          <div className="text-sm text-gray-600">Build a custom solution</div>
+                          <div className="font-medium text-ink-900">Custom Software Development</div>
+                          <div className="text-sm text-ink-500">Build a custom solution</div>
                         </div>
                       </div>
                     </div>
@@ -111,14 +111,14 @@ export default function ContactForm() {
                       onChange={handleChange}
                       className="sr-only peer"
                     />
-                    <div className="p-4 border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:border-primary-500 peer-checked:bg-primary-50 hover:border-primary-300 transition-colors">
+                    <div className="p-4 border-2 border-ink-200 rounded-lg cursor-pointer peer-checked:border-primary-500 peer-checked:bg-primary-50 hover:border-primary-300 transition-colors">
                       <div className="flex items-center">
                         <svg className="w-5 h-5 text-primary-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M8 11h8l.64 5.12a2 2 0 01-1.96 2.38H9.32a2 2 0 01-1.96-2.38L8 11z" />
                         </svg>
                         <div>
-                          <div className="font-medium text-gray-900">Rawnn E-commerce Platform</div>
-                          <div className="text-sm text-gray-600">Learn about our product</div>
+                          <div className="font-medium text-ink-900">Rawnn E-commerce Platform</div>
+                          <div className="text-sm text-ink-500">Learn about our product</div>
                         </div>
                       </div>
                     </div>
@@ -128,7 +128,7 @@ export default function ContactForm() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-ink-700 mb-2">
                     Full Name *
                   </label>
                   <input
@@ -138,13 +138,13 @@ export default function ContactForm() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                     placeholder="Your full name"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-ink-700 mb-2">
                     Email Address *
                   </label>
                   <input
@@ -154,7 +154,7 @@ export default function ContactForm() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -162,7 +162,7 @@ export default function ContactForm() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="phone" className="block text-sm font-medium text-ink-700 mb-2">
                     Phone Number
                   </label>
                   <input
@@ -171,13 +171,13 @@ export default function ContactForm() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                     placeholder="+91 XXXXX XXXXX"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="company" className="block text-sm font-medium text-ink-700 mb-2">
                     Company/Organization
                   </label>
                   <input
@@ -186,14 +186,14 @@ export default function ContactForm() {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                     placeholder="Your company name"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-ink-700 mb-2">
                   Message *
                 </label>
                 <textarea
@@ -203,7 +203,7 @@ export default function ContactForm() {
                   rows={6}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   placeholder="Tell us about your project, questions, or how we can help..."
                 ></textarea>
               </div>
@@ -222,7 +222,7 @@ export default function ContactForm() {
                 </div>
               )}
 
-              <p className="text-xs text-gray-500 text-center">
+              <p className="text-xs text-ink-500 text-center">
                 We respect your privacy and will only use your information to respond to your inquiry.
               </p>
             </form>

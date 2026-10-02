@@ -60,24 +60,24 @@ export default function RawnnBenefits() {
     <section className="section-padding bg-white">
       <div className="container-max">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 mb-4">
             Why Fashion Brands Choose Rawnn
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-ink-500 max-w-3xl mx-auto">
             Join hundreds of fashion brands that have transformed their online presence with Rawnn's comprehensive e-commerce solution.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {benefits.map((benefit, index) => (
-            <div key={index} className="text-center p-8 rounded-xl hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary-200">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-primary-50 rounded-full mb-6">
+            <div key={index} className="text-center p-8 rounded-xl hover:shadow-lg transition-all duration-300 border border-ink-100 hover:border-primary-200">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-primary-50 rounded-lg mb-6">
                 {benefit.icon}
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+              <h3 className="text-xl font-semibold text-ink-900 mb-4">
                 {benefit.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-ink-500 leading-relaxed">
                 {benefit.description}
               </p>
             </div>
@@ -87,18 +87,18 @@ export default function RawnnBenefits() {
         {/* Key Capabilities */}
         <div className="mt-20 bg-gradient-to-r from-primary-50 to-primary-100 rounded-2xl p-8 md:p-12">
           <div className="text-center mb-12">
-            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+            <h3 className="text-2xl sm:text-3xl font-bold text-ink-900 mb-4">
               Complete E-commerce Operations
             </h3>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-ink-500">
               Everything you need to run a successful online store
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white rounded-lg p-6 shadow-sm">
-              <h4 className="text-lg font-bold text-gray-900 mb-4">Customer Experience</h4>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <h4 className="text-lg font-bold text-ink-900 mb-4">Customer Experience</h4>
+              <ul className="space-y-2 text-sm text-ink-500">
                 <li className="flex items-center">
                   <svg className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -145,8 +145,8 @@ export default function RawnnBenefits() {
             </div>
 
             <div className="bg-white rounded-lg p-6 shadow-sm">
-              <h4 className="text-lg font-bold text-gray-900 mb-4">Admin Operations</h4>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <h4 className="text-lg font-bold text-ink-900 mb-4">Admin Operations</h4>
+              <ul className="space-y-2 text-sm text-ink-500">
                 <li className="flex items-center">
                   <svg className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />

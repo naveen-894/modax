@@ -36,6 +36,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Resume Matcher Product Page -->
+  <url>
+    <loc>https://modax.in/products/ai-resume-matcher</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- About Page -->
   <url>
     <loc>https://modax.in/about</loc>

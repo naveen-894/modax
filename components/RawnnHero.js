@@ -1,68 +1,82 @@
+import Link from 'next/link'
+
 export default function RawnnHero() {
   return (
-    <section className="bg-gradient-to-br from-primary-50 to-white min-h-screen flex items-center pt-16 px-3 sm:px-4 lg:px-6">
-      <div className="container-max">
-        <div className="text-center max-w-5xl mx-auto">
-          {/* Main Headline */}
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-            Meet <span className="text-primary-600">Rawnn</span>
-          </h1>
-
-          {/* Subheading */}
-          <p className="text-xl sm:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
-            The complete fashion e-commerce ecosystem designed specifically for modern fashion brands.
-            Transform your online presence with our powerful, scalable platform built by Modax.
-          </p>
-
-          {/* Key Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12">
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <div className="text-3xl font-bold text-primary-600 mb-2">End-to-End</div>
-              <div className="text-gray-600">Order Management</div>
+    <section className="relative overflow-hidden bg-ink-50 px-3 sm:px-4 lg:px-6 pt-28 pb-16 lg:pt-32 lg:pb-20">
+      <div className="absolute inset-0 bg-grid [mask-image:linear-gradient(to_bottom,black,transparent)]" aria-hidden="true" />
+      <div className="container-max relative">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <div className="eyebrow mb-4">
+              <span className="h-1.5 w-1.5 rounded-full bg-primary-600" />
+              Built &amp; owned by Modax
             </div>
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <div className="text-3xl font-bold text-primary-600 mb-2">Seamless</div>
-              <div className="text-gray-600">Returns & Exchanges</div>
+            <h1 className="text-4xl sm:text-5xl font-bold text-ink-900 mb-5 leading-[1.1] tracking-tight">
+              Meet <span className="text-primary-700">Rawnn</span>
+            </h1>
+            <p className="text-lg text-ink-500 mb-8 max-w-xl leading-relaxed">
+              The complete fashion e-commerce ecosystem — order management, inventory,
+              returns, and payments, in one platform designed specifically for modern
+              fashion brands.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 mb-10">
+              <a href="#demo" className="btn-primary px-7 py-3.5">
+                Request a demo
+              </a>
+              <a href="#features" className="btn-secondary px-7 py-3.5">
+                Explore features
+              </a>
             </div>
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <div className="text-3xl font-bold text-primary-600 mb-2">Secure</div>
-              <div className="text-gray-600">Payment Processing</div>
+
+            <div className="flex flex-wrap gap-2">
+              <span className="bg-primary-100 text-primary-700 px-3 py-1 rounded-md text-sm font-medium">Fashion focused</span>
+              <span className="bg-primary-100 text-primary-700 px-3 py-1 rounded-md text-sm font-medium">Scalable</span>
+              <span className="bg-primary-100 text-primary-700 px-3 py-1 rounded-md text-sm font-medium">Mobile first</span>
             </div>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <a href="#demo" className="btn-primary text-lg px-8 py-4 w-full sm:w-auto">
-              Request Demo
-            </a>
-            <a href="#features" className="btn-secondary text-lg px-8 py-4 w-full sm:w-auto">
-              Explore Services
-            </a>
-          </div>
+          {/* Visual */}
+          <div className="relative hidden lg:block">
+            <div className="rounded-xl bg-white shadow-xl ring-1 ring-ink-900/5 overflow-hidden">
+              <div className="flex items-center gap-2 px-4 py-3 bg-ink-100 border-b border-ink-200">
+                <span className="h-2.5 w-2.5 rounded-full bg-ink-300" />
+                <span className="h-2.5 w-2.5 rounded-full bg-ink-300" />
+                <span className="h-2.5 w-2.5 rounded-full bg-ink-300" />
+                <span className="ml-3 flex-1 bg-white rounded px-3 py-1 text-xs text-ink-400 font-mono truncate">
+                  shop.rawnn.com/dashboard
+                </span>
+              </div>
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-5">
+                  <div className="h-3 w-28 rounded bg-ink-900" />
+                  <div className="h-7 w-20 rounded-md bg-primary-600" />
+                </div>
+                <div className="grid grid-cols-3 gap-3 mb-5">
+                  <div className="rounded-lg bg-ink-50 p-3">
+                    <div className="text-lg font-bold text-ink-900">1,284</div>
+                    <div className="text-xs text-ink-500">Orders</div>
+                  </div>
+                  <div className="rounded-lg bg-ink-50 p-3">
+                    <div className="text-lg font-bold text-ink-900">98.4%</div>
+                    <div className="text-xs text-ink-500">Fulfilled</div>
+                  </div>
+                  <div className="rounded-lg bg-ink-50 p-3">
+                    <div className="text-lg font-bold text-ink-900">4.9★</div>
+                    <div className="text-xs text-ink-500">Rating</div>
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="aspect-[4/5] rounded-lg bg-gradient-to-br from-primary-100 to-primary-50" />
+                  <div className="aspect-[4/5] rounded-lg bg-gradient-to-br from-ink-100 to-ink-50" />
+                </div>
+              </div>
+            </div>
 
-          {/* Product Preview */}
-          <div className="relative">
-            <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-4xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Complete E-commerce Solution</h3>
-                  <p className="text-gray-600 mb-6">
-                    From inventory management to customer engagement, Rawnn provides everything fashion brands need to succeed online.
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm">Fashion Focused</span>
-                    <span className="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm">Scalable</span>
-                    <span className="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm">Mobile First</span>
-                  </div>
-                </div>
-                <div className="bg-gradient-to-br from-primary-100 to-primary-200 rounded-xl p-6 h-48 flex items-center justify-center">
-                  <div className="text-center">
-                    <svg className="w-16 h-16 text-primary-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M8 11h8l.64 5.12a2 2 0 01-1.96 2.38H9.32a2 2 0 01-1.96-2.38L8 11z" />
-                    </svg>
-                    <p className="text-primary-700 font-medium">Rawnn Platform Preview</p>
-                  </div>
-                </div>
+            <div className="absolute -bottom-6 -left-6 card-surface shadow-lg px-4 py-3">
+              <div className="flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-green-500" />
+                <span className="text-xs font-semibold text-ink-700">Secure payments active</span>
               </div>
             </div>
           </div>

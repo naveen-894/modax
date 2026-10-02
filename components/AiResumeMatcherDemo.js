@@ -2,14 +2,14 @@
 
 import { useState } from 'react'
 
-export default function RawnnProductDemo() {
+export default function AiResumeMatcherDemo() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
     phone: '',
-    businessType: '',
-    currentPlatform: '',
+    role: '',
+    hiringVolume: '',
     message: ''
   })
 
@@ -36,7 +36,7 @@ export default function RawnnProductDemo() {
         },
         body: JSON.stringify({
           ...formData,
-          message: `Rawnn Demo Request:\n\nBusiness Type: ${formData.businessType}\nCurrent Platform: ${formData.currentPlatform}\n\n${formData.message}\n\n[This is a Rawnn Product Demo Request]`
+          message: `Resume Matcher Demo Request:\n\nRole: ${formData.role}\nHiring Volume: ${formData.hiringVolume}\n\n${formData.message}\n\n[This is a Resume Matcher Product Demo Request]`
         }),
       })
 
@@ -49,8 +49,8 @@ export default function RawnnProductDemo() {
           email: '',
           company: '',
           phone: '',
-          businessType: '',
-          currentPlatform: '',
+          role: '',
+          hiringVolume: '',
           message: ''
         })
       } else {
@@ -68,11 +68,11 @@ export default function RawnnProductDemo() {
       <div className="container-max">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            Experience Rawnn Firsthand
+            See Resume Matcher in Action
           </h2>
           <p className="text-lg sm:text-xl text-primary-100 max-w-3xl mx-auto">
-            See how Rawnn can transform your fashion business. Schedule a personalized demo
-            and discover the platform that powers direct-to-consumer success.
+            Schedule a personalized demo and see how a real resume and job description
+            get scored, explained, and ready to discuss in seconds.
           </p>
         </div>
 
@@ -80,7 +80,7 @@ export default function RawnnProductDemo() {
           <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 text-ink-900">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold mb-2">Request Your Free Demo</h3>
-              <p className="text-ink-500">See Rawnn in action with your own products and brand</p>
+              <p className="text-ink-500">See Resume Matcher score a real resume against one of your open roles</p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -121,7 +121,7 @@ export default function RawnnProductDemo() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-ink-700 mb-2">
-                    Brand/Company Name *
+                    Company Name *
                   </label>
                   <input
                     type="text"
@@ -131,7 +131,7 @@ export default function RawnnProductDemo() {
                     value={formData.company}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                    placeholder="Your fashion brand"
+                    placeholder="Your company"
                   />
                 </div>
 
@@ -153,44 +153,43 @@ export default function RawnnProductDemo() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="businessType" className="block text-sm font-medium text-ink-700 mb-2">
-                    Business Type
+                  <label htmlFor="role" className="block text-sm font-medium text-ink-700 mb-2">
+                    Your Role
                   </label>
                   <select
-                    id="businessType"
-                    name="businessType"
-                    value={formData.businessType}
+                    id="role"
+                    name="role"
+                    value={formData.role}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   >
-                    <option value="">Select your business type</option>
-                    <option value="fashion-boutique">Fashion Boutique</option>
-                    <option value="fashion-retail">Fashion Retail Chain</option>
-                    <option value="designer-brand">Designer Brand</option>
-                    <option value="streetwear">Streetwear Brand</option>
-                    <option value="accessories">Accessories Brand</option>
+                    <option value="">Select your role</option>
+                    <option value="recruiter">Recruiter / Talent Acquisition</option>
+                    <option value="hiring-manager">Hiring Manager</option>
+                    <option value="hr-leader">HR Leader</option>
+                    <option value="founder">Founder / Small Business Owner</option>
+                    <option value="job-seeker">Job Seeker</option>
                     <option value="other">Other</option>
                   </select>
                 </div>
 
                 <div>
-                  <label htmlFor="currentPlatform" className="block text-sm font-medium text-ink-700 mb-2">
-                    Current Platform
+                  <label htmlFor="hiringVolume" className="block text-sm font-medium text-ink-700 mb-2">
+                    Monthly Hiring Volume
                   </label>
                   <select
-                    id="currentPlatform"
-                    name="currentPlatform"
-                    value={formData.currentPlatform}
+                    id="hiringVolume"
+                    name="hiringVolume"
+                    value={formData.hiringVolume}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   >
-                    <option value="">How do you currently sell?</option>
-                    <option value="instagram">Instagram/WhatsApp</option>
-                    <option value="shopify">Shopify</option>
-                    <option value="woocommerce">WooCommerce</option>
-                    <option value="etsy">Etsy</option>
-                    <option value="no-online">No online presence</option>
-                    <option value="other">Other platform</option>
+                    <option value="">How many resumes do you screen?</option>
+                    <option value="1-10">1-10 per month</option>
+                    <option value="11-50">11-50 per month</option>
+                    <option value="51-200">51-200 per month</option>
+                    <option value="200+">200+ per month</option>
+                    <option value="not-applicable">Not applicable</option>
                   </select>
                 </div>
               </div>
@@ -206,7 +205,7 @@ export default function RawnnProductDemo() {
                   value={formData.message}
                   onChange={handleChange}
                   className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                  placeholder="What are your biggest challenges? What do you hope to achieve with Rawnn?"
+                  placeholder="What's slowing down your resume screening today? What would you like to see in the demo?"
                 ></textarea>
               </div>
 

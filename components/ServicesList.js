@@ -60,17 +60,27 @@ export default function ServicesList() {
       title: "Product & MVP Development",
       description: "Transform your ideas into market-ready products with our MVP development process and iterative improvement approach.",
       features: ["MVP development", "Product strategy", "User testing", "Iterative development", "Launch support"]
+    },
+    {
+      icon: (
+        <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
+        </svg>
+      ),
+      title: "AI Integration & Development",
+      description: "We build LLM-powered features into real products — from document parsing and explainable scoring to conversational assistants that stream responses in real time.",
+      features: ["LLM integration (OpenAI, LangChain)", "AI-assisted content & data generation", "Conversational assistants & chat", "Document parsing & extraction", "Retrieval-augmented matching & scoring"]
     }
   ]
 
   return (
-    <section id="services-list" className="section-padding bg-gray-50">
+    <section id="services-list" className="section-padding bg-ink-50">
       <div className="container-max">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 mb-4">
             Our Software Development Services
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-ink-500 max-w-3xl mx-auto">
             We deliver reliable, scalable software solutions that help businesses grow and operate more efficiently.
             Each service is tailored to your specific needs and goals.
           </p>
@@ -84,20 +94,20 @@ export default function ServicesList() {
                   {service.icon}
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-xl font-bold text-ink-900 mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
+                  <p className="text-ink-500 mb-4 leading-relaxed">
                     {service.description}
                   </p>
                 </div>
               </div>
 
-              <div className="border-t border-gray-100 pt-6">
-                <h4 className="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">What's Included:</h4>
+              <div className="border-t border-ink-100 pt-6">
+                <h4 className="text-sm font-semibold text-ink-900 mb-3 uppercase tracking-wide">What's Included:</h4>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                    <li key={featureIndex} className="flex items-center text-sm text-ink-500">
                       <svg className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>

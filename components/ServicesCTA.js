@@ -2,45 +2,39 @@ import Link from 'next/link'
 
 export default function ServicesCTA() {
   return (
-    <section className="section-padding bg-primary-600">
+    <section className="section-padding bg-white">
       <div className="container-max">
-        <div className="text-center">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-            Ready to Build Your Software Solution?
-          </h2>
-          <p className="text-xl text-primary-100 mb-8 max-w-3xl mx-auto">
-            Let's discuss your project requirements and create a custom solution that drives your business forward.
-            Our team is ready to help you succeed.
-          </p>
+        <div className="relative overflow-hidden rounded-2xl bg-ink-900 px-8 py-14 sm:px-14 sm:py-16">
+          <div className="absolute inset-0 bg-grid-dark" aria-hidden="true" />
+          <div className="absolute -bottom-24 -right-24 w-80 h-80 bg-primary-600/30 rounded-full blur-3xl" aria-hidden="true" />
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-            <Link href="/contact" className="bg-white text-primary-600 hover:bg-gray-50 font-semibold px-8 py-4 rounded-lg text-lg transition-colors duration-200 shadow-lg">
-              Start Your Project
-            </Link>
-            <Link href="/contact" className="border-2 border-white text-white hover:bg-white hover:text-primary-600 font-semibold px-8 py-4 rounded-lg text-lg transition-colors duration-200">
-              Schedule Consultation
-            </Link>
+          <div className="relative grid lg:grid-cols-[1.4fr_1fr] gap-10 items-center">
+            <div>
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 tracking-tight">
+                Ready to build your software solution?
+              </h2>
+              <p className="text-lg text-ink-300 max-w-xl leading-relaxed">
+                Let's discuss your project requirements and create a custom solution that
+                drives your business forward. Our team is ready to help you succeed.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row lg:flex-col gap-3">
+              <Link href="/contact" className="bg-white text-ink-900 hover:bg-ink-100 font-semibold px-6 py-3.5 rounded-md text-center transition-colors">
+                Start your project
+              </Link>
+              <Link href="/contact" className="border border-white/20 text-white hover:bg-white/10 font-semibold px-6 py-3.5 rounded-md text-center transition-colors">
+                Schedule a consultation
+              </Link>
+            </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-primary-100">
-            <div className="flex items-center">
-              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span>No long-term contracts</span>
-            </div>
-            <div className="flex items-center">
-              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span>Transparent pricing</span>
-            </div>
-            <div className="flex items-center">
-              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span>Flexible engagement models</span>
-            </div>
+          <div className="relative flex flex-wrap items-center gap-x-8 gap-y-3 mt-10 pt-8 border-t border-white/10 text-sm text-ink-400">
+            <span>No long-term contracts</span>
+            <span className="h-1 w-1 rounded-full bg-ink-600 hidden sm:block" />
+            <span>Transparent pricing</span>
+            <span className="h-1 w-1 rounded-full bg-ink-600 hidden sm:block" />
+            <span>Flexible engagement models</span>
           </div>
         </div>
       </div>

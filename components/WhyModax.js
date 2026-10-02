@@ -1,88 +1,77 @@
 export default function WhyModax() {
   const reasons = [
     {
-      icon: (
-        <svg className="w-12 h-12 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      ),
-      title: "Quality First Approach",
-      description: "Every project undergoes rigorous testing and quality assurance. We deliver reliable, scalable solutions that stand the test of time."
+      title: "Quality first approach",
+      description: "Every project undergoes rigorous testing and quality assurance before it ships."
     },
     {
-      icon: (
-        <svg className="w-12 h-12 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-        </svg>
-      ),
-      title: "Expert Team",
-      description: "Our team combines deep technical expertise with business acumen. We understand both code and commerce."
+      title: "Senior engineering team",
+      description: "Our team combines deep technical expertise with business acumen — we understand code and commerce."
     },
     {
-      icon: (
-        <svg className="w-12 h-12 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-      ),
-      title: "Innovation Driven",
-      description: "We stay ahead of technology trends and continuously explore new ways to solve business challenges through software."
+      title: "Innovation driven",
+      description: "We track emerging technology and apply it where it actually moves the business forward."
     },
     {
-      icon: (
-        <svg className="w-12 h-12 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      ),
-      title: "Fast Delivery",
-      description: "We value your time. Our streamlined processes and experienced team ensure projects are delivered on schedule."
+      title: "Fast, predictable delivery",
+      description: "Structured timelines and an experienced team mean your project lands on schedule."
     },
     {
-      icon: (
-        <svg className="w-12 h-12 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-        </svg>
-      ),
-      title: "Ongoing Support",
-      description: "Our relationship doesn't end at launch. We provide continuous support, updates, and optimization to ensure long-term success."
+      title: "Ongoing support",
+      description: "Our relationship doesn't end at launch — we provide continuous support and optimization."
     },
     {
-      icon: (
-        <svg className="w-12 h-12 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-        </svg>
-      ),
-      title: "Transparent Communication",
-      description: "Clear, honest communication throughout the project lifecycle. Regular updates, detailed reporting, and no hidden surprises."
+      title: "Transparent communication",
+      description: "Regular updates and detailed reporting, with no hidden surprises along the way."
     }
   ]
 
   return (
-    <section className="section-padding bg-gray-50">
-      <div className="container-max">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Why Choose Modax?
-          </h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-            We're more than just a development agency. We're your technology partner,
-            committed to your long-term success through innovative software solutions.
-          </p>
-        </div>
+    <section className="section-padding bg-ink-950 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-grid-dark" aria-hidden="true" />
+      <div className="container-max relative">
+        <div className="grid lg:grid-cols-3 gap-16">
+          <div className="lg:col-span-1">
+            <div className="eyebrow mb-4 text-primary-300">Why Modax</div>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 tracking-tight">
+              A technology partner, not just a vendor
+            </h2>
+            <p className="text-ink-300 leading-relaxed mb-10">
+              We're committed to your long-term success through engineering that
+              holds up after launch, not just at the demo.
+            </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {reasons.map((reason, index) => (
-            <div key={index} className="text-center p-8 rounded-xl hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary-200">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-primary-50 rounded-full mb-6">
-                {reason.icon}
+            <div className="grid grid-cols-2 gap-6 border-t border-white/10 pt-8">
+              <div>
+                <div className="text-3xl font-bold text-white">20+</div>
+                <div className="text-sm text-ink-400 mt-1">Projects delivered</div>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                {reason.title}
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                {reason.description}
-              </p>
+              <div>
+                <div className="text-3xl font-bold text-white">99.9%</div>
+                <div className="text-sm text-ink-400 mt-1">Uptime guarantee</div>
+              </div>
             </div>
-          ))}
+          </div>
+
+          <div className="lg:col-span-2 grid sm:grid-cols-2 gap-x-10 gap-y-10">
+            {reasons.map((reason, index) => (
+              <div key={index} className="flex gap-4">
+                <span className="flex-shrink-0 mt-1 flex h-6 w-6 items-center justify-center rounded-full bg-primary-500/20 text-primary-300">
+                  <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                </span>
+                <div>
+                  <h3 className="text-base font-semibold text-white mb-1.5">
+                    {reason.title}
+                  </h3>
+                  <p className="text-ink-400 text-sm leading-relaxed">
+                    {reason.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

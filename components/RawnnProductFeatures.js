@@ -6,9 +6,9 @@ export default function RawnnProductFeatures() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M8 11h8l.64 5.12a2 2 0 01-1.96 2.38H9.32a2 2 0 01-1.96-2.38L8 11z" />
         </svg>
       ),
-      title: "Complete E-commerce Store",
-      description: "Professional online storefront with product catalog, shopping cart, and secure checkout. Fully customizable design to match your brand.",
-      details: ["Product catalog with categories", "Advanced search & filtering", "Shopping cart & wishlist", "Secure payment processing", "Mobile-optimized design"]
+      title: "AI-Powered Product Listings",
+      description: "Upload a photo of your product and AI drafts the title, description, specs and sizes for you to review — no copywriting required.",
+      details: ["AI-generated title & description", "Auto-suggested specs & sizes", "Category-aware defaults", "Manual entry also supported", "Draft to published in minutes"]
     },
     {
       icon: (
@@ -16,9 +16,9 @@ export default function RawnnProductFeatures() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
         </svg>
       ),
-      title: "Inventory & Order Management",
-      description: "Complete inventory tracking and order processing system. Manage stock levels, process orders, and track fulfillment in real-time.",
-      details: ["Real-time inventory tracking", "Automated order processing", "Order status updates", "Shipping integration", "Order history & analytics"]
+      title: "Flexible Inventory, Delivery & Pickup",
+      description: "Per-size stock variants with delivery and in-store pickup controlled individually on every product, backed by an 8-stage approval pipeline.",
+      details: ["Per-size stock variants", "Delivery & in-store pickup toggles", "Real-time stock tracking", "Shipping dimensions per product", "New → Under Review → Approved → Published pipeline"]
     },
     {
       icon: (
@@ -27,8 +27,8 @@ export default function RawnnProductFeatures() {
         </svg>
       ),
       title: "Returns & Exchanges",
-      description: "Streamlined returns and exchange process with automated workflows. Easy request submission and processing for both customers and staff.",
-      details: ["Customer return requests", "Exchange processing", "Refund automation", "Quality inspection", "Return analytics"]
+      description: "Returns and exchanges are configurable per product, with requests submitted by customers and managed by retailers once online selling is enabled.",
+      details: ["Enabled per product", "Customer-initiated requests", "Retailer-side approval", "Tied to order history"]
     },
     {
       icon: (
@@ -36,9 +36,9 @@ export default function RawnnProductFeatures() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
         </svg>
       ),
-      title: "Payment Processing",
-      description: "Secure payment processing with multiple gateway support. Handle transactions, manage subscriptions, and reconcile payments automatically.",
-      details: ["Multiple payment gateways", "Subscription management", "Automated reconciliation", "Fraud protection", "Multi-currency support"]
+      title: "Razorpay Payments & Settlements",
+      description: "Integrated Razorpay checkout for customers, paired with a settlement dashboard so retailers can track payouts without leaving the platform.",
+      details: ["Razorpay checkout for customers", "Retailer settlement dashboard", "Coupon & discount support", "Order status tracking"]
     },
     {
       icon: (
@@ -47,8 +47,8 @@ export default function RawnnProductFeatures() {
         </svg>
       ),
       title: "Ratings & Reviews",
-      description: "Customer review system with star ratings and detailed feedback. Admin moderation tools to maintain quality and respond to reviews.",
-      details: ["Star rating system", "Detailed review comments", "Review moderation", "Admin responses", "Review analytics"]
+      description: "Customer review system with star ratings and a moderation pipeline, so every review is checked before it affects a product's public rating.",
+      details: ["Star ratings per product", "Moderated review pipeline", "Review counts on product cards", "Builds buyer trust"]
     },
     {
       icon: (
@@ -56,9 +56,9 @@ export default function RawnnProductFeatures() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       ),
-      title: "Product Q&A",
-      description: "Interactive Q&A system where customers can ask questions about products. Sellers can provide detailed answers and build customer trust.",
-      details: ["Question submission", "Seller responses", "Q&A search", "Question categories", "Customer notifications"]
+      title: "In-App Customer Chat",
+      description: "Direct messaging between customers and retailers, with the option to tag a specific product, so questions never leave the platform.",
+      details: ["Customer ↔ retailer messaging", "Tag specific products in chat", "One chat session per customer-retailer pair", "Keeps enquiries on-platform"]
     },
     {
       icon: (
@@ -66,9 +66,9 @@ export default function RawnnProductFeatures() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
         </svg>
       ),
-      title: "Analytics Dashboard",
-      description: "Comprehensive analytics and reporting dashboard. Track sales performance, customer behavior, and business metrics in real-time.",
-      details: ["Sales performance tracking", "Customer behavior analytics", "Inventory reports", "Revenue forecasting", "Custom dashboards"]
+      title: "Location-Based Discovery",
+      description: "The customer app is location-aware, surfacing nearby retailers and products first so shoppers can find you without needing your store name.",
+      details: ["Google Maps-powered location search", "Nearby retailers surfaced first", "Address autofill at checkout", "Dedicated store page per retailer"]
     },
     {
       icon: (
@@ -76,22 +76,22 @@ export default function RawnnProductFeatures() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
         </svg>
       ),
-      title: "Admin Control Panel",
-      description: "Powerful admin interface for complete control over your store. Manage products, orders, customers, and settings with ease.",
-      details: ["Product management", "Order processing", "Customer management", "Store settings", "User permissions"]
+      title: "Phone & OTP Login",
+      description: "Passwordless sign-in for both retailers and shoppers — enter your number, verify with a 4-digit OTP, and you're in.",
+      details: ["10-digit phone + 4-digit OTP", "No passwords to manage", "JWT-based sessions", "Used across the retailer & customer apps"]
     }
   ]
 
   return (
-    <section id="features" className="section-padding bg-gray-50">
+    <section id="features" className="section-padding bg-ink-50">
       <div className="container-max">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 mb-4">
             Everything You Need to Sell Online
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-            Rawnn provides all the tools and features fashion brands need to create a professional
-            online presence and sell directly to customers.
+          <p className="text-lg sm:text-xl text-ink-500 max-w-3xl mx-auto">
+            Rawnn pairs an AI-assisted retailer dashboard with a location-aware shopping app,
+            so fashion brands can list products in minutes and get discovered by nearby customers.
           </p>
         </div>
 
@@ -103,19 +103,19 @@ export default function RawnnProductFeatures() {
                   {feature.icon}
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-xl font-bold text-ink-900 mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
+                  <p className="text-ink-500 mb-4 leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
               </div>
 
-              <div className="border-t border-gray-100 pt-6">
+              <div className="border-t border-ink-100 pt-6">
                 <ul className="space-y-2">
                   {feature.details.map((detail, detailIndex) => (
-                    <li key={detailIndex} className="flex items-center text-sm text-gray-600">
+                    <li key={detailIndex} className="flex items-center text-sm text-ink-500">
                       <svg className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>

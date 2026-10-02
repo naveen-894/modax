@@ -5,23 +5,23 @@ export default function ContactInfo() {
     <section className="section-padding bg-white">
       <div className="container-max">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 mb-4">
             Get Started Today
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-ink-500 max-w-2xl mx-auto">
             Ready to transform your business? Choose the path that best fits your needs.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <div className="bg-gradient-to-br from-primary-50 to-primary-100 rounded-xl p-8 text-center">
-            <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="w-16 h-16 bg-ink-900 rounded-lg flex items-center justify-center mx-auto mb-6">
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
               </svg>
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Custom Software Development</h3>
-            <p className="text-gray-700 mb-6">
+            <h3 className="text-2xl font-bold text-ink-900 mb-4">Custom Software Development</h3>
+            <p className="text-ink-700 mb-6">
               Need a tailored solution for your business? Our team builds custom software that fits your exact requirements.
             </p>
             <div className="space-y-3 mb-6">
@@ -50,13 +50,13 @@ export default function ContactInfo() {
           </div>
 
           <div className="bg-gradient-to-br from-primary-50 to-primary-100 rounded-xl p-8 text-center">
-            <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="w-16 h-16 bg-ink-900 rounded-lg flex items-center justify-center mx-auto mb-6">
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M8 11h8l.64 5.12a2 2 0 01-1.96 2.38H9.32a2 2 0 01-1.96-2.38L8 11z" />
               </svg>
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Rawnn E-commerce Platform</h3>
-            <p className="text-gray-700 mb-6">
+            <h3 className="text-2xl font-bold text-ink-900 mb-4">Rawnn E-commerce Platform</h3>
+            <p className="text-ink-700 mb-6">
               Launch your fashion brand's online store with our ready-to-use e-commerce platform. No development required.
             </p>
             <div className="space-y-3 mb-6">

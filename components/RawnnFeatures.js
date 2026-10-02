@@ -95,13 +95,13 @@ export default function RawnnFeatures() {
   ]
 
   return (
-    <section id="features" className="section-padding bg-gray-50">
+    <section id="features" className="section-padding bg-ink-50">
       <div className="container-max">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 mb-4">
             Powerful Services Built for Fashion
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-ink-500 max-w-3xl mx-auto">
             Every feature in Rawnn is designed specifically for fashion brands, understanding the unique challenges and requirements of the fashion industry.
           </p>
         </div>
@@ -114,20 +114,20 @@ export default function RawnnFeatures() {
                   {feature.icon}
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-xl font-bold text-ink-900 mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
+                  <p className="text-ink-500 mb-4 leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
               </div>
 
-              <div className="border-t border-gray-100 pt-6">
-                <h4 className="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">Key Capabilities:</h4>
+              <div className="border-t border-ink-100 pt-6">
+                <h4 className="text-sm font-semibold text-ink-900 mb-3 uppercase tracking-wide">Key Capabilities:</h4>
                 <ul className="space-y-2">
                   {feature.details.map((detail, detailIndex) => (
-                    <li key={detailIndex} className="flex items-center text-sm text-gray-600">
+                    <li key={detailIndex} className="flex items-center text-sm text-ink-500">
                       <svg className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>

@@ -67,13 +67,13 @@ export default function RawnnDemo() {
     }
   }
   return (
-    <section id="demo" className="section-padding bg-gray-900 text-white">
+    <section id="demo" className="section-padding bg-ink-900 text-white">
       <div className="container-max">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
             See Rawnn in Action
           </h2>
-          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-ink-300 max-w-3xl mx-auto">
             Experience the power of our fashion e-commerce platform with a personalized demo tailored to your business needs.
           </p>
         </div>
@@ -85,48 +85,48 @@ export default function RawnnDemo() {
 
             <div className="space-y-6">
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center mr-4 mt-1">
+                <div className="flex-shrink-0 w-8 h-8 bg-ink-900 rounded-lg flex items-center justify-center mr-4 mt-1">
                   <span className="text-sm font-bold text-white">1</span>
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold mb-2">Admin Dashboard Walkthrough</h4>
-                  <p className="text-gray-300">
+                  <p className="text-ink-300">
                     See how easy it is to manage your inventory, process orders, and analyze sales performance with our intuitive admin interface.
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center mr-4 mt-1">
+                <div className="flex-shrink-0 w-8 h-8 bg-ink-900 rounded-lg flex items-center justify-center mr-4 mt-1">
                   <span className="text-sm font-bold text-white">2</span>
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold mb-2">Customer Experience Preview</h4>
-                  <p className="text-gray-300">
+                  <p className="text-ink-300">
                     Experience your store from a customer's perspective - browsing products, adding to cart, and completing checkout.
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center mr-4 mt-1">
+                <div className="flex-shrink-0 w-8 h-8 bg-ink-900 rounded-lg flex items-center justify-center mr-4 mt-1">
                   <span className="text-sm font-bold text-white">3</span>
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold mb-2">Customization & Integration</h4>
-                  <p className="text-gray-300">
+                  <p className="text-ink-300">
                     Learn how to customize your store design, integrate payment gateways, and connect with your existing systems.
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center mr-4 mt-1">
+                <div className="flex-shrink-0 w-8 h-8 bg-ink-900 rounded-lg flex items-center justify-center mr-4 mt-1">
                   <span className="text-sm font-bold text-white">4</span>
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold mb-2">Q&A Session</h4>
-                  <p className="text-gray-300">
+                  <p className="text-ink-300">
                     Get answers to your specific questions and learn about implementation timeline, pricing, and ongoing support.
                   </p>
                 </div>
@@ -135,13 +135,13 @@ export default function RawnnDemo() {
           </div>
 
           {/* Demo Form */}
-          <div className="bg-white rounded-xl p-8 text-gray-900">
+          <div className="bg-white rounded-xl p-8 text-ink-900">
             <h3 className="text-2xl font-bold mb-6 text-center">Request Your Free Demo</h3>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="firstName" className="block text-sm font-medium text-ink-700 mb-2">
                     First Name *
                   </label>
                   <input
@@ -151,12 +151,12 @@ export default function RawnnDemo() {
                     required
                     value={formData.firstName}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                     placeholder="John"
                   />
                 </div>
                 <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="lastName" className="block text-sm font-medium text-ink-700 mb-2">
                     Last Name *
                   </label>
                   <input
@@ -166,14 +166,14 @@ export default function RawnnDemo() {
                     required
                     value={formData.lastName}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                     placeholder="Doe"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-ink-700 mb-2">
                   Email Address *
                 </label>
                 <input
@@ -183,13 +183,13 @@ export default function RawnnDemo() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   placeholder="john@yourbrand.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="company" className="block text-sm font-medium text-ink-700 mb-2">
                   Company/Brand Name *
                 </label>
                 <input
@@ -199,13 +199,13 @@ export default function RawnnDemo() {
                   required
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   placeholder="Your Fashion Brand"
                 />
               </div>
 
               <div>
-                <label htmlFor="businessType" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="businessType" className="block text-sm font-medium text-ink-700 mb-2">
                   Business Type
                 </label>
                 <select
@@ -213,7 +213,7 @@ export default function RawnnDemo() {
                   name="businessType"
                   value={formData.businessType}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                 >
                   <option value="">Select your business type</option>
                   <option value="boutique">Fashion Boutique</option>
@@ -225,7 +225,7 @@ export default function RawnnDemo() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-ink-700 mb-2">
                   Tell us about your current setup
                 </label>
                 <textarea
@@ -234,7 +234,7 @@ export default function RawnnDemo() {
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   placeholder="Currently using Instagram/WhatsApp, Shopify, or building from scratch?"
                 ></textarea>
               </div>
@@ -253,7 +253,7 @@ export default function RawnnDemo() {
                 </div>
               )}
 
-              <p className="text-xs text-gray-500 text-center">
+              <p className="text-xs text-ink-500 text-center">
                 We respect your privacy. Your information will only be used to provide you with demo access and follow-up support.
               </p>
             </form>
@@ -265,15 +265,15 @@ export default function RawnnDemo() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             <div>
               <div className="text-2xl font-bold text-primary-400 mb-2">30 min</div>
-              <div className="text-gray-300">Demo Duration</div>
+              <div className="text-ink-300">Demo Duration</div>
             </div>
             <div>
               <div className="text-2xl font-bold text-primary-400 mb-2">24-48 hrs</div>
-              <div className="text-gray-300">Response Time</div>
+              <div className="text-ink-300">Response Time</div>
             </div>
             <div>
               <div className="text-2xl font-bold text-primary-400 mb-2">Free</div>
-              <div className="text-gray-300">No Obligations</div>
+              <div className="text-ink-300">No Obligations</div>
             </div>
           </div>
         </div>

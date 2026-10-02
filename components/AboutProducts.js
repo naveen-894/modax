@@ -2,13 +2,13 @@ import Link from 'next/link'
 
 export default function AboutProducts() {
   return (
-    <section className="section-padding bg-gray-50">
+    <section className="section-padding bg-ink-50">
       <div className="container-max">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 mb-4">
             Our Products
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-ink-500 max-w-3xl mx-auto">
             Beyond custom development, we build and own products that solve real business challenges.
             These products represent our commitment to innovation and long-term value creation.
           </p>
@@ -17,7 +17,7 @@ export default function AboutProducts() {
         <div className="max-w-4xl mx-auto">
           {/* Rawnn Product Highlight */}
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-            <div className="bg-gradient-to-r from-primary-600 to-primary-700 text-white p-8 md:p-12">
+            <div className="bg-ink-900 text-white p-8 md:p-12 relative overflow-hidden">
               <div className="text-center">
                 <h3 className="text-3xl md:text-4xl font-bold mb-4">
                   Rawnn - Our Flagship Product
@@ -32,7 +32,7 @@ export default function AboutProducts() {
             <div className="p-8 md:p-12">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
-                  <h4 className="text-2xl font-bold text-gray-900 mb-6">Why We Built Rawnn</h4>
+                  <h4 className="text-2xl font-bold text-ink-900 mb-6">Why We Built Rawnn</h4>
 
                   <div className="space-y-4 mb-8">
                     <div className="flex items-start">
@@ -40,8 +40,8 @@ export default function AboutProducts() {
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
                       <div>
-                        <h5 className="font-semibold text-gray-900">Fashion Industry Expertise</h5>
-                        <p className="text-gray-600">We recognized that existing e-commerce platforms weren't built for fashion brands' unique needs.</p>
+                        <h5 className="font-semibold text-ink-900">Fashion Industry Expertise</h5>
+                        <p className="text-ink-500">We recognized that existing e-commerce platforms weren't built for fashion brands' unique needs.</p>
                       </div>
                     </div>
 
@@ -50,8 +50,8 @@ export default function AboutProducts() {
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
                       <div>
-                        <h5 className="font-semibold text-gray-900">End-to-End Solution</h5>
-                        <p className="text-gray-600">We wanted to create a complete platform that handles everything from inventory to customer service.</p>
+                        <h5 className="font-semibold text-ink-900">End-to-End Solution</h5>
+                        <p className="text-ink-500">We wanted to create a complete platform that handles everything from inventory to customer service.</p>
                       </div>
                     </div>
 
@@ -60,8 +60,8 @@ export default function AboutProducts() {
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
                       <div>
-                        <h5 className="font-semibold text-gray-900">Ownership & Control</h5>
-                        <p className="text-gray-600">By building our own product, we maintain complete control over features, security, and roadmap.</p>
+                        <h5 className="font-semibold text-ink-900">Ownership & Control</h5>
+                        <p className="text-ink-500">By building our own product, we maintain complete control over features, security, and roadmap.</p>
                       </div>
                     </div>
                   </div>
@@ -76,19 +76,19 @@ export default function AboutProducts() {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl p-8">
+                <div className="bg-gradient-to-br from-ink-100 to-ink-200 rounded-xl p-8">
                   <div className="text-center mb-8">
-                    <h4 className="text-xl font-bold text-gray-900 mb-4">Rawnn by the Numbers</h4>
+                    <h4 className="text-xl font-bold text-ink-900 mb-4">Rawnn by the Numbers</h4>
                   </div>
 
                   <div className="grid grid-cols-2 gap-6">
                     <div className="text-center">
                       <div className="text-3xl font-bold text-primary-600 mb-2">99.9%</div>
-                      <div className="text-sm text-gray-600">Uptime</div>
+                      <div className="text-sm text-ink-500">Uptime</div>
                     </div>
                     <div className="text-center">
                       <div className="text-3xl font-bold text-primary-600 mb-2">24/7</div>
-                      <div className="text-sm text-gray-600">Support</div>
+                      <div className="text-sm text-ink-500">Support</div>
                     </div>
                   </div>
 
@@ -105,8 +105,8 @@ export default function AboutProducts() {
 
           {/* Future Products Teaser */}
           <div className="mt-16 text-center">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">More Products Coming Soon</h3>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-ink-900 mb-4">More Products Coming Soon</h3>
+            <p className="text-ink-500 max-w-2xl mx-auto">
               We're constantly working on new products that solve business challenges.
               Follow our journey as we build tools that make businesses more efficient and successful.
             </p>
