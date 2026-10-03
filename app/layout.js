@@ -1,16 +1,17 @@
 import './globals.css'
+import ChatWidget from '../components/chatbot/ChatWidget'
 
 export const metadata = {
   metadataBase: new URL('https://modax.in'),
-  title: 'Modax - Custom Software Development & Digital Solutions Company',
-  description: 'Leading software development company specializing in custom web applications, mobile apps, e-commerce solutions, and business automation. Transform your business with scalable digital solutions.',
-  keywords: ['software development', 'custom software', 'web development', 'mobile app development', 'e-commerce solutions', 'business automation', 'digital transformation', 'software company'],
-  authors: [{ name: 'Modax Software Development' }],
+  title: 'Modax | Custom AI Tools for HR Teams & Businesses',
+  description: 'Modax builds custom AI tools that save teams hours of manual work, from resume screening to document processing and AI assistants. Try our free AI resume screener, Screenr.',
+  keywords: ['AI tools', 'AI resume screening', 'AI for HR', 'AI automation', 'custom AI development', 'LLM integration', 'Bangalore'],
+  authors: [{ name: 'Modax' }],
   creator: 'Modax',
   publisher: 'Modax',
   openGraph: {
-    title: 'Modax - Custom Software Development & Digital Solutions',
-    description: 'Leading software development company specializing in custom web applications, mobile apps, e-commerce solutions, and business automation.',
+    title: 'Modax | Custom AI Tools for HR Teams & Businesses',
+    description: 'Modax builds custom AI tools that save teams hours of manual work, from resume screening to document processing and AI assistants.',
     url: 'https://modax.in',
     siteName: 'Modax',
     locale: 'en_US',
@@ -18,9 +19,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Modax - Custom Software Development & Digital Solutions',
-    description: 'Leading software development company specializing in custom web applications, mobile apps, e-commerce solutions, and business automation.',
-    creator: '@modax',
+    title: 'Modax | Custom AI Tools for HR Teams & Businesses',
+    description: 'Modax builds custom AI tools that save teams hours of manual work, from resume screening to document processing and AI assistants.',
   },
   robots: {
     index: true,
@@ -33,9 +33,6 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: 'your-google-site-verification-code',
-  },
 }
 
 export const viewport = {
@@ -46,23 +43,24 @@ export const viewport = {
 export default function RootLayout({ children }) {
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "SoftwareDevelopmentCompany",
+    "@type": "ProfessionalService",
     "name": "Modax",
-    "description": "Leading software development company specializing in custom web applications, mobile apps, e-commerce solutions, and business automation.",
+    "description": "Founder-led AI studio that builds custom AI tools for HR teams and businesses — resume screening, document understanding, AI assistants, and workflow automation.",
     "url": "https://modax.in",
     "logo": "https://modax.in/images/logo.png",
     "sameAs": [
-      "https://www.linkedin.com/company/modax-ecommerce/",
+      "https://www.linkedin.com/in/naveen-v-89011421b/",
       "https://wa.me/919164579092"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+91-9164579092",
       "contactType": "customer service",
-      "email": "modaxecommerce@gmail.com"
+      "email": "vnaveen894@gmail.com"
     },
     "address": {
       "@type": "PostalAddress",
+      "addressLocality": "Bangalore",
       "addressCountry": "IN"
     },
     "serviceArea": {
@@ -71,58 +69,57 @@ export default function RootLayout({ children }) {
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Software Development Services",
+      "name": "AI Tools & Services",
       "itemListElement": [
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Custom Software Development",
-            "description": "Tailored software solutions built from the ground up to meet your specific business requirements."
+            "name": "AI Document Understanding",
+            "description": "Extract structured data from resumes, invoices, contracts and forms."
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Web Application Development",
-            "description": "Modern web applications with responsive design, fast performance, and seamless user experiences."
+            "name": "AI Scoring & Matching",
+            "description": "Explainable scores that compare candidates, leads or documents against your criteria."
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Mobile Application Development",
-            "description": "Native and cross-platform mobile apps for iOS and Android platforms."
+            "name": "AI Assistants",
+            "description": "Chat assistants that answer questions from your own data and documents."
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "E-commerce Solutions",
-            "description": "Complete e-commerce platforms with payment processing and inventory management."
+            "name": "Workflow Automation with AI",
+            "description": "Automate follow-ups, reports, data entry and approvals."
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Business Automation",
-            "description": "Streamline business processes with custom automation solutions."
+            "name": "AI Features in Your Product",
+            "description": "Add LLM-powered features to existing software."
           }
         }
       ]
     },
     "knowsAbout": [
-      "Software Development",
-      "Web Development",
-      "Mobile App Development",
-      "E-commerce",
-      "Business Automation",
-      "Digital Transformation",
-      "Custom Software Solutions"
+      "Artificial Intelligence",
+      "AI for HR and Recruitment",
+      "Resume Screening",
+      "Document Understanding",
+      "LLM Integration",
+      "Workflow Automation"
     ]
   }
 
@@ -136,7 +133,10 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className="font-sans">{children}</body>
+      <body className="font-sans">
+        {children}
+        <ChatWidget />
+      </body>
     </html>
   )
 }
