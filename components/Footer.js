@@ -14,11 +14,10 @@ export default function Footer() {
               <span className="text-lg font-bold text-white tracking-tight">Modax</span>
             </Link>
             <p className="text-ink-300 mb-6 max-w-sm leading-relaxed">
-              We design and engineer custom software, web platforms, and mobile apps for
-              businesses that need technology built right the first time.
+              Custom AI tools that save teams hours of manual work.
             </p>
             <a
-              href="https://www.linkedin.com/company/modax-ecommerce/"
+              href="https://www.linkedin.com/in/naveen-v-89011421b/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center w-9 h-9 rounded-md border border-ink-700 text-ink-300 hover:text-white hover:border-ink-500 transition-colors"
@@ -35,19 +34,20 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-white uppercase tracking-wide mb-4">Company</h3>
             <ul className="space-y-2.5">
               <li><Link href="/" className="text-ink-400 hover:text-white transition-colors text-sm">Home</Link></li>
-              <li><Link href="/services" className="text-ink-400 hover:text-white transition-colors text-sm">Services</Link></li>
+              <li><Link href="/services" className="text-ink-400 hover:text-white transition-colors text-sm">AI Solutions</Link></li>
+              <li><Link href="/hr" className="text-ink-400 hover:text-white transition-colors text-sm">For HR Teams</Link></li>
               <li><Link href="/products" className="text-ink-400 hover:text-white transition-colors text-sm">Products</Link></li>
               <li><Link href="/about" className="text-ink-400 hover:text-white transition-colors text-sm">About</Link></li>
               <li><Link href="/contact" className="text-ink-400 hover:text-white transition-colors text-sm">Contact</Link></li>
             </ul>
           </div>
 
-          {/* Product */}
+          {/* Products */}
           <div>
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wide mb-4">Product</h3>
+            <h3 className="text-sm font-semibold text-white uppercase tracking-wide mb-4">Products</h3>
             <ul className="space-y-2.5">
+              <li><Link href="/products/ai-resume-matcher" className="text-ink-400 hover:text-white transition-colors text-sm">Screenr</Link></li>
               <li><Link href="/products/rawnn" className="text-ink-400 hover:text-white transition-colors text-sm">Rawnn</Link></li>
-              <li><Link href="/products/rawnn#demo" className="text-ink-400 hover:text-white transition-colors text-sm">Request a demo</Link></li>
             </ul>
           </div>
 
@@ -56,8 +56,8 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-white uppercase tracking-wide mb-4">Contact</h3>
             <ul className="space-y-2.5">
               <li className="text-ink-400 text-sm">
-                <a href="mailto:modaxecommerce@gmail.com" className="hover:text-white transition-colors break-all">
-                  modaxecommerce@gmail.com
+                <a href="mailto:vnaveen894@gmail.com" className="hover:text-white transition-colors break-all">
+                  vnaveen894@gmail.com
                 </a>
               </li>
               <li className="text-ink-400 text-sm">
@@ -74,7 +74,7 @@ export default function Footer() {
 
         <div className="border-t border-ink-800 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-ink-500 text-sm">
-            © 2026 Modax Software Pvt. Ltd. All rights reserved.
+            © 2026 Modax. All rights reserved.
           </p>
           <p className="text-ink-500 text-sm">
             Designed &amp; built in-house by Modax.

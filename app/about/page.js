@@ -1,18 +1,18 @@
 import Navigation from '../../components/Navigation'
 import AboutHero from '../../components/AboutHero'
+import AboutFounder from '../../components/AboutFounder'
 import AboutMission from '../../components/AboutMission'
 import AboutProducts from '../../components/AboutProducts'
-import AboutTeam from '../../components/AboutTeam'
 import Footer from '../../components/Footer'
 
 export const metadata = {
   metadataBase: new URL('https://modax.in'),
-  title: 'About Modax | Leading Software Development Company',
-  description: 'Learn about Modax, a leading software development company specializing in custom applications, digital transformation, and innovative software solutions for businesses.',
-  keywords: ['about modax', 'software development company', 'custom software company', 'digital transformation', 'software innovation'],
+  title: 'About Modax | A Founder-Led AI Studio',
+  description: 'Modax is a founder-led AI studio in Bangalore building custom AI tools that save businesses hours of manual work.',
+  keywords: ['about modax', 'AI studio', 'founder-led AI company', 'custom AI tools', 'Bangalore AI company'],
   openGraph: {
-    title: 'About Modax | Software Development Company',
-    description: 'Leading software development company specializing in custom applications and digital transformation solutions.',
+    title: 'About Modax | A Founder-Led AI Studio',
+    description: 'Modax is a founder-led AI studio in Bangalore building custom AI tools that save businesses hours of manual work.',
     url: '/about',
     type: 'website',
   },
@@ -24,9 +24,9 @@ export default function AboutPage() {
       <Navigation />
       <main>
         <AboutHero />
+        <AboutFounder />
         <AboutMission />
         <AboutProducts />
-        <AboutTeam />
       </main>
       <Footer />
     </div>

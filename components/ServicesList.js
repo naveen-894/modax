@@ -1,94 +1,62 @@
+import { FileText, ShieldCheck, MessageCircle, Settings, Zap, CheckCircle2 } from 'lucide-react'
+import Reveal from './motion/Reveal'
+import RevealGroup, { RevealItem } from './motion/RevealGroup'
+
 export default function ServicesList() {
   const services = [
     {
-      icon: (
-        <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-        </svg>
-      ),
-      title: "Custom Software Development",
-      description: "Tailored software solutions built from the ground up to meet your specific business requirements and workflows.",
-      features: ["Custom business logic", "Scalable architecture", "API integrations", "Database design", "Performance optimization"]
+      icon: <FileText className="w-8 h-8 text-primary-600" />,
+      title: "AI Document Understanding",
+      description: "We train AI to read your documents and pull out exactly the fields you need — no more retyping data from one system into another.",
+      useCases: ["HR: parse resumes into structured candidate profiles", "Finance: extract line items from invoices and receipts", "Legal/ops: pull key terms and dates out of contracts and forms"],
+      youGet: ["Structured data output (JSON, spreadsheet or your database)", "Handles PDFs, scans, Word docs and images", "Built around your exact fields, not a generic template"]
     },
     {
-      icon: (
-        <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9m0 9c-1.657 0-3-1.343-3-3s1.343-3 3-3m0-9c1.657 0 3 1.343 3 3s-1.343 3-3 3" />
-        </svg>
-      ),
-      title: "Web Application Development",
-      description: "Modern web applications with responsive design, fast performance, and seamless user experiences across all devices.",
-      features: ["Responsive web apps", "Progressive Web Apps", "Real-time features", "Admin dashboards", "Third-party integrations"]
+      icon: <ShieldCheck className="w-8 h-8 text-primary-600" />,
+      title: "AI Scoring & Matching",
+      description: "We build explainable scoring that compares something against your criteria and tells you why — not a black-box number.",
+      useCases: ["HR: score how well a resume matches a job description", "Sales: rank inbound leads against your ideal customer profile", "Ops: compare vendor quotes or documents against a checklist"],
+      youGet: ["A 0–100% score with plain-English reasoning", "Criteria you control and can adjust", "A tool your team will actually trust, because it shows its work"]
     },
     {
-      icon: (
-        <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-        </svg>
-      ),
-      title: "Mobile Application Development",
-      description: "Native and cross-platform mobile apps that deliver exceptional user experiences and leverage device capabilities.",
-      features: ["iOS & Android apps", "Cross-platform solutions", "App store optimization", "Push notifications", "Offline functionality"]
+      icon: <MessageCircle className="w-8 h-8 text-primary-600" />,
+      title: "AI Assistants",
+      description: "Chat assistants trained on your own documents and data, so your team or customers get answers without digging through files.",
+      useCases: ["HR: an assistant that answers policy questions from your HR docs", "Support: an assistant that answers customer FAQs from your help docs", "Internal: an assistant for company knowledge, onboarding, and SOPs"],
+      youGet: ["An assistant that only answers from your approved sources", "Deployed where your team already works", "Clear answers with the source it pulled from"]
     },
     {
-      icon: (
-        <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M8 11h8l.64 5.12a2 2 0 01-1.96 2.38H9.32a2 2 0 01-1.96-2.38L8 11z" />
-        </svg>
-      ),
-      title: "E-commerce Solutions",
-      description: "Complete e-commerce platforms with payment processing, inventory management, and customer experience optimization.",
-      features: ["Payment gateway integration", "Inventory management", "Order processing", "Customer portals", "Analytics & reporting"]
+      icon: <Settings className="w-8 h-8 text-primary-600" />,
+      title: "Workflow Automation with AI",
+      description: "We automate the repetitive steps around a process — the follow-ups, the reports, the data entry, the approvals — so your team only steps in where judgment is needed.",
+      useCases: ["HR: automatic candidate status updates and interview reminders", "Sales/ops: automatic weekly reports pulled from your systems", "Finance: automated data entry and approval routing"],
+      youGet: ["A defined workflow that runs on a schedule or trigger", "Humans kept in the loop at the decision points that matter", "Fewer dropped follow-ups and missed deadlines"]
     },
     {
-      icon: (
-        <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-        </svg>
-      ),
-      title: "Business Automation",
-      description: "Streamline operations with intelligent automation solutions that reduce manual work and improve efficiency.",
-      features: ["Workflow automation", "Data processing", "Report generation", "Integration APIs", "Custom dashboards"]
+      icon: <Zap className="w-8 h-8 text-primary-600" />,
+      title: "AI Features in Your Product",
+      description: "You already have a product. We add the LLM-powered feature your users are asking for — search, summarization, drafting, or something custom.",
+      useCases: ["SaaS: add AI-powered search or summarization to your app", "Internal tools: add AI drafting or classification to existing dashboards", "Any product: add a chat layer on top of your existing data"],
+      youGet: ["A feature integrated into your existing codebase", "Your choice of LLM provider, your data stays in your infrastructure", "Ongoing tuning as usage grows"]
     },
-    {
-      icon: (
-        <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-      ),
-      title: "Product & MVP Development",
-      description: "Transform your ideas into market-ready products with our MVP development process and iterative improvement approach.",
-      features: ["MVP development", "Product strategy", "User testing", "Iterative development", "Launch support"]
-    },
-    {
-      icon: (
-        <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
-        </svg>
-      ),
-      title: "AI Integration & Development",
-      description: "We build LLM-powered features into real products — from document parsing and explainable scoring to conversational assistants that stream responses in real time.",
-      features: ["LLM integration (OpenAI, LangChain)", "AI-assisted content & data generation", "Conversational assistants & chat", "Document parsing & extraction", "Retrieval-augmented matching & scoring"]
-    }
   ]
 
   return (
     <section id="services-list" className="section-padding bg-ink-50">
       <div className="container-max">
-        <div className="text-center mb-16">
+        <Reveal className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 mb-4">
-            Our Software Development Services
+            What we build
           </h2>
           <p className="text-lg sm:text-xl text-ink-500 max-w-3xl mx-auto">
-            We deliver reliable, scalable software solutions that help businesses grow and operate more efficiently.
-            Each service is tailored to your specific needs and goals.
+            Five ways we remove manual work with AI. Each tool is scoped to your
+            workflow, not sold off a shelf.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <RevealGroup className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {services.map((service, index) => (
-            <div key={index} className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
+            <RevealItem key={index} className="bg-white rounded-xl p-8 shadow-sm card-hover">
               <div className="flex items-start mb-6">
                 <div className="flex-shrink-0 w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mr-6">
                   {service.icon}
@@ -103,22 +71,32 @@ export default function ServicesList() {
                 </div>
               </div>
 
-              <div className="border-t border-ink-100 pt-6">
-                <h4 className="text-sm font-semibold text-ink-900 mb-3 uppercase tracking-wide">What's Included:</h4>
+              <div className="border-t border-ink-100 pt-6 mb-6">
+                <h4 className="text-sm font-semibold text-ink-900 mb-3 uppercase tracking-wide">Example use cases</h4>
                 <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-ink-500">
-                      <svg className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
-                      {feature}
+                  {service.useCases.map((useCase, i) => (
+                    <li key={i} className="flex items-start text-sm text-ink-500">
+                      <CheckCircle2 className="w-4 h-4 text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      {useCase}
                     </li>
                   ))}
                 </ul>
               </div>
-            </div>
+
+              <div className="border-t border-ink-100 pt-6">
+                <h4 className="text-sm font-semibold text-ink-900 mb-3 uppercase tracking-wide">What you get</h4>
+                <ul className="space-y-2">
+                  {service.youGet.map((item, i) => (
+                    <li key={i} className="flex items-center text-sm text-ink-500">
+                      <CheckCircle2 className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </RevealItem>
           ))}
-        </div>
+        </RevealGroup>
       </div>
     </section>
   )

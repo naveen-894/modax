@@ -1,7 +1,7 @@
 import Reveal from './motion/Reveal'
 import RevealGroup, { RevealItem } from './motion/RevealGroup'
 
-export default function ServicesProcess() {
+export default function HowWeWork() {
   const steps = [
     {
       number: "01",
@@ -28,25 +28,23 @@ export default function ServicesProcess() {
   return (
     <section className="section-padding bg-white">
       <div className="container-max">
-        <Reveal className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 mb-4">
-            How we work
+        <Reveal className="text-center mb-14">
+          <div className="eyebrow mb-4 justify-center">How we work</div>
+          <h2 className="text-3xl sm:text-4xl font-bold text-ink-900 tracking-tight">
+            From first call to working tool
           </h2>
-          <p className="text-lg sm:text-xl text-ink-500 max-w-3xl mx-auto">
-            A straightforward process, from the first call to a working tool.
-          </p>
         </Reveal>
 
-        <RevealGroup className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <RevealGroup className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {steps.map((step) => (
-            <RevealItem key={step.number} className="bg-ink-50 rounded-xl p-6 h-full border-2 border-transparent hover:border-primary-200 card-hover">
-              <div className="w-12 h-12 bg-ink-900 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-white font-bold text-lg">{step.number}</span>
+            <RevealItem key={step.number} className="bg-ink-50 rounded-xl p-6 h-full card-hover">
+              <div className="w-10 h-10 bg-ink-900 rounded-lg flex items-center justify-center mb-5">
+                <span className="text-white font-bold text-sm">{step.number}</span>
               </div>
-              <h3 className="text-xl font-bold text-ink-900 mb-3">
+              <h3 className="text-lg font-bold text-ink-900 mb-2">
                 {step.title}
               </h3>
-              <p className="text-ink-500 leading-relaxed">
+              <p className="text-ink-500 text-sm leading-relaxed">
                 {step.description}
               </p>
             </RevealItem>

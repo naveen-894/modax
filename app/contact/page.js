@@ -6,12 +6,12 @@ import Footer from '../../components/Footer'
 
 export const metadata = {
   metadataBase: new URL('https://modax.in'),
-  title: 'Contact Modax | Get Your Custom Software Quote Today',
-  description: 'Ready to start your software development project? Contact Modax for a free consultation. Get expert advice on custom software, web apps, and digital solutions.',
-  keywords: ['contact modax', 'software development quote', 'custom software consultation', 'software project inquiry', 'get quote'],
+  title: 'Contact Modax | Book a Call About Custom AI Tools',
+  description: 'Have a task your team does manually every day? Contact Modax to see if a custom AI tool can take it off your plate.',
+  keywords: ['contact modax', 'AI tools inquiry', 'custom AI consultation', 'AI for HR inquiry'],
   openGraph: {
-    title: 'Contact Modax | Start Your Software Project',
-    description: 'Get in touch with our expert software development team for a free consultation and project quote.',
+    title: 'Contact Modax | Book a Call About Custom AI Tools',
+    description: 'Get in touch to see if a custom AI tool can save your team hours of manual work.',
     url: '/contact',
     type: 'website',
   },

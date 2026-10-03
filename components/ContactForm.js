@@ -1,6 +1,8 @@
 'use client'
 
 import { useState } from 'react'
+import { Settings, ShoppingBag } from 'lucide-react'
+import Reveal from './motion/Reveal'
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -62,7 +64,7 @@ export default function ContactForm() {
     <section className="section-padding bg-ink-50">
       <div className="container-max">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
+          <Reveal className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 mb-4">
               Send Us a Message
             </h2>
@@ -70,9 +72,9 @@ export default function ContactForm() {
               Have questions about our services or products? Want to discuss your project?
               We'd love to hear from you.
             </p>
-          </div>
+          </Reveal>
 
-          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+          <Reveal delay={0.1} className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Inquiry Type */}
               <div>
@@ -91,12 +93,10 @@ export default function ContactForm() {
                     />
                     <div className="p-4 border-2 border-ink-200 rounded-lg cursor-pointer peer-checked:border-primary-500 peer-checked:bg-primary-50 hover:border-primary-300 transition-colors">
                       <div className="flex items-center">
-                        <svg className="w-5 h-5 text-primary-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                        </svg>
+                        <Settings className="w-5 h-5 text-primary-600 mr-3" />
                         <div>
-                          <div className="font-medium text-ink-900">Custom Software Development</div>
-                          <div className="text-sm text-ink-500">Build a custom solution</div>
+                          <div className="font-medium text-ink-900">Custom AI Tool</div>
+                          <div className="text-sm text-ink-500">Build a tool for your workflow</div>
                         </div>
                       </div>
                     </div>
@@ -113,12 +113,10 @@ export default function ContactForm() {
                     />
                     <div className="p-4 border-2 border-ink-200 rounded-lg cursor-pointer peer-checked:border-primary-500 peer-checked:bg-primary-50 hover:border-primary-300 transition-colors">
                       <div className="flex items-center">
-                        <svg className="w-5 h-5 text-primary-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M8 11h8l.64 5.12a2 2 0 01-1.96 2.38H9.32a2 2 0 01-1.96-2.38L8 11z" />
-                        </svg>
+                        <ShoppingBag className="w-5 h-5 text-primary-600 mr-3" />
                         <div>
-                          <div className="font-medium text-ink-900">Rawnn E-commerce Platform</div>
-                          <div className="text-sm text-ink-500">Learn about our product</div>
+                          <div className="font-medium text-ink-900">AI Products</div>
+                          <div className="text-sm text-ink-500">Screenr or Rawnn</div>
                         </div>
                       </div>
                     </div>
@@ -226,7 +224,7 @@ export default function ContactForm() {
                 We respect your privacy and will only use your information to respond to your inquiry.
               </p>
             </form>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

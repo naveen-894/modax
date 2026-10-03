@@ -5,12 +5,12 @@ import Footer from '../../components/Footer'
 
 export const metadata = {
   metadataBase: new URL('https://modax.in'),
-  title: 'Software Products | Rawnn & Resume Matcher | Modax',
-  description: 'Discover our ready-to-use software products: Rawnn, our complete e-commerce platform for fashion brands, and Resume Matcher, our AI resume & job description matching tool.',
-  keywords: ['software products', 'e-commerce platform', 'rawnn', 'resume matcher', 'ai resume screening', 'fashion e-commerce', 'online store platform', 'd2c platform'],
+  title: 'AI Products | Screenr & Rawnn | Modax',
+  description: 'AI products built by Modax: Screenr, our AI resume & job description matching tool, and Rawnn, an AI-assisted commerce platform for fashion brands.',
+  keywords: ['AI products', 'screenr', 'resume matcher', 'ai resume screening', 'rawnn', 'ai for hr', 'fashion e-commerce', 'd2c platform'],
   openGraph: {
-    title: 'Software Products & Platforms | Modax',
-    description: 'Ready-to-use software products including Rawnn e-commerce platform for fashion brands and Resume Matcher, our AI resume screening tool.',
+    title: 'AI Products | Screenr & Rawnn | Modax',
+    description: 'AI products built by Modax, including Screenr, our AI resume screening tool, and Rawnn, an AI-assisted commerce platform.',
     url: '/products',
     type: 'website',
   },

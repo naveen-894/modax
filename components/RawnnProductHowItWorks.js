@@ -1,44 +1,30 @@
+import { UserPlus, Package, CreditCard, Zap } from 'lucide-react'
+
 export default function RawnnProductHowItWorks() {
   const steps = [
     {
       step: "01",
       title: "Sign Up with Your Phone",
       description: "Enter your number and verify with a 4-digit OTP. No passwords, no lengthy onboarding forms.",
-      icon: (
-        <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
-        </svg>
-      )
+      icon: <UserPlus className="w-8 h-8 text-primary-600" />
     },
     {
       step: "02",
       title: "Snap a Photo, Let AI List It",
       description: "Pick a category and upload a product photo. AI drafts the title, description, specs and sizes for you to review and adjust.",
-      icon: (
-        <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-        </svg>
-      )
+      icon: <Package className="w-8 h-8 text-primary-600" />
     },
     {
       step: "03",
       title: "Get Approved & Go Live",
       description: "Your listing moves through the approval pipeline, then publishes to shoppers browsing nearby in the customer app.",
-      icon: (
-        <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-        </svg>
-      )
+      icon: <CreditCard className="w-8 h-8 text-primary-600" />
     },
     {
       step: "04",
       title: "Sell, Chat & Get Paid",
       description: "Manage orders and returns, chat with customers about specific products, and track payouts through Razorpay — all from one dashboard.",
-      icon: (
-        <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-      )
+      icon: <Zap className="w-8 h-8 text-primary-600" />
     }
   ]
 

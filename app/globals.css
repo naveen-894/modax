@@ -14,15 +14,15 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-ink-900 hover:bg-primary-700 text-white font-medium px-6 py-3 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 inline-flex items-center justify-center gap-2;
+    @apply bg-ink-900 hover:bg-primary-700 text-white font-medium px-6 py-3 rounded-md transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 inline-flex items-center justify-center gap-2 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary-900/10 active:translate-y-0 active:scale-[0.98];
   }
 
   .btn-secondary {
-    @apply bg-white hover:border-ink-400 text-ink-900 border border-ink-200 font-medium px-6 py-3 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 inline-flex items-center justify-center gap-2;
+    @apply bg-white hover:border-ink-400 text-ink-900 border border-ink-200 font-medium px-6 py-3 rounded-md transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 inline-flex items-center justify-center gap-2 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 active:scale-[0.98];
   }
 
   .btn-whatsapp {
-    @apply bg-green-600 hover:bg-green-700 text-white font-medium px-6 py-3 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2;
+    @apply bg-green-600 hover:bg-green-700 text-white font-medium px-6 py-3 rounded-md transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 active:scale-[0.98];
   }
 
   .section-padding {
@@ -38,7 +38,11 @@
   }
 
   .card-surface {
-    @apply bg-white border border-ink-100 rounded-lg;
+    @apply bg-white border border-ink-100 rounded-lg transition-all duration-300 ease-out;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-xl hover:shadow-ink-900/5 hover:border-primary-200;
   }
 
   .bg-grid {
@@ -51,5 +55,46 @@
     background-image: linear-gradient(to right, rgb(255 255 255 / 0.07) 1px, transparent 1px),
       linear-gradient(to bottom, rgb(255 255 255 / 0.07) 1px, transparent 1px);
     background-size: 36px 36px;
+  }
+}
+
+@layer utilities {
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes blob-pulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.08); opacity: 0.65; }
+  }
+
+  @keyframes fill-bar {
+    from { width: 0%; }
+  }
+
+  @keyframes soft-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.55; }
+  }
+
+  .animate-float {
+    animation: float 5s ease-in-out infinite;
+  }
+
+  .animate-blob-pulse {
+    animation: blob-pulse 8s ease-in-out infinite;
+  }
+
+  .animate-soft-pulse {
+    animation: soft-pulse 2.5s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-float,
+    .animate-blob-pulse,
+    .animate-soft-pulse {
+      animation: none;
+    }
   }
 }

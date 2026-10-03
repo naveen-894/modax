@@ -20,6 +20,14 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- For HR Teams Page -->
+  <url>
+    <loc>https://modax.in/hr</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Products Page -->
   <url>
     <loc>https://modax.in/products</loc>
@@ -36,7 +44,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Resume Matcher Product Page -->
+  <!-- Screenr Product Page -->
   <url>
     <loc>https://modax.in/products/ai-resume-matcher</loc>
     <lastmod>2026-10-02</lastmod>

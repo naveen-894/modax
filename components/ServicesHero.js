@@ -1,23 +1,17 @@
-import Link from 'next/link'
 import PageHero from './PageHero'
 
 export default function ServicesHero() {
   return (
     <PageHero
-      eyebrow="Services"
-      title="Custom software"
-      accent=" development"
-      description="We build scalable software solutions that drive business growth. From web and mobile apps to AI-powered features, we deliver reliable, high-performance software tailored to your needs."
-      stats={[
-        { value: '20+', label: 'Projects delivered' },
-        { value: '99.9%', label: 'Uptime guarantee' },
-        { value: '24/7', label: 'Support' },
-      ]}
+      eyebrow="AI Solutions"
+      title="AI tools, built"
+      accent=" for real work"
+      description="We design and build custom AI tools that save your team hours of manual work — document processing, scoring and matching, assistants, and automation, built around your actual workflow."
     >
       <div className="flex flex-col sm:flex-row gap-4 mt-10">
-        <Link href="/contact" className="btn-primary">
-          Start your project
-        </Link>
+        <a href="https://calendly.com/vnaveen894/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">
+          Book a 15-min call
+        </a>
         <a href="#services-list" className="btn-secondary">
           View services
         </a>

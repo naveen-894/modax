@@ -1,7 +1,9 @@
 import Navigation from '../components/Navigation'
 import Hero from '../components/Hero'
 import Services from '../components/Services'
+import BuiltForHR from '../components/BuiltForHR'
 import ProductHighlight from '../components/ProductHighlight'
+import HowWeWork from '../components/HowWeWork'
 import WhyModax from '../components/WhyModax'
 import CTA from '../components/CTA'
 import Footer from '../components/Footer'
@@ -13,7 +15,9 @@ export default function Home() {
       <main>
         <Hero />
         <Services />
+        <BuiltForHR />
         <ProductHighlight />
+        <HowWeWork />
         <WhyModax />
         <CTA />
       </main>

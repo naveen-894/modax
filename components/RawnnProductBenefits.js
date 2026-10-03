@@ -1,56 +1,34 @@
+import { Zap, DollarSign, FileText, Heart, LifeBuoy, BarChart3 } from 'lucide-react'
+
 export default function RawnnProductBenefits() {
   const benefits = [
     {
-      icon: (
-        <svg className="w-12 h-12 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-      ),
+      icon: <Zap className="w-12 h-12 text-primary-600" />,
       title: "Launch Without a Developer",
       description: "Upload a product photo and AI drafts the title, description, specs and sizes. Review, publish, and your store is live."
     },
     {
-      icon: (
-        <svg className="w-12 h-12 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-        </svg>
-      ),
+      icon: <DollarSign className="w-12 h-12 text-primary-600" />,
       title: "Get Discovered Locally",
       description: "The customer app is location-aware, so nearby shoppers find your products and store without you needing to run ads."
     },
     {
-      icon: (
-        <svg className="w-12 h-12 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-        </svg>
-      ),
+      icon: <FileText className="w-12 h-12 text-primary-600" />,
       title: "Quality-Controlled Catalog",
       description: "Every listing moves through an approval pipeline before going live, keeping the catalog consistent across every retailer."
     },
     {
-      icon: (
-        <svg className="w-12 h-12 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-        </svg>
-      ),
+      icon: <Heart className="w-12 h-12 text-primary-600" />,
       title: "Payments & Payouts Built In",
       description: "Razorpay checkout for customers plus a settlement dashboard so you can track payouts without switching tools."
     },
     {
-      icon: (
-        <svg className="w-12 h-12 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-        </svg>
-      ),
+      icon: <LifeBuoy className="w-12 h-12 text-primary-600" />,
       title: "Keep Conversations On-Platform",
       description: "Built-in chat lets customers message you directly and tag the exact product they're asking about — no phone numbers to exchange."
     },
     {
-      icon: (
-        <svg className="w-12 h-12 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-        </svg>
-      ),
+      icon: <BarChart3 className="w-12 h-12 text-primary-600" />,
       title: "Mobile-First, Passwordless",
       description: "Phone + OTP login across both the retailer and shopper apps means no passwords to reset and no friction signing in on the go."
     }

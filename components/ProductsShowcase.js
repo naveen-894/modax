@@ -1,48 +1,14 @@
 import Link from 'next/link'
+import { CheckCircle2 } from 'lucide-react'
+import Reveal from './motion/Reveal'
 
 export default function ProductsShowcase() {
   const products = [
     {
-      id: "rawnn",
-      name: "Rawnn",
-      tagline: "D2C E-commerce Platform for Fashion Brands",
-      description: "A two-sided e-commerce platform for fashion brands: an AI-assisted retailer dashboard for listing and managing products, paired with a location-aware customer app that surfaces nearby stores to shoppers.",
-      image: "/images/rawnn-preview.png",
-      features: [
-        "AI-powered product listings",
-        "Per-size inventory with delivery & pickup toggles",
-        "Razorpay payments & settlement dashboard",
-        "Returns & exchange handling",
-        "In-app customer-retailer chat",
-        "Ratings & moderated reviews",
-        "Location-based discovery",
-        "Phone & OTP login"
-      ],
-      benefits: [
-        "List a product in minutes with AI-drafted titles, descriptions & sizes",
-        "Get discovered by nearby shoppers through the location-aware customer app",
-        "Every listing passes an 8-stage approval pipeline before going live",
-        "Payments and payouts handled through Razorpay, end to end",
-        "Passwordless phone + OTP login across both apps"
-      ],
-      pricing: {
-        model: "SaaS Subscription",
-        starting: "Custom pricing based on business needs"
-      },
-      badges: ["SaaS Platform", "Fashion Focused", "Built by Modax"],
-      cta: {
-        primary: "Request Demo",
-        secondary: "View Product Details",
-        primaryLink: "/products/rawnn#demo",
-        secondaryLink: "/products/rawnn"
-      }
-    },
-    {
       id: "ai-resume-matcher",
-      name: "Resume Matcher",
+      name: "Screenr",
       tagline: "AI Resume & Job Description Matching",
       description: "An AI tool that instantly tells you how well a candidate's resume fits a job. Upload a resume and a job description and in about 15 seconds get a clear 0-100% match score with a plain-English explanation — built for recruiters and hiring managers, and just as useful for job seekers checking their own resume before they apply.",
-      image: "/images/resume-matcher-preview.png",
       features: [
         "AI resume & JD parsing",
         "Explainable 0-100% match score",
@@ -60,16 +26,42 @@ export default function ProductsShowcase() {
         "Real AI understanding, not a keyword search",
         "Ask follow-up questions about any match"
       ],
-      pricing: {
-        model: "SaaS Subscription",
-        starting: "Custom pricing based on hiring volume"
-      },
-      badges: ["AI Powered", "Hiring & Recruitment", "Built by Modax"],
+      badges: ["Lead Product", "AI Powered", "Hiring & Recruitment"],
       cta: {
-        primary: "Request Demo",
+        primary: "Try it free",
         secondary: "View Product Details",
-        primaryLink: "/products/ai-resume-matcher#demo",
+        primaryLink: "https://ai-resume-matcher-fed.vercel.app/",
         secondaryLink: "/products/ai-resume-matcher"
+      }
+    },
+    {
+      id: "rawnn",
+      name: "Rawnn",
+      tagline: "AI-Assisted Commerce Platform for Fashion Brands",
+      description: "A two-sided commerce platform for fashion brands: an AI-assisted retailer dashboard that drafts product titles, descriptions and sizes, paired with a location-aware customer app that surfaces nearby stores to shoppers.",
+      features: [
+        "AI-drafted product titles, descriptions & sizes",
+        "Per-size inventory with delivery & pickup toggles",
+        "Razorpay payments & settlement dashboard",
+        "Returns & exchange handling",
+        "In-app customer-retailer chat",
+        "Ratings & moderated reviews",
+        "Location-based discovery",
+        "Phone & OTP login"
+      ],
+      benefits: [
+        "List a product in minutes with AI-drafted titles, descriptions & sizes",
+        "Get discovered by nearby shoppers through the location-aware customer app",
+        "Every listing passes an 8-stage approval pipeline before going live",
+        "Payments and payouts handled through Razorpay, end to end",
+        "Passwordless phone + OTP login across both apps"
+      ],
+      badges: ["AI-Assisted Commerce", "Fashion Focused", "Built by Modax"],
+      cta: {
+        primary: "Learn more",
+        secondary: "Request a demo",
+        primaryLink: "/products/rawnn",
+        secondaryLink: "/products/rawnn#demo"
       }
     }
   ]
@@ -77,42 +69,34 @@ export default function ProductsShowcase() {
   return (
     <section id="products" className="section-padding bg-ink-50">
       <div className="container-max">
-        <div className="text-center mb-16">
+        <Reveal className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 mb-4">
-            Our Products
+            AI products built by Modax
           </h2>
           <p className="text-lg sm:text-xl text-ink-500 max-w-3xl mx-auto">
-            Purpose-built software products that solve real business challenges. Each product is developed,
+            Purpose-built AI products that solve real business problems. Each product is developed,
             owned, and maintained by Modax to ensure reliability and continuous improvement.
           </p>
-        </div>
+        </Reveal>
 
         <div className="max-w-6xl mx-auto space-y-16">
           {products.map((product, index) => (
-            <div key={index} className="bg-white rounded-2xl shadow-xl overflow-hidden">
+            <Reveal key={index} delay={index * 0.1} className="bg-white rounded-2xl shadow-xl overflow-hidden transition-shadow duration-300 hover:shadow-2xl">
               {/* Product Header */}
               <div className="bg-ink-900 text-white p-8 md:p-12 relative overflow-hidden">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                  <div>
-                    <h3 className="text-3xl md:text-4xl font-bold mb-4">
-                      {product.name}
-                    </h3>
-                    <p className="text-xl text-primary-100 mb-6">
-                      {product.tagline}
-                    </p>
-                    <div className="flex flex-wrap gap-3">
-                      {product.badges.map((badge, badgeIndex) => (
-                        <span key={badgeIndex} className="bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium">
-                          {badge}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 max-w-sm mx-auto">
-                      <div className="text-4xl font-bold mb-2">{product.pricing.starting}</div>
-                      <div className="text-primary-100">{product.pricing.model}</div>
-                    </div>
+                <div>
+                  <h3 className="text-3xl md:text-4xl font-bold mb-4">
+                    {product.name}
+                  </h3>
+                  <p className="text-xl text-primary-100 mb-6">
+                    {product.tagline}
+                  </p>
+                  <div className="flex flex-wrap gap-3">
+                    {product.badges.map((badge, badgeIndex) => (
+                      <span key={badgeIndex} className="bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium">
+                        {badge}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -131,9 +115,7 @@ export default function ProductsShowcase() {
                     <ul className="space-y-3">
                       {product.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-start">
-                          <svg className="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                          </svg>
+                          <CheckCircle2 className="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
                           <span className="text-ink-700">{benefit}</span>
                         </li>
                       ))}
@@ -146,9 +128,7 @@ export default function ProductsShowcase() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {product.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center bg-ink-50 rounded-lg p-3">
-                          <svg className="w-5 h-5 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                          </svg>
+                          <CheckCircle2 className="w-5 h-5 text-primary-600 mr-3 flex-shrink-0" />
                           <span className="text-ink-700 text-sm">{feature}</span>
                         </div>
                       ))}
@@ -156,9 +136,14 @@ export default function ProductsShowcase() {
 
                     {/* CTA Buttons */}
                     <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                      <Link href={product.cta.primaryLink} className="btn-primary text-center flex-1">
+                      <a
+                        href={product.cta.primaryLink}
+                        target={product.cta.primaryLink.startsWith('http') ? '_blank' : undefined}
+                        rel={product.cta.primaryLink.startsWith('http') ? 'noopener noreferrer' : undefined}
+                        className="btn-primary text-center flex-1"
+                      >
                         {product.cta.primary}
-                      </Link>
+                      </a>
                       <Link href={product.cta.secondaryLink} className="btn-secondary text-center flex-1">
                         {product.cta.secondary}
                       </Link>
@@ -174,7 +159,7 @@ export default function ProductsShowcase() {
                   We maintain full control over development, security, and feature roadmap.
                 </p>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

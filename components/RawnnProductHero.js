@@ -1,3 +1,4 @@
+import { CheckCircle2 } from 'lucide-react'
 import PageHero from './PageHero'
 
 export default function RawnnProductHero() {
@@ -22,9 +23,7 @@ export default function RawnnProductHero() {
       </div>
 
       <div className="inline-flex items-center gap-2 bg-primary-50 text-primary-800 px-4 py-2.5 rounded-md text-sm font-medium mt-8">
-        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
+        <CheckCircle2 className="w-4 h-4" />
         Built &amp; owned by Modax
       </div>
     </PageHero>

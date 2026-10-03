@@ -7,12 +7,12 @@ import Footer from '../../components/Footer'
 
 export const metadata = {
   metadataBase: new URL('https://modax.in'),
-  title: 'Software & AI Development Services | Custom Web & Mobile Apps | Modax',
-  description: 'Expert software development services including custom web applications, mobile app development, e-commerce solutions, AI integration, and business automation. Transform your business with scalable digital solutions.',
-  keywords: ['software development services', 'custom software development', 'web application development', 'mobile app development', 'ai integration services', 'ai development', 'e-commerce development', 'business automation', 'digital solutions'],
+  title: 'AI Solutions | Custom AI Tools for Business | Modax',
+  description: 'Custom AI tools that save teams hours of manual work: document understanding, scoring & matching, AI assistants, workflow automation, and AI features for your product.',
+  keywords: ['AI solutions', 'AI tools', 'AI for HR', 'AI resume screening', 'AI automation', 'custom AI development', 'LLM integration'],
   openGraph: {
-    title: 'Software & AI Development Services | Custom Solutions | Modax',
-    description: 'Expert software development services for web, mobile, e-commerce, and AI-powered applications. Transform your business with our custom development expertise.',
+    title: 'AI Solutions | Custom AI Tools for Business | Modax',
+    description: 'Custom AI tools that save teams hours of manual work, built around your actual workflow.',
     url: '/services',
     type: 'website',
   },

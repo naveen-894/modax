@@ -1,31 +1,34 @@
 import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
+import Reveal from './motion/Reveal'
+import RevealGroup, { RevealItem } from './motion/RevealGroup'
 
 export default function Services() {
   const services = [
     {
       number: "01",
-      title: "Custom Software Development",
-      description: "Tailored software solutions built to meet your unique business requirements and drive growth.",
+      title: "AI Document Understanding",
+      description: "Extract structured data from resumes, invoices, contracts and forms — no more manual data entry.",
     },
     {
       number: "02",
-      title: "Web Applications",
-      description: "Modern, responsive web applications with exceptional user experiences and robust functionality.",
+      title: "AI Scoring & Matching",
+      description: "Explainable scores that compare candidates, leads or documents against your criteria.",
     },
     {
       number: "03",
-      title: "Mobile Applications",
-      description: "Native and cross-platform mobile apps that deliver outstanding performance and user engagement.",
+      title: "AI Assistants",
+      description: "Chat assistants that answer questions from your own data and documents.",
     },
     {
       number: "04",
-      title: "Business Automation",
-      description: "Streamline operations and boost efficiency with intelligent automation and workflow solutions.",
+      title: "Workflow Automation with AI",
+      description: "Automate follow-ups, reports, data entry and approvals that currently eat up your team's day.",
     },
     {
       number: "05",
-      title: "AI Integration & Development",
-      description: "LLM-powered features — document parsing, explainable scoring, conversational assistants — built into real products.",
+      title: "AI Features in Your Product",
+      description: "Add LLM-powered features to existing software — search, summarization, drafting, and more.",
     }
   ]
 
@@ -33,31 +36,29 @@ export default function Services() {
     <section id="services" className="section-padding bg-white">
       <div className="container-max">
         <div className="grid lg:grid-cols-3 gap-12 mb-14">
-          <div className="lg:col-span-2">
-            <div className="eyebrow mb-4">What we do</div>
+          <Reveal className="lg:col-span-2">
+            <div className="eyebrow mb-4">What we build</div>
             <h2 className="text-3xl sm:text-4xl font-bold text-ink-900 tracking-tight">
-              Engineering services that cover the full product lifecycle
+              Five ways we remove manual work with AI
             </h2>
-          </div>
-          <div className="flex flex-col justify-end">
+          </Reveal>
+          <Reveal delay={0.1} className="flex flex-col justify-end">
             <p className="text-ink-500 leading-relaxed mb-4">
-              From the first line of code to the systems that keep running at scale,
-              we build software your business can rely on.
+              Every tool we build is scoped around one goal: save your team hours
+              on work that shouldn't need a human to do by hand.
             </p>
             <Link href="/services" className="text-primary-700 font-semibold inline-flex items-center gap-1.5 hover:gap-2.5 transition-all">
               View all services
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
+              <ArrowRight className="w-4 h-4" />
             </Link>
-          </div>
+          </Reveal>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 border-t border-ink-100">
+        <RevealGroup className="grid grid-cols-1 sm:grid-cols-2 border-t border-ink-100">
           {services.map((service, index) => (
-            <div
+            <RevealItem
               key={index}
-              className={`py-10 px-2 sm:px-8 border-b border-ink-100 ${index % 2 === 0 ? 'sm:border-r' : ''}`}
+              className={`py-10 px-2 sm:px-8 border-b border-ink-100 transition-colors duration-300 hover:bg-ink-50/60 ${index % 2 === 0 ? 'sm:border-r' : ''}`}
             >
               <div className="text-sm font-mono text-primary-600 mb-4">{service.number}</div>
               <h3 className="text-xl font-bold text-ink-900 mb-3">
@@ -66,9 +67,9 @@ export default function Services() {
               <p className="text-ink-500 leading-relaxed max-w-md">
                 {service.description}
               </p>
-            </div>
+            </RevealItem>
           ))}
-        </div>
+        </RevealGroup>
       </div>
     </section>
   )

@@ -36,7 +36,7 @@ export default function AiResumeMatcherDemo() {
         },
         body: JSON.stringify({
           ...formData,
-          message: `Resume Matcher Demo Request:\n\nRole: ${formData.role}\nHiring Volume: ${formData.hiringVolume}\n\n${formData.message}\n\n[This is a Resume Matcher Product Demo Request]`
+          message: `Screenr Demo Request:\n\nRole: ${formData.role}\nHiring Volume: ${formData.hiringVolume}\n\n${formData.message}\n\n[This is a Screenr Product Demo Request]`
         }),
       })
 
@@ -68,7 +68,7 @@ export default function AiResumeMatcherDemo() {
       <div className="container-max">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            See Resume Matcher in Action
+            See Screenr in Action
           </h2>
           <p className="text-lg sm:text-xl text-primary-100 max-w-3xl mx-auto">
             Schedule a personalized demo and see how a real resume and job description
@@ -80,7 +80,7 @@ export default function AiResumeMatcherDemo() {
           <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 text-ink-900">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold mb-2">Request Your Free Demo</h3>
-              <p className="text-ink-500">See Resume Matcher score a real resume against one of your open roles</p>
+              <p className="text-ink-500">See Screenr score a real resume against one of your open roles</p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-6">
