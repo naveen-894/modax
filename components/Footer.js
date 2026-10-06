@@ -56,13 +56,13 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-white uppercase tracking-wide mb-4">Contact</h3>
             <ul className="space-y-2.5">
               <li className="text-ink-400 text-sm">
-                <a href="mailto:vnaveen894@gmail.com" className="hover:text-white transition-colors break-all">
-                  vnaveen894@gmail.com
+                <a href={`mailto:${process.env.CONTACT_EMAIL}`} className="hover:text-white transition-colors break-all">
+                  {process.env.CONTACT_EMAIL}
                 </a>
               </li>
               <li className="text-ink-400 text-sm">
-                <a href="https://wa.me/9164579092" className="hover:text-white transition-colors">
-                  +91 9164579092
+                <a href={`https://wa.me/${process.env.CONTACT_WHATSAPP}`} className="hover:text-white transition-colors">
+                  {process.env.CONTACT_PHONE_DISPLAY}
                 </a>
               </li>
               <li className="text-ink-400 text-sm">

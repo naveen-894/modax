@@ -24,7 +24,7 @@ export default function CTA() {
               <a href="https://calendly.com/vnaveen894/30min" target="_blank" rel="noopener noreferrer" className="bg-white text-ink-900 hover:bg-ink-100 font-semibold px-6 py-3.5 rounded-md text-center transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0">
                 Book a 15-min call
               </a>
-              <a href="mailto:vnaveen894@gmail.com" className="border border-white/20 text-white hover:bg-white/10 font-semibold px-6 py-3.5 rounded-md text-center transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0">
+              <a href={`mailto:${process.env.CONTACT_EMAIL}`} className="border border-white/20 text-white hover:bg-white/10 font-semibold px-6 py-3.5 rounded-md text-center transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0">
                 Email us
               </a>
             </div>

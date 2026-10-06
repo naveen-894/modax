@@ -50,13 +50,13 @@ export default function RootLayout({ children }) {
     "logo": "https://modax.in/images/logo.png",
     "sameAs": [
       "https://www.linkedin.com/in/naveen-v-89011421b/",
-      "https://wa.me/919164579092"
+      `https://wa.me/${process.env.CONTACT_WHATSAPP}`
     ],
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+91-9164579092",
+      "telephone": process.env.CONTACT_PHONE,
       "contactType": "customer service",
-      "email": "vnaveen894@gmail.com"
+      "email": process.env.CONTACT_EMAIL
     },
     "address": {
       "@type": "PostalAddress",

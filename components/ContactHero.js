@@ -6,22 +6,22 @@ export default function ContactHero() {
     {
       title: "Email us",
       description: "Get detailed responses to your questions",
-      action: "vnaveen894@gmail.com",
-      href: "mailto:vnaveen894@gmail.com",
+      action: process.env.CONTACT_EMAIL,
+      href: `mailto:${process.env.CONTACT_EMAIL}`,
       icon: <Mail className="w-5 h-5" />,
     },
     {
       title: "Call us",
       description: "Speak directly with our team",
-      action: "+91 91645 79092",
-      href: "tel:+919164579092",
+      action: process.env.CONTACT_PHONE_DISPLAY,
+      href: `tel:${process.env.CONTACT_PHONE}`,
       icon: <Phone className="w-5 h-5" />,
     },
     {
       title: "WhatsApp",
       description: "Quick responses on WhatsApp",
       action: "Message us",
-      href: "https://wa.me/919164579092",
+      href: `https://wa.me/${process.env.CONTACT_WHATSAPP}`,
       icon: <MessageCircle className="w-5 h-5" />,
     },
   ]
