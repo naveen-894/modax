@@ -830,6 +830,7 @@ fbq('track', 'PageView');
   var errorBanner = document.getElementById("formErrorBanner");
   var whatsappCta = document.getElementById("whatsappCta");
   var isSubmitting = false;
+  var leadFired = false;
 
   var PHONE_RE = /^[6-9]\d{9}$/;
   var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -911,6 +912,20 @@ fbq('track', 'PageView');
       timestamp: document.getElementById("timestamp").value
     };
 
+    form.style.display = "none";
+    thankYou.classList.add("show");
+
+    // Fire the Meta Pixel Lead event as soon as the submission starts, rather
+    // than waiting on the fetch below (which can take ~10s) — users often
+    // leave before it resolves, losing the event.
+    if (!leadFired && typeof fbq === "function") {
+      leadFired = true;
+      fbq("track", "Lead", {
+        content_name: "Free Demo Request",
+        business_type: payload.business_type
+      });
+    }
+
     // mode: "no-cors" + text/plain avoids a CORS preflight against the Apps
     // Script web app (Apps Script does not return CORS headers by default).
     // The response is opaque, so a resolved fetch is our best signal of success;
@@ -926,21 +941,10 @@ fbq('track', 'PageView');
   });
 
   function onSubmitSuccess(payload) {
-    form.style.display = "none";
-    thankYou.classList.add("show");
-
     var waText = encodeURIComponent(
       "Hi, I'm " + payload.full_name + " from " + payload.business_name + ". I just booked a free Modax demo and would like to chat."
     );
     whatsappCta.href = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + waText;
-
-    // Fire the Meta Pixel Lead event only after a successful submission.
-    if (window.fbq) {
-      fbq("track", "Lead", {
-        content_name: "Free Demo Request",
-        business_type: payload.business_type
-      });
-    }
 
     // --- Meta Conversions API (server-side, optional but recommended) ---
     // To improve match quality and recover events blocked client-side, send
