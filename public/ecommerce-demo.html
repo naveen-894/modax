@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Modax — Your Own Premium Online Store | Book a Free Demo</title>
+<meta name="description" content="A complete, fully owned online store for your brand — customer website, store admin panel and owner control panel, all in one. Payments, shipping and returns handled automatically. Book a free demo." />
+<meta name="theme-color" content="#146b4f" />
+<link rel="preconnect" href="https://connect.facebook.net" />
+
+<!-- ================= Meta Pixel Code ================= -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2148681715750093');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" alt=""
+  src="https://www.facebook.com/tr?id=2148681715750093&ev=PageView&noscript=1" /></noscript>
+<!-- =============== End Meta Pixel Code =============== -->
+
+<style>
+  :root{
+    --accent:#146b4f;
+    --accent-dark:#0f5540;
+    --accent-darker:#0b3f30;
+    --accent-light:#e7f2ec;
+    --accent-light-2:#cfe8dc;
+    --ink-900:#1c1917;
+    --ink-800:#2b2622;
+    --ink-700:#3f3a34;
+    --ink-600:#57514a;
+    --ink-500:#716a61;
+    --ink-400:#948c81;
+    --ink-200:#ddd6cc;
+    --ink-100:#ede8e0;
+    --ink-50:#f8f5f0;
+    --white:#ffffff;
+    --radius-lg:20px;
+    --radius:14px;
+    --radius-sm:10px;
+    --shadow-sm:0 1px 2px rgba(28,25,23,.06);
+    --shadow-md:0 10px 30px rgba(28,25,23,.08);
+    --shadow-lg:0 24px 64px rgba(28,25,23,.14);
+    --maxw:1180px;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    font-family:var(--font);
+    color:var(--ink-700);
+    background:var(--white);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img,svg{display:block;max-width:100%;}
+  a{color:inherit;}
+  h1,h2,h3,h4{color:var(--ink-900);margin:0 0 .5em;line-height:1.18;font-weight:700;letter-spacing:-0.01em;}
+  p{margin:0 0 1em;}
+  ul{margin:0;padding:0;list-style:none;}
+  button{font-family:inherit;}
+
+  .container{max-width:var(--maxw);margin:0 auto;padding:0 20px;}
+  section{padding:64px 0;}
+  .section-pad-sm{padding:48px 0;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:6px;
+    font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--accent-dark);background:var(--accent-light);
+    padding:6px 14px;border-radius:999px;margin-bottom:16px;
+  }
+  .section-head{max-width:680px;margin:0 auto 40px;text-align:center;}
+  .section-head h2{font-size:clamp(26px,4.5vw,38px);}
+  .section-head p{color:var(--ink-500);font-size:17px;margin:0;}
+
+  /* Buttons */
+  .btn{
+    appearance:none;border:none;cursor:pointer;
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    font-size:16px;font-weight:600;padding:14px 26px;border-radius:999px;
+    text-decoration:none;transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+    white-space:nowrap;
+  }
+  .btn:active{transform:scale(.97);}
+  .btn-primary{background:var(--accent);color:#fff;box-shadow:0 8px 20px rgba(20,107,79,.3);}
+  .btn-primary:hover{background:var(--accent-dark);box-shadow:0 10px 26px rgba(20,107,79,.38);}
+  .btn-secondary{background:var(--white);color:var(--ink-800);border:1.5px solid var(--ink-200);}
+  .btn-secondary:hover{border-color:var(--accent);color:var(--accent-dark);}
+  .btn-ghost{background:transparent;color:var(--accent-dark);padding:10px 4px;}
+  .btn-whatsapp{background:#25D366;color:#fff;box-shadow:0 8px 20px rgba(37,211,102,.3);}
+  .btn-whatsapp:hover{background:#1ebe5a;}
+  .btn-block{width:100%;}
+  .btn-lg{padding:16px 30px;font-size:17px;}
+
+  /* Header */
+  header.site-header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.85);backdrop-filter:saturate(180%) blur(10px);
+    border-bottom:1px solid var(--ink-100);
+  }
+  .header-inner{
+    max-width:var(--maxw);margin:0 auto;padding:14px 20px;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .logo{font-size:20px;font-weight:800;color:var(--ink-900);letter-spacing:-0.02em;text-decoration:none;display:flex;align-items:center;gap:8px;}
+  .logo-dot{width:9px;height:9px;border-radius:50%;background:var(--accent);display:inline-block;}
+  .header-cta{display:none;}
+  @media(min-width:860px){.header-cta{display:inline-flex;}}
+
+  /* Hero */
+  .hero{
+    position:relative;padding:56px 0 48px;
+    background:
+      radial-gradient(900px 420px at 85% -10%, var(--accent-light) 0%, transparent 60%),
+      linear-gradient(to bottom, #fbfbff, #ffffff);
+    overflow:hidden;
+  }
+  .hero-grid{display:grid;gap:40px;align-items:center;}
+  @media(min-width:960px){.hero-grid{grid-template-columns:1.05fr .95fr;gap:48px;}}
+  .hero h1{font-size:clamp(30px,5.4vw,48px);}
+  .hero .accent-word{color:var(--accent);}
+  .hero-sub{font-size:clamp(16px,2.2vw,18.5px);color:var(--ink-500);max-width:560px;}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;}
+  .hero-trust{display:flex;align-items:center;gap:10px;margin-top:28px;color:var(--ink-500);font-size:13.5px;}
+  .hero-trust svg{flex:none;color:var(--accent);}
+
+  .hero-visual{position:relative;display:flex;justify-content:center;}
+  .device-stack{position:relative;width:100%;max-width:400px;}
+  .device-frame{
+    background:var(--ink-900);border-radius:28px;padding:10px;box-shadow:var(--shadow-lg);
+  }
+  .device-screen{
+    background:linear-gradient(160deg, var(--accent-light) 0%, #fff 55%);
+    border-radius:18px;aspect-ratio:762/1280;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:10px;color:var(--ink-400);text-align:center;padding:0;overflow:hidden;
+  }
+  .device-screen img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;}
+  .device-float{
+    position:absolute;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow-md);
+    padding:14px 16px;display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600;color:var(--ink-800);
+  }
+  .device-float.f1{top:8%;left:-14px;}
+  .device-float.f2{bottom:12%;right:-18px;}
+  .pulse-dot{width:9px;height:9px;border-radius:50%;background:#16a34a;box-shadow:0 0 0 0 rgba(22,163,74,.5);animation:pulse 2s infinite;}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(22,163,74,.45);}70%{box-shadow:0 0 0 10px rgba(22,163,74,0);}100%{box-shadow:0 0 0 0 rgba(22,163,74,0);}}
+
+  /* Cards grids */
+  .grid-3{display:grid;gap:22px;grid-template-columns:1fr;}
+  @media(min-width:720px){.grid-3{grid-template-columns:repeat(3,1fr);}}
+  .grid-6{display:grid;gap:20px;grid-template-columns:1fr;}
+  @media(min-width:640px){.grid-6{grid-template-columns:repeat(2,1fr);}}
+  @media(min-width:1000px){.grid-6{grid-template-columns:repeat(3,1fr);}}
+
+  .card{
+    background:#fff;border:1px solid var(--ink-100);border-radius:var(--radius-lg);
+    padding:28px 24px;box-shadow:var(--shadow-sm);transition:box-shadow .2s ease, transform .2s ease;
+  }
+  .card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px);}
+  .icon-badge{
+    width:50px;height:50px;border-radius:14px;background:var(--accent-light);color:var(--accent);
+    display:flex;align-items:center;justify-content:center;margin-bottom:16px;
+  }
+  .card h3{font-size:19px;margin-bottom:8px;}
+  .card p{color:var(--ink-500);font-size:15px;margin:0;}
+
+  .section-alt{background:var(--ink-50);}
+
+  /* Demo / case study */
+  .demo-wrap{display:grid;gap:40px;}
+  @media(min-width:980px){.demo-wrap{grid-template-columns:1fr 1fr;align-items:center;}}
+  .client-tag{
+    display:inline-flex;align-items:center;gap:8px;background:var(--white);border:1px solid var(--ink-100);
+    padding:8px 14px;border-radius:999px;font-size:13.5px;font-weight:600;color:var(--ink-700);margin-bottom:18px;box-shadow:var(--shadow-sm);
+  }
+  .demo-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px;}
+  .demo-note{font-size:13.5px;color:var(--ink-500);margin-top:10px;max-width:420px;}
+
+  .mockup-row{display:flex;align-items:flex-end;justify-content:center;gap:18px;position:relative;}
+  .mockup-desktop{
+    flex:1;max-width:360px;background:var(--ink-900);border-radius:14px;padding:10px 10px 0;box-shadow:var(--shadow-lg);
+  }
+  .mockup-desktop .screen{
+    background:linear-gradient(160deg,#fff 0%, var(--accent-light) 100%);
+    border-radius:8px 8px 0 0;aspect-ratio:3584/2054;display:flex;align-items:center;justify-content:center;
+    color:var(--ink-400);font-size:13px;text-align:center;padding:0;overflow:hidden;
+  }
+  .mockup-desktop .screen img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;}
+  .mockup-desktop .stand{height:14px;background:var(--ink-800);margin:0 auto;width:60px;border-radius:0 0 6px 6px;}
+  .mockup-phone{width:120px;flex:none;background:var(--ink-900);border-radius:22px;padding:7px;box-shadow:var(--shadow-lg);}
+  .mockup-phone .screen{
+    background:linear-gradient(170deg, var(--accent-light) 0%, #fff 60%);
+    border-radius:15px;aspect-ratio:762/1280;display:flex;align-items:center;justify-content:center;
+    color:var(--ink-400);font-size:11px;text-align:center;padding:0;overflow:hidden;
+  }
+  .mockup-phone .screen img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;}
+
+  .admin-preview{margin-top:56px;}
+  .admin-preview-label{font-size:13px;font-weight:700;color:var(--ink-500);text-transform:uppercase;letter-spacing:.05em;margin-bottom:18px;text-align:center;}
+  .admin-preview-row{display:grid;gap:20px;grid-template-columns:1fr;}
+  @media(min-width:760px){.admin-preview-row{grid-template-columns:1fr 1fr;}}
+  .browser-frame{background:var(--white);border:1px solid var(--ink-100);border-radius:var(--radius);box-shadow:var(--shadow-md);overflow:hidden;}
+  .browser-bar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:var(--ink-50);border-bottom:1px solid var(--ink-100);}
+  .browser-dot{width:9px;height:9px;border-radius:50%;background:var(--ink-200);}
+  .browser-frame img{width:100%;display:block;}
+  .browser-caption{padding:12px 16px;font-size:13.5px;font-weight:600;color:var(--ink-700);border-top:1px solid var(--ink-100);}
+
+  /* Accordion (features + faq) */
+  .accordion{max-width:860px;margin:0 auto;}
+  .acc-item{border:1px solid var(--ink-100);border-radius:var(--radius);margin-bottom:12px;overflow:hidden;background:#fff;}
+  .acc-trigger{
+    width:100%;background:none;border:none;text-align:left;cursor:pointer;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+    padding:20px 22px;font-size:16.5px;font-weight:700;color:var(--ink-900);
+  }
+  .acc-trigger .chev{transition:transform .25s ease;color:var(--accent);flex:none;}
+  .acc-item.is-open .acc-trigger .chev{transform:rotate(180deg);}
+  .acc-panel{max-height:0;overflow:hidden;transition:max-height .32s ease;}
+  .acc-panel-inner{padding:0 22px 22px;color:var(--ink-600);font-size:15px;}
+  .acc-panel-inner h4{font-size:14px;color:var(--ink-500);text-transform:uppercase;letter-spacing:.04em;margin:14px 0 8px;}
+  .acc-panel-inner h4:first-child{margin-top:0;}
+  .feat-list li{position:relative;padding-left:22px;margin-bottom:9px;}
+  .feat-list li::before{
+    content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%;background:var(--accent-light-2);
+    box-shadow:inset 0 0 0 2px var(--accent);
+  }
+
+  /* Lead form */
+  .form-section{background:linear-gradient(180deg, var(--ink-50), #fff 70%);}
+  .form-wrap{max-width:640px;margin:0 auto;background:#fff;border:1px solid var(--ink-100);border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);padding:32px 24px;}
+  @media(min-width:640px){.form-wrap{padding:40px;}}
+  .form-grid{display:grid;gap:16px;grid-template-columns:1fr;}
+  @media(min-width:600px){.form-grid{grid-template-columns:1fr 1fr;}
+    .form-grid .full{grid-column:1 / -1;}}
+  .field label{display:block;font-size:13.5px;font-weight:600;color:var(--ink-700);margin-bottom:6px;}
+  .field input[type="text"],
+  .field input[type="email"],
+  .field input[type="tel"],
+  .field select{
+    width:100%;padding:13px 14px;border-radius:var(--radius-sm);border:1.5px solid var(--ink-200);
+    font-size:15px;color:var(--ink-900);background:#fff;transition:border-color .15s ease, box-shadow .15s ease;
+    appearance:none;
+  }
+  .field select{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%23948c81' stroke-width='1.8'><path d='M5 7.5L10 12.5L15 7.5'/></svg>");background-repeat:no-repeat;background-position:right 12px center;background-size:16px;padding-right:36px;}
+  .field input:focus,.field select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 4px var(--accent-light);}
+  .field.has-error input,.field.has-error select{border-color:#dc2626;}
+  .error-msg{display:none;color:#dc2626;font-size:12.5px;margin-top:5px;}
+  .field.has-error .error-msg{display:block;}
+  .phone-input{display:flex;align-items:stretch;}
+  .phone-prefix{display:flex;align-items:center;padding:0 12px;border:1.5px solid var(--ink-200);border-right:none;border-radius:var(--radius-sm) 0 0 var(--radius-sm);background:var(--ink-50);color:var(--ink-600);font-size:15px;font-weight:600;}
+  .phone-input input{border-radius:0 var(--radius-sm) var(--radius-sm) 0;}
+  .form-submit{margin-top:22px;}
+  .form-foot-note{font-size:12.5px;color:var(--ink-400);text-align:center;margin-top:14px;}
+
+  .thankyou{display:none;text-align:center;padding:12px 0 4px;}
+  .thankyou.show{display:block;}
+  .thankyou .icon-badge{margin:0 auto 18px;width:64px;height:64px;border-radius:50%;background:#dcfce7;color:#16a34a;}
+  .thankyou h3{font-size:22px;}
+  .thankyou p{color:var(--ink-500);}
+  .form-error-banner{display:none;background:#fef2f2;border:1px solid #fecaca;color:#b91c1c;padding:12px 16px;border-radius:var(--radius-sm);font-size:13.5px;margin-bottom:16px;}
+  .form-error-banner.show{display:block;}
+
+  /* FAQ */
+  .faq-accordion{max-width:760px;}
+
+  /* Footer */
+  footer{background:var(--ink-900);color:var(--ink-200);padding:40px 0 28px;}
+  .footer-inner{display:flex;flex-direction:column;gap:18px;align-items:center;text-align:center;}
+  @media(min-width:720px){.footer-inner{flex-direction:row;justify-content:space-between;text-align:left;}}
+  .footer-links{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;font-size:13.5px;}
+  .footer-links a{text-decoration:none;color:#cfc6b8;}
+  .footer-links a:hover{color:#fff;}
+  .footer-contact{display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center;}
+  .footer-copy{font-size:12.5px;color:#948c81;margin-top:10px;width:100%;text-align:center;}
+
+  /* Sticky mobile CTA */
+  .mobile-sticky-cta{
+    position:fixed;left:0;right:0;bottom:0;z-index:60;
+    background:#fff;border-top:1px solid var(--ink-100);box-shadow:0 -8px 24px rgba(28,25,23,.08);
+    padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+    transform:translateY(110%);transition:transform .3s ease;
+  }
+  .mobile-sticky-cta.show{transform:translateY(0);}
+  @media(min-width:860px){.mobile-sticky-cta{display:none;}}
+
+  /* Reveal animation */
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in-view{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .reveal{opacity:1;transform:none;transition:none;}
+    *{animation-duration:0.001ms !important;transition-duration:0.001ms !important;}
+  }
+
+  /* Utilities */
+  .text-center{text-align:center;}
+  .mt-0{margin-top:0;}
+  @media(max-width:859px){body{padding-bottom:0;}}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#hero" class="logo"><span class="logo-dot"></span>Modax</a>
+    <a href="#demo-form" class="btn btn-primary header-cta">Book a Free Demo</a>
+  </div>
+</header>
+
+<!-- ============ 1. HERO ============ -->
+<section class="hero" id="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">For established businesses, not marketplaces</span>
+      <h1>Your own <span class="accent-word">premium online store</span> — website, admin panel and owner control, all in one.</h1>
+      <p class="hero-sub">Built for your brand. Payments, shipping and returns handled automatically.</p>
+      <div class="hero-actions">
+        <a href="#demo-form" class="btn btn-primary btn-lg">Book a Free Demo</a>
+        <a href="https://nrd-customer-fed.vercel.app/" target="_blank" rel="noopener" class="btn btn-secondary btn-lg">View Live Store</a>
+      </div>
+      <div class="hero-trust">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+        <span>You own the brand, the data and the customer relationship — end to end.</span>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="device-stack">
+        <div class="device-frame">
+          <div class="device-screen">
+            <img src="https://modax-s3.s3.ap-south-1.amazonaws.com/DEV/landing/638de390-3179-45dc-9c67-5956ca8f7cb7.jpeg" alt="Paramparaa Silks store on mobile" loading="lazy" />
+          </div>
+        </div>
+        <div class="device-float f1"><span class="pulse-dot"></span> New order received</div>
+        <div class="device-float f2">✓ Payment confirmed</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. THREE PARTS ============ -->
+<section id="parts">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">One platform, three parts</span>
+      <h2>Everything your store needs, built in</h2>
+      <p>A customer-facing site, a daily operations panel and full owner oversight — working together from day one.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card reveal">
+        <div class="icon-badge">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3>Customer Website</h3>
+        <p>A fast, beautiful store your customers shop on, from phone or desktop.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon-badge">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
+        </div>
+        <h3>Store Admin Panel</h3>
+        <p>Run daily operations — products, stock, orders and returns.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon-badge">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6l7-3z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg>
+        </div>
+        <h3>Owner Control Panel</h3>
+        <p>Full control — categories, product approval, shipping and refunds.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. HIGHLIGHTS ============ -->
+<section class="section-alt" id="highlights">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Why owners choose Modax</span>
+      <h2>Built to run itself, so you don't have to</h2>
+      <p>The operational heavy-lifting — payments, logistics, inventory and trust — comes ready-made.</p>
+    </div>
+    <div class="grid-6">
+      <div class="card reveal">
+        <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
+        <h3>Payments ready</h3>
+        <p>Razorpay with UPI, cards, net banking, plus Cash on Delivery.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="7" width="15" height="10" rx="1.5"/><path d="M16 10h4l3 3v4h-7z"/><circle cx="6" cy="19" r="1.6"/><circle cx="18" cy="19" r="1.6"/></svg></div>
+        <h3>Shipping on autopilot</h3>
+        <p>Automatic courier booking, pickup, tracking and shipping labels via Shiprocket.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h3l2-2h6l2 2h3v12H4z"/><circle cx="12" cy="13" r="3.2"/><path d="M8 4.5l1-1.5"/></svg></div>
+        <h3>AI product listing</h3>
+        <p>Upload a photo and AI fills in product details.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8M12 13v8"/></svg></div>
+        <h3>Size-wise inventory</h3>
+        <p>Stock tracked for every size, with low-stock and out-of-stock alerts.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0115-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 01-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></div>
+        <h3>Easy returns</h3>
+        <p>Customers can cancel or return orders themselves; you manage it all in one place.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L12 16l-5.6 3.1 1.4-6.3-4.8-4.3 6.4-.6z"/></svg></div>
+        <h3>Customer trust built in</h3>
+        <p>Ratings and reviews with photos, product Q&amp;A, pincode delivery check, OTP login.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. LIVE DEMO / CASE STUDY ============ -->
+<section id="live-demo">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Live demo</span>
+      <h2>Try a fully working store before you decide</h2>
+      <p>No mockups, no concepts — explore a fully working demo store.</p>
+    </div>
+    <div class="demo-wrap">
+      <div class="reveal">
+        <span class="client-tag">🪔 Paramparaa Silks, Bengaluru — premium silk wedding wear</span>
+        <p style="color:var(--ink-500);font-size:15.5px;max-width:460px;">Paramparaa Silks is a demo store we built on Modax to show what your store could look like — browse products, search, add to cart and go through checkout yourself.</p>
+        <div class="demo-actions">
+          <a href="https://nrd-customer-fed.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary">Explore the Demo Store</a>
+          <a href="#demo-form" class="btn btn-secondary">See the Admin Panel</a>
+        </div>
+        <p class="demo-note">On your demo call, we walk you through the admin and owner panels with sample orders, stock and shipping in action.</p>
+      </div>
+
+      <div class="reveal">
+        <div class="mockup-row">
+          <div class="mockup-desktop">
+            <div class="screen"><img src="https://modax-s3.s3.ap-south-1.amazonaws.com/DEV/landing/389b2af3-ef7a-460b-b0a2-b45ea9197d33.png" alt="Paramparaa Silks desktop store" loading="lazy" /></div>
+            <div class="stand"></div>
+          </div>
+          <div class="mockup-phone">
+            <div class="screen"><img src="https://modax-s3.s3.ap-south-1.amazonaws.com/DEV/landing/638de390-3179-45dc-9c67-5956ca8f7cb7.jpeg" alt="Paramparaa Silks mobile store" loading="lazy" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="admin-preview reveal">
+      <p class="admin-preview-label">A peek at the Store Admin Panel</p>
+      <div class="admin-preview-row">
+        <div class="browser-frame">
+          <div class="browser-bar"><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span></div>
+          <img src="https://modax-s3.s3.ap-south-1.amazonaws.com/DEV/landing/c0228362-c722-4794-9173-788ba8e2b5a4.png" alt="Store Admin Panel — product catalogue" loading="lazy" />
+          <div class="browser-caption">Products — publish, price and discount in bulk</div>
+        </div>
+        <div class="browser-frame">
+          <div class="browser-bar"><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span></div>
+          <img src="https://modax-s3.s3.ap-south-1.amazonaws.com/DEV/landing/410ad794-fa2c-4330-91f3-1a541b0c5f27.png" alt="Store Admin Panel — size-wise inventory" loading="lazy" />
+          <div class="browser-caption">Inventory — stock tracked down to the size</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. FULL FEATURE LIST ============ -->
+<section class="section-alt" id="features">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Under the hood</span>
+      <h2>The full feature list</h2>
+      <p>Tap a panel to see exactly what's included.</p>
+    </div>
+    <div class="accordion">
+      <div class="acc-item">
+        <button class="acc-trigger" data-accordion-trigger aria-expanded="false">
+          Customer Website
+          <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="acc-panel">
+          <div class="acc-panel-inner">
+            <ul class="feat-list">
+              <li>Home page with category banners and handpicked collections; endless scrolling product feed</li>
+              <li>Search with suggestions, autocomplete and recent searches</li>
+              <li>Filters by price range and discount; sort by newest or price</li>
+              <li>Product page: photo gallery, size selection with size chart, stock per size, ratings and reviews with customer photos, product Q&amp;A, delivery check by pincode or location, similar products, Add to Cart or Buy Now</li>
+              <li>Wishlist; cart with quantity changes and coupon codes; quick Buy Now checkout</li>
+              <li>Saved addresses with map location picker</li>
+              <li>Razorpay payments (UPI, cards, net banking) plus Cash on Delivery; order confirmation page</li>
+              <li>Order history by status; order tracking timeline; cancel or return orders; rate and review delivered products</li>
+              <li>OTP sign-up and login, password reset; profile and saved details</li>
+              <li>Customer support form; About, Privacy, Terms, Shipping and Return policy pages</li>
+              <li>Mobile bottom menu and desktop footer with social links</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-trigger" data-accordion-trigger aria-expanded="false">
+          Store Admin Panel
+          <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="acc-panel">
+          <div class="acc-panel-inner">
+            <ul class="feat-list">
+              <li>3-step product wizard: choose category, upload a photo for AI to fill details (or enter manually), review</li>
+              <li>Reorder images, set specifications, price per size, copy one price to all sizes</li>
+              <li>Publish, hold or discontinue products individually or in bulk; search and filter by status</li>
+              <li>Stock tracked for every size; out-of-stock and low-stock tabs with live counts; edit stock directly; add missing sizes</li>
+              <li>Orders by stage (in progress, returns, delivered, cancelled); bulk updates or reject single orders</li>
+              <li>Automatic courier booking, pickup and tracking via Shiprocket; downloadable shipping labels</li>
+              <li>Full order details with timeline; return list with reasons and customer comments</li>
+              <li>Secure login for you and your staff; raise and track support queries</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-trigger" data-accordion-trigger aria-expanded="false">
+          Owner Control Panel
+          <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="acc-panel">
+          <div class="acc-panel-inner">
+            <ul class="feat-list">
+              <li>Create and organise categories and sub-categories with search tags</li>
+              <li>Define size charts and which sizes apply to each category</li>
+              <li>Approve or reject products (with reason) before they go live</li>
+              <li>Search every order; shipment tracking updated automatically from Shiprocket with full activity history</li>
+              <li>View all refunds with customer bank/UPI details and update refund status</li>
+              <li>Owner-only secure login</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. LEAD FORM ============ -->
+<section class="form-section section-alt" id="demo-form">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Let's talk</span>
+      <h2>Book your free demo</h2>
+      <p>Tell us a little about your business — we'll show you the exact store, admin and owner panels on a call.</p>
+    </div>
+
+    <div class="form-wrap reveal">
+      <div id="formErrorBanner" class="form-error-banner">Something went wrong sending your details. Please try again, or chat with us on WhatsApp below.</div>
+
+      <form id="demoForm" novalidate>
+        <div class="form-grid">
+          <div class="field full">
+            <label for="full_name">Full name *</label>
+            <input type="text" id="full_name" name="full_name" autocomplete="name" required />
+            <div class="error-msg">Please enter your full name.</div>
+          </div>
+
+          <div class="field full">
+            <label for="business_name">Business name *</label>
+            <input type="text" id="business_name" name="business_name" autocomplete="organization" required />
+            <div class="error-msg">Please enter your business name.</div>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone / WhatsApp number *</label>
+            <div class="phone-input">
+              <span class="phone-prefix">+91</span>
+              <input type="tel" id="phone" name="phone" inputmode="numeric" maxlength="10" placeholder="98765 43210" autocomplete="tel-national" required />
+            </div>
+            <div class="error-msg">Enter a valid 10-digit Indian mobile number.</div>
+          </div>
+
+          <div class="field">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" autocomplete="email" required />
+            <div class="error-msg">Please enter a valid email address.</div>
+          </div>
+
+          <div class="field">
+            <label for="business_type">Type of business *</label>
+            <select id="business_type" name="business_type" required>
+              <option value="">Select...</option>
+              <option value="B2B">B2B</option>
+              <option value="D2C">D2C</option>
+              <option value="B2C / Retail">B2C / Retail</option>
+              <option value="Other">Other</option>
+            </select>
+            <div class="error-msg">Please select your business type.</div>
+          </div>
+
+          <div class="field">
+            <label for="what_you_sell">What do you sell?</label>
+            <input type="text" id="what_you_sell" name="what_you_sell" placeholder="e.g. Silk sarees" />
+          </div>
+
+          <div class="field">
+            <label for="monthly_revenue">Current monthly revenue *</label>
+            <select id="monthly_revenue" name="monthly_revenue" required>
+              <option value="">Select...</option>
+              <option value="Under ₹5L">Under ₹5L</option>
+              <option value="₹5–25L">₹5–25L</option>
+              <option value="₹25L–1Cr">₹25L–1Cr</option>
+              <option value="Above ₹1Cr">Above ₹1Cr</option>
+            </select>
+            <div class="error-msg">Please select your monthly revenue range.</div>
+          </div>
+
+          <div class="field">
+            <label for="launch_timeline">When do you want to launch? *</label>
+            <select id="launch_timeline" name="launch_timeline" required>
+              <option value="">Select...</option>
+              <option value="Immediately">Immediately</option>
+              <option value="Within 1 month">Within 1 month</option>
+              <option value="1–3 months">1–3 months</option>
+              <option value="Just exploring">Just exploring</option>
+            </select>
+            <div class="error-msg">Please select a launch timeline.</div>
+          </div>
+        </div>
+
+        <!-- Hidden tracking fields -->
+        <input type="hidden" name="utm_source" id="utm_source" value="" />
+        <input type="hidden" name="utm_campaign" id="utm_campaign" value="" />
+        <input type="hidden" name="utm_content" id="utm_content" value="" />
+        <input type="hidden" name="timestamp" id="timestamp" value="" />
+
+        <div class="form-submit">
+          <button type="submit" id="submitBtn" class="btn btn-primary btn-block btn-lg">Get My Free Demo</button>
+        </div>
+        <p class="form-foot-note">We never sell your details. One quick call, no pressure. Read our <a href="https://modax.in/privacy-policy" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Privacy Policy</a>.</p>
+      </form>
+
+      <div id="thankYou" class="thankyou">
+        <div class="icon-badge">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <h3>Thanks — your request is in!</h3>
+        <p>We'll reach out within one business day to schedule your demo. Prefer to talk now?</p>
+        <a id="whatsappCta" href="#" target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.6-.8-1.8-.9-.2-.1-.4-.1-.6.1-.2.2-.7.9-.8 1-.2.2-.3.2-.5.1-1.5-.7-2.5-1.3-3.5-3-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.2-1.2-.1-.2-.2-.2-.5-.3z"/><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.5A10 10 0 1012 2z"/></svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. FAQ ============ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Questions</span>
+      <h2>Frequently asked questions</h2>
+    </div>
+    <div class="accordion faq-accordion">
+      <div class="acc-item">
+        <button class="acc-trigger" data-accordion-trigger aria-expanded="false">
+          How long does setup take?
+          <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="acc-panel"><div class="acc-panel-inner"><p style="margin:0;">Most stores go live within 2–3 weeks of your demo call, depending on your catalogue size and how much customisation you need.</p></div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-trigger" data-accordion-trigger aria-expanded="false">
+          What does it cost?
+          <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="acc-panel"><div class="acc-panel-inner"><p style="margin:0;">Pricing depends on your catalogue size and customisation — we share a clear quote after the demo.</p></div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-trigger" data-accordion-trigger aria-expanded="false">
+          Can I use my own domain and branding?
+          <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="acc-panel"><div class="acc-panel-inner"><p style="margin:0;">Yes. Your store runs on your own domain, with your own branding throughout.</p></div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-trigger" data-accordion-trigger aria-expanded="false">
+          Do I need technical knowledge?
+          <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="acc-panel"><div class="acc-panel-inner"><p style="margin:0;">No — the admin panel is built for shop owners and staff, not developers.</p></div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-trigger" data-accordion-trigger aria-expanded="false">
+          What about payments and shipping?
+          <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="acc-panel"><div class="acc-panel-inner"><p style="margin:0;">Razorpay and Shiprocket come integrated, so payments and shipping work out of the box.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. FOOTER ============ -->
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-links">
+      <a href="https://modax.in/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
+      <a href="tel:+919164579092">+91 91645 79092</a>
+    </div>
+    <div class="footer-contact">
+      <a href="https://wa.me/919164579092" target="_blank" rel="noopener" class="btn btn-whatsapp">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.6-.8-1.8-.9-.2-.1-.4-.1-.6.1-.2.2-.7.9-.8 1-.2.2-.3.2-.5.1-1.5-.7-2.5-1.3-3.5-3-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.2-1.2-.1-.2-.2-.2-.5-.3z"/><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.5A10 10 0 1012 2z"/></svg>
+        WhatsApp Us
+      </a>
+    </div>
+    <p class="footer-copy">© <span id="year"></span> Modax. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Sticky mobile CTA -->
+<div class="mobile-sticky-cta" id="stickyCta">
+  <a href="#demo-form" class="btn btn-primary btn-block">Book a Free Demo</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* =========================================================
+     CONFIG
+     ========================================================= */
+  var FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbwiwytL9fvKGP93G8c87MituXcqa18cYUmjldCgM2SvtwcTvjln8u0X2G4di1QH5Xnl5w/exec";
+  var WHATSAPP_NUMBER = "919164579092";
+
+  /* =========================================================
+     Footer year
+     ========================================================= */
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  /* =========================================================
+     UTM capture into hidden fields
+     ========================================================= */
+  var params = new URLSearchParams(window.location.search);
+  ["utm_source", "utm_campaign", "utm_content"].forEach(function (key) {
+    var el = document.getElementById(key);
+    if (el) el.value = params.get(key) || "";
+  });
+
+  /* =========================================================
+     Generic accordion (feature list + FAQ)
+     ========================================================= */
+  document.querySelectorAll("[data-accordion-trigger]").forEach(function (trigger) {
+    trigger.addEventListener("click", function () {
+      var item = trigger.closest(".acc-item");
+      var panel = item.querySelector(".acc-panel");
+      var isOpen = item.classList.contains("is-open");
+
+      item.classList.toggle("is-open", !isOpen);
+      trigger.setAttribute("aria-expanded", String(!isOpen));
+      panel.style.maxHeight = isOpen ? null : panel.scrollHeight + "px";
+    });
+  });
+
+  /* =========================================================
+     Scroll reveal
+     ========================================================= */
+  if ("IntersectionObserver" in window) {
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach(function (el) { revealObserver.observe(el); });
+  } else {
+    document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("in-view"); });
+  }
+
+  /* =========================================================
+     Sticky mobile CTA visibility
+     ========================================================= */
+  var stickyCta = document.getElementById("stickyCta");
+  var heroEl = document.getElementById("hero");
+  var formEl = document.getElementById("demo-form");
+  if ("IntersectionObserver" in window && stickyCta) {
+    var heroVisible = true;
+    var formVisible = false;
+
+    function syncSticky() {
+      stickyCta.classList.toggle("show", !heroVisible && !formVisible);
+    }
+
+    new IntersectionObserver(function (entries) {
+      heroVisible = entries[0].isIntersecting;
+      syncSticky();
+    }, { threshold: 0 }).observe(heroEl);
+
+    new IntersectionObserver(function (entries) {
+      formVisible = entries[0].isIntersecting;
+      syncSticky();
+    }, { threshold: 0.15 }).observe(formEl);
+  }
+
+  /* =========================================================
+     Lead form: validation + submission
+     ========================================================= */
+  var form = document.getElementById("demoForm");
+  var submitBtn = document.getElementById("submitBtn");
+  var thankYou = document.getElementById("thankYou");
+  var errorBanner = document.getElementById("formErrorBanner");
+  var whatsappCta = document.getElementById("whatsappCta");
+  var isSubmitting = false;
+
+  var PHONE_RE = /^[6-9]\d{9}$/;
+  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  function setFieldError(fieldEl, hasError) {
+    var wrapper = fieldEl.closest(".field");
+    wrapper.classList.toggle("has-error", hasError);
+  }
+
+  // Clear a field's error state as soon as the user edits it, rather than
+  // waiting for the next submit attempt.
+  form.querySelectorAll(".field input, .field select").forEach(function (el) {
+    el.addEventListener("input", function () { setFieldError(el, false); });
+    el.addEventListener("change", function () { setFieldError(el, false); });
+  });
+
+  function validateForm(data) {
+    var errors = {};
+    if (!data.full_name.trim()) errors.full_name = true;
+    if (!data.business_name.trim()) errors.business_name = true;
+    if (!PHONE_RE.test(data.phone.trim())) errors.phone = true;
+    if (!EMAIL_RE.test(data.email.trim())) errors.email = true;
+    if (!data.business_type) errors.business_type = true;
+    if (!data.monthly_revenue) errors.monthly_revenue = true;
+    if (!data.launch_timeline) errors.launch_timeline = true;
+    return errors;
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (isSubmitting) return;
+
+    errorBanner.classList.remove("show");
+
+    var fields = {
+      full_name: form.full_name,
+      business_name: form.business_name,
+      phone: form.phone,
+      email: form.email,
+      business_type: form.business_type,
+      what_you_sell: form.what_you_sell,
+      monthly_revenue: form.monthly_revenue,
+      launch_timeline: form.launch_timeline
+    };
+
+    var data = {};
+    Object.keys(fields).forEach(function (key) { data[key] = fields[key].value; });
+
+    var errors = validateForm(data);
+    var errorKeys = Object.keys(errors);
+
+    Object.keys(fields).forEach(function (key) {
+      setFieldError(fields[key], !!errors[key]);
+    });
+
+    if (errorKeys.length > 0) {
+      fields[errorKeys[0]].focus();
+      return;
+    }
+
+    isSubmitting = true;
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
+
+    document.getElementById("timestamp").value = new Date().toISOString();
+
+    var payload = {
+      full_name: data.full_name.trim(),
+      business_name: data.business_name.trim(),
+      phone: "+91" + data.phone.trim(),
+      email: data.email.trim(),
+      business_type: data.business_type,
+      what_you_sell: data.what_you_sell.trim(),
+      monthly_revenue: data.monthly_revenue,
+      launch_timeline: data.launch_timeline,
+      utm_source: document.getElementById("utm_source").value,
+      utm_campaign: document.getElementById("utm_campaign").value,
+      utm_content: document.getElementById("utm_content").value,
+      timestamp: document.getElementById("timestamp").value
+    };
+
+    // mode: "no-cors" + text/plain avoids a CORS preflight against the Apps
+    // Script web app (Apps Script does not return CORS headers by default).
+    // The response is opaque, so a resolved fetch is our best signal of success;
+    // a rejected fetch means the request never left the browser (offline/DNS/etc).
+    fetch(FORM_ENDPOINT, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify(payload)
+    })
+      .then(function () { onSubmitSuccess(payload); })
+      .catch(function () { onSubmitFailure(); });
+  });
+
+  function onSubmitSuccess(payload) {
+    form.style.display = "none";
+    thankYou.classList.add("show");
+
+    var waText = encodeURIComponent(
+      "Hi, I'm " + payload.full_name + " from " + payload.business_name + ". I just booked a free Modax demo and would like to chat."
+    );
+    whatsappCta.href = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + waText;
+
+    // Fire the Meta Pixel Lead event only after a successful submission.
+    if (window.fbq) {
+      fbq("track", "Lead", {
+        content_name: "Free Demo Request",
+        business_type: payload.business_type
+      });
+    }
+
+    // --- Meta Conversions API (server-side, optional but recommended) ---
+    // To improve match quality and recover events blocked client-side, send
+    // this same "Lead" event from your backend (or the Apps Script handler
+    // above) using the Conversions API, sharing an event_id with the fbq()
+    // call above so Meta can de-duplicate the two signals. See Meta's
+    // Conversions API documentation for the request format.
+
+    isSubmitting = false;
+  }
+
+  function onSubmitFailure() {
+    errorBanner.classList.add("show");
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Get My Free Demo";
+    isSubmitting = false;
+  }
+})();
+</script>
+
+</body>
+</html>

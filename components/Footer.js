@@ -75,6 +75,8 @@ export default function Footer() {
         <div className="border-t border-ink-800 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-ink-500 text-sm">
             © 2026 Modax. All rights reserved.
+            {' · '}
+            <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
           </p>
           <p className="text-ink-500 text-sm">
             Designed &amp; built in-house by Modax.
