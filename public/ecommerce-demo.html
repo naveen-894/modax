@@ -324,7 +324,7 @@ fbq('track', 'PageView');
       <p class="hero-sub">Built for your brand. Payments, shipping and returns handled automatically.</p>
       <div class="hero-actions">
         <a href="#demo-form" class="btn btn-primary btn-lg">Book a Free Demo</a>
-        <a href="https://nrd-customer-fed.vercel.app/" target="_blank" rel="noopener" class="btn btn-secondary btn-lg">View Live Store</a>
+        <a href="https://nrd-customer-fed.vercel.app/" target="_blank" rel="noopener" class="btn btn-secondary btn-lg" id="viewLiveStoreBtn">View Live Store</a>
       </div>
       <div class="hero-trust">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
@@ -741,6 +741,19 @@ fbq('track', 'PageView');
      Footer year
      ========================================================= */
   document.getElementById("year").textContent = new Date().getFullYear();
+
+  /* =========================================================
+     View Live Store: open in same tab on mobile, new tab on desktop
+     ========================================================= */
+  var viewLiveStoreBtn = document.getElementById("viewLiveStoreBtn");
+  if (viewLiveStoreBtn) {
+    var mobileQuery = window.matchMedia("(max-width: 859px)");
+    var syncLiveStoreTarget = function () {
+      viewLiveStoreBtn.target = mobileQuery.matches ? "_self" : "_blank";
+    };
+    syncLiveStoreTarget();
+    mobileQuery.addEventListener("change", syncLiveStoreTarget);
+  }
 
   /* =========================================================
      UTM capture into hidden fields
