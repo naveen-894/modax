@@ -1,28 +1,29 @@
 import { UploadCloud, FileText, BarChart3, MessageCircle } from 'lucide-react'
+import { SCREENR_URL } from '../lib/constants'
 
 export default function AiResumeMatcherHowItWorks() {
   const steps = [
     {
       step: "01",
-      title: "Add Resume & Job Description",
+      title: "Add resume & job description",
       description: "Paste the text directly, or upload a PDF, Word, or plain text file. Drag-and-drop is supported too.",
       icon: <UploadCloud className="w-8 h-8 text-primary-600" />
     },
     {
       step: "02",
-      title: "AI Reads & Parses Both",
+      title: "AI reads & parses both",
       description: "The model extracts skills, experience, education and requirements from each document in parallel.",
       icon: <FileText className="w-8 h-8 text-primary-600" />
     },
     {
       step: "03",
-      title: "Compares Skills & Scores the Match",
+      title: "Compares skills & scores the match",
       description: "Required skills are checked against the candidate's background, producing a 0-100% score with reasoning.",
       icon: <BarChart3 className="w-8 h-8 text-primary-600" />
     },
     {
       step: "04",
-      title: "Review & Ask Follow-ups",
+      title: "Review & ask follow-ups",
       description: "See the skills breakdown, read the explanation, and chat about specifics. Every match is saved for later.",
       icon: <MessageCircle className="w-8 h-8 text-primary-600" />
     }
@@ -33,7 +34,7 @@ export default function AiResumeMatcherHowItWorks() {
       <div className="container-max">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 mb-4">
-            How Screenr Works
+            How Screenr works
           </h2>
           <p className="text-lg sm:text-xl text-ink-500 max-w-3xl mx-auto">
             From upload to a clear, explainable match score in about 15 seconds.
@@ -85,12 +86,12 @@ export default function AiResumeMatcherHowItWorks() {
 
         <div className="text-center mt-16">
           <h3 className="text-2xl font-bold text-ink-900 mb-4">
-            Ready to Screen Smarter?
+            Ready to screen smarter?
           </h3>
           <p className="text-ink-500 mb-8 max-w-2xl mx-auto">
             Try a full match for free — no account needed to get your first result.
           </p>
-          <a href="https://ai-resume-matcher-fed.vercel.app/" target="_blank" rel="noopener noreferrer" className="btn-primary text-lg px-8 py-4">
+          <a href={SCREENR_URL} target="_blank" rel="noopener noreferrer" className="btn-primary text-lg px-8 py-4">
             Try it free
           </a>
           <p className="text-sm text-ink-500 mt-4">

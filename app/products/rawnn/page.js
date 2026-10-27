@@ -8,12 +8,12 @@ import Footer from '../../../components/Footer'
 
 export const metadata = {
   metadataBase: new URL('https://modax.in'),
-  title: 'Rawnn - Complete E-commerce Platform for Fashion Brands | Modax',
-  description: 'Launch your fashion brand\'s online store with Rawnn, our complete e-commerce platform. Built for D2C fashion brands with inventory management, payment processing, and analytics. Setup in 1 week.',
-  keywords: ['rawnn', 'e-commerce platform', 'fashion e-commerce', 'd2c platform', 'online store', 'fashion store platform', 'e-commerce software'],
+  title: 'Rawnn — Own Your Ecommerce Platform, Pay Once | Book a Free Demo',
+  description: 'Rawnn is a complete, fully owned ecommerce platform for your brand — a customer website, store admin panel and owner control panel, on your own servers. One-time cost, no monthly fees, no commission. Book a free demo.',
+  keywords: ['rawnn', 'e-commerce platform', 'premium online store', 'd2c platform', 'online store', 'store admin panel', 'e-commerce software', 'own your ecommerce platform'],
   openGraph: {
-    title: 'Rawnn - Complete E-commerce Platform for Fashion Brands',
-    description: 'Launch your fashion brand\'s online store in 1 week with Rawnn, our complete e-commerce platform built for D2C fashion brands.',
+    title: 'Rawnn — Own Your Ecommerce Platform, Pay Once | Book a Free Demo',
+    description: 'Rawnn is a complete, fully owned ecommerce platform for your brand — a customer website, store admin panel and owner control panel, on your own servers. One-time cost, no monthly fees, no commission.',
     url: '/products/rawnn',
     type: 'website',
   },

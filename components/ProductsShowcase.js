@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { CheckCircle2 } from 'lucide-react'
 import Reveal from './motion/Reveal'
+import { RAWNN_STARTING_PRICE, SCREENR_URL } from '../lib/constants'
 
 export default function ProductsShowcase() {
   const products = [
@@ -27,42 +28,52 @@ export default function ProductsShowcase() {
         "Ask follow-up questions about any match"
       ],
       badges: ["Lead Product", "AI Powered", "Hiring & Recruitment"],
+      // TODO: no Screenr product screenshot exists in the codebase yet — add one
+      // (e.g. the match-score result screen) and set `screenshot` below, matching
+      // the Rawnn card's admin panel screenshot.
+      screenshot: null,
       cta: {
         primary: "Try it free",
-        secondary: "View Product Details",
-        primaryLink: "https://ai-resume-matcher-fed.vercel.app/",
+        secondary: "View details",
+        primaryLink: SCREENR_URL,
         secondaryLink: "/products/ai-resume-matcher"
-      }
+      },
+      footerNote: "Screenr is a product built and owned by Modax. We maintain full control over development, security, and feature roadmap."
     },
     {
       id: "rawnn",
       name: "Rawnn",
-      tagline: "AI-Assisted Commerce Platform for Fashion Brands",
-      description: "A two-sided commerce platform for fashion brands: an AI-assisted retailer dashboard that drafts product titles, descriptions and sizes, paired with a location-aware customer app that surfaces nearby stores to shoppers.",
+      tagline: "Own Your Ecommerce Platform, Pay Once",
+      description: "A complete, fully owned e-commerce platform for established businesses: a customer website, store admin panel and owner control panel, all in one — on your own servers, with no monthly fees and no commission on your sales.",
       features: [
-        "AI-drafted product titles, descriptions & sizes",
-        "Per-size inventory with delivery & pickup toggles",
-        "Razorpay payments & settlement dashboard",
+        "One-time cost — no subscription, no commission",
+        "Your own servers, your own domain, your data",
+        "AI-drafted product titles, descriptions & sizes/variants",
+        "Variant-level inventory (size, colour, weight, pack) with low-stock alerts",
+        "Razorpay payments (UPI, cards, net banking, COD)",
+        "Shipping on autopilot via Shiprocket",
         "Returns & exchange handling",
-        "In-app customer-retailer chat",
-        "Ratings & moderated reviews",
-        "Location-based discovery",
-        "Phone & OTP login"
+        "Ratings, reviews & product Q&A"
       ],
       benefits: [
-        "List a product in minutes with AI-drafted titles, descriptions & sizes",
-        "Get discovered by nearby shoppers through the location-aware customer app",
-        "Every listing passes an 8-stage approval pipeline before going live",
-        "Payments and payouts handled through Razorpay, end to end",
-        "Passwordless phone + OTP login across both apps"
+        "Pay once and keep the platform — no recurring fees or commission from Modax, ever",
+        "Launch your own branded store, not a listing on a marketplace",
+        "List a product in minutes with AI-drafted titles, descriptions & sizes/variants",
+        "Payments and shipping handled end to end through Razorpay & Shiprocket",
+        "Live in 2–6 weeks, built and set up for your brand"
       ],
-      badges: ["AI-Assisted Commerce", "Fashion Focused", "Built by Modax"],
+      badges: ["Own It, Don't Rent It", "AI-Assisted Listings", "Built by Modax"],
+      screenshot: {
+        src: "https://modax-s3.s3.ap-south-1.amazonaws.com/DEV/landing/c0228362-c722-4794-9173-788ba8e2b5a4.png",
+        alt: "Rawnn store admin panel — product catalogue",
+      },
       cta: {
-        primary: "Learn more",
-        secondary: "Request a demo",
-        primaryLink: "/products/rawnn",
-        secondaryLink: "/products/rawnn#demo"
-      }
+        primary: "Request a demo",
+        secondary: "View details",
+        primaryLink: "/products/rawnn#demo",
+        secondaryLink: "/products/rawnn"
+      },
+      footerNote: `Rawnn is built by Modax. You get a full source code licence for your business, running on your own servers; Modax provides updates and support under a separate plan. ${RAWNN_STARTING_PRICE}.`
     }
   ]
 
@@ -71,11 +82,10 @@ export default function ProductsShowcase() {
       <div className="container-max">
         <Reveal className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 mb-4">
-            AI products built by Modax
+            Products built by Modax
           </h2>
           <p className="text-lg sm:text-xl text-ink-500 max-w-3xl mx-auto">
-            Purpose-built AI products that solve real business problems. Each product is developed,
-            owned, and maintained by Modax to ensure reliability and continuous improvement.
+            Purpose-built products that solve real business problems — from AI tools to a fully owned ecommerce platform.
           </p>
         </Reveal>
 
@@ -103,6 +113,21 @@ export default function ProductsShowcase() {
 
               {/* Product Content */}
               <div className="p-8 md:p-12">
+                {product.screenshot && (
+                  <div className="mb-10 rounded-xl bg-ink-50 ring-1 ring-ink-100 overflow-hidden">
+                    <div className="flex items-center gap-2 px-4 py-3 bg-ink-100 border-b border-ink-200">
+                      <span className="h-2.5 w-2.5 rounded-full bg-ink-300" />
+                      <span className="h-2.5 w-2.5 rounded-full bg-ink-300" />
+                      <span className="h-2.5 w-2.5 rounded-full bg-ink-300" />
+                    </div>
+                    <img
+                      src={product.screenshot.src}
+                      alt={product.screenshot.alt}
+                      className="w-full h-auto"
+                      loading="lazy"
+                    />
+                  </div>
+                )}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                   {/* Description & Benefits */}
                   <div>
@@ -111,7 +136,7 @@ export default function ProductsShowcase() {
                       {product.description}
                     </p>
 
-                    <h4 className="text-xl font-bold text-ink-900 mb-4">Key Benefits</h4>
+                    <h4 className="text-xl font-bold text-ink-900 mb-4">Key benefits</h4>
                     <ul className="space-y-3">
                       {product.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-start">
@@ -124,7 +149,7 @@ export default function ProductsShowcase() {
 
                   {/* Features */}
                   <div>
-                    <h4 className="text-xl font-bold text-ink-900 mb-4">Core Features</h4>
+                    <h4 className="text-xl font-bold text-ink-900 mb-4">Core features</h4>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {product.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center bg-ink-50 rounded-lg p-3">
@@ -155,8 +180,7 @@ export default function ProductsShowcase() {
               {/* Footer Note */}
               <div className="bg-ink-50 px-8 md:px-12 py-6 border-t border-ink-200">
                 <p className="text-sm text-ink-500 text-center">
-                  <span className="font-medium">{product.name}</span> is a product built and owned by Modax.
-                  We maintain full control over development, security, and feature roadmap.
+                  {product.footerNote}
                 </p>
               </div>
             </Reveal>

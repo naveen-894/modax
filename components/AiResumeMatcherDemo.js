@@ -68,7 +68,7 @@ export default function AiResumeMatcherDemo() {
       <div className="container-max">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            See Screenr in Action
+            See Screenr in action
           </h2>
           <p className="text-lg sm:text-xl text-primary-100 max-w-3xl mx-auto">
             Schedule a personalized demo and see how a real resume and job description
@@ -79,7 +79,7 @@ export default function AiResumeMatcherDemo() {
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 text-ink-900">
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold mb-2">Request Your Free Demo</h3>
+              <h3 className="text-2xl font-bold mb-2">Request your free demo</h3>
               <p className="text-ink-500">See Screenr score a real resume against one of your open roles</p>
             </div>
 
@@ -229,9 +229,6 @@ export default function AiResumeMatcherDemo() {
                 </p>
                 <p className="text-xs text-ink-500">
                   ✓ 30-minute personalized demo
-                </p>
-                <p className="text-xs text-ink-500">
-                  ✓ Cancel anytime, no commitments
                 </p>
               </div>
             </form>

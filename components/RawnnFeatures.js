@@ -1,60 +1,61 @@
-import { User, Package, RefreshCw, CreditCard, Settings, Star, HelpCircle, CheckCircle2 } from 'lucide-react'
+import { Globe, LayoutDashboard, ShieldCheck, CreditCard, Truck, Camera, Boxes, RefreshCw, Star, CheckCircle2 } from 'lucide-react'
+import ZoomableImage from './ZoomableImage'
 
 export default function RawnnFeatures() {
   const features = [
     {
-      icon: <User className="w-8 h-8 text-primary-600" />,
-      title: "Complete Customer Flow",
-      description: "End-to-end customer experience from browsing to post-purchase. Seamless order placement, payment processing, and ongoing support.",
-      details: ["Product browsing & selection", "Secure checkout process", "Order tracking & notifications", "Customer account management", "24/7 customer support"]
+      icon: <Globe className="w-8 h-8 text-primary-600" />,
+      title: "Customer website",
+      description: "A fast, beautiful store your customers shop on, from phone or desktop — built on your own domain, with your own branding.",
+      details: ["Home page with banners & collections", "Search, filters and sorting", "Product pages with photos, size charts & reviews", "Wishlist, cart and quick checkout", "Order tracking, returns and OTP login"]
     },
     {
-      icon: <Package className="w-8 h-8 text-primary-600" />,
-      title: "Order Management System",
-      description: "Complete order lifecycle management from placement to delivery. Handle orders, cancellations, and delivery tracking efficiently.",
-      details: ["Order placement & processing", "Order status tracking", "Cancellation handling", "Delivery management", "Order history & records"]
+      icon: <LayoutDashboard className="w-8 h-8 text-primary-600" />,
+      title: "Store admin panel",
+      description: "Run daily operations from one dashboard — products, stock, orders and returns, without needing a developer.",
+      details: ["3-step product wizard", "Publish, hold or discontinue products in bulk", "Orders by stage with bulk updates", "Shipping labels and tracking", "Support queries for you and your staff"]
     },
     {
-      icon: <RefreshCw className="w-8 h-8 text-primary-600" />,
-      title: "Returns & Exchanges",
-      description: "Streamlined returns and exchange process for customers. Easy request submission, approval workflow, and processing management.",
-      details: ["Return request system", "Exchange processing", "Refund management", "Return policy enforcement", "Quality inspection workflow"]
+      icon: <ShieldCheck className="w-8 h-8 text-primary-600" />,
+      title: "Owner control panel",
+      description: "Full oversight of the business — categories, product approval, shipping and refunds, all in one place.",
+      details: ["Create & organise categories", "Approve or reject products before they go live", "Track every order and shipment", "View and action all refunds", "Owner-only secure login"]
     },
     {
       icon: <CreditCard className="w-8 h-8 text-primary-600" />,
-      title: "Payment Processing",
-      description: "Secure and reliable payment processing with multiple gateway support. Handle transactions, refunds, and payment reconciliation.",
-      details: ["Multiple payment gateways", "Secure transaction processing", "Refund & cancellation handling", "Payment reconciliation", "Transaction records"]
+      title: "Payments ready",
+      description: "Razorpay comes integrated from day one, so payments work out of the box.",
+      details: ["UPI, cards & net banking", "Cash on Delivery", "Order confirmation & receipts", "Payment reconciliation", "Coupon & discount support"]
     },
     {
-      icon: <Settings className="w-8 h-8 text-primary-600" />,
-      title: "Admin Dashboard",
-      description: "Powerful admin interface for managing products, orders, and customer service. Streamlined tools for efficient business operations.",
-      details: ["Product management system", "Order processing dashboard", "Return & exchange handling", "Customer service tools", "Business analytics overview"]
+      icon: <Truck className="w-8 h-8 text-primary-600" />,
+      title: "Shipping on autopilot",
+      description: "Automatic courier booking, pickup and tracking via Shiprocket — no manual logistics work.",
+      details: ["Automatic courier booking & pickup", "Live tracking updates", "Downloadable shipping labels", "Full shipment activity history"]
     },
     {
-      icon: <Package className="w-8 h-8 text-primary-600" />,
-      title: "Product Management",
-      description: "Comprehensive product catalog management with inventory tracking, categorization, and product information management.",
-      details: ["Product catalog management", "Inventory tracking system", "Product categorization", "Pricing management", "Product image handling"]
+      icon: <Camera className="w-8 h-8 text-primary-600" />,
+      title: "AI product listing",
+      description: "Upload a photo and AI fills in the product title, description, specs and sizes/variants for you to review.",
+      details: ["AI-drafted title & description", "Auto-suggested specs & sizes/variants", "Manual entry also supported", "Draft to published in minutes"]
+    },
+    {
+      icon: <Boxes className="w-8 h-8 text-primary-600" />,
+      title: "Variant-level inventory",
+      description: "Stock tracked for every size, colour, weight or pack, with low-stock and out-of-stock alerts so you never oversell.",
+      details: ["Per-variant stock tracking", "Low-stock & out-of-stock tabs", "Edit stock directly", "Add missing sizes/variants on the fly"]
+    },
+    {
+      icon: <RefreshCw className="w-8 h-8 text-primary-600" />,
+      title: "Easy returns",
+      description: "Customers can cancel or return orders themselves; you manage every request from one place.",
+      details: ["Customer-initiated returns", "Approval workflow for retailers", "Refund status tracking", "Tied to full order history"]
     },
     {
       icon: <Star className="w-8 h-8 text-primary-600" />,
-      title: "Ratings & Reviews System",
-      description: "Comprehensive review system allowing customers to rate products and leave detailed reviews. Admin can moderate and respond to reviews.",
-      details: ["Star rating system", "Detailed review comments", "Review moderation tools", "Admin response capability", "Review analytics & insights"]
-    },
-    {
-      icon: <HelpCircle className="w-8 h-8 text-primary-600" />,
-      title: "Product Q&A System",
-      description: "Interactive Q&A system where customers can ask questions about products and get answers from the seller. Full admin control over questions and answers.",
-      details: ["Question submission system", "Admin answer management", "Question moderation", "Searchable Q&A archive", "Customer notification system"]
-    },
-    {
-      icon: <Settings className="w-8 h-8 text-primary-600" />,
-      title: "Content Moderation Dashboard",
-      description: "Complete admin control over user-generated content including reviews, questions, and ratings. Powerful moderation tools to maintain quality and brand standards.",
-      details: ["Review approval system", "Question moderation", "Content filtering", "Spam detection", "Bulk moderation actions"]
+      title: "Customer trust built in",
+      description: "Ratings, reviews and Q&A come standard, so shoppers trust your store before they buy.",
+      details: ["Ratings & reviews with photos", "Product Q&A", "Pincode delivery check", "OTP sign-up and login"]
     }
   ]
 
@@ -63,16 +64,21 @@ export default function RawnnFeatures() {
       <div className="container-max">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 mb-4">
-            Powerful Services Built for Fashion
+            Everything your store needs, built in
           </h2>
           <p className="text-lg sm:text-xl text-ink-500 max-w-3xl mx-auto">
-            Every feature in Rawnn is designed specifically for fashion brands, understanding the unique challenges and requirements of the fashion industry.
+            Rawnn is built for established businesses running their own store — not a marketplace. The operational heavy-lifting comes ready-made.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {features.map((feature, index) => (
-            <div key={index} className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
+            <div
+              key={index}
+              className={`bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300 ${
+                index === features.length - 1 && features.length % 2 !== 0 ? 'lg:col-span-2' : ''
+              }`}
+            >
               <div className="flex items-start mb-6">
                 <div className="flex-shrink-0 w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mr-6">
                   {feature.icon}
@@ -88,7 +94,7 @@ export default function RawnnFeatures() {
               </div>
 
               <div className="border-t border-ink-100 pt-6">
-                <h4 className="text-sm font-semibold text-ink-900 mb-3 uppercase tracking-wide">Key Capabilities:</h4>
+                <h4 className="text-sm font-semibold text-ink-900 mb-3 uppercase tracking-wide">Key capabilities:</h4>
                 <ul className="space-y-2">
                   {feature.details.map((detail, detailIndex) => (
                     <li key={detailIndex} className="flex items-center text-sm text-ink-500">
@@ -100,6 +106,39 @@ export default function RawnnFeatures() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Admin panel screenshots */}
+        <div className="mt-16">
+          <p className="text-center text-sm font-semibold text-ink-500 uppercase tracking-wide mb-6">A peek at the Store Admin Panel</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="rounded-xl bg-white shadow-sm ring-1 ring-ink-100 overflow-hidden">
+              <div className="flex items-center gap-2 px-4 py-3 bg-ink-100 border-b border-ink-200">
+                <span className="h-2.5 w-2.5 rounded-full bg-ink-300" />
+                <span className="h-2.5 w-2.5 rounded-full bg-ink-300" />
+                <span className="h-2.5 w-2.5 rounded-full bg-ink-300" />
+              </div>
+              <ZoomableImage
+                src="https://modax-s3.s3.ap-south-1.amazonaws.com/DEV/landing/c0228362-c722-4794-9173-788ba8e2b5a4.png"
+                alt="Store Admin Panel — product catalogue"
+                className="w-full h-auto"
+              />
+              <p className="px-4 py-3 text-sm font-semibold text-ink-700 border-t border-ink-100">Products — publish, price and discount in bulk</p>
+            </div>
+            <div className="rounded-xl bg-white shadow-sm ring-1 ring-ink-100 overflow-hidden">
+              <div className="flex items-center gap-2 px-4 py-3 bg-ink-100 border-b border-ink-200">
+                <span className="h-2.5 w-2.5 rounded-full bg-ink-300" />
+                <span className="h-2.5 w-2.5 rounded-full bg-ink-300" />
+                <span className="h-2.5 w-2.5 rounded-full bg-ink-300" />
+              </div>
+              <ZoomableImage
+                src="https://modax-s3.s3.ap-south-1.amazonaws.com/DEV/landing/410ad794-fa2c-4330-91f3-1a541b0c5f27.png"
+                alt="Store admin panel — variant-level inventory"
+                className="w-full h-auto"
+              />
+              <p className="px-4 py-3 text-sm font-semibold text-ink-700 border-t border-ink-100">Inventory — stock tracked down to the size/variant</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

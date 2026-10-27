@@ -1,8 +1,17 @@
 'use client'
 
 import { useState } from 'react'
-import { Settings, ShoppingBag } from 'lucide-react'
+import { Sparkles, Globe, Smartphone, ShoppingBag, FileText, HelpCircle } from 'lucide-react'
 import Reveal from './motion/Reveal'
+
+const inquiryTypes = [
+  { value: 'ai-tool', label: 'AI tool', icon: Sparkles },
+  { value: 'website', label: 'Website', icon: Globe },
+  { value: 'app', label: 'App', icon: Smartphone },
+  { value: 'rawnn', label: 'Rawnn (ecommerce platform)', icon: ShoppingBag },
+  { value: 'screenr', label: 'Screenr', icon: FileText },
+  { value: 'other', label: 'Something else', icon: HelpCircle },
+]
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -11,7 +20,7 @@ export default function ContactForm() {
     phone: '',
     company: '',
     message: '',
-    inquiryType: 'general'
+    inquiryType: ''
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -48,7 +57,7 @@ export default function ContactForm() {
           phone: '',
           company: '',
           message: '',
-          inquiryType: 'general'
+          inquiryType: ''
         })
       } else {
         setSubmitMessage(data.error || 'Something went wrong. Please try again.')
@@ -66,11 +75,11 @@ export default function ContactForm() {
         <div className="max-w-4xl mx-auto">
           <Reveal className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 mb-4">
-              Send Us a Message
+              Send us a message
             </h2>
             <p className="text-lg text-ink-500">
               Have questions about our services or products? Want to discuss your project?
-              We'd love to hear from you.
+              We&apos;d love to hear from you.
             </p>
           </Reveal>
 
@@ -81,46 +90,25 @@ export default function ContactForm() {
                 <label className="block text-sm font-medium text-ink-700 mb-3">
                   What can we help you with?
                 </label>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <label className="relative">
-                    <input
-                      type="radio"
-                      name="inquiryType"
-                      value="services"
-                      checked={formData.inquiryType === 'services'}
-                      onChange={handleChange}
-                      className="sr-only peer"
-                    />
-                    <div className="p-4 border-2 border-ink-200 rounded-lg cursor-pointer peer-checked:border-primary-500 peer-checked:bg-primary-50 hover:border-primary-300 transition-colors">
-                      <div className="flex items-center">
-                        <Settings className="w-5 h-5 text-primary-600 mr-3" />
-                        <div>
-                          <div className="font-medium text-ink-900">Custom AI Tool</div>
-                          <div className="text-sm text-ink-500">Build a tool for your workflow</div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {inquiryTypes.map(({ value, label, icon: Icon }) => (
+                    <label key={value} className="relative">
+                      <input
+                        type="radio"
+                        name="inquiryType"
+                        value={value}
+                        checked={formData.inquiryType === value}
+                        onChange={handleChange}
+                        className="sr-only peer"
+                      />
+                      <div className="p-4 border-2 border-ink-200 rounded-lg cursor-pointer peer-checked:border-primary-500 peer-checked:bg-primary-50 hover:border-primary-300 transition-colors">
+                        <div className="flex items-center">
+                          <Icon className="w-5 h-5 text-primary-600 mr-3 flex-shrink-0" />
+                          <div className="font-medium text-ink-900">{label}</div>
                         </div>
                       </div>
-                    </div>
-                  </label>
-
-                  <label className="relative">
-                    <input
-                      type="radio"
-                      name="inquiryType"
-                      value="product"
-                      checked={formData.inquiryType === 'product'}
-                      onChange={handleChange}
-                      className="sr-only peer"
-                    />
-                    <div className="p-4 border-2 border-ink-200 rounded-lg cursor-pointer peer-checked:border-primary-500 peer-checked:bg-primary-50 hover:border-primary-300 transition-colors">
-                      <div className="flex items-center">
-                        <ShoppingBag className="w-5 h-5 text-primary-600 mr-3" />
-                        <div>
-                          <div className="font-medium text-ink-900">AI Products</div>
-                          <div className="text-sm text-ink-500">Screenr or Rawnn</div>
-                        </div>
-                      </div>
-                    </div>
-                  </label>
+                    </label>
+                  ))}
                 </div>
               </div>
 

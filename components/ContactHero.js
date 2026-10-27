@@ -1,5 +1,6 @@
 import { Mail, Phone, MessageCircle, CheckCircle2 } from 'lucide-react'
 import PageHero from './PageHero'
+import HeroVisualPanel from './HeroVisualPanel'
 
 export default function ContactHero() {
   const options = [
@@ -31,7 +32,8 @@ export default function ContactHero() {
       eyebrow="Contact"
       title="Let's build something"
       accent=" together"
-      description="Have a task your team does manually every day? Tell us about it — we're here to help you see if AI can take it off your plate."
+      description="Have a task your team does manually every day, or need a website or app built? Tell us about it — we're here to help."
+      visual={<HeroVisualPanel />}
     >
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-10">
         {options.map((option, index) => (

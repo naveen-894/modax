@@ -1,5 +1,7 @@
 import { CheckCircle2 } from 'lucide-react'
 import PageHero from './PageHero'
+import HeroVisualPanel from './HeroVisualPanel'
+import { SCREENR_URL, SCREENR_PRICING_NOTE } from '../lib/constants'
 
 export default function AiResumeMatcherHero() {
   return (
@@ -12,9 +14,10 @@ export default function AiResumeMatcherHero() {
         { value: '~15s', label: 'Per match' },
         { value: '0-100%', label: 'Explainable score' },
       ]}
+      visual={<HeroVisualPanel />}
     >
       <div className="flex flex-col sm:flex-row gap-4 mt-10">
-        <a href="https://ai-resume-matcher-fed.vercel.app/" target="_blank" rel="noopener noreferrer" className="btn-primary">
+        <a href={SCREENR_URL} target="_blank" rel="noopener noreferrer" className="btn-primary">
           Try it free
         </a>
         <a href="#features" className="btn-secondary">
@@ -22,9 +25,12 @@ export default function AiResumeMatcherHero() {
         </a>
       </div>
 
-      <div className="inline-flex items-center gap-2 bg-primary-50 text-primary-800 px-4 py-2.5 rounded-md text-sm font-medium mt-8">
-        <CheckCircle2 className="w-4 h-4" />
-        Built &amp; owned by Modax
+      <div className="flex flex-wrap items-center gap-4 mt-8">
+        <div className="inline-flex items-center gap-2 bg-primary-50 text-primary-800 px-4 py-2.5 rounded-md text-sm font-medium">
+          <CheckCircle2 className="w-4 h-4" />
+          Built &amp; owned by Modax
+        </div>
+        <span className="text-sm text-ink-500">{SCREENR_PRICING_NOTE} after your free match</span>
       </div>
     </PageHero>
   )

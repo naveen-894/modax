@@ -1,15 +1,18 @@
 import PageHero from './PageHero'
+import HeroVisualPanel from './HeroVisualPanel'
+import { CALENDLY_URL } from '../lib/constants'
 
 export default function ServicesHero() {
   return (
     <PageHero
-      eyebrow="AI Solutions"
-      title="AI tools, built"
-      accent=" for real work"
-      description="We design and build custom AI tools that save your team hours of manual work — document processing, scoring and matching, assistants, and automation, built around your actual workflow."
+      eyebrow="Services"
+      title="AI, websites & apps,"
+      accent=" built for real work"
+      description="We design and build AI tools, websites and apps for growing businesses — document processing, scoring and matching, assistants, automation, and the web or app product you need shipped."
+      visual={<HeroVisualPanel />}
     >
       <div className="flex flex-col sm:flex-row gap-4 mt-10">
-        <a href="https://calendly.com/vnaveen894/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">
+        <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn-primary">
           Book a 15-min call
         </a>
         <a href="#services-list" className="btn-secondary">

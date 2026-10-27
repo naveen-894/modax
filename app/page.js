@@ -1,8 +1,8 @@
 import Navigation from '../components/Navigation'
 import Hero from '../components/Hero'
-import Services from '../components/Services'
-import BuiltForHR from '../components/BuiltForHR'
+import Capabilities from '../components/Capabilities'
 import ProductHighlight from '../components/ProductHighlight'
+import EcommerceShowcase from '../components/EcommerceShowcase'
 import HowWeWork from '../components/HowWeWork'
 import WhyModax from '../components/WhyModax'
 import CTA from '../components/CTA'
@@ -14,9 +14,9 @@ export default function Home() {
       <Navigation />
       <main>
         <Hero />
-        <Services />
-        <BuiltForHR />
+        <Capabilities />
         <ProductHighlight />
+        <EcommerceShowcase />
         <HowWeWork />
         <WhyModax />
         <CTA />
