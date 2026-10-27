@@ -1,4 +1,3 @@
-import { User } from 'lucide-react'
 import Reveal from './motion/Reveal'
 
 export default function AboutFounder() {
@@ -7,12 +6,11 @@ export default function AboutFounder() {
       <div className="container-max">
         <Reveal className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-[auto_1fr] gap-8 items-start">
-            {/* TODO: swap for the real founder photo (e.g. /public/naveen.jpg via
-                next/image) once a photo file path is provided — placeholder avatar
-                below until then. */}
-            <div className="w-28 h-28 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full flex items-center justify-center mx-auto sm:mx-0 flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:rotate-2">
-              <User className="w-14 h-14 text-white" />
-            </div>
+            <img
+              src="/naveen.png"
+              alt="Naveen V, Founder of Modax"
+              className="w-28 h-28 rounded-full object-cover mx-auto sm:mx-0 flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:rotate-2"
+            />
             <div className="text-center sm:text-left">
               <h3 className="text-2xl font-bold text-ink-900 mb-1">Naveen V</h3>
               <p className="text-primary-700 font-medium mb-4">Founder, Modax</p>
