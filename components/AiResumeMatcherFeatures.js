@@ -4,50 +4,50 @@ export default function AiResumeMatcherFeatures() {
   const features = [
     {
       icon: <FileText className="w-8 h-8 text-primary-600" />,
-      title: "Smart Resume & JD Parsing",
+      title: "Smart resume & JD parsing",
       description: "An AI model reads both documents the way a person would, pulling out the facts that matter instead of doing a keyword search.",
       details: ["Name, email & phone", "Skills & certifications", "Work history & education", "Job title & responsibilities", "Required experience & education"]
     },
     {
       icon: <BarChart3 className="w-8 h-8 text-primary-600" />,
-      title: "0–100% Match Score",
+      title: "0–100% match score",
       description: "A simple score with a Strong / Partial / Weak rating, a written explanation of why, and a short list of key takeaways.",
       details: ["Plain-English reasoning", "Strong / Partial / Weak rating", "Key takeaways list", "Consistent across candidates"]
     },
     {
       icon: <ShieldCheck className="w-8 h-8 text-primary-600" />,
-      title: "Skills Gap Analysis",
+      title: "Skills gap analysis",
       description: "A visual breakdown of which required skills the candidate has and which are missing, so coverage is clear at a glance.",
       details: ["e.g. 6 of 8 skills covered", "Recognizes skills phrased differently", "Highlights missing requirements", "Side-by-side comparison"]
     },
     {
       icon: <Zap className="w-8 h-8 text-primary-600" />,
-      title: "Live Streaming Analysis",
+      title: "Live streaming analysis",
       description: "Watch each step happen in real time — reading the resume, reading the job description, comparing skills, scoring the match — so it never feels like a black box.",
-      details: ["Step-by-step progress", "Real-time streaming (SSE)", "Transparent reasoning", "No waiting in the dark"]
+      details: ["Step-by-step progress", "Results appear as they're generated", "Transparent reasoning", "No waiting in the dark"]
     },
     {
       icon: <MessageCircle className="w-8 h-8 text-primary-600" />,
-      title: "Follow-up Chat",
+      title: "Follow-up chat",
       description: "Ask questions about a specific match — \"How much management experience do they have?\" — and get a conversational, grounded answer.",
       details: ["Context-aware Q&A", "Word-by-word streaming replies", "Scoped to the resume & role", "Refuses unrelated questions"]
     },
     {
       icon: <UploadCloud className="w-8 h-8 text-primary-600" />,
-      title: "Flexible Uploads",
+      title: "Flexible uploads",
       description: "Paste text directly or upload a file — PDF, Word, or plain text. Drag-and-drop is supported too.",
       details: ["PDF, DOCX & TXT support", "Paste-as-text option", "Drag-and-drop", "Works for resume & JD"]
     },
     {
       icon: <Clock className="w-8 h-8 text-primary-600" />,
-      title: "Match History",
+      title: "Match history",
       description: "Every match you run is saved. Revisit any past comparison, along with the full conversation, whenever you need it.",
       details: ["Full match archive", "Saved chat history", "One-click revisit", "Organized by candidate"]
     },
     {
       icon: <Sparkles className="w-8 h-8 text-primary-600" />,
-      title: "Try Before You Sign Up",
-      description: "No account needed to get started. First-time visitors get one full match and one round of follow-up questions, free.",
+      title: "Try before you sign up",
+      description: "No account needed to get started. First-time visitors get one full match and one round of follow-up questions, free. Pricing after that is free during beta.",
       details: ["No signup required", "1 free match + chat", "Unlimited after sign-in", "Full history once logged in"]
     }
   ]
@@ -57,7 +57,7 @@ export default function AiResumeMatcherFeatures() {
       <div className="container-max">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 mb-4">
-            Screening That Actually Reads the Resume
+            Screening that actually reads the resume
           </h2>
           <p className="text-lg sm:text-xl text-ink-500 max-w-3xl mx-auto">
             Screenr replaces manual side-by-side reading with a fast, consistent,

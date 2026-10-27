@@ -1,12 +1,20 @@
 export default function EmailTemplate({ name, email, phone, company, message, inquiryType }) {
   const getInquiryTypeLabel = (type) => {
     switch (type) {
-      case 'services':
-        return 'Custom AI Tool';
-      case 'product':
-        return 'AI Products (Screenr or Rawnn)';
+      case 'ai-tool':
+        return 'AI tool';
+      case 'website':
+        return 'Website';
+      case 'app':
+        return 'App';
+      case 'rawnn':
+        return 'Rawnn (ecommerce platform)';
+      case 'screenr':
+        return 'Screenr';
+      case 'other':
+        return 'Something else';
       default:
-        return 'General Inquiry';
+        return 'Not specified';
     }
   };
 

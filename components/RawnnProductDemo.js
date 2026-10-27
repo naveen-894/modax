@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { RAWNN_STARTING_PRICE, RAWNN_HOSTING_COST } from '../lib/constants'
 
 export default function RawnnProductDemo() {
   const [formData, setFormData] = useState({
@@ -68,18 +69,45 @@ export default function RawnnProductDemo() {
       <div className="container-max">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            Experience Rawnn Firsthand
+            Experience Rawnn firsthand
           </h2>
           <p className="text-lg sm:text-xl text-primary-100 max-w-3xl mx-auto">
-            See how Rawnn can transform your fashion business. Schedule a personalized demo
-            and discover the platform that powers direct-to-consumer success.
+            No mockups, no concepts — explore a fully working demo store, then book a
+            personalized walkthrough of the admin and owner panels. {RAWNN_STARTING_PRICE}.
           </p>
+        </div>
+
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
+          <div className="w-full max-w-sm rounded-xl bg-white shadow-xl overflow-hidden ring-1 ring-black/5">
+            <img
+              src="https://modax-s3.s3.ap-south-1.amazonaws.com/DEV/landing/389b2af3-ef7a-460b-b0a2-b45ea9197d33.png"
+              alt="Paramparaa Silks — example storefront built on Rawnn, desktop view"
+              className="w-full h-auto"
+              loading="lazy"
+            />
+          </div>
+          <div className="w-28 rounded-2xl bg-ink-900 p-1.5 shadow-xl ring-1 ring-black/10">
+            <img
+              src="https://modax-s3.s3.ap-south-1.amazonaws.com/DEV/landing/638de390-3179-45dc-9c67-5956ca8f7cb7.jpeg"
+              alt="Paramparaa Silks — example storefront built on Rawnn, mobile view"
+              className="w-full h-auto rounded-xl"
+              loading="lazy"
+            />
+          </div>
+          <a
+            href="https://nrd-customer-fed.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary px-6 py-3 whitespace-nowrap"
+          >
+            Explore the Demo Store
+          </a>
         </div>
 
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 text-ink-900">
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold mb-2">Request Your Free Demo</h3>
+              <h3 className="text-2xl font-bold mb-2">Request your free demo</h3>
               <p className="text-ink-500">See Rawnn in action with your own products and brand</p>
             </div>
 
@@ -131,7 +159,7 @@ export default function RawnnProductDemo() {
                     value={formData.company}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                    placeholder="Your fashion brand"
+                    placeholder="Your brand name"
                   />
                 </div>
 
@@ -164,11 +192,9 @@ export default function RawnnProductDemo() {
                     className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   >
                     <option value="">Select your business type</option>
-                    <option value="fashion-boutique">Fashion Boutique</option>
-                    <option value="fashion-retail">Fashion Retail Chain</option>
-                    <option value="designer-brand">Designer Brand</option>
-                    <option value="streetwear">Streetwear Brand</option>
-                    <option value="accessories">Accessories Brand</option>
+                    <option value="b2b">B2B</option>
+                    <option value="d2c">D2C</option>
+                    <option value="b2c-retail">B2C / Retail</option>
                     <option value="other">Other</option>
                   </select>
                 </div>
@@ -232,7 +258,13 @@ export default function RawnnProductDemo() {
                   ✓ 30-minute personalized demo
                 </p>
                 <p className="text-xs text-ink-500">
-                  ✓ Cancel anytime, no commitments
+                  ✓ A dedicated store built and set up for your brand
+                </p>
+                <p className="text-xs text-ink-500">
+                  ✓ One-time cost from Modax — no monthly fees, no commission. {RAWNN_STARTING_PRICE}.
+                </p>
+                <p className="text-xs text-ink-500">
+                  ✓ You pay only your own hosting costs directly to your host ({RAWNN_HOSTING_COST})
                 </p>
               </div>
             </form>

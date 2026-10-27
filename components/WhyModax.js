@@ -19,6 +19,10 @@ export default function WhyModax() {
     {
       title: "Shipped, not just demoed",
       description: "Real products in use today — not a prototype that stalls after the pitch."
+    },
+    {
+      title: "One team, every layer",
+      description: "AI tools, websites and apps — built, deployed and supported by the same team, not handed off between vendors."
     }
   ]
 
@@ -33,14 +37,19 @@ export default function WhyModax() {
               A technology partner, not just a vendor
             </h2>
             <p className="text-ink-300 leading-relaxed">
-              We're committed to your long-term success through AI that holds up
-              after launch, not just at the demo.
+              We&apos;re committed to your long-term success through AI, websites and
+              apps that hold up after launch, not just at the demo.
             </p>
           </Reveal>
 
           <RevealGroup className="lg:col-span-2 grid sm:grid-cols-2 gap-x-10 gap-y-10">
             {reasons.map((reason, index) => (
-              <RevealItem key={index} className="flex gap-4">
+              <RevealItem
+                key={index}
+                className={`flex gap-4 ${
+                  index === reasons.length - 1 && reasons.length % 2 !== 0 ? 'sm:col-span-2' : ''
+                }`}
+              >
                 <span className="flex-shrink-0 mt-1 flex h-6 w-6 items-center justify-center rounded-full bg-primary-500/20 text-primary-300">
                   <CheckCircle2 className="w-3.5 h-3.5" />
                 </span>

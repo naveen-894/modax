@@ -1,4 +1,5 @@
-import { FileText, ShieldCheck, MessageCircle, Settings, Zap, CheckCircle2 } from 'lucide-react'
+import Link from 'next/link'
+import { FileText, ShieldCheck, MessageCircle, Settings, Zap, Globe, Smartphone, ShoppingBag, CheckCircle2, ArrowRight } from 'lucide-react'
 import Reveal from './motion/Reveal'
 import RevealGroup, { RevealItem } from './motion/RevealGroup'
 
@@ -6,38 +7,60 @@ export default function ServicesList() {
   const services = [
     {
       icon: <FileText className="w-8 h-8 text-primary-600" />,
-      title: "AI Document Understanding",
-      description: "We train AI to read your documents and pull out exactly the fields you need — no more retyping data from one system into another.",
+      title: "AI document understanding",
+      description: "We set up AI to read your documents and pull out exactly the fields you need — no more retyping data from one system into another.",
       useCases: ["HR: parse resumes into structured candidate profiles", "Finance: extract line items from invoices and receipts", "Legal/ops: pull key terms and dates out of contracts and forms"],
       youGet: ["Structured data output (JSON, spreadsheet or your database)", "Handles PDFs, scans, Word docs and images", "Built around your exact fields, not a generic template"]
     },
     {
       icon: <ShieldCheck className="w-8 h-8 text-primary-600" />,
-      title: "AI Scoring & Matching",
+      title: "AI scoring & matching",
       description: "We build explainable scoring that compares something against your criteria and tells you why — not a black-box number.",
       useCases: ["HR: score how well a resume matches a job description", "Sales: rank inbound leads against your ideal customer profile", "Ops: compare vendor quotes or documents against a checklist"],
       youGet: ["A 0–100% score with plain-English reasoning", "Criteria you control and can adjust", "A tool your team will actually trust, because it shows its work"]
     },
     {
       icon: <MessageCircle className="w-8 h-8 text-primary-600" />,
-      title: "AI Assistants",
-      description: "Chat assistants trained on your own documents and data, so your team or customers get answers without digging through files.",
+      title: "AI assistants",
+      description: "Chat assistants that answer from your own documents and data, so your team or customers get answers without digging through files.",
       useCases: ["HR: an assistant that answers policy questions from your HR docs", "Support: an assistant that answers customer FAQs from your help docs", "Internal: an assistant for company knowledge, onboarding, and SOPs"],
       youGet: ["An assistant that only answers from your approved sources", "Deployed where your team already works", "Clear answers with the source it pulled from"]
     },
     {
       icon: <Settings className="w-8 h-8 text-primary-600" />,
-      title: "Workflow Automation with AI",
+      title: "Workflow automation with AI",
       description: "We automate the repetitive steps around a process — the follow-ups, the reports, the data entry, the approvals — so your team only steps in where judgment is needed.",
       useCases: ["HR: automatic candidate status updates and interview reminders", "Sales/ops: automatic weekly reports pulled from your systems", "Finance: automated data entry and approval routing"],
       youGet: ["A defined workflow that runs on a schedule or trigger", "Humans kept in the loop at the decision points that matter", "Fewer dropped follow-ups and missed deadlines"]
     },
     {
       icon: <Zap className="w-8 h-8 text-primary-600" />,
-      title: "AI Features in Your Product",
+      title: "AI features in your product",
       description: "You already have a product. We add the LLM-powered feature your users are asking for — search, summarization, drafting, or something custom.",
       useCases: ["SaaS: add AI-powered search or summarization to your app", "Internal tools: add AI drafting or classification to existing dashboards", "Any product: add a chat layer on top of your existing data"],
       youGet: ["A feature integrated into your existing codebase", "Your choice of LLM provider, your data stays in your infrastructure", "Ongoing tuning as usage grows"]
+    },
+    {
+      icon: <Globe className="w-8 h-8 text-primary-600" />,
+      title: "Website development",
+      description: "We design, build and deploy fast, modern websites — marketing sites, landing pages and web apps that are easy to maintain and built to convert.",
+      useCases: ["Startups: a launch-ready marketing site and landing pages", "Established brands: a redesign that loads fast and converts better", "Products: a web app front-end for an existing backend or API"],
+      youGet: ["A responsive, SEO-ready site built on modern tooling", "Clean handoff with docs, or we host and maintain it for you", "Analytics and tracking set up from day one"]
+    },
+    {
+      icon: <Smartphone className="w-8 h-8 text-primary-600" />,
+      title: "App development",
+      description: "We build web and mobile apps end to end — from an internal tool your team needs tomorrow to a customer-facing product you can scale.",
+      useCases: ["Internal tools: a dashboard or ops tool your team logs into daily", "Startups: an MVP you can put in front of users fast", "Existing products: a new feature or platform built on your current stack"],
+      youGet: ["A working app, not just a prototype or mockup", "Your choice of stack, with code you own outright", "Ongoing support as you add features and scale"]
+    },
+    {
+      icon: <ShoppingBag className="w-8 h-8 text-primary-600" />,
+      title: "Ecommerce platform (Rawnn)",
+      description: "A fully owned ecommerce platform for established businesses — customer website, store admin panel and owner control panel, on your own servers. One-time cost, no commission.",
+      useCases: ["D2C brands: a premium branded store, not a marketplace listing", "Retailers: move from Instagram/WhatsApp selling to a real storefront", "Established businesses: replace recurring platform fees with a one-time build"],
+      youGet: ["A store built and set up for your brand, live in 2–6 weeks", "Payments and shipping handled via Razorpay & Shiprocket", "Full source code licence, running on your own servers"],
+      link: "/products/rawnn"
     },
   ]
 
@@ -49,8 +72,8 @@ export default function ServicesList() {
             What we build
           </h2>
           <p className="text-lg sm:text-xl text-ink-500 max-w-3xl mx-auto">
-            Five ways we remove manual work with AI. Each tool is scoped to your
-            workflow, not sold off a shelf.
+            AI tools, websites and apps — each one scoped to your business,
+            not sold off a shelf.
           </p>
         </Reveal>
 
@@ -94,6 +117,15 @@ export default function ServicesList() {
                   ))}
                 </ul>
               </div>
+
+              {service.link && (
+                <div className="border-t border-ink-100 mt-6 pt-6">
+                  <Link href={service.link} className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary-600 hover:text-primary-700">
+                    View details
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              )}
             </RevealItem>
           ))}
         </RevealGroup>

@@ -4,32 +4,32 @@ export default function RawnnBenefits() {
   const benefits = [
     {
       icon: <Zap className="w-12 h-12 text-primary-600" />,
-      title: "Rapid Setup & Deployment",
-      description: "Get your fashion store live in just 1 week with our streamlined setup process. Pre-built templates and automated configuration save you weeks of development time."
+      title: "Built & set up for your brand",
+      description: "We set up a dedicated store for your brand — not a shared template — and have it live in weeks, so you skip months of development time."
     },
     {
       icon: <DollarSign className="w-12 h-12 text-primary-600" />,
-      title: "Complete Control & Ownership",
+      title: "Complete control & ownership",
       description: "Own your data and maintain complete control over your business. No vendor lock-in or hidden fees. Customize every aspect of your store to match your brand perfectly."
     },
     {
       icon: <FileText className="w-12 h-12 text-primary-600" />,
-      title: "Built-in Business Intelligence",
+      title: "Built-in business intelligence",
       description: "Make informed decisions with comprehensive analytics and reporting. Track sales trends, customer behavior, and inventory performance with detailed insights and dashboards."
     },
     {
       icon: <LifeBuoy className="w-12 h-12 text-primary-600" />,
-      title: "Dedicated Fashion Support",
-      description: "Get direct support from our fashion industry experts. Regular updates, training sessions, and priority support ensure your business runs smoothly 24/7."
+      title: "Dedicated support",
+      description: "Get direct support from our team. Regular updates, onboarding sessions, and priority support ensure your business runs smoothly 24/7."
     },
     {
       icon: <Heart className="w-12 h-12 text-primary-600" />,
-      title: "Fashion-Specific Services",
-      description: "Designed from the ground up for fashion brands with features like size variants, style guides, lookbooks, and fashion-specific workflows that other platforms lack."
+      title: "Customer trust built in",
+      description: "Ratings and reviews with photos, product Q&A, pincode delivery checks and OTP login come standard, so shoppers trust your store before they buy."
     },
     {
       icon: <Lock className="w-12 h-12 text-primary-600" />,
-      title: "Enterprise-Grade Security",
+      title: "Enterprise-grade security",
       description: "Bank-level security with SSL encryption, PCI compliance, regular security audits, and advanced fraud detection to protect your business and customers."
     }
   ]
@@ -39,10 +39,10 @@ export default function RawnnBenefits() {
       <div className="container-max">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 mb-4">
-            Why Fashion Brands Choose Rawnn
+            Why owners choose Rawnn
           </h2>
           <p className="text-lg sm:text-xl text-ink-500 max-w-3xl mx-auto">
-            Join hundreds of fashion brands that have transformed their online presence with Rawnn's comprehensive e-commerce solution.
+            Be one of our first launch partners: a dedicated store built for your brand, with hands-on setup from the founder.
           </p>
         </div>
 
@@ -66,7 +66,7 @@ export default function RawnnBenefits() {
         <div className="mt-20 bg-gradient-to-r from-primary-50 to-primary-100 rounded-2xl p-8 md:p-12">
           <div className="text-center mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-ink-900 mb-4">
-              Complete E-commerce Operations
+              Complete e-commerce operations
             </h3>
             <p className="text-lg text-ink-500">
               Everything you need to run a successful online store

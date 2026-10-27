@@ -64,6 +64,11 @@ export default function PrivacyPolicyPage() {
             </div>
 
             <Section id="information-we-collect" title="1. Information we collect">
+              {/* TODO: this list mentions "approximate monthly revenue" and "planned launch
+                  time" — none of the current site forms (ContactForm, RawnnDemo,
+                  RawnnProductDemo, AiResumeMatcherDemo) collect these fields. Either add
+                  those fields to the forms, or have legal review and trim this text to match
+                  what's actually collected. */}
               <SubHeading>Information you give us</SubHeading>
               <List
                 items={[

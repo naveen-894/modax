@@ -71,17 +71,45 @@ export default function RawnnDemo() {
       <div className="container-max">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            See Rawnn in Action
+            See Rawnn in action
           </h2>
           <p className="text-lg sm:text-xl text-ink-300 max-w-3xl mx-auto">
-            Experience the power of our fashion e-commerce platform with a personalized demo tailored to your business needs.
+            Explore a fully working store built on Rawnn, then book a personalized demo tailored to your business.
           </p>
+        </div>
+
+        {/* Live demo screenshots */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
+          <div className="w-full max-w-sm rounded-xl bg-white shadow-xl overflow-hidden ring-1 ring-black/5">
+            <img
+              src="https://modax-s3.s3.ap-south-1.amazonaws.com/DEV/landing/389b2af3-ef7a-460b-b0a2-b45ea9197d33.png"
+              alt="Example storefront built on Rawnn — desktop view"
+              className="w-full h-auto"
+              loading="lazy"
+            />
+          </div>
+          <div className="w-28 rounded-2xl bg-ink-900 p-1.5 shadow-xl ring-1 ring-black/10">
+            <img
+              src="https://modax-s3.s3.ap-south-1.amazonaws.com/DEV/landing/638de390-3179-45dc-9c67-5956ca8f7cb7.jpeg"
+              alt="Example storefront built on Rawnn — mobile view"
+              className="w-full h-auto rounded-xl"
+              loading="lazy"
+            />
+          </div>
+          <a
+            href="https://nrd-customer-fed.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary px-6 py-3 whitespace-nowrap"
+          >
+            Explore the Demo Store
+          </a>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Demo Content */}
           <div>
-            <h3 className="text-2xl font-bold mb-6">What You'll Experience in Your Demo</h3>
+            <h3 className="text-2xl font-bold mb-6">What you&apos;ll experience in your demo</h3>
 
             <div className="space-y-6">
               <div className="flex items-start">
@@ -89,7 +117,7 @@ export default function RawnnDemo() {
                   <span className="text-sm font-bold text-white">1</span>
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold mb-2">Admin Dashboard Walkthrough</h4>
+                  <h4 className="text-lg font-semibold mb-2">Admin dashboard walkthrough</h4>
                   <p className="text-ink-300">
                     See how easy it is to manage your inventory, process orders, and analyze sales performance with our intuitive admin interface.
                   </p>
@@ -101,9 +129,9 @@ export default function RawnnDemo() {
                   <span className="text-sm font-bold text-white">2</span>
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold mb-2">Customer Experience Preview</h4>
+                  <h4 className="text-lg font-semibold mb-2">Customer experience preview</h4>
                   <p className="text-ink-300">
-                    Experience your store from a customer's perspective - browsing products, adding to cart, and completing checkout.
+                    Experience your store from a customer&apos;s perspective — browsing products, adding to cart, and completing checkout.
                   </p>
                 </div>
               </div>
@@ -113,7 +141,7 @@ export default function RawnnDemo() {
                   <span className="text-sm font-bold text-white">3</span>
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold mb-2">Customization & Integration</h4>
+                  <h4 className="text-lg font-semibold mb-2">Customization & integration</h4>
                   <p className="text-ink-300">
                     Learn how to customize your store design, integrate payment gateways, and connect with your existing systems.
                   </p>
@@ -125,7 +153,7 @@ export default function RawnnDemo() {
                   <span className="text-sm font-bold text-white">4</span>
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold mb-2">Q&A Session</h4>
+                  <h4 className="text-lg font-semibold mb-2">Q&A session</h4>
                   <p className="text-ink-300">
                     Get answers to your specific questions and learn about implementation timeline, pricing, and ongoing support.
                   </p>
@@ -136,7 +164,7 @@ export default function RawnnDemo() {
 
           {/* Demo Form */}
           <div className="bg-white rounded-xl p-8 text-ink-900">
-            <h3 className="text-2xl font-bold mb-6 text-center">Request Your Free Demo</h3>
+            <h3 className="text-2xl font-bold mb-6 text-center">Request your free demo</h3>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -200,7 +228,7 @@ export default function RawnnDemo() {
                   value={formData.company}
                   onChange={handleChange}
                   className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                  placeholder="Your Fashion Brand"
+                  placeholder="Your Brand Name"
                 />
               </div>
 
@@ -216,10 +244,9 @@ export default function RawnnDemo() {
                   className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                 >
                   <option value="">Select your business type</option>
-                  <option value="boutique">Fashion Boutique</option>
-                  <option value="retail">Fashion Retail Chain</option>
-                  <option value="designer">Fashion Designer</option>
-                  <option value="marketplace">Fashion Marketplace</option>
+                  <option value="b2b">B2B</option>
+                  <option value="d2c">D2C</option>
+                  <option value="b2c-retail">B2C / Retail</option>
                   <option value="other">Other</option>
                 </select>
               </div>

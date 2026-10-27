@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Reveal from './motion/Reveal'
 import RevealGroup, { RevealItem } from './motion/RevealGroup'
+import { SCREENR_URL } from '../lib/constants'
 
 export default function AboutProducts() {
   return (
@@ -8,10 +9,10 @@ export default function AboutProducts() {
       <div className="container-max">
         <Reveal className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 mb-4">
-            Our AI products
+            Our products
           </h2>
           <p className="text-lg sm:text-xl text-ink-500 max-w-3xl mx-auto">
-            Beyond custom tools for clients, we build and own AI products ourselves —
+            Beyond custom tools for clients, we build and run our own products —
             proof that what we build actually gets used.
           </p>
         </Reveal>
@@ -23,7 +24,7 @@ export default function AboutProducts() {
               Our lead product. Explainable 0–100% resume-to-job match scores for
               recruiters and hiring managers.
             </p>
-            <a href="https://ai-resume-matcher-fed.vercel.app/" target="_blank" rel="noopener noreferrer" className="btn-primary inline-block">
+            <a href={SCREENR_URL} target="_blank" rel="noopener noreferrer" className="btn-primary inline-block">
               Try it free
             </a>
           </RevealItem>
@@ -31,8 +32,9 @@ export default function AboutProducts() {
           <RevealItem className="bg-white rounded-xl p-8 shadow-sm card-hover">
             <h3 className="text-xl font-bold text-ink-900 mb-3">Rawnn</h3>
             <p className="text-ink-500 mb-6 leading-relaxed">
-              An AI-assisted commerce platform for fashion brands, with AI-drafted
-              product listings and location-aware discovery.
+              A complete e-commerce platform you own outright — pay once, run it on
+              your own servers, with AI-drafted listings, payments, shipping and
+              returns all handled automatically.
             </p>
             <Link href="/products/rawnn" className="btn-secondary inline-block">
               Learn more

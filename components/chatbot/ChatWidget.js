@@ -9,7 +9,7 @@ const easeOut = [0.21, 0.47, 0.32, 0.98]
 
 /** Floating AI assistant widget, mounted once in the root layout so it's
  * available on every page without blocking the initial page render. */
-export default function ChatWidget() {
+export default function ChatWidget({ contactEmail, contactWhatsapp }) {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -22,7 +22,12 @@ export default function ChatWidget() {
             exit={{ opacity: 0, y: 16, scale: 0.97 }}
             transition={{ duration: 0.22, ease: easeOut }}
           >
-            <ChatWindow onClose={() => setIsOpen(false)} onMinimize={() => setIsOpen(false)} />
+            <ChatWindow
+              onClose={() => setIsOpen(false)}
+              onMinimize={() => setIsOpen(false)}
+              contactEmail={contactEmail}
+              contactWhatsapp={contactWhatsapp}
+            />
           </motion.div>
         )}
       </AnimatePresence>
@@ -32,9 +37,19 @@ export default function ChatWidget() {
         onClick={() => setIsOpen((prev) => !prev)}
         aria-label={isOpen ? 'Close chat assistant' : 'Open chat assistant'}
         aria-expanded={isOpen}
-        whileTap={{ scale: 0.95 }}
-        className="flex h-14 w-14 items-center justify-center rounded-full bg-ink-900 text-white shadow-xl shadow-ink-900/20 hover:bg-primary-700 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+        whileHover={{ scale: 1.08 }}
+        whileTap={{ scale: 0.92 }}
+        transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+        className="relative flex h-14 w-14 items-center justify-center rounded-full bg-ink-900 text-white shadow-xl shadow-ink-900/20 hover:bg-primary-700 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
       >
+        {!isOpen && (
+          <motion.span
+            className="absolute inset-0 rounded-full bg-primary-500"
+            initial={{ opacity: 0.35, scale: 1 }}
+            animate={{ opacity: 0, scale: 1.6 }}
+            transition={{ duration: 1.8, repeat: Infinity, ease: 'easeOut' }}
+          />
+        )}
         <AnimatePresence mode="wait" initial={false}>
           {isOpen ? (
             <motion.span
@@ -50,9 +65,15 @@ export default function ChatWidget() {
             <motion.span
               key="open"
               initial={{ opacity: 0, rotate: 45 }}
-              animate={{ opacity: 1, rotate: 0 }}
+              animate={{
+                opacity: 1,
+                rotate: [0, -8, 8, -8, 0],
+              }}
               exit={{ opacity: 0, rotate: -45 }}
-              transition={{ duration: 0.15 }}
+              transition={{
+                opacity: { duration: 0.15 },
+                rotate: { duration: 0.6, delay: 1, repeat: Infinity, repeatDelay: 3 },
+              }}
             >
               <Bot className="w-6 h-6" />
             </motion.span>

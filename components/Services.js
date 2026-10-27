@@ -29,6 +29,16 @@ export default function Services() {
       number: "05",
       title: "AI Features in Your Product",
       description: "Add LLM-powered features to existing software — search, summarization, drafting, and more.",
+    },
+    {
+      number: "06",
+      title: "Website Development",
+      description: "Fast, modern websites and web apps — designed, built and deployed by one team.",
+    },
+    {
+      number: "07",
+      title: "App Development",
+      description: "Web and mobile apps for your business, from internal tools to customer-facing products.",
     }
   ]
 
@@ -39,13 +49,13 @@ export default function Services() {
           <Reveal className="lg:col-span-2">
             <div className="eyebrow mb-4">What we build</div>
             <h2 className="text-3xl sm:text-4xl font-bold text-ink-900 tracking-tight">
-              Five ways we remove manual work with AI
+              AI tools, websites and apps for growing businesses
             </h2>
           </Reveal>
           <Reveal delay={0.1} className="flex flex-col justify-end">
             <p className="text-ink-500 leading-relaxed mb-4">
-              Every tool we build is scoped around one goal: save your team hours
-              on work that shouldn't need a human to do by hand.
+              Every project we take on is scoped around one goal: ship something
+              your team actually uses, not a slide deck.
             </p>
             <Link href="/services" className="text-primary-700 font-semibold inline-flex items-center gap-1.5 hover:gap-2.5 transition-all">
               View all services

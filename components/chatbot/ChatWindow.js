@@ -1,14 +1,16 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { ArrowUp, Loader2, Minus, Sparkles, Trash2, X } from 'lucide-react'
+import { ArrowUp, Loader2, Mail, MessageCircle, Minus, Sparkles, Trash2, X } from 'lucide-react'
 import ChatMessage from './ChatMessage'
 import SuggestedPrompts from './SuggestedPrompts'
 import LeadForm from './LeadForm'
 import useChatSession from './useChatSession'
+import { CALENDLY_URL } from '../../lib/constants'
 
-export default function ChatWindow({ onClose, onMinimize }) {
+export default function ChatWindow({ onClose, onMinimize, contactEmail, contactWhatsapp }) {
   const {
+    sessionId,
     messages,
     suggestedPrompts,
     isLoading,
@@ -107,73 +109,113 @@ export default function ChatWindow({ onClose, onMinimize }) {
         </div>
       </div>
 
-      {/* Messages */}
-      <div ref={scrollRef} className="flex-1 overflow-y-auto px-4 py-4 space-y-3 bg-white">
-        {isInitializing ? (
-          <div className="flex items-center justify-center h-full text-ink-400 text-sm gap-2">
-            <Loader2 className="w-4 h-4 animate-spin" />
-            Starting chat...
-          </div>
-        ) : (
-          <>
-            {messages.map((message, index) => (
-              <ChatMessage key={index} message={message} />
-            ))}
-            {showLeadForm && (
-              <LeadForm
-                onSubmit={submitLead}
-                onCancel={() => setShowLeadForm(false)}
-              />
+      {!isInitializing && !sessionId ? (
+        <div className="flex-1 overflow-y-auto px-5 py-6 bg-white">
+          <p className="text-sm font-semibold text-ink-900 mb-1.5">Unable to start the chat assistant right now.</p>
+          <p className="text-sm text-ink-500 mb-5">No worries — reach us directly and we&apos;ll get back to you fast:</p>
+          <div className="space-y-2.5">
+            {contactEmail && (
+              <a
+                href={`mailto:${contactEmail}`}
+                className="flex items-center gap-2.5 text-sm font-medium text-ink-700 bg-ink-50 hover:bg-ink-100 rounded-lg px-3.5 py-3 transition-colors"
+              >
+                <Mail className="w-4 h-4 text-primary-600 flex-shrink-0" />
+                Email us
+              </a>
             )}
-          </>
-        )}
-      </div>
-
-      {error && (
-        <div className="px-4 py-2 text-xs text-red-700 bg-red-50 border-t border-red-100 flex-shrink-0">
-          {error}
+            {contactWhatsapp && (
+              <a
+                href={`https://wa.me/${contactWhatsapp}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2.5 text-sm font-medium text-ink-700 bg-ink-50 hover:bg-ink-100 rounded-lg px-3.5 py-3 transition-colors"
+              >
+                <MessageCircle className="w-4 h-4 text-primary-600 flex-shrink-0" />
+                WhatsApp us
+              </a>
+            )}
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2.5 text-sm font-medium text-ink-700 bg-ink-50 hover:bg-ink-100 rounded-lg px-3.5 py-3 transition-colors"
+            >
+              <Sparkles className="w-4 h-4 text-primary-600 flex-shrink-0" />
+              Book a 15-min call
+            </a>
+          </div>
         </div>
-      )}
+      ) : (
+        <>
+          {/* Messages */}
+          <div ref={scrollRef} className="flex-1 overflow-y-auto px-4 py-4 space-y-3 bg-white">
+            {isInitializing ? (
+              <div className="flex items-center justify-center h-full text-ink-400 text-sm gap-2">
+                <Loader2 className="w-4 h-4 animate-spin" />
+                Starting chat...
+              </div>
+            ) : (
+              <>
+                {messages.map((message, index) => (
+                  <ChatMessage key={index} message={message} />
+                ))}
+                {showLeadForm && (
+                  <LeadForm
+                    onSubmit={submitLead}
+                    onCancel={() => setShowLeadForm(false)}
+                  />
+                )}
+              </>
+            )}
+          </div>
 
-      {!isInitializing && messages.length <= 1 && (
-        <SuggestedPrompts prompts={suggestedPrompts} onSelect={handleSend} disabled={isLoading} />
-      )}
+          {error && (
+            <div className="px-4 py-2 text-xs text-red-700 bg-red-50 border-t border-red-100 flex-shrink-0">
+              {error}
+            </div>
+          )}
 
-      {/* Footer */}
-      <div className="border-t border-ink-100 px-3 py-3 flex-shrink-0 bg-white">
-        {!showLeadForm && (
-          <button
-            type="button"
-            onClick={() => setShowLeadForm(true)}
-            className="w-full mb-2 inline-flex items-center justify-center gap-1.5 text-xs font-medium text-primary-700 hover:text-primary-800 bg-primary-50 hover:bg-primary-100 rounded-md py-1.5 transition-colors"
-          >
-            <Sparkles className="w-3.5 h-3.5" />
-            Share project details with our team
-          </button>
-        )}
-        <div className="flex items-end gap-2">
-          <textarea
-            ref={textareaRef}
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={handleKeyDown}
-            disabled={isInitializing || isLoading}
-            rows={1}
-            placeholder="Ask a question..."
-            aria-label="Message"
-            className="flex-1 resize-none overflow-y-auto max-h-24 px-3 py-2.5 text-sm leading-5 border border-ink-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent disabled:bg-ink-50"
-          />
-          <button
-            type="button"
-            onClick={() => handleSend()}
-            disabled={isInitializing || isLoading || !input.trim()}
-            aria-label="Send message"
-            className="flex-shrink-0 h-10 w-10 flex items-center justify-center rounded-lg bg-ink-900 text-white hover:bg-primary-700 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
-          >
-            {isLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : <ArrowUp className="w-4 h-4" />}
-          </button>
-        </div>
-      </div>
+          {!isInitializing && messages.length <= 1 && (
+            <SuggestedPrompts prompts={suggestedPrompts} onSelect={handleSend} disabled={isLoading} />
+          )}
+
+          {/* Footer */}
+          <div className="border-t border-ink-100 px-3 py-3 flex-shrink-0 bg-white">
+            {!showLeadForm && (
+              <button
+                type="button"
+                onClick={() => setShowLeadForm(true)}
+                className="w-full mb-2 inline-flex items-center justify-center gap-1.5 text-xs font-medium text-primary-700 hover:text-primary-800 bg-primary-50 hover:bg-primary-100 rounded-md py-1.5 transition-colors"
+              >
+                <Sparkles className="w-3.5 h-3.5" />
+                Share project details with our team
+              </button>
+            )}
+            <div className="flex items-end gap-2">
+              <textarea
+                ref={textareaRef}
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                onKeyDown={handleKeyDown}
+                disabled={isInitializing || isLoading}
+                rows={1}
+                placeholder="Ask a question..."
+                aria-label="Message"
+                className="flex-1 resize-none overflow-y-auto max-h-24 px-3 py-2.5 text-sm leading-5 border border-ink-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent disabled:bg-ink-50"
+              />
+              <button
+                type="button"
+                onClick={() => handleSend()}
+                disabled={isInitializing || isLoading || !input.trim()}
+                aria-label="Send message"
+                className="flex-shrink-0 h-10 w-10 flex items-center justify-center rounded-lg bg-ink-900 text-white hover:bg-primary-700 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+              >
+                {isLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : <ArrowUp className="w-4 h-4" />}
+              </button>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   )
 }

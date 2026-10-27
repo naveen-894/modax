@@ -6,7 +6,7 @@ export default function HowWeWork() {
     {
       number: "01",
       title: "15-min call",
-      description: "Tell us what your team does manually today. We'll tell you honestly if AI can help.",
+      description: "Tell us what you need built, or what your team does manually today. We'll tell you honestly how we'd approach it.",
     },
     {
       number: "02",
@@ -15,8 +15,8 @@ export default function HowWeWork() {
     },
     {
       number: "03",
-      title: "Working AI tool in 2–3 weeks",
-      description: "We build and ship something you can actually use, not a slide deck.",
+      title: "Working product in weeks",
+      description: "Most projects ship in 2–6 weeks, depending on scope. You'll get a firm date in the proposal.",
     },
     {
       number: "04",

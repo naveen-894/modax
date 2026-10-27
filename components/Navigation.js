@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
+import { CALENDLY_URL } from '../lib/constants'
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -24,7 +25,6 @@ export default function Navigation() {
   const navLinks = {
     home: '/',
     services: '/services',
-    hr: '/hr',
     products: '/products',
     about: '/about',
     contact: '/contact'
@@ -32,13 +32,12 @@ export default function Navigation() {
 
   const linkItems = [
     { href: navLinks.home, label: 'Home' },
-    { href: navLinks.services, label: 'AI Solutions' },
-    { href: navLinks.hr, label: 'For HR Teams' },
+    { href: navLinks.services, label: 'Services' },
     { href: navLinks.products, label: 'Products' },
     { href: navLinks.about, label: 'About' },
   ]
 
-  const bookCallHref = 'https://calendly.com/vnaveen894/30min'
+  const bookCallHref = CALENDLY_URL
 
   return (
     <nav
