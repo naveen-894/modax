@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Modax — Your Own Premium Online Store | Book a Free Demo</title>
-<meta name="description" content="A complete, fully owned online store for your brand — customer website, store admin panel and owner control panel, all in one. Payments, shipping and returns handled automatically. Book a free demo." />
-<meta name="theme-color" content="#146b4f" />
+<title>Modax — Own Your Ecommerce Platform | One-Time Cost, No Commission</title>
+<meta name="description" content="Get your own branded ecommerce platform, with a customer website, store admin and owner control panel, on your own servers. Pay once. No monthly fees, no commission. See a live demo store." />
+<meta name="theme-color" content="#1e6bff" />
 <link rel="preconnect" href="https://connect.facebook.net" />
 
 <!-- ================= Meta Pixel Code ================= -->
@@ -27,11 +27,14 @@ fbq('track', 'PageView');
 
 <style>
   :root{
-    --accent:#146b4f;
-    --accent-dark:#0f5540;
-    --accent-darker:#0b3f30;
-    --accent-light:#e7f2ec;
-    --accent-light-2:#cfe8dc;
+    --accent:#1e6bff;
+    --accent-dark:#1552cc;
+    --accent-darker:#0d3a99;
+    --accent-light:#e8f0ff;
+    --accent-light-2:#c7dbff;
+    --gold:#c99a2e;
+    --gold-dark:#9c7820;
+    --gold-light:#fbf1dc;
     --ink-900:#1c1917;
     --ink-800:#2b2622;
     --ink-700:#3f3a34;
@@ -91,8 +94,8 @@ fbq('track', 'PageView');
     white-space:nowrap;
   }
   .btn:active{transform:scale(.97);}
-  .btn-primary{background:var(--accent);color:#fff;box-shadow:0 8px 20px rgba(20,107,79,.3);}
-  .btn-primary:hover{background:var(--accent-dark);box-shadow:0 10px 26px rgba(20,107,79,.38);}
+  .btn-primary{background:var(--accent);color:#fff;box-shadow:0 8px 20px rgba(30,107,255,.3);}
+  .btn-primary:hover{background:var(--accent-dark);box-shadow:0 10px 26px rgba(30,107,255,.38);}
   .btn-secondary{background:var(--white);color:var(--ink-800);border:1.5px solid var(--ink-200);}
   .btn-secondary:hover{border-color:var(--accent);color:var(--accent-dark);}
   .btn-ghost{background:transparent;color:var(--accent-dark);padding:10px 4px;}
@@ -173,6 +176,31 @@ fbq('track', 'PageView');
   .card p{color:var(--ink-500);font-size:15px;margin:0;}
 
   .section-alt{background:var(--ink-50);}
+
+  /* Comparison table (own it, don't rent it) */
+  .compare-table-wrap{max-width:900px;margin:0 auto;}
+  .compare-cards{display:grid;gap:16px;grid-template-columns:1fr;}
+  .compare-card{background:#fff;border:1px solid var(--ink-100);border-radius:var(--radius-lg);padding:22px;box-shadow:var(--shadow-sm);}
+  .compare-card h3{font-size:17px;margin-bottom:14px;}
+  .compare-card dl{margin:0;}
+  .compare-card dl>div{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-top:1px solid var(--ink-100);}
+  .compare-card dl>div:first-child{border-top:none;}
+  .compare-card dt{color:var(--ink-500);font-size:13.5px;flex:none;width:46%;}
+  .compare-card dd{margin:0;font-size:13.5px;font-weight:600;color:var(--ink-800);text-align:right;}
+  .compare-card-highlight{border:2px solid var(--gold);background:var(--gold-light);box-shadow:var(--shadow-md);}
+  .compare-card-highlight dt{color:var(--gold-dark);}
+  .compare-card-highlight dd{color:var(--ink-900);}
+  .compare-table{display:none;}
+  @media(min-width:720px){
+    .compare-cards{display:none;}
+    .compare-table{display:table;width:100%;border-collapse:separate;border-spacing:0;background:#fff;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);}
+    .compare-table th,.compare-table td{padding:16px 18px;font-size:14.5px;border-bottom:1px solid var(--ink-100);text-align:left;}
+    .compare-table thead th{font-size:12.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-500);font-weight:700;}
+    .compare-table tbody th{font-weight:600;color:var(--ink-700);}
+    .compare-table tr:last-child td,.compare-table tr:last-child th{border-bottom:none;}
+    .compare-table td.compare-highlight{background:var(--gold-light);font-weight:700;color:var(--ink-900);}
+    .compare-table thead th.compare-highlight{background:var(--gold);color:var(--ink-900);}
+  }
 
   /* Demo / case study */
   .demo-wrap{display:grid;gap:40px;}
@@ -320,15 +348,15 @@ fbq('track', 'PageView');
   <div class="container hero-grid">
     <div>
       <span class="eyebrow">For established businesses, not marketplaces</span>
-      <h1>Your own <span class="accent-word">premium online store</span> — website, admin panel and owner control, all in one.</h1>
-      <p class="hero-sub">Built for your brand. Payments, shipping and returns handled automatically.</p>
+      <h1>Own your ecommerce platform. <span class="accent-word">Pay once, keep it forever.</span></h1>
+      <p class="hero-sub">Your brand, your servers, your customer data. No monthly fees. No commission. Payments, shipping and returns handled automatically.</p>
       <div class="hero-actions">
-        <a href="#demo-form" class="btn btn-primary btn-lg">Book a Free Demo</a>
-        <a href="https://nrd-customer-fed.vercel.app/" target="_blank" rel="noopener" class="btn btn-secondary btn-lg" id="viewLiveStoreBtn">View Live Store</a>
+        <a href="https://nrd-customer-fed.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary btn-lg" id="viewLiveStoreBtn">Explore the Live Demo Store</a>
+        <a href="#demo-form" class="btn btn-secondary btn-lg">Book a Free Demo</a>
       </div>
       <div class="hero-trust">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
-        <span>You own the brand, the data and the customer relationship — end to end.</span>
+        <span>One-time cost · Your own servers · Live in 2–6 weeks</span>
       </div>
     </div>
     <div class="hero-visual reveal">
@@ -410,13 +438,102 @@ fbq('track', 'PageView');
       </div>
       <div class="card reveal">
         <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0115-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 01-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></div>
-        <h3>Easy returns</h3>
-        <p>Customers can cancel or return orders themselves; you manage it all in one place.</p>
+        <h3>Easy returns &amp; exchanges</h3>
+        <p>Customers can cancel, return or exchange orders themselves, including size changes. You manage it all in one place.</p>
       </div>
       <div class="card reveal">
         <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L12 16l-5.6 3.1 1.4-6.3-4.8-4.3 6.4-.6z"/></svg></div>
         <h3>Customer trust built in</h3>
         <p>Ratings and reviews with photos, product Q&amp;A, pincode delivery check, OTP login.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3b. OWN IT, DON'T RENT IT ============ -->
+<section id="own-it">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Why own your platform</span>
+      <h2>Own it, don't rent it</h2>
+      <p>Monthly platforms and marketplaces keep charging you as you grow. With Modax, you pay once and the platform is yours.</p>
+    </div>
+
+    <div class="compare-table-wrap reveal">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th class="compare-highlight">Modax</th>
+            <th>Monthly subscription platforms</th>
+            <th>Marketplaces</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Cost</th>
+            <td class="compare-highlight">One-time project fee</td>
+            <td>Monthly fees + paid apps</td>
+            <td>Commission on every order</td>
+          </tr>
+          <tr>
+            <th scope="row">Commission on sales</th>
+            <td class="compare-highlight">None</td>
+            <td>Transaction fees on some plans</td>
+            <td>Typically 20–30%</td>
+          </tr>
+          <tr>
+            <th scope="row">Where it runs</th>
+            <td class="compare-highlight">Your own servers, in your business name</td>
+            <td>Their servers</td>
+            <td>Their platform</td>
+          </tr>
+          <tr>
+            <th scope="row">Customer data</th>
+            <td class="compare-highlight">100% yours</td>
+            <td>Stored on their platform</td>
+            <td>Owned by the marketplace</td>
+          </tr>
+          <tr>
+            <th scope="row">Your brand</th>
+            <td class="compare-highlight">Fully custom, your domain</td>
+            <td>Theme-based</td>
+            <td>Listed alongside competitors</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="compare-cards">
+        <div class="compare-card compare-card-highlight">
+          <h3>Modax</h3>
+          <dl>
+            <div><dt>Cost</dt><dd>One-time project fee</dd></div>
+            <div><dt>Commission on sales</dt><dd>None</dd></div>
+            <div><dt>Where it runs</dt><dd>Your own servers, in your business name</dd></div>
+            <div><dt>Customer data</dt><dd>100% yours</dd></div>
+            <div><dt>Your brand</dt><dd>Fully custom, your domain</dd></div>
+          </dl>
+        </div>
+        <div class="compare-card">
+          <h3>Monthly subscription platforms</h3>
+          <dl>
+            <div><dt>Cost</dt><dd>Monthly fees + paid apps</dd></div>
+            <div><dt>Commission on sales</dt><dd>Transaction fees on some plans</dd></div>
+            <div><dt>Where it runs</dt><dd>Their servers</dd></div>
+            <div><dt>Customer data</dt><dd>Stored on their platform</dd></div>
+            <div><dt>Your brand</dt><dd>Theme-based</dd></div>
+          </dl>
+        </div>
+        <div class="compare-card">
+          <h3>Marketplaces</h3>
+          <dl>
+            <div><dt>Cost</dt><dd>Commission on every order</dd></div>
+            <div><dt>Commission on sales</dt><dd>Typically 20–30%</dd></div>
+            <div><dt>Where it runs</dt><dd>Their platform</dd></div>
+            <div><dt>Customer data</dt><dd>Owned by the marketplace</dd></div>
+            <div><dt>Your brand</dt><dd>Listed alongside competitors</dd></div>
+          </dl>
+        </div>
       </div>
     </div>
   </div>
@@ -496,7 +613,7 @@ fbq('track', 'PageView');
               <li>Wishlist; cart with quantity changes and coupon codes; quick Buy Now checkout</li>
               <li>Saved addresses with map location picker</li>
               <li>Razorpay payments (UPI, cards, net banking) plus Cash on Delivery; order confirmation page</li>
-              <li>Order history by status; order tracking timeline; cancel or return orders; rate and review delivered products</li>
+              <li>Order history by status; order tracking timeline; cancel, return or exchange orders (including size change); rate and review delivered products</li>
               <li>OTP sign-up and login, password reset; profile and saved details</li>
               <li>Customer support form; About, Privacy, Terms, Shipping and Return policy pages</li>
               <li>Mobile bottom menu and desktop footer with social links</li>
@@ -517,7 +634,7 @@ fbq('track', 'PageView');
               <li>Reorder images, set specifications, price per size, copy one price to all sizes</li>
               <li>Publish, hold or discontinue products individually or in bulk; search and filter by status</li>
               <li>Stock tracked for every size; out-of-stock and low-stock tabs with live counts; edit stock directly; add missing sizes</li>
-              <li>Orders by stage (in progress, returns, delivered, cancelled); bulk updates or reject single orders</li>
+              <li>Orders by stage (in progress, returns, exchanges, delivered, cancelled); bulk updates or reject single orders</li>
               <li>Automatic courier booking, pickup and tracking via Shiprocket; downloadable shipping labels</li>
               <li>Full order details with timeline; return list with reasons and customer comments</li>
               <li>Secure login for you and your staff; raise and track support queries</li>
@@ -607,6 +724,18 @@ fbq('track', 'PageView');
           </div>
 
           <div class="field">
+            <label for="selling_channel">Where do you sell today?</label>
+            <select id="selling_channel" name="selling_channel">
+              <option value="">Select...</option>
+              <option value="Instagram / WhatsApp">Instagram / WhatsApp</option>
+              <option value="Marketplaces (Myntra, Amazon, Meesho, etc.)">Marketplaces (Myntra, Amazon, Meesho, etc.)</option>
+              <option value="My own website">My own website</option>
+              <option value="Offline store only">Offline store only</option>
+              <option value="Not selling yet">Not selling yet</option>
+            </select>
+          </div>
+
+          <div class="field">
             <label for="monthly_revenue">Current monthly revenue *</label>
             <select id="monthly_revenue" name="monthly_revenue" required>
               <option value="">Select...</option>
@@ -649,7 +778,7 @@ fbq('track', 'PageView');
         </div>
         <h3>Thanks — your request is in!</h3>
         <p>We'll reach out within one business day to schedule your demo. Prefer to talk now?</p>
-        <a id="whatsappCta" href="#" target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg">
+        <a id="whatsappCta" href="https://wa.me/919164579092" target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.6-.8-1.8-.9-.2-.1-.4-.1-.6.1-.2.2-.7.9-.8 1-.2.2-.3.2-.5.1-1.5-.7-2.5-1.3-3.5-3-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.2-1.2-.1-.2-.2-.2-.5-.3z"/><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.5A10 10 0 1012 2z"/></svg>
           Chat on WhatsApp
         </a>
@@ -671,14 +800,21 @@ fbq('track', 'PageView');
           How long does setup take?
           <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
         </button>
-        <div class="acc-panel"><div class="acc-panel-inner"><p style="margin:0;">Most stores go live within 2–3 weeks of your demo call, depending on your catalogue size and how much customisation you need.</p></div></div>
+        <div class="acc-panel"><div class="acc-panel-inner"><p style="margin:0;">Most stores go live in 2–6 weeks, depending on your catalogue size and how much customisation you need.</p></div></div>
       </div>
       <div class="acc-item">
         <button class="acc-trigger" data-accordion-trigger aria-expanded="false">
           What does it cost?
           <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
         </button>
-        <div class="acc-panel"><div class="acc-panel-inner"><p style="margin:0;">Pricing depends on your catalogue size and customisation — we share a clear quote after the demo.</p></div></div>
+        <div class="acc-panel"><div class="acc-panel-inner"><p style="margin:0;">Modax is a one-time project fee, with no subscription and no commission on your sales. Packages start from ₹1,99,999 + GST. We share an exact quote after your demo call, based on your catalogue and custom features.</p></div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-trigger" data-accordion-trigger aria-expanded="false">
+          What are the running costs?
+          <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="acc-panel"><div class="acc-panel-inner"><p style="margin:0;">You pay running costs directly to each provider, in your own business name: cloud hosting, your domain and email, Razorpay (about 2% per transaction), Shiprocket shipping, SMS/OTP and AI usage. Modax sets all of these up for you.</p></div></div>
       </div>
       <div class="acc-item">
         <button class="acc-trigger" data-accordion-trigger aria-expanded="false">
@@ -686,6 +822,13 @@ fbq('track', 'PageView');
           <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="acc-panel"><div class="acc-panel-inner"><p style="margin:0;">Yes. Your store runs on your own domain, with your own branding throughout.</p></div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-trigger" data-accordion-trigger aria-expanded="false">
+          Do I own the platform?
+          <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="acc-panel"><div class="acc-panel-inner"><p style="margin:0;">Your domain, brand, accounts and all your data belong to you. You receive a lifetime licence to use your platform. Full source code handover is available as an add-on, and is included in our Enterprise package.</p></div></div>
       </div>
       <div class="acc-item">
         <button class="acc-trigger" data-accordion-trigger aria-expanded="false">
@@ -700,6 +843,13 @@ fbq('track', 'PageView');
           <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="acc-panel"><div class="acc-panel-inner"><p style="margin:0;">Razorpay and Shiprocket come integrated, so payments and shipping work out of the box.</p></div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-trigger" data-accordion-trigger aria-expanded="false">
+          What support do I get after launch?
+          <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="acc-panel"><div class="acc-panel-inner"><p style="margin:0;">Every package includes free support after launch (3 to 12 months depending on package), covering bug fixes, security updates and server monitoring. After that, an optional annual maintenance plan is available.</p></div></div>
       </div>
     </div>
   </div>
@@ -872,6 +1022,7 @@ fbq('track', 'PageView');
       email: form.email,
       business_type: form.business_type,
       what_you_sell: form.what_you_sell,
+      selling_channel: form.selling_channel,
       monthly_revenue: form.monthly_revenue,
       launch_timeline: form.launch_timeline
     };
@@ -904,6 +1055,7 @@ fbq('track', 'PageView');
       email: data.email.trim(),
       business_type: data.business_type,
       what_you_sell: data.what_you_sell.trim(),
+      selling_channel: data.selling_channel,
       monthly_revenue: data.monthly_revenue,
       launch_timeline: data.launch_timeline,
       utm_source: document.getElementById("utm_source").value,
