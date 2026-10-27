@@ -18,7 +18,7 @@ export default function Reveal({
   duration = 0.6,
   className,
   once = true,
-  amount = 0.2,
+  amount = 'some',
 }) {
   const MotionTag = motion[as] || motion.div
   const offset = DIRECTIONS[direction] || DIRECTIONS.up

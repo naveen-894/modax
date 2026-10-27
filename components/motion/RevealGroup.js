@@ -32,7 +32,7 @@ export function RevealItem({ children, className, direction = 'up' }) {
   )
 }
 
-export default function RevealGroup({ children, className, once = true, amount = 0.2 }) {
+export default function RevealGroup({ children, className, once = true, amount = 'some' }) {
   return (
     <motion.div
       className={className}

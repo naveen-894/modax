@@ -76,6 +76,25 @@ export default function AiResumeMatcherDemo() {
           </p>
         </div>
 
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
+          <div className="w-full max-w-md rounded-xl bg-white shadow-xl overflow-hidden ring-1 ring-black/5">
+            <img
+              src="https://modax-s3.s3.ap-south-1.amazonaws.com/uploads/e6f2be8b-df11-4dff-b60d-baf532ac1d18.png"
+              alt="Screenr match result showing an 85% match score and skill comparison for a Python Developer role"
+              className="w-full h-auto"
+              loading="lazy"
+            />
+          </div>
+          <div className="w-full max-w-md rounded-xl bg-white shadow-xl overflow-hidden ring-1 ring-black/5">
+            <img
+              src="https://modax-s3.s3.ap-south-1.amazonaws.com/uploads/b438282a-f45c-4e21-b077-a423f3cc11ca.png"
+              alt="Screenr follow-up chat answering a question about the biggest gaps in a candidate's match"
+              className="w-full h-auto"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 text-ink-900">
             <div className="text-center mb-8">
