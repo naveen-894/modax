@@ -2,11 +2,11 @@ import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 
 export const metadata = {
-  metadataBase: new URL('https://modax.in'),
+  metadataBase: new URL('https://www.modax.in'),
   title: 'Terms of Service | Modax',
   description: 'The terms that govern your use of modax.in and the products and services Modax provides.',
   alternates: {
-    canonical: 'https://modax.in/terms',
+    canonical: 'https://www.modax.in/terms',
   },
   robots: {
     index: true,

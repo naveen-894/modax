@@ -2,17 +2,20 @@ import './globals.css'
 import ChatWidget from '../components/chatbot/ChatWidget'
 
 export const metadata = {
-  metadataBase: new URL('https://modax.in'),
+  metadataBase: new URL('https://www.modax.in'),
   title: 'Modax | AI, Website & App Development',
   description: 'Modax is a tech studio that builds AI tools, websites and apps for growing businesses — document processing, workflow automation, AI assistants, and the web or app product you need shipped.',
   keywords: ['AI tools', 'website development', 'app development', 'software development company', 'AI automation', 'custom AI development', 'LLM integration', 'Bengaluru'],
   authors: [{ name: 'Modax' }],
   creator: 'Modax',
   publisher: 'Modax',
+  alternates: {
+    canonical: 'https://www.modax.in/',
+  },
   openGraph: {
     title: 'Modax | AI, Website & App Development',
     description: 'Modax is a tech studio that builds AI tools, websites and apps for growing businesses.',
-    url: 'https://modax.in',
+    url: 'https://www.modax.in/',
     siteName: 'Modax',
     locale: 'en_US',
     type: 'website',
@@ -46,8 +49,8 @@ export default function RootLayout({ children }) {
     "@type": "ProfessionalService",
     "name": "Modax",
     "description": "Founder-led tech studio that builds AI tools, websites and apps for growing businesses — document understanding, AI assistants, workflow automation, and web and app development.",
-    "url": "https://modax.in",
-    "logo": "https://modax.in/images/logo.png",
+    "url": "https://www.modax.in",
+    "logo": "https://www.modax.in/images/logo.png",
     "sameAs": [
       "https://www.linkedin.com/in/naveen-v-89011421b/",
       `https://wa.me/${process.env.CONTACT_WHATSAPP}`

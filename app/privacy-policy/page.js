@@ -2,11 +2,11 @@ import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 
 export const metadata = {
-  metadataBase: new URL('https://modax.in'),
+  metadataBase: new URL('https://www.modax.in'),
   title: 'Privacy Policy | Modax',
   description: 'How Modax collects, uses and protects your personal data across modax.in, our landing pages, and our products.',
   alternates: {
-    canonical: 'https://modax.in/privacy-policy',
+    canonical: 'https://www.modax.in/privacy-policy',
   },
   robots: {
     index: true,

@@ -18,4 +18,4 @@ User-agent: Slurp
 Allow: /
 
 # Sitemap location
-Sitemap: https://modax.in/sitemap.xml
+Sitemap: https://www.modax.in/sitemap.xml

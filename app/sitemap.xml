@@ -6,7 +6,7 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://modax.in/</loc>
+    <loc>https://www.modax.in/</loc>
     <lastmod>2024-01-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -14,7 +14,7 @@
 
   <!-- Services Page -->
   <url>
-    <loc>https://modax.in/services</loc>
+    <loc>https://www.modax.in/services</loc>
     <lastmod>2024-01-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -22,7 +22,7 @@
 
   <!-- Products Page -->
   <url>
-    <loc>https://modax.in/products</loc>
+    <loc>https://www.modax.in/products</loc>
     <lastmod>2024-01-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -30,7 +30,7 @@
 
   <!-- Rawnn Product Page -->
   <url>
-    <loc>https://modax.in/products/rawnn</loc>
+    <loc>https://www.modax.in/products/rawnn</loc>
     <lastmod>2024-01-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -38,7 +38,7 @@
 
   <!-- Screenr Product Page -->
   <url>
-    <loc>https://modax.in/products/ai-resume-matcher</loc>
+    <loc>https://www.modax.in/products/ai-resume-matcher</loc>
     <lastmod>2026-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -46,7 +46,7 @@
 
   <!-- About Page -->
   <url>
-    <loc>https://modax.in/about</loc>
+    <loc>https://www.modax.in/about</loc>
     <lastmod>2024-01-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -54,7 +54,7 @@
 
   <!-- Contact Page -->
   <url>
-    <loc>https://modax.in/contact</loc>
+    <loc>https://www.modax.in/contact</loc>
     <lastmod>2024-01-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -62,7 +62,7 @@
 
   <!-- Legacy Rawnn Page (redirect) -->
   <url>
-    <loc>https://modax.in/rawnn</loc>
+    <loc>https://www.modax.in/rawnn</loc>
     <lastmod>2024-01-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -70,7 +70,7 @@
 
   <!-- Privacy Policy -->
   <url>
-    <loc>https://modax.in/privacy-policy</loc>
+    <loc>https://www.modax.in/privacy-policy</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -78,7 +78,7 @@
 
   <!-- Terms of Service -->
   <url>
-    <loc>https://modax.in/terms</loc>
+    <loc>https://www.modax.in/terms</loc>
     <lastmod>2026-10-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
