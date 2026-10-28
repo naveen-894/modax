@@ -1,6 +1,5 @@
 import Navigation from '../components/Navigation'
 import Hero from '../components/Hero'
-import Capabilities from '../components/Capabilities'
 import ProductHighlight from '../components/ProductHighlight'
 import EcommerceShowcase from '../components/EcommerceShowcase'
 import HowWeWork from '../components/HowWeWork'
@@ -14,7 +13,6 @@ export default function Home() {
       <Navigation />
       <main>
         <Hero />
-        <Capabilities />
         <ProductHighlight />
         <EcommerceShowcase />
         <HowWeWork />
