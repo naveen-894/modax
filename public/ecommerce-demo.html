@@ -719,23 +719,6 @@ fbq('track', 'PageView');
           </div>
 
           <div class="field">
-            <label for="what_you_sell">What do you sell?</label>
-            <input type="text" id="what_you_sell" name="what_you_sell" placeholder="e.g. Silk sarees" />
-          </div>
-
-          <div class="field">
-            <label for="selling_channel">Where do you sell today?</label>
-            <select id="selling_channel" name="selling_channel">
-              <option value="">Select...</option>
-              <option value="Instagram / WhatsApp">Instagram / WhatsApp</option>
-              <option value="Marketplaces (Myntra, Amazon, Meesho, etc.)">Marketplaces (Myntra, Amazon, Meesho, etc.)</option>
-              <option value="My own website">My own website</option>
-              <option value="Offline store only">Offline store only</option>
-              <option value="Not selling yet">Not selling yet</option>
-            </select>
-          </div>
-
-          <div class="field">
             <label for="monthly_revenue">Current monthly revenue *</label>
             <select id="monthly_revenue" name="monthly_revenue" required>
               <option value="">Select...</option>
@@ -1021,8 +1004,6 @@ fbq('track', 'PageView');
       phone: form.phone,
       email: form.email,
       business_type: form.business_type,
-      what_you_sell: form.what_you_sell,
-      selling_channel: form.selling_channel,
       monthly_revenue: form.monthly_revenue,
       launch_timeline: form.launch_timeline
     };
@@ -1054,8 +1035,6 @@ fbq('track', 'PageView');
       phone: "+91" + data.phone.trim(),
       email: data.email.trim(),
       business_type: data.business_type,
-      what_you_sell: data.what_you_sell.trim(),
-      selling_channel: data.selling_channel,
       monthly_revenue: data.monthly_revenue,
       launch_timeline: data.launch_timeline,
       utm_source: document.getElementById("utm_source").value,
