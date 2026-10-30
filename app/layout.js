@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import ChatWidget from '../components/chatbot/ChatWidget'
 
@@ -159,6 +160,7 @@ export default function RootLayout({ children }) {
           contactEmail={process.env.CONTACT_EMAIL}
           contactWhatsapp={process.env.CONTACT_WHATSAPP}
         />
+        <Analytics />
       </body>
     </html>
   )
