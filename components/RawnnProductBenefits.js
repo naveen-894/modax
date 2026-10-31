@@ -1,5 +1,4 @@
 import { DollarSign, Lock, Zap, Truck, CreditCard, Heart } from 'lucide-react'
-import { RAWNN_HOSTING_COST } from '../lib/constants'
 
 export default function RawnnProductBenefits() {
   const benefits = [
@@ -38,7 +37,7 @@ export default function RawnnProductBenefits() {
   const compareRows = [
     { label: "Cost", rawnn: "One-time project fee", monthly: "Monthly fees + paid apps", marketplace: "Commission on every order" },
     { label: "Commission on sales", rawnn: "None", monthly: "Transaction fees on some plans", marketplace: "Typically 20–30%" },
-    { label: "Running costs", rawnn: `Your own hosting only (${RAWNN_HOSTING_COST})`, monthly: "Included in monthly fee", marketplace: "Included in commission" },
+    { label: "Running costs", rawnn: "Your own hosting only", monthly: "Included in monthly fee", marketplace: "Included in commission" },
     { label: "Where it runs", rawnn: "Your own servers, in your business name", monthly: "Their servers", marketplace: "Their platform" },
     { label: "Customer data", rawnn: "Lives on your own servers", monthly: "Stored on their platform", marketplace: "Owned by the marketplace" },
     { label: "Your brand", rawnn: "Fully custom, your domain", monthly: "Theme-based", marketplace: "Listed alongside competitors" },

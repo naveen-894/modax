@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { RAWNN_DEMO_URL } from '../lib/constants'
 
 export default function RawnnDemo() {
   const [formData, setFormData] = useState({
@@ -97,7 +98,7 @@ export default function RawnnDemo() {
             />
           </div>
           <a
-            href="https://nrd-customer-fed.vercel.app/"
+            href={RAWNN_DEMO_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary px-6 py-3 whitespace-nowrap"

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { RAWNN_STARTING_PRICE, RAWNN_HOSTING_COST } from '../lib/constants'
+import { RAWNN_STARTING_PRICE, RAWNN_DEMO_URL } from '../lib/constants'
 
 export default function RawnnProductDemo() {
   const [formData, setFormData] = useState({
@@ -95,7 +95,7 @@ export default function RawnnProductDemo() {
             />
           </div>
           <a
-            href="https://nrd-customer-fed.vercel.app/"
+            href={RAWNN_DEMO_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary px-6 py-3 whitespace-nowrap"
@@ -264,7 +264,7 @@ export default function RawnnProductDemo() {
                   ✓ One-time cost from Modax — no monthly fees, no commission. {RAWNN_STARTING_PRICE}.
                 </p>
                 <p className="text-xs text-ink-500">
-                  ✓ You pay only your own hosting costs directly to your host ({RAWNN_HOSTING_COST})
+                  ✓ You pay only your own hosting costs directly to your host
                 </p>
               </div>
             </form>

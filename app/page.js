@@ -13,8 +13,8 @@ export default function Home() {
       <Navigation />
       <main>
         <Hero />
-        <ProductHighlight />
         <EcommerceShowcase />
+        <ProductHighlight />
         <HowWeWork />
         <WhyModax />
         <CTA />

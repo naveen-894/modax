@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { ArrowRight, Sparkles, Globe, Smartphone, ChevronDown } from 'lucide-react'
+import { ArrowRight, Sparkles, Globe, Smartphone, ShoppingCart, ChevronDown } from 'lucide-react'
 import { CALENDLY_URL } from '../lib/constants'
 
 const easeOut = [0.21, 0.47, 0.32, 0.98]
@@ -18,6 +18,7 @@ const leftItem = {
 }
 
 const capabilities = [
+  { icon: ShoppingCart, label: 'Ecommerce platforms' },
   { icon: Sparkles, label: 'AI tools' },
   { icon: Globe, label: 'Websites' },
   { icon: Smartphone, label: 'Apps' },
@@ -39,7 +40,7 @@ export default function Hero() {
           <motion.div variants={leftContainer} initial="hidden" animate="show" className="max-w-2xl">
             <motion.div variants={leftItem} className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.15em] text-primary-300 mb-5">
               <span className="h-1.5 w-1.5 rounded-full bg-primary-400" />
-              AI, websites & apps, built for real work
+              Ecommerce platforms, websites & AI tools, built for real work
             </motion.div>
 
             <motion.h1 variants={leftItem} className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-white mb-6 leading-[1.1] tracking-tight">
@@ -58,8 +59,8 @@ export default function Hero() {
             </motion.p>
 
             <motion.div variants={leftItem} className="flex flex-col sm:flex-row gap-4 mb-9">
-              <Link href="/products" className="btn-primary px-7 py-3.5">
-                See what we&apos;ve built
+              <Link href="/products/rawnn" className="btn-primary px-7 py-3.5">
+                See the ecommerce platform
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn-secondary px-7 py-3.5">
@@ -97,11 +98,11 @@ export default function Hero() {
                 <div className="flex items-center justify-between bg-white/5 border border-white/10 rounded-lg px-4 py-3.5">
                   <div className="flex items-center gap-3">
                     <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary-500/20 text-primary-300 flex-shrink-0">
-                      <Sparkles className="w-4 h-4" />
+                      <ShoppingCart className="w-4 h-4" />
                     </span>
                     <div>
-                      <p className="text-sm font-semibold text-white">Screenr</p>
-                      <p className="text-xs text-ink-300">Resume ↔ JD matching</p>
+                      <p className="text-sm font-semibold text-white">Rawnn</p>
+                      <p className="text-xs text-ink-300">Own your ecommerce platform</p>
                     </div>
                   </div>
                   <span className="text-[11px] font-semibold text-emerald-300 bg-emerald-400/10 px-2 py-1 rounded-full flex-shrink-0">Live</span>
@@ -109,11 +110,11 @@ export default function Hero() {
                 <div className="flex items-center justify-between bg-white/5 border border-white/10 rounded-lg px-4 py-3.5">
                   <div className="flex items-center gap-3">
                     <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary-500/20 text-primary-300 flex-shrink-0">
-                      <Globe className="w-4 h-4" />
+                      <Sparkles className="w-4 h-4" />
                     </span>
                     <div>
-                      <p className="text-sm font-semibold text-white">Rawnn</p>
-                      <p className="text-xs text-ink-300">Ecommerce, automated</p>
+                      <p className="text-sm font-semibold text-white">Screenr</p>
+                      <p className="text-xs text-ink-300">Resume ↔ JD matching</p>
                     </div>
                   </div>
                   <span className="text-[11px] font-semibold text-emerald-300 bg-emerald-400/10 px-2 py-1 rounded-full flex-shrink-0">Live</span>

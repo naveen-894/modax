@@ -1,6 +1,6 @@
 import { CheckCircle2 } from 'lucide-react'
 import PageHero from './PageHero'
-import { RAWNN_STARTING_PRICE, RAWNN_HOSTING_COST } from '../lib/constants'
+import { RAWNN_STARTING_PRICE, RAWNN_DEMO_URL } from '../lib/constants'
 
 export default function RawnnProductHero() {
   return (
@@ -18,7 +18,7 @@ export default function RawnnProductHero() {
         <a href="#demo" className="btn-primary">
           Book a Free Demo
         </a>
-        <a href="https://nrd-customer-fed.vercel.app/" target="_blank" rel="noopener noreferrer" className="btn-secondary">
+        <a href={RAWNN_DEMO_URL} target="_blank" rel="noopener noreferrer" className="btn-secondary">
           Explore the Live Demo Store
         </a>
       </div>
@@ -31,7 +31,7 @@ export default function RawnnProductHero() {
         <span className="text-sm text-ink-500">{RAWNN_STARTING_PRICE} · Your own servers · Live in 2–6 weeks</span>
       </div>
       <p className="text-sm text-ink-400 mb-10">
-        No monthly fees from Modax — you pay only your own hosting costs directly to your hosting provider ({RAWNN_HOSTING_COST}).
+        No monthly fees from Modax — you pay only your own hosting costs directly to your hosting provider.
       </p>
 
       <div className="rounded-xl bg-white shadow-xl ring-1 ring-ink-900/5 overflow-hidden max-w-2xl lg:max-w-none">
