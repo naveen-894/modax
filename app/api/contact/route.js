@@ -1,5 +1,6 @@
 import { Resend } from "resend";
 import EmailTemplate from "../../../components/EmailTemplate";
+import { pushHubspotLead } from "../../../lib/hubspot";
 
 export async function POST(req) {
   try {
@@ -15,6 +16,12 @@ export async function POST(req) {
 
     if (error) {
       return Response.json({ error: error.message }, { status: 400 });
+    }
+
+    try {
+      await pushHubspotLead(body);
+    } catch (hubspotError) {
+      console.error('HubSpot lead push error:', hubspotError);
     }
 
     return Response.json({ message: "Email sent successfully!" }, { status: 200 });

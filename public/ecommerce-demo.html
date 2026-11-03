@@ -868,6 +868,7 @@ fbq('track', 'PageView');
      CONFIG
      ========================================================= */
   var FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbwiwytL9fvKGP93G8c87MituXcqa18cYUmjldCgM2SvtwcTvjln8u0X2G4di1QH5Xnl5w/exec";
+  var HUBSPOT_ENDPOINT = "/api/ecommerce-lead";
   var WHATSAPP_NUMBER = "919164579092";
 
   /* =========================================================
@@ -1069,6 +1070,15 @@ fbq('track', 'PageView');
     })
       .then(function () { onSubmitSuccess(payload); })
       .catch(function () { onSubmitFailure(); });
+
+    // Push the lead into HubSpot in parallel. Same-origin Next.js API route,
+    // so no CORS issues. Fire-and-forget: a HubSpot hiccup shouldn't affect
+    // the Apps Script submission above or the thank-you state already shown.
+    fetch(HUBSPOT_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    }).catch(function () {});
   });
 
   function onSubmitSuccess(payload) {
