@@ -28,7 +28,7 @@ export default function RawnnProductPricing() {
         'AI-assisted product listing from a photo',
         'Coupons, review moderation, sales analytics',
         'Bulk product upload via Excel/CSV',
-        'Shiprocket auto-shipping & WhatsApp/SMS order updates',
+        'Shiprocket auto-shipping (automated courier booking & tracking)',
       ],
       footer: ['5–7 weeks delivery', '6 months free support', '3 revision rounds'],
       cta: 'btn-primary',
@@ -56,10 +56,10 @@ export default function RawnnProductPricing() {
     <section id="pricing" className="section-padding bg-white">
       <div className="container-max">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-modax-ink mb-4">
             Choose your plan
           </h2>
-          <p className="text-lg sm:text-xl text-ink-500 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-modax-body max-w-3xl mx-auto">
             A one-time project fee, tiered by features — not by how many products you sell. Pick the plan that matches where your brand is today.
           </p>
         </div>
@@ -70,22 +70,22 @@ export default function RawnnProductPricing() {
               key={plan.name}
               className={`relative rounded-xl p-8 h-full flex flex-col ${
                 plan.highlight
-                  ? 'bg-primary-50 ring-2 ring-primary-600 shadow-lg md:-translate-y-2'
-                  : 'bg-white ring-1 ring-ink-100 shadow-sm'
+                  ? 'bg-modax-blue-tint-2 ring-2 ring-modax-blue shadow-lg md:-translate-y-2'
+                  : 'bg-white ring-1 ring-modax-border-lt shadow-sm'
               }`}
             >
               {plan.highlight && (
-                <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-primary-600 text-white text-xs font-bold uppercase tracking-wide px-3 py-1.5 rounded-full">
+                <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-modax-gold text-modax-navy text-xs font-bold uppercase tracking-wide px-3 py-1.5 rounded-full">
                   Most popular
                 </span>
               )}
 
-              <h3 className="text-xl font-bold text-ink-900 mb-1">{plan.name}</h3>
-              <p className="text-sm text-ink-500 mb-5 min-h-[2.5rem]">{plan.tagline}</p>
+              <h3 className="text-xl font-bold text-modax-ink mb-1">{plan.name}</h3>
+              <p className="text-sm text-modax-body mb-5 min-h-[2.5rem]">{plan.tagline}</p>
 
               <div className="mb-6">
-                <span className="text-3xl font-bold text-ink-900">{plan.price}</span>
-                <span className="text-sm text-ink-500 ml-2">one-time</span>
+                <span className="inline-block text-3xl font-bold text-modax-navy bg-modax-gold-tint px-3 py-1 rounded-md">{plan.price}</span>
+                <span className="text-sm text-modax-body ml-2">one-time</span>
               </div>
 
               <ul className="space-y-3 mb-8 flex-1">
@@ -94,7 +94,7 @@ export default function RawnnProductPricing() {
                   return (
                     <li
                       key={index}
-                      className={`flex items-start text-sm ${isLeadIn ? 'text-ink-700 font-semibold' : 'text-ink-500'}`}
+                      className={`flex items-start text-sm ${isLeadIn ? 'text-modax-body font-semibold' : 'text-modax-body'}`}
                     >
                       {!isLeadIn && <CheckCircle2 className="w-4 h-4 text-green-600 mr-3 mt-0.5 flex-shrink-0" />}
                       {feature}
@@ -107,16 +107,16 @@ export default function RawnnProductPricing() {
                 Get started with {plan.name}
               </a>
 
-              <div className="border-t border-ink-100 pt-5 space-y-1.5">
+              <div className="border-t border-modax-border-lt pt-5 space-y-1.5">
                 {plan.footer.map((line, index) => (
-                  <p key={index} className="text-xs text-ink-500">{line}</p>
+                  <p key={index} className="text-xs text-modax-body">{line}</p>
                 ))}
               </div>
             </div>
           ))}
         </div>
 
-        <p className="text-sm text-ink-500 text-center max-w-2xl mx-auto mt-12">
+        <p className="text-sm text-modax-body text-center max-w-2xl mx-auto mt-12">
           Source code handed over on final payment, every plan. Hosting, domain/SSL, and payment/SMS/courier charges are billed at actuals — not included in the package price above.
         </p>
       </div>

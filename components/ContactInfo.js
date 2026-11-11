@@ -9,21 +9,21 @@ export default function ContactInfo() {
     <section className="section-padding bg-white">
       <div className="container-max">
         <Reveal className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-modax-ink mb-4">
             Get started today
           </h2>
-          <p className="text-lg text-ink-500 max-w-2xl mx-auto">
+          <p className="text-lg text-modax-body max-w-2xl mx-auto">
             Pick where you&apos;d like to start.
           </p>
         </Reveal>
 
         <RevealGroup className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          <RevealItem className="bg-gradient-to-br from-primary-50 to-primary-100 rounded-xl p-8 text-center card-hover">
-            <div className="w-16 h-16 bg-ink-900 rounded-lg flex items-center justify-center mx-auto mb-6">
+          <RevealItem className="bg-modax-blue-tint rounded-xl p-8 text-center card-hover">
+            <div className="w-16 h-16 bg-modax-blue-deep rounded-lg flex items-center justify-center mx-auto mb-6">
               <Settings className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-2xl font-bold text-ink-900 mb-4">Custom AI tools</h3>
-            <p className="text-ink-700 mb-6">
+            <h3 className="text-2xl font-bold text-modax-ink mb-4">Custom AI tools</h3>
+            <p className="text-modax-body mb-6">
               Need a specific AI tool for your team? We build custom AI tools that fit your exact workflow.
             </p>
             <div className="space-y-3 mb-6">
@@ -45,12 +45,12 @@ export default function ContactInfo() {
             </Link>
           </RevealItem>
 
-          <RevealItem className="bg-gradient-to-br from-primary-50 to-primary-100 rounded-xl p-8 text-center card-hover">
-            <div className="w-16 h-16 bg-ink-900 rounded-lg flex items-center justify-center mx-auto mb-6">
+          <RevealItem className="bg-modax-blue-tint rounded-xl p-8 text-center card-hover">
+            <div className="w-16 h-16 bg-modax-blue-deep rounded-lg flex items-center justify-center mx-auto mb-6">
               <Globe className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-2xl font-bold text-ink-900 mb-4">Websites & apps</h3>
-            <p className="text-ink-700 mb-6">
+            <h3 className="text-2xl font-bold text-modax-ink mb-4">Websites & apps</h3>
+            <p className="text-modax-body mb-6">
               Need a marketing site, web app, or mobile app built? We design, build and deploy it end to end.
             </p>
             <div className="space-y-3 mb-6">
@@ -72,12 +72,12 @@ export default function ContactInfo() {
             </Link>
           </RevealItem>
 
-          <RevealItem className="bg-gradient-to-br from-primary-50 to-primary-100 rounded-xl p-8 text-center card-hover">
-            <div className="w-16 h-16 bg-ink-900 rounded-lg flex items-center justify-center mx-auto mb-6">
+          <RevealItem className="bg-modax-blue-tint rounded-xl p-8 text-center card-hover">
+            <div className="w-16 h-16 bg-modax-blue-deep rounded-lg flex items-center justify-center mx-auto mb-6">
               <ShoppingBag className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-2xl font-bold text-ink-900 mb-4">Rawnn</h3>
-            <p className="text-ink-700 mb-6">
+            <h3 className="text-2xl font-bold text-modax-ink mb-4">Rawnn</h3>
+            <p className="text-modax-body mb-6">
               Own your ecommerce platform — a customer website, store admin panel and owner control panel, on your own servers.
             </p>
             <div className="space-y-3 mb-6">
@@ -99,12 +99,12 @@ export default function ContactInfo() {
             </Link>
           </RevealItem>
 
-          <RevealItem className="bg-gradient-to-br from-primary-50 to-primary-100 rounded-xl p-8 text-center card-hover">
-            <div className="w-16 h-16 bg-ink-900 rounded-lg flex items-center justify-center mx-auto mb-6">
+          <RevealItem className="bg-modax-blue-tint rounded-xl p-8 text-center card-hover">
+            <div className="w-16 h-16 bg-modax-blue-deep rounded-lg flex items-center justify-center mx-auto mb-6">
               <FileText className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-2xl font-bold text-ink-900 mb-4">Screenr</h3>
-            <p className="text-ink-700 mb-6">
+            <h3 className="text-2xl font-bold text-modax-ink mb-4">Screenr</h3>
+            <p className="text-modax-body mb-6">
               Try our AI resume-to-job matching tool free — no setup required to see your first match.
             </p>
             <div className="space-y-3 mb-6">

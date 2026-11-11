@@ -19,19 +19,19 @@ const LAST_UPDATED = '23 October 2026'
 function Section({ id, title, children }) {
   return (
     <section id={id} className="scroll-mt-28">
-      <h2 className="text-xl sm:text-2xl font-bold text-ink-900 mb-4">{title}</h2>
-      <div className="space-y-4 text-ink-700 leading-relaxed">{children}</div>
+      <h2 className="text-xl sm:text-2xl font-bold text-modax-ink mb-4">{title}</h2>
+      <div className="space-y-4 text-modax-body leading-relaxed">{children}</div>
     </section>
   )
 }
 
 function SubHeading({ children }) {
-  return <h3 className="text-base font-semibold text-ink-900 mt-5 mb-2">{children}</h3>
+  return <h3 className="text-base font-semibold text-modax-ink mt-5 mb-2">{children}</h3>
 }
 
 function List({ items }) {
   return (
-    <ul className="list-disc pl-6 space-y-2 marker:text-ink-400">
+    <ul className="list-disc pl-6 space-y-2 marker:text-modax-muted-2">
       {items.map((item, i) => (
         <li key={i}>{item}</li>
       ))}
@@ -44,17 +44,17 @@ export default function PrivacyPolicyPage() {
     <div className="min-h-screen">
       <Navigation />
       <main>
-        <section className="section-padding bg-ink-50">
+        <section className="section-padding bg-modax-blue-tint-2">
           <div className="container-max max-w-3xl">
             <span className="eyebrow mb-4 block">Legal</span>
-            <h1 className="text-3xl sm:text-4xl font-bold text-ink-900 mb-3">Privacy Policy</h1>
-            <p className="text-ink-500">Last updated: {LAST_UPDATED}</p>
+            <h1 className="text-3xl sm:text-4xl font-bold text-modax-ink mb-3">Privacy Policy</h1>
+            <p className="text-modax-body">Last updated: {LAST_UPDATED}</p>
           </div>
         </section>
 
         <section className="section-padding bg-white">
           <div className="container-max max-w-3xl space-y-12">
-            <div className="space-y-4 text-ink-700 leading-relaxed">
+            <div className="space-y-4 text-modax-body leading-relaxed">
               <p>
                 This Privacy Policy explains how Modax (&ldquo;Modax&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;) collects, uses
                 and protects your personal data when you visit modax.in, its landing pages, or use our products and
@@ -154,7 +154,7 @@ export default function PrivacyPolicyPage() {
                 extract the text needed to generate your match score, and that extracted text — along with your
                 match result — is kept with your session or account so you can come back to it. We don&rsquo;t
                 currently delete this automatically; email us at{' '}
-                <a href="mailto:naveen@modax.in" className="text-primary-700 hover:underline">naveen@modax.in</a>
+                <a href="mailto:naveen@modax.in" className="text-modax-blue hover:text-modax-blue-deep hover:underline">naveen@modax.in</a>
                 {' '}if you&rsquo;d like it removed.
               </p>
             </Section>
@@ -191,7 +191,7 @@ export default function PrivacyPolicyPage() {
               />
               <p>
                 To use any of these rights, email{' '}
-                <a href="mailto:naveen@modax.in" className="text-primary-700 hover:underline">naveen@modax.in</a>.
+                <a href="mailto:naveen@modax.in" className="text-modax-blue hover:text-modax-blue-deep hover:underline">naveen@modax.in</a>.
                 We will respond within 30 days.
               </p>
             </Section>
@@ -219,14 +219,14 @@ export default function PrivacyPolicyPage() {
             </Section>
 
             <Section id="contact-us" title="11. Contact us">
-              <p className="font-semibold text-ink-900">Modax</p>
+              <p className="font-semibold text-modax-ink">Modax</p>
               <p>
                 Email:{' '}
-                <a href="mailto:naveen@modax.in" className="text-primary-700 hover:underline">naveen@modax.in</a>
+                <a href="mailto:naveen@modax.in" className="text-modax-blue hover:text-modax-blue-deep hover:underline">naveen@modax.in</a>
               </p>
               <p>
                 Phone / WhatsApp:{' '}
-                <a href="https://wa.me/919164579092" className="text-primary-700 hover:underline">+91 91645 79092</a>
+                <a href="https://wa.me/919164579092" className="text-modax-blue hover:text-modax-blue-deep hover:underline">+91 91645 79092</a>
               </p>
               <p>Bengaluru, Karnataka, India</p>
             </Section>

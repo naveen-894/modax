@@ -26,6 +26,26 @@
   --ink-800: 39 39 42;
   --ink-900: 24 24 27;
   --ink-950: 9 9 11;
+
+  /* Modax brand palette */
+  --modax-navy: 0 24 72;
+  --modax-navy-2: 0 32 88;
+  --modax-navy-deep: 0 18 64;
+  --modax-line: 10 58 128;
+  --modax-blue-deep: 0 56 168;
+  --modax-blue: 0 136 248;
+  --modax-aqua: 0 232 208;
+  --modax-gold: 255 176 32;
+  --modax-gold-hover: 240 160 0;
+  --modax-gold-tint: 255 241 214;
+  --modax-white: 255 255 255;
+  --modax-muted: 201 214 234;
+  --modax-muted-2: 143 163 196;
+  --modax-ink: 0 24 72;
+  --modax-body: 74 88 120;
+  --modax-border-lt: 227 232 240;
+  --modax-blue-tint: 230 241 254;
+  --modax-blue-tint-2: 242 248 255;
 }
 
 @layer base {
@@ -40,11 +60,15 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-ink-900 hover:bg-primary-700 text-white font-medium px-6 py-3 rounded-md transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 inline-flex items-center justify-center gap-2 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary-900/10 active:translate-y-0 active:scale-[0.98];
+    @apply bg-modax-gold hover:bg-modax-gold-hover text-modax-navy font-medium px-6 py-3 rounded-md transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-modax-blue focus:ring-offset-2 inline-flex items-center justify-center gap-2 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-modax-navy/10 active:translate-y-0 active:scale-[0.98];
   }
 
   .btn-secondary {
-    @apply bg-white hover:border-ink-400 text-ink-900 border border-ink-200 font-medium px-6 py-3 rounded-md transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 inline-flex items-center justify-center gap-2 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 active:scale-[0.98];
+    @apply bg-white hover:bg-modax-blue-tint text-modax-blue border border-modax-blue font-medium px-6 py-3 rounded-md transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-modax-blue focus:ring-offset-2 inline-flex items-center justify-center gap-2 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 active:scale-[0.98];
+  }
+
+  .btn-outline-dark {
+    @apply bg-transparent text-white border border-modax-blue font-medium px-6 py-3 rounded-md transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-modax-aqua focus:ring-offset-2 inline-flex items-center justify-center gap-2 hover:-translate-y-0.5 hover:bg-white/5 active:translate-y-0 active:scale-[0.98];
   }
 
   .btn-whatsapp {
@@ -60,26 +84,26 @@
   }
 
   .eyebrow {
-    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.15em] text-primary-700;
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.15em] text-modax-blue-deep;
   }
 
   .card-surface {
-    @apply bg-white border border-ink-100 rounded-lg transition-all duration-300 ease-out;
+    @apply bg-white border border-modax-border-lt rounded-lg transition-all duration-300 ease-out;
   }
 
   .card-hover {
-    @apply transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-xl hover:shadow-ink-900/5 hover:border-primary-200;
+    @apply transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-xl hover:shadow-modax-ink/5 hover:border-modax-blue/40;
   }
 
   .bg-grid {
-    background-image: linear-gradient(to right, rgb(20 24 36 / 0.06) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(20 24 36 / 0.06) 1px, transparent 1px);
+    background-image: linear-gradient(to right, rgb(var(--modax-ink) / 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(var(--modax-ink) / 0.06) 1px, transparent 1px);
     background-size: 36px 36px;
   }
 
   .bg-grid-dark {
-    background-image: linear-gradient(to right, rgb(255 255 255 / 0.07) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(255 255 255 / 0.07) 1px, transparent 1px);
+    background-image: linear-gradient(to right, rgb(var(--modax-line) / 0.18) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(var(--modax-line) / 0.18) 1px, transparent 1px);
     background-size: 36px 36px;
   }
 }

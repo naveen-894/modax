@@ -78,13 +78,13 @@ export default function ProductsShowcase() {
   ]
 
   return (
-    <section id="products" className="section-padding bg-ink-50">
+    <section id="products" className="section-padding bg-modax-blue-tint-2">
       <div className="container-max">
         <Reveal className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-modax-ink mb-4">
             Products built by Modax
           </h2>
-          <p className="text-lg sm:text-xl text-ink-500 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-modax-body max-w-3xl mx-auto">
             Purpose-built products that solve real business problems — from AI tools to a fully owned ecommerce platform.
           </p>
         </Reveal>
@@ -93,12 +93,12 @@ export default function ProductsShowcase() {
           {products.map((product, index) => (
             <Reveal key={index} delay={index * 0.1} className="bg-white rounded-2xl shadow-xl overflow-hidden transition-shadow duration-300 hover:shadow-2xl">
               {/* Product Header */}
-              <div className="bg-ink-900 text-white p-8 md:p-12 relative overflow-hidden">
+              <div className="bg-modax-navy text-white p-8 md:p-12 relative overflow-hidden">
                 <div>
                   <h3 className="text-3xl md:text-4xl font-bold mb-4">
                     {product.name}
                   </h3>
-                  <p className="text-xl text-primary-100 mb-6">
+                  <p className="text-xl text-modax-muted mb-6">
                     {product.tagline}
                   </p>
                   <div className="flex flex-wrap gap-3">
@@ -114,11 +114,11 @@ export default function ProductsShowcase() {
               {/* Product Content */}
               <div className="p-8 md:p-12">
                 {product.screenshot && (
-                  <div className="mb-10 rounded-xl bg-ink-50 ring-1 ring-ink-100 overflow-hidden">
-                    <div className="flex items-center gap-2 px-4 py-3 bg-ink-100 border-b border-ink-200">
-                      <span className="h-2.5 w-2.5 rounded-full bg-ink-300" />
-                      <span className="h-2.5 w-2.5 rounded-full bg-ink-300" />
-                      <span className="h-2.5 w-2.5 rounded-full bg-ink-300" />
+                  <div className="mb-10 rounded-xl bg-modax-blue-tint-2 ring-1 ring-modax-border-lt overflow-hidden">
+                    <div className="flex items-center gap-2 px-4 py-3 bg-modax-border-lt border-b border-modax-border-lt">
+                      <span className="h-2.5 w-2.5 rounded-full bg-modax-muted-2" />
+                      <span className="h-2.5 w-2.5 rounded-full bg-modax-muted-2" />
+                      <span className="h-2.5 w-2.5 rounded-full bg-modax-muted-2" />
                     </div>
                     <img
                       src={product.screenshot.src}
@@ -131,17 +131,17 @@ export default function ProductsShowcase() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                   {/* Description & Benefits */}
                   <div>
-                    <h4 className="text-2xl font-bold text-ink-900 mb-4">What is {product.name}?</h4>
-                    <p className="text-ink-500 text-lg leading-relaxed mb-8">
+                    <h4 className="text-2xl font-bold text-modax-ink mb-4">What is {product.name}?</h4>
+                    <p className="text-modax-body text-lg leading-relaxed mb-8">
                       {product.description}
                     </p>
 
-                    <h4 className="text-xl font-bold text-ink-900 mb-4">Key benefits</h4>
+                    <h4 className="text-xl font-bold text-modax-ink mb-4">Key benefits</h4>
                     <ul className="space-y-3">
                       {product.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-start">
                           <CheckCircle2 className="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
-                          <span className="text-ink-700">{benefit}</span>
+                          <span className="text-modax-body">{benefit}</span>
                         </li>
                       ))}
                     </ul>
@@ -149,12 +149,12 @@ export default function ProductsShowcase() {
 
                   {/* Features */}
                   <div>
-                    <h4 className="text-xl font-bold text-ink-900 mb-4">Core features</h4>
+                    <h4 className="text-xl font-bold text-modax-ink mb-4">Core features</h4>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {product.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center bg-ink-50 rounded-lg p-3">
-                          <CheckCircle2 className="w-5 h-5 text-primary-600 mr-3 flex-shrink-0" />
-                          <span className="text-ink-700 text-sm">{feature}</span>
+                        <div key={featureIndex} className="flex items-center bg-modax-blue-tint-2 rounded-lg p-3">
+                          <CheckCircle2 className="w-5 h-5 text-modax-blue-deep mr-3 flex-shrink-0" />
+                          <span className="text-modax-body text-sm">{feature}</span>
                         </div>
                       ))}
                     </div>
@@ -178,8 +178,8 @@ export default function ProductsShowcase() {
               </div>
 
               {/* Footer Note */}
-              <div className="bg-ink-50 px-8 md:px-12 py-6 border-t border-ink-200">
-                <p className="text-sm text-ink-500 text-center">
+              <div className="bg-modax-blue-tint-2 px-8 md:px-12 py-6 border-t border-modax-border-lt">
+                <p className="text-sm text-modax-body text-center">
                   {product.footerNote}
                 </p>
               </div>

@@ -11,7 +11,7 @@ const markdownComponents = {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="text-primary-700 underline hover:text-primary-800"
+      className="text-modax-blue underline hover:text-modax-blue-deep"
     >
       {children}
     </a>
@@ -19,9 +19,9 @@ const markdownComponents = {
   p: ({ children }) => <p className="mb-2 last:mb-0 leading-relaxed">{children}</p>,
   ul: ({ children }) => <ul className="mb-2 last:mb-0 list-disc pl-5 space-y-1">{children}</ul>,
   ol: ({ children }) => <ol className="mb-2 last:mb-0 list-decimal pl-5 space-y-1">{children}</ol>,
-  strong: ({ children }) => <strong className="font-semibold text-ink-900">{children}</strong>,
+  strong: ({ children }) => <strong className="font-semibold text-modax-ink">{children}</strong>,
   code: ({ children }) => (
-    <code className="bg-ink-100 text-ink-900 rounded px-1 py-0.5 text-[0.85em] font-mono">{children}</code>
+    <code className="bg-modax-blue-tint-2 text-modax-ink rounded px-1 py-0.5 text-[0.85em] font-mono">{children}</code>
   ),
 }
 
@@ -43,7 +43,7 @@ function CopyButton({ text }) {
       type="button"
       onClick={handleCopy}
       aria-label="Copy response"
-      className="inline-flex items-center gap-1 text-xs text-ink-400 hover:text-ink-700 transition-colors mt-1.5"
+      className="inline-flex items-center gap-1 text-xs text-modax-body hover:text-modax-ink transition-colors mt-1.5"
     >
       {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
       {copied ? 'Copied' : 'Copy'}
@@ -60,15 +60,15 @@ export default function ChatMessage({ message }) {
       <div
         className={`max-w-[85%] rounded-xl px-3.5 py-2.5 text-sm ${
           isUser
-            ? 'bg-ink-900 text-white rounded-br-sm'
-            : 'bg-ink-50 text-ink-900 rounded-bl-sm border border-ink-100'
+            ? 'bg-modax-navy text-white rounded-br-sm'
+            : 'bg-modax-blue-tint-2 text-modax-ink rounded-bl-sm border border-modax-border-lt'
         }`}
       >
         {isEmpty ? (
           <span className="inline-flex items-center gap-1 py-0.5" aria-label="Assistant is typing">
-            <span className="h-1.5 w-1.5 rounded-full bg-ink-400 animate-soft-pulse" />
-            <span className="h-1.5 w-1.5 rounded-full bg-ink-400 animate-soft-pulse [animation-delay:150ms]" />
-            <span className="h-1.5 w-1.5 rounded-full bg-ink-400 animate-soft-pulse [animation-delay:300ms]" />
+            <span className="h-1.5 w-1.5 rounded-full bg-modax-muted-2 animate-soft-pulse" />
+            <span className="h-1.5 w-1.5 rounded-full bg-modax-muted-2 animate-soft-pulse [animation-delay:150ms]" />
+            <span className="h-1.5 w-1.5 rounded-full bg-modax-muted-2 animate-soft-pulse [animation-delay:300ms]" />
           </span>
         ) : isUser ? (
           <p className="whitespace-pre-wrap leading-relaxed">{message.content}</p>
@@ -79,14 +79,14 @@ export default function ChatMessage({ message }) {
         )}
 
         {!isUser && message.sources?.length > 0 && (
-          <div className="mt-2 pt-2 border-t border-ink-200/70 flex flex-wrap gap-x-3 gap-y-1">
+          <div className="mt-2 pt-2 border-t border-modax-border-lt/70 flex flex-wrap gap-x-3 gap-y-1">
             {message.sources.map((source) => (
               <a
                 key={source.url}
                 href={source.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs text-primary-700 hover:text-primary-800 hover:underline"
+                className="text-xs text-modax-blue hover:text-modax-blue-deep hover:underline"
               >
                 {source.title}
               </a>

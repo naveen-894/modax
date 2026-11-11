@@ -42,19 +42,19 @@ export default function ContactHero() {
             href={option.href}
             target={option.href.startsWith('http') ? '_blank' : undefined}
             rel={option.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-            className="card-surface p-5 hover:border-primary-300 hover:shadow-sm transition-all group"
+            className="card-surface p-5 hover:border-modax-blue hover:shadow-sm transition-all group"
           >
-            <div className="flex items-center justify-center w-10 h-10 rounded-md bg-primary-50 text-primary-700 mb-4 group-hover:bg-primary-100 transition-colors">
+            <div className="flex items-center justify-center w-10 h-10 rounded-md bg-modax-blue-tint text-modax-blue-deep mb-4 group-hover:bg-modax-blue-tint-2 transition-colors">
               {option.icon}
             </div>
-            <h3 className="text-base font-semibold text-ink-900 mb-1">{option.title}</h3>
-            <p className="text-sm text-ink-500 mb-3">{option.description}</p>
-            <span className="text-sm font-medium text-primary-700">{option.action}</span>
+            <h3 className="text-base font-semibold text-modax-ink mb-1">{option.title}</h3>
+            <p className="text-sm text-modax-body mb-3">{option.description}</p>
+            <span className="text-sm font-medium text-modax-blue">{option.action}</span>
           </a>
         ))}
       </div>
 
-      <div className="flex items-center gap-2 mt-8 text-sm text-ink-600">
+      <div className="flex items-center gap-2 mt-8 text-sm text-modax-body">
         <CheckCircle2 className="w-4 h-4 text-green-600" />
         <span>We respond within 24 hours</span>
       </div>

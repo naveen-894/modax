@@ -18,11 +18,11 @@ export default function EcommerceShowcase() {
       <div className="container-max">
         <Reveal className="text-center mb-12 max-w-2xl mx-auto">
           <div className="eyebrow mb-4 justify-center">Our ecommerce platform</div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-ink-900 tracking-tight mb-5">
+          <h2 className="text-3xl sm:text-4xl font-bold text-modax-ink tracking-tight mb-5">
             Own your ecommerce platform.{' '}
-            <span className="text-primary-700">Pay once, keep it forever.</span>
+            <span className="text-modax-blue">Pay once, keep it forever.</span>
           </h2>
-          <p className="text-lg text-ink-500 leading-relaxed">
+          <p className="text-lg text-modax-body leading-relaxed">
             Rawnn is Modax&apos;s complete ecommerce platform — a customer website, store admin
             panel and owner control panel, on your own servers. No monthly fees or commission from
             Modax — you pay only your own hosting costs directly to your hosting provider.
@@ -31,23 +31,23 @@ export default function EcommerceShowcase() {
 
         <Reveal className="max-w-4xl mx-auto mb-10">
           {/* Table — sm and up */}
-          <div className="hidden sm:block overflow-hidden rounded-xl ring-1 ring-ink-100 shadow-sm">
+          <div className="hidden sm:block overflow-hidden rounded-xl ring-1 ring-modax-border-lt shadow-sm">
             <table className="w-full border-separate border-spacing-0 bg-white">
               <thead>
                 <tr>
-                  <th className="p-4 text-left text-xs font-bold uppercase tracking-wide text-ink-500 bg-ink-50 border-b border-ink-100"></th>
-                  <th className="p-4 text-left text-xs font-bold uppercase tracking-wide text-primary-800 bg-primary-100 border-b border-ink-100">Rawnn</th>
-                  <th className="p-4 text-left text-xs font-bold uppercase tracking-wide text-ink-500 bg-ink-50 border-b border-ink-100">Monthly subscription platforms</th>
-                  <th className="p-4 text-left text-xs font-bold uppercase tracking-wide text-ink-500 bg-ink-50 border-b border-ink-100">Marketplaces</th>
+                  <th className="p-4 text-left text-xs font-bold uppercase tracking-wide text-modax-body bg-white border-b border-modax-border-lt"></th>
+                  <th className="p-4 text-left text-xs font-bold uppercase tracking-wide text-modax-blue-deep bg-modax-blue-tint border-b border-modax-border-lt">Rawnn</th>
+                  <th className="p-4 text-left text-xs font-bold uppercase tracking-wide text-modax-body bg-white border-b border-modax-border-lt">Monthly subscription platforms</th>
+                  <th className="p-4 text-left text-xs font-bold uppercase tracking-wide text-modax-body bg-white border-b border-modax-border-lt">Marketplaces</th>
                 </tr>
               </thead>
               <tbody>
                 {compareRows.map((row, index) => (
                   <tr key={row.label}>
-                    <th scope="row" className={`p-4 text-left text-sm font-semibold text-ink-700 ${index < compareRows.length - 1 ? 'border-b border-ink-100' : ''}`}>{row.label}</th>
-                    <td className={`p-4 text-sm font-bold text-ink-900 bg-primary-50 ${index < compareRows.length - 1 ? 'border-b border-ink-100' : ''}`}>{row.rawnn}</td>
-                    <td className={`p-4 text-sm text-ink-500 ${index < compareRows.length - 1 ? 'border-b border-ink-100' : ''}`}>{row.monthly}</td>
-                    <td className={`p-4 text-sm text-ink-500 ${index < compareRows.length - 1 ? 'border-b border-ink-100' : ''}`}>{row.marketplace}</td>
+                    <th scope="row" className={`p-4 text-left text-sm font-semibold text-modax-body ${index < compareRows.length - 1 ? 'border-b border-modax-border-lt' : ''}`}>{row.label}</th>
+                    <td className={`p-4 text-sm font-semibold text-modax-ink bg-modax-blue-tint-2 ${index < compareRows.length - 1 ? 'border-b border-modax-border-lt' : ''}`}>{row.rawnn}</td>
+                    <td className={`p-4 text-sm text-modax-body ${index < compareRows.length - 1 ? 'border-b border-modax-border-lt' : ''}`}>{row.monthly}</td>
+                    <td className={`p-4 text-sm text-modax-body ${index < compareRows.length - 1 ? 'border-b border-modax-border-lt' : ''}`}>{row.marketplace}</td>
                   </tr>
                 ))}
               </tbody>
@@ -63,14 +63,14 @@ export default function EcommerceShowcase() {
             ].map((col) => (
               <div
                 key={col.key}
-                className={`rounded-xl p-5 ${col.highlight ? 'bg-primary-50 ring-2 ring-primary-600' : 'bg-white ring-1 ring-ink-100'}`}
+                className={`rounded-xl p-5 ${col.highlight ? 'bg-modax-blue-tint-2 ring-2 ring-modax-blue' : 'bg-white ring-1 ring-modax-border-lt'}`}
               >
-                <h3 className={`text-base font-bold mb-3 ${col.highlight ? 'text-primary-800' : 'text-ink-900'}`}>{col.name}</h3>
+                <h3 className={`text-base font-bold mb-3 ${col.highlight ? 'text-modax-blue-deep' : 'text-modax-ink'}`}>{col.name}</h3>
                 <dl className="space-y-2.5">
                   {compareRows.map((row) => (
                     <div key={row.label} className="flex justify-between gap-3 text-sm">
-                      <dt className="text-ink-500 flex-shrink-0">{row.label}</dt>
-                      <dd className={`text-right font-semibold ${col.highlight ? 'text-ink-900' : 'text-ink-700'}`}>{row[col.key]}</dd>
+                      <dt className="text-modax-body flex-shrink-0">{row.label}</dt>
+                      <dd className={`text-right font-semibold ${col.highlight ? 'text-modax-ink' : 'text-modax-body'}`}>{row[col.key]}</dd>
                     </div>
                   ))}
                 </dl>
@@ -88,8 +88,8 @@ export default function EcommerceShowcase() {
               Explore the Live Demo Store
             </a>
           </div>
-          <div className="flex items-center gap-2 text-sm text-ink-500">
-            <ShieldCheck className="w-4 h-4 text-primary-600" />
+          <div className="flex items-center gap-2 text-sm text-modax-body">
+            <ShieldCheck className="w-4 h-4 text-modax-blue-deep" />
             One-time cost · Your own servers · Live in 2–6 weeks
           </div>
         </Reveal>

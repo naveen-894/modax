@@ -3,49 +3,49 @@ import { FileText, BarChart3, ShieldCheck, Zap, MessageCircle, UploadCloud, Cloc
 export default function AiResumeMatcherFeatures() {
   const features = [
     {
-      icon: <FileText className="w-8 h-8 text-primary-600" />,
+      icon: <FileText className="w-8 h-8 text-modax-blue-deep" />,
       title: "Smart resume & JD parsing",
       description: "An AI model reads both documents the way a person would, pulling out the facts that matter instead of doing a keyword search.",
       details: ["Name, email & phone", "Skills & certifications", "Work history & education", "Job title & responsibilities", "Required experience & education"]
     },
     {
-      icon: <BarChart3 className="w-8 h-8 text-primary-600" />,
+      icon: <BarChart3 className="w-8 h-8 text-modax-blue-deep" />,
       title: "0–100% match score",
       description: "A simple score with a Strong / Partial / Weak rating, a written explanation of why, and a short list of key takeaways.",
       details: ["Plain-English reasoning", "Strong / Partial / Weak rating", "Key takeaways list", "Consistent across candidates"]
     },
     {
-      icon: <ShieldCheck className="w-8 h-8 text-primary-600" />,
+      icon: <ShieldCheck className="w-8 h-8 text-modax-blue-deep" />,
       title: "Skills gap analysis",
       description: "A visual breakdown of which required skills the candidate has and which are missing, so coverage is clear at a glance.",
       details: ["e.g. 6 of 8 skills covered", "Recognizes skills phrased differently", "Highlights missing requirements", "Side-by-side comparison"]
     },
     {
-      icon: <Zap className="w-8 h-8 text-primary-600" />,
+      icon: <Zap className="w-8 h-8 text-modax-blue-deep" />,
       title: "Live streaming analysis",
       description: "Watch each step happen in real time — reading the resume, reading the job description, comparing skills, scoring the match — so it never feels like a black box.",
       details: ["Step-by-step progress", "Results appear as they're generated", "Transparent reasoning", "No waiting in the dark"]
     },
     {
-      icon: <MessageCircle className="w-8 h-8 text-primary-600" />,
+      icon: <MessageCircle className="w-8 h-8 text-modax-blue-deep" />,
       title: "Follow-up chat",
       description: "Ask questions about a specific match — \"How much management experience do they have?\" — and get a conversational, grounded answer.",
       details: ["Context-aware Q&A", "Word-by-word streaming replies", "Scoped to the resume & role", "Refuses unrelated questions"]
     },
     {
-      icon: <UploadCloud className="w-8 h-8 text-primary-600" />,
+      icon: <UploadCloud className="w-8 h-8 text-modax-blue-deep" />,
       title: "Flexible uploads",
       description: "Paste text directly or upload a file — PDF, Word, or plain text. Drag-and-drop is supported too.",
       details: ["PDF, DOCX & TXT support", "Paste-as-text option", "Drag-and-drop", "Works for resume & JD"]
     },
     {
-      icon: <Clock className="w-8 h-8 text-primary-600" />,
+      icon: <Clock className="w-8 h-8 text-modax-blue-deep" />,
       title: "Match history",
       description: "Every match you run is saved. Revisit any past comparison, along with the full conversation, whenever you need it.",
       details: ["Full match archive", "Saved chat history", "One-click revisit", "Organized by candidate"]
     },
     {
-      icon: <Sparkles className="w-8 h-8 text-primary-600" />,
+      icon: <Sparkles className="w-8 h-8 text-modax-blue-deep" />,
       title: "Try before you sign up",
       description: "No account needed to get started. First-time visitors get one full match and one round of follow-up questions, free. Pricing after that is free during beta.",
       details: ["No signup required", "1 free match + chat", "Unlimited after sign-in", "Full history once logged in"]
@@ -53,13 +53,13 @@ export default function AiResumeMatcherFeatures() {
   ]
 
   return (
-    <section id="features" className="section-padding bg-ink-50">
+    <section id="features" className="section-padding bg-modax-blue-tint-2">
       <div className="container-max">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-modax-ink mb-4">
             Screening that actually reads the resume
           </h2>
-          <p className="text-lg sm:text-xl text-ink-500 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-modax-body max-w-3xl mx-auto">
             Screenr replaces manual side-by-side reading with a fast, consistent,
             and explainable comparison between a candidate and a role.
           </p>
@@ -69,23 +69,23 @@ export default function AiResumeMatcherFeatures() {
           {features.map((feature, index) => (
             <div key={index} className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
               <div className="flex items-start mb-6">
-                <div className="flex-shrink-0 w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mr-6">
+                <div className="flex-shrink-0 w-16 h-16 bg-modax-blue-tint rounded-lg flex items-center justify-center mr-6">
                   {feature.icon}
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-ink-900 mb-3">
+                  <h3 className="text-xl font-bold text-modax-ink mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-ink-500 mb-4 leading-relaxed">
+                  <p className="text-modax-body mb-4 leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
               </div>
 
-              <div className="border-t border-ink-100 pt-6">
+              <div className="border-t border-modax-border-lt pt-6">
                 <ul className="space-y-2">
                   {feature.details.map((detail, detailIndex) => (
-                    <li key={detailIndex} className="flex items-center text-sm text-ink-500">
+                    <li key={detailIndex} className="flex items-center text-sm text-modax-body">
                       <CheckCircle2 className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
                       {detail}
                     </li>

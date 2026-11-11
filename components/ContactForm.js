@@ -70,14 +70,14 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="section-padding bg-ink-50">
+    <section className="section-padding bg-modax-blue-tint-2">
       <div className="container-max">
         <div className="max-w-4xl mx-auto">
           <Reveal className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-modax-ink mb-4">
               Send us a message
             </h2>
-            <p className="text-lg text-ink-500">
+            <p className="text-lg text-modax-body">
               Have questions about our services or products? Want to discuss your project?
               We&apos;d love to hear from you.
             </p>
@@ -87,7 +87,7 @@ export default function ContactForm() {
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Inquiry Type */}
               <div>
-                <label className="block text-sm font-medium text-ink-700 mb-3">
+                <label className="block text-sm font-medium text-modax-body mb-3">
                   What can we help you with?
                 </label>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -101,10 +101,10 @@ export default function ContactForm() {
                         onChange={handleChange}
                         className="sr-only peer"
                       />
-                      <div className="p-4 border-2 border-ink-200 rounded-lg cursor-pointer peer-checked:border-primary-500 peer-checked:bg-primary-50 hover:border-primary-300 transition-colors">
+                      <div className="p-4 border-2 border-modax-border-lt rounded-lg cursor-pointer peer-checked:border-modax-blue peer-checked:bg-modax-blue-tint hover:border-modax-blue transition-colors">
                         <div className="flex items-center">
-                          <Icon className="w-5 h-5 text-primary-600 mr-3 flex-shrink-0" />
-                          <div className="font-medium text-ink-900">{label}</div>
+                          <Icon className="w-5 h-5 text-modax-blue-deep mr-3 flex-shrink-0" />
+                          <div className="font-medium text-modax-ink">{label}</div>
                         </div>
                       </div>
                     </label>
@@ -114,7 +114,7 @@ export default function ContactForm() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-ink-700 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-modax-body mb-2">
                     Full Name *
                   </label>
                   <input
@@ -124,13 +124,13 @@ export default function ContactForm() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-modax-border-lt rounded-lg focus:ring-2 focus:ring-modax-blue focus:border-transparent"
                     placeholder="Your full name"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-ink-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-modax-body mb-2">
                     Email Address *
                   </label>
                   <input
@@ -140,7 +140,7 @@ export default function ContactForm() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-modax-border-lt rounded-lg focus:ring-2 focus:ring-modax-blue focus:border-transparent"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -148,7 +148,7 @@ export default function ContactForm() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-ink-700 mb-2">
+                  <label htmlFor="phone" className="block text-sm font-medium text-modax-body mb-2">
                     Phone Number
                   </label>
                   <input
@@ -157,13 +157,13 @@ export default function ContactForm() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-modax-border-lt rounded-lg focus:ring-2 focus:ring-modax-blue focus:border-transparent"
                     placeholder="+91 XXXXX XXXXX"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-ink-700 mb-2">
+                  <label htmlFor="company" className="block text-sm font-medium text-modax-body mb-2">
                     Company/Organization
                   </label>
                   <input
@@ -172,14 +172,14 @@ export default function ContactForm() {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-modax-border-lt rounded-lg focus:ring-2 focus:ring-modax-blue focus:border-transparent"
                     placeholder="Your company name"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-ink-700 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-modax-body mb-2">
                   Message *
                 </label>
                 <textarea
@@ -189,7 +189,7 @@ export default function ContactForm() {
                   rows={6}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-modax-border-lt rounded-lg focus:ring-2 focus:ring-modax-blue focus:border-transparent"
                   placeholder="Tell us about your project, questions, or how we can help..."
                 ></textarea>
               </div>
@@ -197,7 +197,7 @@ export default function ContactForm() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-primary-600 text-white font-semibold py-4 px-6 rounded-lg hover:bg-primary-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200 shadow-lg"
+                className="w-full bg-modax-gold text-modax-navy font-semibold py-4 px-6 rounded-lg hover:bg-modax-gold-hover disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200 shadow-lg"
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
@@ -208,7 +208,7 @@ export default function ContactForm() {
                 </div>
               )}
 
-              <p className="text-xs text-ink-500 text-center">
+              <p className="text-xs text-modax-body text-center">
                 We respect your privacy and will only use your information to respond to your inquiry.
               </p>
             </form>

@@ -29,24 +29,24 @@ export default function ServicesProcess() {
     <section className="section-padding bg-white">
       <div className="container-max">
         <Reveal className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-modax-ink mb-4">
             How we work
           </h2>
-          <p className="text-lg sm:text-xl text-ink-500 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-modax-body max-w-3xl mx-auto">
             A straightforward process, from the first call to a working tool.
           </p>
         </Reveal>
 
         <RevealGroup className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {steps.map((step) => (
-            <RevealItem key={step.number} className="bg-ink-50 rounded-xl p-6 h-full border-2 border-transparent hover:border-primary-200 card-hover">
-              <div className="w-12 h-12 bg-ink-900 rounded-lg flex items-center justify-center mb-4">
+            <RevealItem key={step.number} className="bg-modax-blue-tint-2 rounded-xl p-6 h-full border-2 border-transparent hover:border-modax-blue/40 card-hover">
+              <div className="w-12 h-12 bg-modax-blue-deep rounded-lg flex items-center justify-center mb-4">
                 <span className="text-white font-bold text-lg">{step.number}</span>
               </div>
-              <h3 className="text-xl font-bold text-ink-900 mb-3">
+              <h3 className="text-xl font-bold text-modax-ink mb-3">
                 {step.title}
               </h3>
-              <p className="text-ink-500 leading-relaxed">
+              <p className="text-modax-body leading-relaxed">
                 {step.description}
               </p>
             </RevealItem>

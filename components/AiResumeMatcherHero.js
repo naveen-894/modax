@@ -26,11 +26,11 @@ export default function AiResumeMatcherHero() {
       </div>
 
       <div className="flex flex-wrap items-center gap-4 mt-8">
-        <div className="inline-flex items-center gap-2 bg-primary-50 text-primary-800 px-4 py-2.5 rounded-md text-sm font-medium">
+        <div className="inline-flex items-center gap-2 bg-modax-blue-tint text-modax-blue-deep px-4 py-2.5 rounded-md text-sm font-medium">
           <CheckCircle2 className="w-4 h-4" />
           Built &amp; owned by Modax
         </div>
-        <span className="text-sm text-ink-500">{SCREENR_PRICING_NOTE} after your free match</span>
+        <span className="text-sm text-modax-body">{SCREENR_PRICING_NOTE} after your free match</span>
       </div>
     </PageHero>
   )

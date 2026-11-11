@@ -3,32 +3,32 @@ import { Zap, DollarSign, FileText, LifeBuoy, Heart, Lock, CheckCircle2 } from '
 export default function RawnnBenefits() {
   const benefits = [
     {
-      icon: <Zap className="w-12 h-12 text-primary-600" />,
+      icon: <Zap className="w-12 h-12 text-modax-blue-deep" />,
       title: "Built & set up for your brand",
       description: "We set up a dedicated store for your brand — not a shared template — and have it live in weeks, so you skip months of development time."
     },
     {
-      icon: <DollarSign className="w-12 h-12 text-primary-600" />,
+      icon: <DollarSign className="w-12 h-12 text-modax-blue-deep" />,
       title: "Complete control & ownership",
       description: "Own your data and maintain complete control over your business. No vendor lock-in or hidden fees. Customize every aspect of your store to match your brand perfectly."
     },
     {
-      icon: <FileText className="w-12 h-12 text-primary-600" />,
+      icon: <FileText className="w-12 h-12 text-modax-blue-deep" />,
       title: "Built-in business intelligence",
       description: "Make informed decisions with comprehensive analytics and reporting. Track sales trends, customer behavior, and inventory performance with detailed insights and dashboards."
     },
     {
-      icon: <LifeBuoy className="w-12 h-12 text-primary-600" />,
+      icon: <LifeBuoy className="w-12 h-12 text-modax-blue-deep" />,
       title: "Dedicated support",
       description: "Get direct support from our team. Regular updates, onboarding sessions, and priority support ensure your business runs smoothly 24/7."
     },
     {
-      icon: <Heart className="w-12 h-12 text-primary-600" />,
+      icon: <Heart className="w-12 h-12 text-modax-blue-deep" />,
       title: "Customer trust built in",
       description: "Ratings and reviews with photos, product Q&A, pincode delivery checks and OTP login come standard, so shoppers trust your store before they buy."
     },
     {
-      icon: <Lock className="w-12 h-12 text-primary-600" />,
+      icon: <Lock className="w-12 h-12 text-modax-blue-deep" />,
       title: "Enterprise-grade security",
       description: "Bank-level security with SSL encryption, PCI compliance, regular security audits, and advanced fraud detection to protect your business and customers."
     }
@@ -38,24 +38,24 @@ export default function RawnnBenefits() {
     <section className="section-padding bg-white">
       <div className="container-max">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-modax-ink mb-4">
             Why owners choose Rawnn
           </h2>
-          <p className="text-lg sm:text-xl text-ink-500 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-modax-body max-w-3xl mx-auto">
             Be one of our first launch partners: a dedicated store built for your brand, with hands-on setup from the founder.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {benefits.map((benefit, index) => (
-            <div key={index} className="text-center p-8 rounded-xl hover:shadow-lg transition-all duration-300 border border-ink-100 hover:border-primary-200">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-primary-50 rounded-lg mb-6">
+            <div key={index} className="text-center p-8 rounded-xl hover:shadow-lg transition-all duration-300 border border-modax-border-lt hover:border-modax-blue/40">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-modax-blue-tint-2 rounded-lg mb-6">
                 {benefit.icon}
               </div>
-              <h3 className="text-xl font-semibold text-ink-900 mb-4">
+              <h3 className="text-xl font-semibold text-modax-ink mb-4">
                 {benefit.title}
               </h3>
-              <p className="text-ink-500 leading-relaxed">
+              <p className="text-modax-body leading-relaxed">
                 {benefit.description}
               </p>
             </div>
@@ -63,20 +63,20 @@ export default function RawnnBenefits() {
         </div>
 
         {/* Key Capabilities */}
-        <div className="mt-20 bg-gradient-to-r from-primary-50 to-primary-100 rounded-2xl p-8 md:p-12">
+        <div className="mt-20 bg-modax-blue-tint-2 rounded-2xl p-8 md:p-12">
           <div className="text-center mb-12">
-            <h3 className="text-2xl sm:text-3xl font-bold text-ink-900 mb-4">
+            <h3 className="text-2xl sm:text-3xl font-bold text-modax-ink mb-4">
               Complete e-commerce operations
             </h3>
-            <p className="text-lg text-ink-500">
+            <p className="text-lg text-modax-body">
               Everything you need to run a successful online store
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white rounded-lg p-6 shadow-sm">
-              <h4 className="text-lg font-bold text-ink-900 mb-4">Customer Experience</h4>
-              <ul className="space-y-2 text-sm text-ink-500">
+              <h4 className="text-lg font-bold text-modax-ink mb-4">Customer Experience</h4>
+              <ul className="space-y-2 text-sm text-modax-body">
                 <li className="flex items-center">
                   <CheckCircle2 className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
                   Complete order placement flow
@@ -109,8 +109,8 @@ export default function RawnnBenefits() {
             </div>
 
             <div className="bg-white rounded-lg p-6 shadow-sm">
-              <h4 className="text-lg font-bold text-ink-900 mb-4">Admin Operations</h4>
-              <ul className="space-y-2 text-sm text-ink-500">
+              <h4 className="text-lg font-bold text-modax-ink mb-4">Admin Operations</h4>
+              <ul className="space-y-2 text-sm text-modax-body">
                 <li className="flex items-center">
                   <CheckCircle2 className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
                   Complete product management

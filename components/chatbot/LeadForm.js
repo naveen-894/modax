@@ -73,9 +73,9 @@ export default function LeadForm({ onSubmit, onCancel }) {
 
   if (submitted) {
     return (
-      <div className="bg-primary-50 border border-primary-100 rounded-xl p-4 text-sm text-ink-900">
+      <div className="bg-modax-blue-tint border border-modax-blue/30 rounded-xl p-4 text-sm text-modax-ink">
         <p className="font-medium mb-1">Thanks, {form.name.split(' ')[0]} — we&apos;ve got it.</p>
-        <p className="text-ink-600">The Modax team will reach out to you at {form.email} shortly.</p>
+        <p className="text-modax-body">The Modax team will reach out to you at {form.email} shortly.</p>
       </div>
     )
   }
@@ -83,13 +83,13 @@ export default function LeadForm({ onSubmit, onCancel }) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-white border border-ink-100 rounded-xl p-4 space-y-3 text-sm shadow-sm"
+      className="bg-white border border-modax-border-lt rounded-xl p-4 space-y-3 text-sm shadow-sm"
     >
-      <p className="font-semibold text-ink-900">Share your project details</p>
+      <p className="font-semibold text-modax-ink">Share your project details</p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div>
-          <label className="block text-xs font-medium text-ink-600 mb-1" htmlFor="lead-name">
+          <label className="block text-xs font-medium text-modax-body mb-1" htmlFor="lead-name">
             Name *
           </label>
           <input
@@ -97,14 +97,14 @@ export default function LeadForm({ onSubmit, onCancel }) {
             type="text"
             value={form.name}
             onChange={update('name')}
-            className="w-full px-3 py-2 border border-ink-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-transparent text-sm"
+            className="w-full px-3 py-2 border border-modax-border-lt rounded-md focus:ring-2 focus:ring-modax-blue focus:border-transparent text-sm"
             placeholder="Your name"
           />
           {errors.name && <p className="text-xs text-red-600 mt-1">{errors.name}</p>}
         </div>
 
         <div>
-          <label className="block text-xs font-medium text-ink-600 mb-1" htmlFor="lead-email">
+          <label className="block text-xs font-medium text-modax-body mb-1" htmlFor="lead-email">
             Business email *
           </label>
           <input
@@ -112,7 +112,7 @@ export default function LeadForm({ onSubmit, onCancel }) {
             type="email"
             value={form.email}
             onChange={update('email')}
-            className="w-full px-3 py-2 border border-ink-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-transparent text-sm"
+            className="w-full px-3 py-2 border border-modax-border-lt rounded-md focus:ring-2 focus:ring-modax-blue focus:border-transparent text-sm"
             placeholder="you@company.com"
           />
           {errors.email && <p className="text-xs text-red-600 mt-1">{errors.email}</p>}
@@ -120,7 +120,7 @@ export default function LeadForm({ onSubmit, onCancel }) {
       </div>
 
       <div>
-        <label className="block text-xs font-medium text-ink-600 mb-1" htmlFor="lead-company">
+        <label className="block text-xs font-medium text-modax-body mb-1" htmlFor="lead-company">
           Company (optional)
         </label>
         <input
@@ -128,13 +128,13 @@ export default function LeadForm({ onSubmit, onCancel }) {
           type="text"
           value={form.company}
           onChange={update('company')}
-          className="w-full px-3 py-2 border border-ink-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-transparent text-sm"
+          className="w-full px-3 py-2 border border-modax-border-lt rounded-md focus:ring-2 focus:ring-modax-blue focus:border-transparent text-sm"
           placeholder="Company name"
         />
       </div>
 
       <div>
-        <label className="block text-xs font-medium text-ink-600 mb-1" htmlFor="lead-requirements">
+        <label className="block text-xs font-medium text-modax-body mb-1" htmlFor="lead-requirements">
           What do you need? *
         </label>
         <textarea
@@ -142,7 +142,7 @@ export default function LeadForm({ onSubmit, onCancel }) {
           rows={3}
           value={form.requirements}
           onChange={update('requirements')}
-          className="w-full px-3 py-2 border border-ink-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-transparent text-sm"
+          className="w-full px-3 py-2 border border-modax-border-lt rounded-md focus:ring-2 focus:ring-modax-blue focus:border-transparent text-sm"
           placeholder="Briefly describe what you're trying to build or automate"
         />
         {errors.requirements && <p className="text-xs text-red-600 mt-1">{errors.requirements}</p>}
@@ -150,14 +150,14 @@ export default function LeadForm({ onSubmit, onCancel }) {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div>
-          <label className="block text-xs font-medium text-ink-600 mb-1" htmlFor="lead-service">
+          <label className="block text-xs font-medium text-modax-body mb-1" htmlFor="lead-service">
             Service of interest
           </label>
           <select
             id="lead-service"
             value={form.service_interest}
             onChange={update('service_interest')}
-            className="w-full px-3 py-2 border border-ink-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-transparent text-sm bg-white"
+            className="w-full px-3 py-2 border border-modax-border-lt rounded-md focus:ring-2 focus:ring-modax-blue focus:border-transparent text-sm bg-white"
           >
             <option value="">Select one (optional)</option>
             {SERVICE_OPTIONS.map((opt) => (
@@ -169,7 +169,7 @@ export default function LeadForm({ onSubmit, onCancel }) {
         </div>
 
         <div>
-          <label className="block text-xs font-medium text-ink-600 mb-1" htmlFor="lead-budget">
+          <label className="block text-xs font-medium text-modax-body mb-1" htmlFor="lead-budget">
             Estimated budget (optional)
           </label>
           <input
@@ -177,21 +177,21 @@ export default function LeadForm({ onSubmit, onCancel }) {
             type="text"
             value={form.budget}
             onChange={update('budget')}
-            className="w-full px-3 py-2 border border-ink-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-transparent text-sm"
+            className="w-full px-3 py-2 border border-modax-border-lt rounded-md focus:ring-2 focus:ring-modax-blue focus:border-transparent text-sm"
             placeholder="e.g. ₹1-3L"
           />
         </div>
       </div>
 
       <div>
-        <label className="block text-xs font-medium text-ink-600 mb-1" htmlFor="lead-contact">
+        <label className="block text-xs font-medium text-modax-body mb-1" htmlFor="lead-contact">
           Preferred contact method (optional)
         </label>
         <select
           id="lead-contact"
           value={form.preferred_contact}
           onChange={update('preferred_contact')}
-          className="w-full px-3 py-2 border border-ink-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-transparent text-sm bg-white"
+          className="w-full px-3 py-2 border border-modax-border-lt rounded-md focus:ring-2 focus:ring-modax-blue focus:border-transparent text-sm bg-white"
         >
           <option value="">No preference</option>
           <option value="email">Email</option>
@@ -200,12 +200,12 @@ export default function LeadForm({ onSubmit, onCancel }) {
         </select>
       </div>
 
-      <label className="flex items-start gap-2 text-xs text-ink-600">
+      <label className="flex items-start gap-2 text-xs text-modax-body">
         <input
           type="checkbox"
           checked={form.consent}
           onChange={update('consent')}
-          className="mt-0.5 rounded border-ink-300 text-primary-600 focus:ring-primary-500"
+          className="mt-0.5 rounded border-modax-border-lt text-modax-blue focus:ring-modax-blue"
         />
         I agree to be contacted by Modax about this inquiry.
       </label>
@@ -225,7 +225,7 @@ export default function LeadForm({ onSubmit, onCancel }) {
         <button
           type="button"
           onClick={onCancel}
-          className="text-sm text-ink-500 hover:text-ink-900 px-2 py-2"
+          className="text-sm text-modax-body hover:text-modax-ink px-2 py-2"
         >
           Cancel
         </button>

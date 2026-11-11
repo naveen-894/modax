@@ -48,33 +48,33 @@ export default function Services() {
         <div className="grid lg:grid-cols-3 gap-12 mb-14">
           <Reveal className="lg:col-span-2">
             <div className="eyebrow mb-4">What we build</div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-ink-900 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-modax-ink tracking-tight">
               AI tools, websites and apps for growing businesses
             </h2>
           </Reveal>
           <Reveal delay={0.1} className="flex flex-col justify-end">
-            <p className="text-ink-500 leading-relaxed mb-4">
+            <p className="text-modax-body leading-relaxed mb-4">
               Every project we take on is scoped around one goal: ship something
               your team actually uses, not a slide deck.
             </p>
-            <Link href="/services" className="text-primary-700 font-semibold inline-flex items-center gap-1.5 hover:gap-2.5 transition-all">
+            <Link href="/services" className="text-modax-blue font-semibold inline-flex items-center gap-1.5 hover:gap-2.5 hover:text-modax-blue-deep transition-all">
               View all services
               <ArrowRight className="w-4 h-4" />
             </Link>
           </Reveal>
         </div>
 
-        <RevealGroup className="grid grid-cols-1 sm:grid-cols-2 border-t border-ink-100">
+        <RevealGroup className="grid grid-cols-1 sm:grid-cols-2 border-t border-modax-border-lt">
           {services.map((service, index) => (
             <RevealItem
               key={index}
-              className={`py-10 px-2 sm:px-8 border-b border-ink-100 transition-colors duration-300 hover:bg-ink-50/60 ${index % 2 === 0 ? 'sm:border-r' : ''}`}
+              className={`py-10 px-2 sm:px-8 border-b border-modax-border-lt transition-colors duration-300 hover:bg-modax-blue-tint-2 ${index % 2 === 0 ? 'sm:border-r' : ''}`}
             >
-              <div className="text-sm font-mono text-primary-600 mb-4">{service.number}</div>
-              <h3 className="text-xl font-bold text-ink-900 mb-3">
+              <div className="text-sm font-mono text-modax-blue-deep mb-4">{service.number}</div>
+              <h3 className="text-xl font-bold text-modax-ink mb-3">
                 {service.title}
               </h3>
-              <p className="text-ink-500 leading-relaxed max-w-md">
+              <p className="text-modax-body leading-relaxed max-w-md">
                 {service.description}
               </p>
             </RevealItem>

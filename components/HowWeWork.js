@@ -30,21 +30,21 @@ export default function HowWeWork() {
       <div className="container-max">
         <Reveal className="text-center mb-14">
           <div className="eyebrow mb-4 justify-center">How we work</div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-ink-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-modax-ink tracking-tight">
             From first call to working tool
           </h2>
         </Reveal>
 
         <RevealGroup className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {steps.map((step) => (
-            <RevealItem key={step.number} className="bg-ink-50 rounded-xl p-6 h-full card-hover">
-              <div className="w-10 h-10 bg-ink-900 rounded-lg flex items-center justify-center mb-5">
+            <RevealItem key={step.number} className="bg-modax-blue-tint-2 rounded-xl p-6 h-full card-hover">
+              <div className="w-10 h-10 bg-modax-blue-deep rounded-lg flex items-center justify-center mb-5">
                 <span className="text-white font-bold text-sm">{step.number}</span>
               </div>
-              <h3 className="text-lg font-bold text-ink-900 mb-2">
+              <h3 className="text-lg font-bold text-modax-ink mb-2">
                 {step.title}
               </h3>
-              <p className="text-ink-500 text-sm leading-relaxed">
+              <p className="text-modax-body text-sm leading-relaxed">
                 {step.description}
               </p>
             </RevealItem>

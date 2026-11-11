@@ -64,13 +64,13 @@ export default function AiResumeMatcherDemo() {
   }
 
   return (
-    <section id="demo" className="section-padding bg-primary-900 text-white">
+    <section id="demo" className="section-padding bg-modax-navy text-white">
       <div className="container-max">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
             See Screenr in action
           </h2>
-          <p className="text-lg sm:text-xl text-primary-100 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-modax-muted max-w-3xl mx-auto">
             Schedule a personalized demo and see how a real resume and job description
             get scored, explained, and ready to discuss in seconds.
           </p>
@@ -96,16 +96,16 @@ export default function AiResumeMatcherDemo() {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 text-ink-900">
+          <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 text-modax-ink">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold mb-2">Request your free demo</h3>
-              <p className="text-ink-500">See Screenr score a real resume against one of your open roles</p>
+              <p className="text-modax-body">See Screenr score a real resume against one of your open roles</p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-ink-700 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-modax-body mb-2">
                     Full Name *
                   </label>
                   <input
@@ -115,13 +115,13 @@ export default function AiResumeMatcherDemo() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-modax-border-lt rounded-lg focus:ring-2 focus:ring-modax-blue focus:border-transparent"
                     placeholder="Your full name"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-ink-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-modax-body mb-2">
                     Email Address *
                   </label>
                   <input
@@ -131,7 +131,7 @@ export default function AiResumeMatcherDemo() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-modax-border-lt rounded-lg focus:ring-2 focus:ring-modax-blue focus:border-transparent"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -139,7 +139,7 @@ export default function AiResumeMatcherDemo() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-ink-700 mb-2">
+                  <label htmlFor="company" className="block text-sm font-medium text-modax-body mb-2">
                     Company Name *
                   </label>
                   <input
@@ -149,13 +149,13 @@ export default function AiResumeMatcherDemo() {
                     required
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-modax-border-lt rounded-lg focus:ring-2 focus:ring-modax-blue focus:border-transparent"
                     placeholder="Your company"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-ink-700 mb-2">
+                  <label htmlFor="phone" className="block text-sm font-medium text-modax-body mb-2">
                     Phone Number
                   </label>
                   <input
@@ -164,7 +164,7 @@ export default function AiResumeMatcherDemo() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-modax-border-lt rounded-lg focus:ring-2 focus:ring-modax-blue focus:border-transparent"
                     placeholder="+91 XXXXX XXXXX"
                   />
                 </div>
@@ -172,7 +172,7 @@ export default function AiResumeMatcherDemo() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="role" className="block text-sm font-medium text-ink-700 mb-2">
+                  <label htmlFor="role" className="block text-sm font-medium text-modax-body mb-2">
                     Your Role
                   </label>
                   <select
@@ -180,7 +180,7 @@ export default function AiResumeMatcherDemo() {
                     name="role"
                     value={formData.role}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-modax-border-lt rounded-lg focus:ring-2 focus:ring-modax-blue focus:border-transparent"
                   >
                     <option value="">Select your role</option>
                     <option value="recruiter">Recruiter / Talent Acquisition</option>
@@ -193,7 +193,7 @@ export default function AiResumeMatcherDemo() {
                 </div>
 
                 <div>
-                  <label htmlFor="hiringVolume" className="block text-sm font-medium text-ink-700 mb-2">
+                  <label htmlFor="hiringVolume" className="block text-sm font-medium text-modax-body mb-2">
                     Monthly Hiring Volume
                   </label>
                   <select
@@ -201,7 +201,7 @@ export default function AiResumeMatcherDemo() {
                     name="hiringVolume"
                     value={formData.hiringVolume}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-modax-border-lt rounded-lg focus:ring-2 focus:ring-modax-blue focus:border-transparent"
                   >
                     <option value="">How many resumes do you screen?</option>
                     <option value="1-10">1-10 per month</option>
@@ -214,7 +214,7 @@ export default function AiResumeMatcherDemo() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-ink-700 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-modax-body mb-2">
                   Tell us about your goals
                 </label>
                 <textarea
@@ -223,7 +223,7 @@ export default function AiResumeMatcherDemo() {
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-modax-border-lt rounded-lg focus:ring-2 focus:ring-modax-blue focus:border-transparent"
                   placeholder="What's slowing down your resume screening today? What would you like to see in the demo?"
                 ></textarea>
               </div>
@@ -231,7 +231,7 @@ export default function AiResumeMatcherDemo() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full text-white bg-primary-600 font-semibold py-4 px-6 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200 shadow-lg text-lg"
+                className="w-full text-modax-navy bg-modax-gold hover:bg-modax-gold-hover font-semibold py-4 px-6 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200 shadow-lg text-lg"
               >
                 {isSubmitting ? 'Sending...' : 'Request Free Demo'}
               </button>
@@ -243,10 +243,10 @@ export default function AiResumeMatcherDemo() {
               )}
 
               <div className="text-center space-y-2">
-                <p className="text-xs text-ink-500">
+                <p className="text-xs text-modax-body">
                   ✓ No credit card required
                 </p>
-                <p className="text-xs text-ink-500">
+                <p className="text-xs text-modax-body">
                   ✓ 30-minute personalized demo
                 </p>
               </div>

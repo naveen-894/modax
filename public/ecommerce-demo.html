@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>Modax — Own Your Ecommerce Platform | One-Time Cost, No Commission</title>
 <meta name="description" content="Get your own branded ecommerce platform, with a customer website, store admin and owner control panel, on your own servers. Pay once. No monthly fees, no commission. See a live demo store." />
-<meta name="theme-color" content="#1e6bff" />
+<meta name="theme-color" content="#001848" />
 <link rel="preconnect" href="https://connect.facebook.net" />
 
 <!-- ================= Meta Pixel Code ================= -->
@@ -27,23 +27,43 @@ fbq('track', 'PageView');
 
 <style>
   :root{
-    --accent:#1e6bff;
-    --accent-dark:#1552cc;
-    --accent-darker:#0d3a99;
-    --accent-light:#e8f0ff;
-    --accent-light-2:#c7dbff;
-    --gold:#c99a2e;
-    --gold-dark:#9c7820;
-    --gold-light:#fbf1dc;
-    --ink-900:#1c1917;
-    --ink-800:#2b2622;
-    --ink-700:#3f3a34;
-    --ink-600:#57514a;
-    --ink-500:#716a61;
-    --ink-400:#948c81;
-    --ink-200:#ddd6cc;
-    --ink-100:#ede8e0;
-    --ink-50:#f8f5f0;
+    /* Modax brand palette — single source of truth */
+    --modax-navy:#001848;
+    --modax-navy-2:#002058;
+    --modax-navy-deep:#001240;
+    --modax-line:#0A3A80;
+    --modax-blue-deep:#0038A8;
+    --modax-blue:#0088F8;
+    --modax-aqua:#00E8D0;
+    --modax-gold:#FFB020;
+    --modax-gold-hover:#F0A000;
+    --modax-gold-tint:#FFF1D6;
+    --modax-muted:#C9D6EA;
+    --modax-muted-2:#8FA3C4;
+    --modax-ink:#001848;
+    --modax-body:#4A5878;
+    --modax-border-lt:#E3E8F0;
+    --modax-blue-tint:#E6F1FE;
+    --modax-blue-tint-2:#F2F8FF;
+
+    /* Legacy names used throughout this file, pointed at the palette above */
+    --accent:var(--modax-blue);
+    --accent-dark:var(--modax-blue-deep);
+    --accent-darker:var(--modax-navy);
+    --accent-light:var(--modax-blue-tint);
+    --accent-light-2:var(--modax-blue-tint-2);
+    --gold:var(--modax-gold);
+    --gold-dark:var(--modax-gold-hover);
+    --gold-light:var(--modax-gold-tint);
+    --ink-900:var(--modax-ink);
+    --ink-800:var(--modax-body);
+    --ink-700:var(--modax-body);
+    --ink-600:var(--modax-body);
+    --ink-500:var(--modax-body);
+    --ink-400:var(--modax-body);
+    --ink-200:var(--modax-border-lt);
+    --ink-100:var(--modax-border-lt);
+    --ink-50:var(--modax-blue-tint-2);
     --white:#ffffff;
     --radius-lg:20px;
     --radius:14px;
@@ -94,10 +114,10 @@ fbq('track', 'PageView');
     white-space:nowrap;
   }
   .btn:active{transform:scale(.97);}
-  .btn-primary{background:var(--accent);color:#fff;box-shadow:0 8px 20px rgba(30,107,255,.3);}
-  .btn-primary:hover{background:var(--accent-dark);box-shadow:0 10px 26px rgba(30,107,255,.38);}
-  .btn-secondary{background:var(--white);color:var(--ink-800);border:1.5px solid var(--ink-200);}
-  .btn-secondary:hover{border-color:var(--accent);color:var(--accent-dark);}
+  .btn-primary{background:var(--gold);color:var(--modax-navy);box-shadow:0 8px 20px rgba(255,176,32,.35);}
+  .btn-primary:hover{background:var(--gold-dark);box-shadow:0 10px 26px rgba(255,176,32,.42);}
+  .btn-secondary{background:var(--white);color:var(--accent);border:1.5px solid var(--accent);}
+  .btn-secondary:hover{background:var(--accent-light);color:var(--accent-dark);border-color:var(--accent-dark);}
   .btn-ghost{background:transparent;color:var(--accent-dark);padding:10px 4px;}
   .btn-whatsapp{background:#25D366;color:#fff;box-shadow:0 8px 20px rgba(37,211,102,.3);}
   .btn-whatsapp:hover{background:#1ebe5a;}
@@ -107,15 +127,15 @@ fbq('track', 'PageView');
   /* Header */
   header.site-header{
     position:sticky;top:0;z-index:50;
-    background:rgba(255,255,255,.85);backdrop-filter:saturate(180%) blur(10px);
-    border-bottom:1px solid var(--ink-100);
+    background:rgba(0,24,72,.92);backdrop-filter:saturate(180%) blur(10px);
+    border-bottom:1px solid var(--modax-line);
   }
   .header-inner{
     max-width:var(--maxw);margin:0 auto;padding:14px 20px;
     display:flex;align-items:center;justify-content:space-between;
   }
-  .logo{font-size:20px;font-weight:800;color:var(--ink-900);letter-spacing:-0.02em;text-decoration:none;display:flex;align-items:center;gap:8px;}
-  .logo-dot{width:9px;height:9px;border-radius:50%;background:var(--accent);display:inline-block;}
+  .logo{font-size:20px;font-weight:800;color:#fff;letter-spacing:-0.02em;text-decoration:none;display:flex;align-items:center;gap:8px;}
+  .logo-dot{width:9px;height:9px;border-radius:50%;background:var(--modax-aqua);display:inline-block;}
   .header-cta{display:none;}
   @media(min-width:860px){.header-cta{display:inline-flex;}}
 
@@ -124,7 +144,7 @@ fbq('track', 'PageView');
     position:relative;padding:56px 0 48px;
     background:
       radial-gradient(900px 420px at 85% -10%, var(--accent-light) 0%, transparent 60%),
-      linear-gradient(to bottom, #fbfbff, #ffffff);
+      linear-gradient(to bottom, var(--ink-50), #ffffff);
     overflow:hidden;
   }
   .hero-grid{display:grid;gap:40px;align-items:center;}
@@ -169,7 +189,7 @@ fbq('track', 'PageView');
   }
   .card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px);}
   .icon-badge{
-    width:50px;height:50px;border-radius:14px;background:var(--accent-light);color:var(--accent);
+    width:50px;height:50px;border-radius:14px;background:var(--accent-light);color:var(--accent-dark);
     display:flex;align-items:center;justify-content:center;margin-bottom:16px;
   }
   .card h3{font-size:19px;margin-bottom:8px;}
@@ -187,8 +207,8 @@ fbq('track', 'PageView');
   .compare-card dl>div:first-child{border-top:none;}
   .compare-card dt{color:var(--ink-500);font-size:13.5px;flex:none;width:46%;}
   .compare-card dd{margin:0;font-size:13.5px;font-weight:600;color:var(--ink-800);text-align:right;}
-  .compare-card-highlight{border:2px solid var(--gold);background:var(--gold-light);box-shadow:var(--shadow-md);}
-  .compare-card-highlight dt{color:var(--gold-dark);}
+  .compare-card-highlight{border:2px solid var(--accent);background:var(--accent-light-2);box-shadow:var(--shadow-md);}
+  .compare-card-highlight dt{color:var(--accent-dark);}
   .compare-card-highlight dd{color:var(--ink-900);}
   .compare-table{display:none;}
   @media(min-width:720px){
@@ -198,8 +218,8 @@ fbq('track', 'PageView');
     .compare-table thead th{font-size:12.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-500);font-weight:700;}
     .compare-table tbody th{font-weight:600;color:var(--ink-700);}
     .compare-table tr:last-child td,.compare-table tr:last-child th{border-bottom:none;}
-    .compare-table td.compare-highlight{background:var(--gold-light);font-weight:700;color:var(--ink-900);}
-    .compare-table thead th.compare-highlight{background:var(--gold);color:var(--ink-900);}
+    .compare-table td.compare-highlight{background:var(--accent-light-2);font-weight:700;color:var(--ink-900);}
+    .compare-table thead th.compare-highlight{background:var(--accent-light);color:var(--accent-dark);}
   }
 
   /* Demo / case study */
@@ -247,7 +267,7 @@ fbq('track', 'PageView');
   .pricing-card{background:#fff;border:1px solid var(--ink-100);border-radius:var(--radius-lg);padding:30px 26px;box-shadow:var(--shadow-sm);position:relative;display:flex;flex-direction:column;}
   .pricing-card h3{font-size:19px;margin-bottom:4px;}
   .pricing-tagline{color:var(--ink-500);font-size:14px;min-height:40px;margin-bottom:18px;}
-  .pricing-price{font-size:30px;font-weight:800;color:var(--ink-900);margin-bottom:20px;}
+  .pricing-price{display:inline-block;font-size:30px;font-weight:800;color:var(--ink-900);background:var(--gold-light);padding:4px 14px;border-radius:10px;margin-bottom:20px;}
   .pricing-price span{font-size:14px;font-weight:600;color:var(--ink-500);margin-left:6px;}
   .pricing-features{flex:1;margin:0 0 24px;}
   .pricing-features li{position:relative;padding-left:22px;margin-bottom:10px;font-size:14.5px;color:var(--ink-600);}
@@ -260,7 +280,7 @@ fbq('track', 'PageView');
   .pricing-card .btn{width:100%;margin-bottom:20px;}
   .pricing-foot{border-top:1px solid var(--ink-100);padding-top:16px;}
   .pricing-foot p{font-size:12.5px;color:var(--ink-500);margin:0 0 4px;}
-  .pricing-card-highlight{border:2px solid var(--gold);background:var(--gold-light);box-shadow:var(--shadow-lg);}
+  .pricing-card-highlight{border:2px solid var(--accent);background:var(--accent-light-2);box-shadow:var(--shadow-lg);}
   @media(min-width:860px){.pricing-card-highlight{transform:translateY(-10px);}}
   .pricing-badge{
     position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--ink-900);
@@ -304,7 +324,7 @@ fbq('track', 'PageView');
     font-size:15px;color:var(--ink-900);background:#fff;transition:border-color .15s ease, box-shadow .15s ease;
     appearance:none;
   }
-  .field select{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%23948c81' stroke-width='1.8'><path d='M5 7.5L10 12.5L15 7.5'/></svg>");background-repeat:no-repeat;background-position:right 12px center;background-size:16px;padding-right:36px;}
+  .field select{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%234A5878' stroke-width='1.8'><path d='M5 7.5L10 12.5L15 7.5'/></svg>");background-repeat:no-repeat;background-position:right 12px center;background-size:16px;padding-right:36px;}
   .field input:focus,.field select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 4px var(--accent-light);}
   .field.has-error input,.field.has-error select{border-color:#dc2626;}
   .error-msg{display:none;color:#dc2626;font-size:12.5px;margin-top:5px;}
@@ -327,14 +347,14 @@ fbq('track', 'PageView');
   .faq-accordion{max-width:760px;}
 
   /* Footer */
-  footer{background:var(--ink-900);color:var(--ink-200);padding:40px 0 28px;}
+  footer{background:var(--ink-900);color:var(--modax-muted);padding:40px 0 28px;}
   .footer-inner{display:flex;flex-direction:column;gap:18px;align-items:center;text-align:center;}
   @media(min-width:720px){.footer-inner{flex-direction:row;justify-content:space-between;text-align:left;}}
   .footer-links{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;font-size:13.5px;}
-  .footer-links a{text-decoration:none;color:#cfc6b8;}
+  .footer-links a{text-decoration:none;color:var(--modax-muted);}
   .footer-links a:hover{color:#fff;}
   .footer-contact{display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center;}
-  .footer-copy{font-size:12.5px;color:#948c81;margin-top:10px;width:100%;text-align:center;}
+  .footer-copy{font-size:12.5px;color:var(--modax-muted-2);margin-top:10px;width:100%;text-align:center;}
 
   /* Sticky mobile CTA */
   .mobile-sticky-cta{
@@ -404,31 +424,31 @@ fbq('track', 'PageView');
 <section id="parts">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">One platform, three parts</span>
+      <span class="eyebrow">One platform, built to scale</span>
       <h2>Everything your store needs, built in</h2>
-      <p>A customer-facing site, a daily operations panel and full owner oversight — working together from day one.</p>
+      <p>A customer-facing storefront and one Admin Panel that grows with you — from a single login on Basic to full role-based control on Growth and Premium.</p>
     </div>
     <div class="grid-3">
       <div class="card reveal">
         <div class="icon-badge">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
         </div>
-        <h3>Customer Website</h3>
+        <h3>Customer Storefront</h3>
         <p>A fast, beautiful store your customers shop on, from phone or desktop.</p>
       </div>
       <div class="card reveal">
         <div class="icon-badge">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
         </div>
-        <h3>Store Admin Panel</h3>
-        <p>Run daily operations — products, stock, orders and returns.</p>
+        <h3>Admin Panel</h3>
+        <p>One app to run the business — one login on Basic, Owner/Staff roles from Growth onward.</p>
       </div>
       <div class="card reveal">
         <div class="icon-badge">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6l7-3z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg>
         </div>
-        <h3>Owner Control Panel</h3>
-        <p>Full control — categories, product approval, shipping and refunds.</p>
+        <h3>Analytics &amp; Automation</h3>
+        <p>Sales analytics, automated shipping and AI product listing — unlocked on Growth and Premium.</p>
       </div>
     </div>
   </div>
@@ -582,7 +602,7 @@ fbq('track', 'PageView');
           <a href="https://demo.modax.in/" target="_blank" rel="noopener" class="btn btn-primary">Explore the Demo Store</a>
           <a href="#demo-form" class="btn btn-secondary">See the Admin Panel</a>
         </div>
-        <p class="demo-note">On your demo call, we walk you through the admin and owner panels with sample orders, stock and shipping in action.</p>
+        <p class="demo-note">On your demo call, we walk you through the Admin Panel with sample orders, stock and shipping in action.</p>
       </div>
 
       <div class="reveal">
@@ -599,16 +619,16 @@ fbq('track', 'PageView');
     </div>
 
     <div class="admin-preview reveal">
-      <p class="admin-preview-label">A peek at the Store Admin Panel</p>
+      <p class="admin-preview-label">A peek at the Admin Panel</p>
       <div class="admin-preview-row">
         <div class="browser-frame">
           <div class="browser-bar"><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span></div>
-          <img src="https://modax-s3.s3.ap-south-1.amazonaws.com/DEV/landing/c0228362-c722-4794-9173-788ba8e2b5a4.png" alt="Store Admin Panel — product catalogue" loading="lazy" />
+          <img src="https://modax-s3.s3.ap-south-1.amazonaws.com/DEV/landing/c0228362-c722-4794-9173-788ba8e2b5a4.png" alt="Admin Panel — product catalogue" loading="lazy" />
           <div class="browser-caption">Products — publish, price and discount in bulk</div>
         </div>
         <div class="browser-frame">
           <div class="browser-bar"><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span></div>
-          <img src="https://modax-s3.s3.ap-south-1.amazonaws.com/DEV/landing/410ad794-fa2c-4330-91f3-1a541b0c5f27.png" alt="Store Admin Panel — size-wise inventory" loading="lazy" />
+          <img src="https://modax-s3.s3.ap-south-1.amazonaws.com/DEV/landing/410ad794-fa2c-4330-91f3-1a541b0c5f27.png" alt="Admin Panel — size-wise inventory" loading="lazy" />
           <div class="browser-caption">Inventory — stock tracked down to the size</div>
         </div>
       </div>
@@ -636,11 +656,15 @@ fbq('track', 'PageView');
               <li>Home page with category banners and handpicked collections; endless scrolling product feed</li>
               <li>Search with suggestions, autocomplete and recent searches</li>
               <li>Filters by price range and discount; sort by newest or price</li>
-              <li>Product page: photo gallery, size selection with size chart, stock per size, ratings and reviews with customer photos, product Q&amp;A, delivery check by pincode or location, similar products, Add to Cart or Buy Now</li>
-              <li>Wishlist; cart with quantity changes and coupon codes; quick Buy Now checkout</li>
-              <li>Saved addresses with map location picker</li>
+              <li>Product page: photo gallery, size selection with size chart, stock per size, ratings and reviews with customer photos, product Q&amp;A, delivery check by pincode or location, Add to Cart or Buy Now</li>
+              <li>Similar products and recently viewed recommendation rails (Growth &amp; Premium plans)</li>
+              <li>Wishlist; cart with quantity changes; quick Buy Now checkout</li>
+              <li>Coupon and discount codes at checkout (Growth &amp; Premium plans)</li>
+              <li>Address book; multiple saved addresses with a Google Maps location picker (Premium plan)</li>
               <li>Razorpay payments (UPI, cards, net banking) plus Cash on Delivery; order confirmation page</li>
               <li>Order history by status; order tracking timeline; cancel, return or exchange orders (including size change); rate and review delivered products</li>
+              <li>Photo and video review uploads, with moderation before they go live (Growth &amp; Premium plans)</li>
+              <li>Live chat support widget (Premium plan)</li>
               <li>OTP sign-up and login, password reset; profile and saved details</li>
               <li>Customer support form; About, Privacy, Terms, Shipping and Return policy pages</li>
               <li>Mobile bottom menu and desktop footer with social links</li>
@@ -651,39 +675,38 @@ fbq('track', 'PageView');
 
       <div class="acc-item">
         <button class="acc-trigger" data-accordion-trigger aria-expanded="false">
-          Store Admin Panel
+          Admin Panel
           <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="acc-panel">
           <div class="acc-panel-inner">
+            <h4>Every plan</h4>
             <ul class="feat-list">
-              <li>3-step product wizard: choose category, upload a photo for AI to fill details (or enter manually), review</li>
+              <li>Store profile, catalog taxonomy (categories, sizes, colours, specs, search tags) and product management</li>
+              <li>3-step product wizard: choose category, enter details manually, review</li>
+              <li>Products publish immediately on save — no approval step on any plan</li>
               <li>Reorder images, set specifications, price per size, copy one price to all sizes</li>
-              <li>Publish, hold or discontinue products individually or in bulk; search and filter by status</li>
               <li>Stock tracked for every size; out-of-stock and low-stock tabs with live counts; edit stock directly; add missing sizes</li>
-              <li>Orders by stage (in progress, returns, exchanges, delivered, cancelled); bulk updates or reject single orders</li>
-              <li>Automatic courier booking, pickup and tracking via Shiprocket; downloadable shipping labels</li>
-              <li>Full order details with timeline; return list with reasons and customer comments</li>
-              <li>Secure login for you and your staff; raise and track support queries</li>
+              <li>Orders by stage (in progress, returns, exchanges, delivered, cancelled); bulk updates</li>
+              <li>Manual courier name and tracking number/link entry for customer visibility</li>
+              <li>View refund status; raise and track customer support queries</li>
+              <li>One login that can do everything — no separate roles (Basic)</li>
             </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="acc-item">
-        <button class="acc-trigger" data-accordion-trigger aria-expanded="false">
-          Owner Control Panel
-          <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-        </button>
-        <div class="acc-panel">
-          <div class="acc-panel-inner">
+            <h4>Growth &amp; Premium add</h4>
             <ul class="feat-list">
-              <li>Create and organise categories and sub-categories with search tags</li>
-              <li>Define size charts and which sizes apply to each category</li>
-              <li>Approve or reject products (with reason) before they go live</li>
-              <li>Search every order; shipment tracking updated automatically from Shiprocket with full activity history</li>
-              <li>View all refunds with customer bank/UPI details and update refund status</li>
-              <li>Owner-only secure login</li>
+              <li>Owner vs Staff roles within the same Admin Panel — Owner sees everything incl. taxonomy and reporting; Staff gets day-to-day product/order/support screens</li>
+              <li>AI-assisted product listing: upload a photo and auto-fill name, description, category, specs and search tags</li>
+              <li>Coupon management, review moderation and sales analytics (orders, revenue, top sellers, low-stock alerts)</li>
+              <li>Bulk product upload via Excel/CSV</li>
+              <li>Automatic courier booking, pickup and tracking via Shiprocket; downloadable shipping labels; RTO handling</li>
+              <li>Owner-only refund reconciliation and cross-module reporting screen</li>
+            </ul>
+            <h4>Premium adds</h4>
+            <ul class="feat-list">
+              <li>Custom staff roles and unlimited staff logins with granular permissions</li>
+              <li>Advanced analytics, customer repeat-rate, exportable CSV/PDF reports and audit log of staff actions</li>
+              <li>Store-wide configuration: payment gateway keys, shipping zones, tax/GST settings, notification templates</li>
+              <li>Priority support channel and large-catalog performance tuning</li>
             </ul>
           </div>
         </div>
@@ -733,7 +756,7 @@ fbq('track', 'PageView');
           <li>AI-assisted product listing from a photo</li>
           <li>Coupons, review moderation, sales analytics</li>
           <li>Bulk product upload via Excel/CSV</li>
-          <li>Shiprocket auto-shipping &amp; WhatsApp/SMS order updates</li>
+          <li>Shiprocket auto-shipping (automated courier booking &amp; tracking)</li>
         </ul>
         <a href="#demo-form" class="btn btn-primary">Get started with Growth</a>
         <div class="pricing-foot">
@@ -774,7 +797,7 @@ fbq('track', 'PageView');
     <div class="section-head reveal">
       <span class="eyebrow">Let's talk</span>
       <h2>Book your free demo</h2>
-      <p>Tell us a little about your business — we'll show you the exact store, admin and owner panels on a call.</p>
+      <p>Tell us a little about your business — we'll show you the exact storefront and Admin Panel on a call.</p>
     </div>
 
     <div class="form-wrap reveal">

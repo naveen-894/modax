@@ -40,11 +40,11 @@ export default function ChatWidget({ contactEmail, contactWhatsapp }) {
         whileHover={{ scale: 1.08 }}
         whileTap={{ scale: 0.92 }}
         transition={{ type: 'spring', stiffness: 400, damping: 17 }}
-        className="relative flex h-14 w-14 items-center justify-center rounded-full bg-ink-900 text-white shadow-xl shadow-ink-900/20 hover:bg-primary-700 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+        className="relative flex h-14 w-14 items-center justify-center rounded-full bg-modax-navy text-modax-aqua shadow-xl shadow-modax-navy/20 hover:bg-modax-navy-2 transition-colors focus:outline-none focus:ring-2 focus:ring-modax-aqua focus:ring-offset-2"
       >
         {!isOpen && (
           <motion.span
-            className="absolute inset-0 rounded-full bg-primary-500"
+            className="absolute inset-0 rounded-full bg-modax-aqua"
             initial={{ opacity: 0.35, scale: 1 }}
             animate={{ opacity: 0, scale: 1.6 }}
             transition={{ duration: 1.8, repeat: Infinity, ease: 'easeOut' }}

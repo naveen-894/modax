@@ -3,25 +3,25 @@ import { MessageCircle } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-ink-950 text-white px-3 sm:px-4 lg:px-6">
+    <footer className="bg-modax-navy text-white px-3 sm:px-4 lg:px-6">
       <div className="container-max py-16">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-10">
           {/* Company Info */}
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center gap-2.5 mb-5">
-              <span className="flex h-8 w-8 items-center justify-center rounded-md bg-white text-ink-950 font-bold text-sm">
+              <span className="flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br from-modax-blue-deep to-modax-blue text-white font-bold text-sm">
                 M
               </span>
               <span className="text-lg font-bold text-white tracking-tight">Modax</span>
             </Link>
-            <p className="text-ink-300 mb-6 max-w-sm leading-relaxed">
+            <p className="text-modax-muted mb-6 max-w-sm leading-relaxed">
               A tech studio building AI tools, websites and apps for growing businesses.
             </p>
             <a
               href="https://www.linkedin.com/in/naveen-v-89011421b/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center w-9 h-9 rounded-md border border-ink-700 text-ink-300 hover:text-white hover:border-ink-500 transition-colors"
+              className="inline-flex items-center justify-center w-9 h-9 rounded-md border border-modax-line text-modax-muted hover:text-white hover:border-modax-muted-2 transition-colors"
               aria-label="Naveen on LinkedIn"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -34,11 +34,11 @@ export default function Footer() {
           <div>
             <h3 className="text-sm font-semibold text-white uppercase tracking-wide mb-4">Company</h3>
             <ul className="space-y-2.5">
-              <li><Link href="/" className="text-ink-400 hover:text-white transition-colors text-sm">Home</Link></li>
-              <li><Link href="/services" className="text-ink-400 hover:text-white transition-colors text-sm">Services</Link></li>
-              <li><Link href="/products" className="text-ink-400 hover:text-white transition-colors text-sm">Products</Link></li>
-              <li><Link href="/about" className="text-ink-400 hover:text-white transition-colors text-sm">About</Link></li>
-              <li><Link href="/contact" className="text-ink-400 hover:text-white transition-colors text-sm">Contact</Link></li>
+              <li><Link href="/" className="text-modax-muted hover:text-white transition-colors text-sm">Home</Link></li>
+              <li><Link href="/services" className="text-modax-muted hover:text-white transition-colors text-sm">Services</Link></li>
+              <li><Link href="/products" className="text-modax-muted hover:text-white transition-colors text-sm">Products</Link></li>
+              <li><Link href="/about" className="text-modax-muted hover:text-white transition-colors text-sm">About</Link></li>
+              <li><Link href="/contact" className="text-modax-muted hover:text-white transition-colors text-sm">Contact</Link></li>
             </ul>
           </div>
 
@@ -46,8 +46,8 @@ export default function Footer() {
           <div>
             <h3 className="text-sm font-semibold text-white uppercase tracking-wide mb-4">Products</h3>
             <ul className="space-y-2.5">
-              <li><Link href="/products/ai-resume-matcher" className="text-ink-400 hover:text-white transition-colors text-sm">Screenr</Link></li>
-              <li><Link href="/products/rawnn" className="text-ink-400 hover:text-white transition-colors text-sm">Rawnn</Link></li>
+              <li><Link href="/products/ai-resume-matcher" className="text-modax-muted hover:text-white transition-colors text-sm">Screenr</Link></li>
+              <li><Link href="/products/rawnn" className="text-modax-muted hover:text-white transition-colors text-sm">Rawnn</Link></li>
             </ul>
           </div>
 
@@ -55,12 +55,12 @@ export default function Footer() {
           <div>
             <h3 className="text-sm font-semibold text-white uppercase tracking-wide mb-4">Contact</h3>
             <ul className="space-y-2.5">
-              <li className="text-ink-400 text-sm">
+              <li className="text-modax-muted text-sm">
                 <a href={`mailto:${process.env.CONTACT_EMAIL}`} className="hover:text-white transition-colors break-all">
                   {process.env.CONTACT_EMAIL}
                 </a>
               </li>
-              <li className="text-ink-400 text-sm">
+              <li className="text-modax-muted text-sm">
                 <a
                   href={`https://wa.me/${process.env.CONTACT_WHATSAPP}`}
                   className="inline-flex items-center gap-1.5 hover:text-white transition-colors"
@@ -68,25 +68,25 @@ export default function Footer() {
                 >
                   <MessageCircle className="w-3.5 h-3.5 flex-shrink-0" />
                   {process.env.CONTACT_PHONE_DISPLAY}
-                  <span className="text-ink-500">(WhatsApp)</span>
+                  <span className="text-modax-muted-2">(WhatsApp)</span>
                 </a>
               </li>
-              <li className="text-ink-400 text-sm">
+              <li className="text-modax-muted text-sm">
                 Bengaluru, India
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-ink-800 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-ink-500 text-sm">
+        <div className="border-t border-modax-line mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-modax-muted-2 text-sm">
             © 2026 Modax. All rights reserved.
             {' · '}
             <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
             {' · '}
             <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
           </p>
-          <p className="text-ink-500 text-sm">
+          <p className="text-modax-muted-2 text-sm">
             Designed &amp; built in-house by Modax.
           </p>
         </div>

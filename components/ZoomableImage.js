@@ -33,7 +33,7 @@ export default function ZoomableImage({ src, alt, className }) {
           role="dialog"
           aria-modal="true"
           aria-label={alt}
-          className="fixed inset-0 z-[100] bg-ink-950/90 flex items-center justify-center p-4 sm:p-8"
+          className="fixed inset-0 z-[100] bg-modax-navy/90 flex items-center justify-center p-4 sm:p-8"
           onClick={() => setOpen(false)}
         >
           <button

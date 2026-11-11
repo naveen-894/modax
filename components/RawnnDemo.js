@@ -68,13 +68,13 @@ export default function RawnnDemo() {
     }
   }
   return (
-    <section id="demo" className="section-padding bg-ink-900 text-white">
+    <section id="demo" className="section-padding bg-modax-navy text-white">
       <div className="container-max">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
             See Rawnn in action
           </h2>
-          <p className="text-lg sm:text-xl text-ink-300 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-modax-muted max-w-3xl mx-auto">
             Explore a fully working store built on Rawnn, then book a personalized demo tailored to your business.
           </p>
         </div>
@@ -89,7 +89,7 @@ export default function RawnnDemo() {
               loading="lazy"
             />
           </div>
-          <div className="w-28 rounded-2xl bg-ink-900 p-1.5 shadow-xl ring-1 ring-black/10">
+          <div className="w-28 rounded-2xl bg-modax-navy-deep p-1.5 shadow-xl ring-1 ring-black/10">
             <img
               src="https://modax-s3.s3.ap-south-1.amazonaws.com/DEV/landing/638de390-3179-45dc-9c67-5956ca8f7cb7.jpeg"
               alt="Example storefront built on Rawnn — mobile view"
@@ -114,48 +114,48 @@ export default function RawnnDemo() {
 
             <div className="space-y-6">
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-8 h-8 bg-ink-900 rounded-lg flex items-center justify-center mr-4 mt-1">
+                <div className="flex-shrink-0 w-8 h-8 bg-modax-blue-deep rounded-lg flex items-center justify-center mr-4 mt-1">
                   <span className="text-sm font-bold text-white">1</span>
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold mb-2">Admin dashboard walkthrough</h4>
-                  <p className="text-ink-300">
+                  <p className="text-modax-muted">
                     See how easy it is to manage your inventory, process orders, and analyze sales performance with our intuitive admin interface.
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-8 h-8 bg-ink-900 rounded-lg flex items-center justify-center mr-4 mt-1">
+                <div className="flex-shrink-0 w-8 h-8 bg-modax-blue-deep rounded-lg flex items-center justify-center mr-4 mt-1">
                   <span className="text-sm font-bold text-white">2</span>
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold mb-2">Customer experience preview</h4>
-                  <p className="text-ink-300">
+                  <p className="text-modax-muted">
                     Experience your store from a customer&apos;s perspective — browsing products, adding to cart, and completing checkout.
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-8 h-8 bg-ink-900 rounded-lg flex items-center justify-center mr-4 mt-1">
+                <div className="flex-shrink-0 w-8 h-8 bg-modax-blue-deep rounded-lg flex items-center justify-center mr-4 mt-1">
                   <span className="text-sm font-bold text-white">3</span>
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold mb-2">Customization & integration</h4>
-                  <p className="text-ink-300">
+                  <p className="text-modax-muted">
                     Learn how to customize your store design, integrate payment gateways, and connect with your existing systems.
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-8 h-8 bg-ink-900 rounded-lg flex items-center justify-center mr-4 mt-1">
+                <div className="flex-shrink-0 w-8 h-8 bg-modax-blue-deep rounded-lg flex items-center justify-center mr-4 mt-1">
                   <span className="text-sm font-bold text-white">4</span>
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold mb-2">Q&A session</h4>
-                  <p className="text-ink-300">
+                  <p className="text-modax-muted">
                     Get answers to your specific questions and learn about implementation timeline, pricing, and ongoing support.
                   </p>
                 </div>
@@ -164,13 +164,13 @@ export default function RawnnDemo() {
           </div>
 
           {/* Demo Form */}
-          <div className="bg-white rounded-xl p-8 text-ink-900">
+          <div className="bg-white rounded-xl p-8 text-modax-ink">
             <h3 className="text-2xl font-bold mb-6 text-center">Request your free demo</h3>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium text-ink-700 mb-2">
+                  <label htmlFor="firstName" className="block text-sm font-medium text-modax-body mb-2">
                     First Name *
                   </label>
                   <input
@@ -180,12 +180,12 @@ export default function RawnnDemo() {
                     required
                     value={formData.firstName}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-modax-border-lt rounded-lg focus:ring-2 focus:ring-modax-blue focus:border-transparent"
                     placeholder="John"
                   />
                 </div>
                 <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-ink-700 mb-2">
+                  <label htmlFor="lastName" className="block text-sm font-medium text-modax-body mb-2">
                     Last Name *
                   </label>
                   <input
@@ -195,14 +195,14 @@ export default function RawnnDemo() {
                     required
                     value={formData.lastName}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-modax-border-lt rounded-lg focus:ring-2 focus:ring-modax-blue focus:border-transparent"
                     placeholder="Doe"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-ink-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-modax-body mb-2">
                   Email Address *
                 </label>
                 <input
@@ -212,13 +212,13 @@ export default function RawnnDemo() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-modax-border-lt rounded-lg focus:ring-2 focus:ring-modax-blue focus:border-transparent"
                   placeholder="john@yourbrand.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="company" className="block text-sm font-medium text-ink-700 mb-2">
+                <label htmlFor="company" className="block text-sm font-medium text-modax-body mb-2">
                   Company/Brand Name *
                 </label>
                 <input
@@ -228,13 +228,13 @@ export default function RawnnDemo() {
                   required
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-modax-border-lt rounded-lg focus:ring-2 focus:ring-modax-blue focus:border-transparent"
                   placeholder="Your Brand Name"
                 />
               </div>
 
               <div>
-                <label htmlFor="businessType" className="block text-sm font-medium text-ink-700 mb-2">
+                <label htmlFor="businessType" className="block text-sm font-medium text-modax-body mb-2">
                   Business Type
                 </label>
                 <select
@@ -242,7 +242,7 @@ export default function RawnnDemo() {
                   name="businessType"
                   value={formData.businessType}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-modax-border-lt rounded-lg focus:ring-2 focus:ring-modax-blue focus:border-transparent"
                 >
                   <option value="">Select your business type</option>
                   <option value="b2b">B2B</option>
@@ -253,7 +253,7 @@ export default function RawnnDemo() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-ink-700 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-modax-body mb-2">
                   Tell us about your current setup
                 </label>
                 <textarea
@@ -262,7 +262,7 @@ export default function RawnnDemo() {
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-ink-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-modax-border-lt rounded-lg focus:ring-2 focus:ring-modax-blue focus:border-transparent"
                   placeholder="Currently using Instagram/WhatsApp, Shopify, or building from scratch?"
                 ></textarea>
               </div>
@@ -270,7 +270,7 @@ export default function RawnnDemo() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-primary-600 text-white font-semibold py-4 px-6 rounded-lg hover:bg-primary-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200 shadow-lg"
+                className="w-full bg-modax-gold text-modax-navy font-semibold py-4 px-6 rounded-lg hover:bg-modax-gold-hover disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200 shadow-lg"
               >
                 {isSubmitting ? 'Sending...' : 'Request Free Demo'}
               </button>
@@ -281,7 +281,7 @@ export default function RawnnDemo() {
                 </div>
               )}
 
-              <p className="text-xs text-ink-500 text-center">
+              <p className="text-xs text-modax-body text-center">
                 We respect your privacy. Your information will only be used to provide you with demo access and follow-up support.
               </p>
             </form>
@@ -292,16 +292,16 @@ export default function RawnnDemo() {
         <div className="mt-16 text-center">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             <div>
-              <div className="text-2xl font-bold text-primary-400 mb-2">30 min</div>
-              <div className="text-ink-300">Demo Duration</div>
+              <div className="text-2xl font-bold text-modax-gold mb-2">30 min</div>
+              <div className="text-modax-muted">Demo Duration</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-primary-400 mb-2">24-48 hrs</div>
-              <div className="text-ink-300">Response Time</div>
+              <div className="text-2xl font-bold text-modax-gold mb-2">24-48 hrs</div>
+              <div className="text-modax-muted">Response Time</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-primary-400 mb-2">Free</div>
-              <div className="text-ink-300">No Obligations</div>
+              <div className="text-2xl font-bold text-modax-gold mb-2">Free</div>
+              <div className="text-modax-muted">No Obligations</div>
             </div>
           </div>
         </div>

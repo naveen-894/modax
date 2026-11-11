@@ -27,16 +27,16 @@ export default function WhyModax() {
   ]
 
   return (
-    <section className="section-padding bg-ink-950 text-white relative overflow-hidden">
+    <section className="section-padding bg-modax-navy text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-dark" aria-hidden="true" />
       <div className="container-max relative">
         <div className="grid lg:grid-cols-3 gap-16">
           <Reveal direction="right" className="lg:col-span-1">
-            <div className="eyebrow mb-4 text-primary-300">Why Modax</div>
+            <div className="eyebrow mb-4 !text-modax-aqua">Why Modax</div>
             <h2 className="text-3xl sm:text-4xl font-bold mb-6 tracking-tight">
               A technology partner, not just a vendor
             </h2>
-            <p className="text-ink-300 leading-relaxed">
+            <p className="text-modax-muted leading-relaxed">
               We&apos;re committed to your long-term success through AI, websites and
               apps that hold up after launch, not just at the demo.
             </p>
@@ -50,14 +50,14 @@ export default function WhyModax() {
                   index === reasons.length - 1 && reasons.length % 2 !== 0 ? 'sm:col-span-2' : ''
                 }`}
               >
-                <span className="flex-shrink-0 mt-1 flex h-6 w-6 items-center justify-center rounded-full bg-primary-500/20 text-primary-300">
+                <span className="flex-shrink-0 mt-1 flex h-6 w-6 items-center justify-center rounded-full bg-modax-aqua/15 text-modax-aqua">
                   <CheckCircle2 className="w-3.5 h-3.5" />
                 </span>
                 <div>
                   <h3 className="text-base font-semibold text-white mb-1.5">
                     {reason.title}
                   </h3>
-                  <p className="text-ink-400 text-sm leading-relaxed">
+                  <p className="text-modax-muted text-sm leading-relaxed">
                     {reason.description}
                   </p>
                 </div>

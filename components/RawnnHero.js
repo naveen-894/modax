@@ -2,19 +2,19 @@ import Link from 'next/link'
 
 export default function RawnnHero() {
   return (
-    <section className="relative overflow-hidden bg-ink-50 px-3 sm:px-4 lg:px-6 pt-28 pb-16 lg:pt-32 lg:pb-20">
+    <section className="relative overflow-hidden bg-modax-blue-tint-2 px-3 sm:px-4 lg:px-6 pt-28 pb-16 lg:pt-32 lg:pb-20">
       <div className="absolute inset-0 bg-grid [mask-image:linear-gradient(to_bottom,black,transparent)]" aria-hidden="true" />
       <div className="container-max relative">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <div className="eyebrow mb-4">
-              <span className="h-1.5 w-1.5 rounded-full bg-primary-600" />
+              <span className="h-1.5 w-1.5 rounded-full bg-modax-blue-deep" />
               For established businesses, not marketplaces
             </div>
-            <h1 className="text-4xl sm:text-5xl font-bold text-ink-900 mb-5 leading-[1.1] tracking-tight">
-              Your own <span className="text-primary-700">premium online store</span> — all in one platform
+            <h1 className="text-4xl sm:text-5xl font-bold text-modax-ink mb-5 leading-[1.1] tracking-tight">
+              Your own <span className="text-modax-blue">premium online store</span> — all in one platform
             </h1>
-            <p className="text-lg text-ink-500 mb-8 max-w-xl leading-relaxed">
+            <p className="text-lg text-modax-body mb-8 max-w-xl leading-relaxed">
               Rawnn is Modax&apos;s complete e-commerce platform: a customer website, a store
               admin panel and an owner control panel, built for your brand. Payments, shipping
               and returns are handled automatically.
@@ -30,20 +30,20 @@ export default function RawnnHero() {
             </div>
 
             <div className="flex flex-wrap gap-2">
-              <span className="bg-primary-100 text-primary-700 px-3 py-1 rounded-md text-sm font-medium">Payments built in</span>
-              <span className="bg-primary-100 text-primary-700 px-3 py-1 rounded-md text-sm font-medium">Shipping automated</span>
-              <span className="bg-primary-100 text-primary-700 px-3 py-1 rounded-md text-sm font-medium">Mobile first</span>
+              <span className="bg-modax-blue-tint text-modax-blue-deep px-3 py-1 rounded-md text-sm font-medium">Payments built in</span>
+              <span className="bg-modax-blue-tint text-modax-blue-deep px-3 py-1 rounded-md text-sm font-medium">Shipping automated</span>
+              <span className="bg-modax-blue-tint text-modax-blue-deep px-3 py-1 rounded-md text-sm font-medium">Mobile first</span>
             </div>
           </div>
 
           {/* Visual: real screenshots of a store built on Rawnn */}
           <div className="relative hidden lg:block">
-            <div className="rounded-xl bg-white shadow-xl ring-1 ring-ink-900/5 overflow-hidden">
-              <div className="flex items-center gap-2 px-4 py-3 bg-ink-100 border-b border-ink-200">
-                <span className="h-2.5 w-2.5 rounded-full bg-ink-300" />
-                <span className="h-2.5 w-2.5 rounded-full bg-ink-300" />
-                <span className="h-2.5 w-2.5 rounded-full bg-ink-300" />
-                <span className="ml-3 flex-1 bg-white rounded px-3 py-1 text-xs text-ink-400 font-mono truncate">
+            <div className="rounded-xl bg-white shadow-xl ring-1 ring-modax-ink/5 overflow-hidden">
+              <div className="flex items-center gap-2 px-4 py-3 bg-modax-border-lt border-b border-modax-border-lt">
+                <span className="h-2.5 w-2.5 rounded-full bg-modax-muted-2" />
+                <span className="h-2.5 w-2.5 rounded-full bg-modax-muted-2" />
+                <span className="h-2.5 w-2.5 rounded-full bg-modax-muted-2" />
+                <span className="ml-3 flex-1 bg-white rounded px-3 py-1 text-xs text-modax-body font-mono truncate">
                   yourbrand.com
                 </span>
               </div>
@@ -55,7 +55,7 @@ export default function RawnnHero() {
               />
             </div>
 
-            <div className="absolute -bottom-10 -right-10 w-32 rounded-2xl bg-ink-900 shadow-xl p-1.5 ring-1 ring-black/10">
+            <div className="absolute -bottom-10 -right-10 w-32 rounded-2xl bg-modax-navy shadow-xl p-1.5 ring-1 ring-black/10">
               <img
                 src="https://modax-s3.s3.ap-south-1.amazonaws.com/DEV/landing/638de390-3179-45dc-9c67-5956ca8f7cb7.jpeg"
                 alt="Example storefront built on Rawnn — mobile view"
@@ -67,7 +67,7 @@ export default function RawnnHero() {
             <div className="absolute -bottom-6 -left-6 card-surface shadow-lg px-4 py-3">
               <div className="flex items-center gap-2">
                 <span className="h-2 w-2 rounded-full bg-green-500" />
-                <span className="text-xs font-semibold text-ink-700">Secure payments active</span>
+                <span className="text-xs font-semibold text-modax-body">Secure payments active</span>
               </div>
             </div>
           </div>

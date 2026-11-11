@@ -19,15 +19,15 @@ const LAST_UPDATED = '27 October 2026'
 function Section({ id, title, children }) {
   return (
     <section id={id} className="scroll-mt-28">
-      <h2 className="text-xl sm:text-2xl font-bold text-ink-900 mb-4">{title}</h2>
-      <div className="space-y-4 text-ink-700 leading-relaxed">{children}</div>
+      <h2 className="text-xl sm:text-2xl font-bold text-modax-ink mb-4">{title}</h2>
+      <div className="space-y-4 text-modax-body leading-relaxed">{children}</div>
     </section>
   )
 }
 
 function List({ items }) {
   return (
-    <ul className="list-disc pl-6 space-y-2 marker:text-ink-400">
+    <ul className="list-disc pl-6 space-y-2 marker:text-modax-muted-2">
       {items.map((item, i) => (
         <li key={i}>{item}</li>
       ))}
@@ -40,11 +40,11 @@ export default function TermsPage() {
     <div className="min-h-screen">
       <Navigation />
       <main>
-        <section className="section-padding bg-ink-50">
+        <section className="section-padding bg-modax-blue-tint-2">
           <div className="container-max max-w-3xl">
             <span className="eyebrow mb-4 block">Legal</span>
-            <h1 className="text-3xl sm:text-4xl font-bold text-ink-900 mb-3">Terms of Service</h1>
-            <p className="text-ink-500">Last updated: {LAST_UPDATED}</p>
+            <h1 className="text-3xl sm:text-4xl font-bold text-modax-ink mb-3">Terms of Service</h1>
+            <p className="text-modax-body">Last updated: {LAST_UPDATED}</p>
           </div>
         </section>
 
@@ -55,7 +55,7 @@ export default function TermsPage() {
                 of liability, refund/cancellation and governing law sections — the
                 specifics of Modax's actual refund policy and any client contracts
                 should take precedence over this generic draft. */}
-            <div className="space-y-4 text-ink-700 leading-relaxed">
+            <div className="space-y-4 text-modax-body leading-relaxed">
               <p>
                 These Terms of Service (&ldquo;Terms&rdquo;) govern your use of modax.in and the products and
                 services offered by Modax (&ldquo;Modax&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;). By using our
@@ -141,14 +141,14 @@ export default function TermsPage() {
             </Section>
 
             <Section id="contact-us" title="10. Contact us">
-              <p className="font-semibold text-ink-900">Modax</p>
+              <p className="font-semibold text-modax-ink">Modax</p>
               <p>
                 Email:{' '}
-                <a href="mailto:naveen@modax.in" className="text-primary-700 hover:underline">naveen@modax.in</a>
+                <a href="mailto:naveen@modax.in" className="text-modax-blue hover:text-modax-blue-deep hover:underline">naveen@modax.in</a>
               </p>
               <p>
                 Phone / WhatsApp:{' '}
-                <a href="https://wa.me/919164579092" className="text-primary-700 hover:underline">+91 91645 79092</a>
+                <a href="https://wa.me/919164579092" className="text-modax-blue hover:text-modax-blue-deep hover:underline">+91 91645 79092</a>
               </p>
               <p>Bengaluru, Karnataka, India</p>
             </Section>

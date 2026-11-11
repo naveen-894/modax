@@ -12,12 +12,12 @@ export default function AboutFounder() {
               className="w-28 h-28 rounded-full object-cover mx-auto sm:mx-0 flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:rotate-2"
             />
             <div className="text-center sm:text-left">
-              <h3 className="text-2xl font-bold text-ink-900 mb-1">Naveen V</h3>
-              <p className="text-primary-700 font-medium mb-4">Founder, Modax</p>
+              <h3 className="text-2xl font-bold text-modax-ink mb-1">Naveen V</h3>
+              <p className="text-modax-blue-deep font-medium mb-4">Founder, Modax</p>
               {/* TODO: "years of building software for businesses" is a placeholder —
                   replace with real specifics (years of experience, notable
                   companies/projects) once provided; not invented here per the brief. */}
-              <p className="text-ink-500 leading-relaxed mb-4">
+              <p className="text-modax-body leading-relaxed mb-4">
                 Naveen founded Modax after years of building software for businesses
                 and seeing the same pattern everywhere: teams buried in manual, repetitive
                 work, or stuck waiting months for a website or app to ship. Modax exists
@@ -28,7 +28,7 @@ export default function AboutFounder() {
                 href="https://www.linkedin.com/in/naveen-v-89011421b/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-primary-700 hover:text-primary-800 transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-modax-blue hover:text-modax-blue-deep transition-colors"
               >
                 Connect on LinkedIn
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">

@@ -24,22 +24,22 @@ export default function RawnnProductHero() {
       </div>
 
       <div className="flex flex-wrap items-center gap-4 mt-8 mb-3">
-        <div className="inline-flex items-center gap-2 bg-primary-50 text-primary-800 px-4 py-2.5 rounded-md text-sm font-medium">
+        <div className="inline-flex items-center gap-2 bg-modax-blue-tint text-modax-blue-deep px-4 py-2.5 rounded-md text-sm font-medium">
           <CheckCircle2 className="w-4 h-4" />
           Built by Modax
         </div>
-        <span className="text-sm text-ink-500">{RAWNN_STARTING_PRICE} · Your own servers · Live in 2–6 weeks</span>
+        <span className="text-sm text-modax-body">{RAWNN_STARTING_PRICE} · Your own servers · Live in 2–6 weeks</span>
       </div>
-      <p className="text-sm text-ink-400 mb-10">
+      <p className="text-sm text-modax-body mb-10">
         No monthly fees from Modax — you pay only your own hosting costs directly to your hosting provider.
       </p>
 
-      <div className="rounded-xl bg-white shadow-xl ring-1 ring-ink-900/5 overflow-hidden max-w-2xl lg:max-w-none">
-        <div className="flex items-center gap-2 px-4 py-3 bg-ink-100 border-b border-ink-200">
-          <span className="h-2.5 w-2.5 rounded-full bg-ink-300" />
-          <span className="h-2.5 w-2.5 rounded-full bg-ink-300" />
-          <span className="h-2.5 w-2.5 rounded-full bg-ink-300" />
-          <span className="ml-3 flex-1 bg-white rounded px-3 py-1 text-xs text-ink-400 font-mono truncate">
+      <div className="rounded-xl bg-white shadow-xl ring-1 ring-modax-ink/5 overflow-hidden max-w-2xl lg:max-w-none">
+        <div className="flex items-center gap-2 px-4 py-3 bg-modax-border-lt border-b border-modax-border-lt">
+          <span className="h-2.5 w-2.5 rounded-full bg-modax-muted-2" />
+          <span className="h-2.5 w-2.5 rounded-full bg-modax-muted-2" />
+          <span className="h-2.5 w-2.5 rounded-full bg-modax-muted-2" />
+          <span className="ml-3 flex-1 bg-white rounded px-3 py-1 text-xs text-modax-body font-mono truncate">
             yourbrand.com
           </span>
         </div>
