@@ -241,6 +241,33 @@ fbq('track', 'PageView');
   .browser-frame img{width:100%;display:block;}
   .browser-caption{padding:12px 16px;font-size:13.5px;font-weight:600;color:var(--ink-700);border-top:1px solid var(--ink-100);}
 
+  /* Pricing */
+  .pricing-grid{display:grid;gap:22px;grid-template-columns:1fr;align-items:start;max-width:var(--maxw);margin:0 auto;}
+  @media(min-width:860px){.pricing-grid{grid-template-columns:repeat(3,1fr);}}
+  .pricing-card{background:#fff;border:1px solid var(--ink-100);border-radius:var(--radius-lg);padding:30px 26px;box-shadow:var(--shadow-sm);position:relative;display:flex;flex-direction:column;}
+  .pricing-card h3{font-size:19px;margin-bottom:4px;}
+  .pricing-tagline{color:var(--ink-500);font-size:14px;min-height:40px;margin-bottom:18px;}
+  .pricing-price{font-size:30px;font-weight:800;color:var(--ink-900);margin-bottom:20px;}
+  .pricing-price span{font-size:14px;font-weight:600;color:var(--ink-500);margin-left:6px;}
+  .pricing-features{flex:1;margin:0 0 24px;}
+  .pricing-features li{position:relative;padding-left:22px;margin-bottom:10px;font-size:14.5px;color:var(--ink-600);}
+  .pricing-features li::before{
+    content:"";position:absolute;left:0;top:7px;width:7px;height:7px;border-radius:50%;background:var(--accent-light-2);
+    box-shadow:inset 0 0 0 2px var(--accent);
+  }
+  .pricing-features li.pricing-leadin{padding-left:0;font-weight:700;color:var(--ink-800);}
+  .pricing-features li.pricing-leadin::before{content:none;}
+  .pricing-card .btn{width:100%;margin-bottom:20px;}
+  .pricing-foot{border-top:1px solid var(--ink-100);padding-top:16px;}
+  .pricing-foot p{font-size:12.5px;color:var(--ink-500);margin:0 0 4px;}
+  .pricing-card-highlight{border:2px solid var(--gold);background:var(--gold-light);box-shadow:var(--shadow-lg);}
+  @media(min-width:860px){.pricing-card-highlight{transform:translateY(-10px);}}
+  .pricing-badge{
+    position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--ink-900);
+    font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;padding:6px 14px;border-radius:999px;box-shadow:var(--shadow-sm);
+  }
+  .pricing-footnote{max-width:640px;margin:36px auto 0;text-align:center;font-size:13.5px;color:var(--ink-500);}
+
   /* Accordion (features + faq) */
   .accordion{max-width:860px;margin:0 auto;}
   .acc-item{border:1px solid var(--ink-100);border-radius:var(--radius);margin-bottom:12px;overflow:hidden;background:#fff;}
@@ -662,6 +689,82 @@ fbq('track', 'PageView');
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ============ 5b. PRICING ============ -->
+<section id="pricing">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Pricing</span>
+      <h2>Choose your plan</h2>
+      <p>A one-time project fee, tiered by features — not by how many products you sell.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="pricing-card reveal">
+        <h3>Basic</h3>
+        <p class="pricing-tagline">Single SKU store, does it all with one login</p>
+        <div class="pricing-price">₹99,000<span>one-time</span></div>
+        <ul class="pricing-features">
+          <li>Full storefront: catalog, search &amp; filters, cart, checkout</li>
+          <li>Razorpay (UPI/cards/netbanking) + Cash on Delivery</li>
+          <li>OTP login, order tracking, reviews, wishlist</li>
+          <li>One admin login — no roles, does everything</li>
+          <li>Manual product publish, per-variant inventory</li>
+          <li>Manual order &amp; shipping updates, support inbox</li>
+        </ul>
+        <a href="#demo-form" class="btn btn-secondary">Get started with Basic</a>
+        <div class="pricing-foot">
+          <p>3–4 weeks delivery</p>
+          <p>3 months free support</p>
+          <p>2 revision rounds</p>
+        </div>
+      </div>
+
+      <div class="pricing-card pricing-card-highlight reveal">
+        <span class="pricing-badge">Most popular</span>
+        <h3>Growth</h3>
+        <p class="pricing-tagline">Growing brand automating ops &amp; adding staff roles</p>
+        <div class="pricing-price">₹1,89,000<span>one-time</span></div>
+        <ul class="pricing-features">
+          <li class="pricing-leadin">Everything in Basic, plus:</li>
+          <li>Owner / Staff roles in one Admin Panel</li>
+          <li>AI-assisted product listing from a photo</li>
+          <li>Coupons, review moderation, sales analytics</li>
+          <li>Bulk product upload via Excel/CSV</li>
+          <li>Shiprocket auto-shipping &amp; WhatsApp/SMS order updates</li>
+        </ul>
+        <a href="#demo-form" class="btn btn-primary">Get started with Growth</a>
+        <div class="pricing-foot">
+          <p>5–7 weeks delivery</p>
+          <p>6 months free support</p>
+          <p>3 revision rounds</p>
+        </div>
+      </div>
+
+      <div class="pricing-card reveal">
+        <h3>Premium</h3>
+        <p class="pricing-tagline">Established brand, full ops control &amp; reporting</p>
+        <div class="pricing-price">₹2,99,000<span>one-time</span></div>
+        <ul class="pricing-features">
+          <li class="pricing-leadin">Everything in Growth, plus:</li>
+          <li>Fully custom UI/theme for your brand</li>
+          <li>Live chat support widget</li>
+          <li>Custom staff roles &amp; unlimited staff logins</li>
+          <li>Advanced analytics, exportable reports, audit log</li>
+          <li>Store-wide config, priority support, large-catalog tuning</li>
+        </ul>
+        <a href="#demo-form" class="btn btn-secondary">Get started with Premium</a>
+        <div class="pricing-foot">
+          <p>8–10 weeks delivery</p>
+          <p>12 months free support</p>
+          <p>5 revision rounds · 1st-year AMC included</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="pricing-footnote reveal">Source code handed over on final payment, every plan. Hosting, domain/SSL, and payment/SMS/courier charges are billed at actuals — not included in the package price above.</p>
   </div>
 </section>
 

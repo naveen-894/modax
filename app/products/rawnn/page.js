@@ -3,6 +3,7 @@ import RawnnProductHero from '../../../components/RawnnProductHero'
 import RawnnProductFeatures from '../../../components/RawnnProductFeatures'
 import RawnnProductBenefits from '../../../components/RawnnProductBenefits'
 import RawnnProductHowItWorks from '../../../components/RawnnProductHowItWorks'
+import RawnnProductPricing from '../../../components/RawnnProductPricing'
 import RawnnProductDemo from '../../../components/RawnnProductDemo'
 import Footer from '../../../components/Footer'
 
@@ -31,6 +32,7 @@ export default function RawnnProductPage() {
         <RawnnProductFeatures />
         <RawnnProductBenefits />
         <RawnnProductHowItWorks />
+        <RawnnProductPricing />
         <RawnnProductDemo />
       </main>
       <Footer />
