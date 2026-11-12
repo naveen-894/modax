@@ -845,10 +845,25 @@ fbq('track', 'PageView');
           </div>
 
           <div class="field">
+            <label for="sales_channel">Where do you sell today? *</label>
+            <select id="sales_channel" name="sales_channel" required>
+              <option value="">Select...</option>
+              <option value="Physical shop only">Physical shop only</option>
+              <option value="Instagram / WhatsApp">Instagram / WhatsApp</option>
+              <option value="Amazon / Flipkart / Meesho">Amazon / Flipkart / Meesho</option>
+              <option value="My own website">My own website</option>
+              <option value="Not selling yet">Not selling yet</option>
+            </select>
+            <div class="error-msg">Please select where you sell today.</div>
+          </div>
+
+          <div class="field">
             <label for="monthly_revenue">Current monthly revenue *</label>
             <select id="monthly_revenue" name="monthly_revenue" required>
               <option value="">Select...</option>
-              <option value="Under ₹5L">Under ₹5L</option>
+              <option value="Not selling yet">Not selling yet</option>
+              <option value="Under ₹1L">Under ₹1L</option>
+              <option value="₹1–5L">₹1–5L</option>
               <option value="₹5–25L">₹5–25L</option>
               <option value="₹25L–1Cr">₹25L–1Cr</option>
               <option value="Above ₹1Cr">Above ₹1Cr</option>
@@ -874,6 +889,8 @@ fbq('track', 'PageView');
         <input type="hidden" name="utm_campaign" id="utm_campaign" value="" />
         <input type="hidden" name="utm_content" id="utm_content" value="" />
         <input type="hidden" name="timestamp" id="timestamp" value="" />
+
+        <p class="form-foot-note">Plans from <strong>₹99,000</strong> (one-time) · No monthly fees · 0% commission</p>
 
         <div class="form-submit">
           <button type="submit" id="submitBtn" class="btn btn-primary btn-block btn-lg">Get My Free Demo</button>
@@ -1095,10 +1112,32 @@ fbq('track', 'PageView');
   var PHONE_RE = /^[6-9]\d{9}$/;
   var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+  // Kept in sync with lib/leadQuality.js DISPOSABLE_EMAIL_DOMAINS.
+  var DISPOSABLE_EMAIL_DOMAINS = [
+    "mailinator.com", "yopmail.com", "guerrillamail.com", "guerrillamail.net", "sharklasers.com",
+    "10minutemail.com", "10minutemail.net", "tempmail.com", "temp-mail.org", "temp-mail.io",
+    "tempmail.net", "throwawaymail.com", "trashmail.com", "getnada.com", "maildrop.cc",
+    "dispostable.com", "fakeinbox.com", "emailondeck.com", "mytemp.email", "tempinbox.com",
+    "burnermail.io", "moakt.com", "discard.email", "emailfake.com", "minuteinbox.com",
+    "mail.tm", "tmpmail.org"
+  ];
+
+  function isDisposableEmail(email) {
+    if (!email) return false;
+    var atIndex = email.lastIndexOf("@");
+    if (atIndex === -1) return false;
+    var domain = email.slice(atIndex + 1).trim().toLowerCase();
+    return DISPOSABLE_EMAIL_DOMAINS.indexOf(domain) !== -1;
+  }
+
   function setFieldError(fieldEl, hasError) {
     var wrapper = fieldEl.closest(".field");
     wrapper.classList.toggle("has-error", hasError);
   }
+
+  var emailErrorMsgEl = form.email.closest(".field").querySelector(".error-msg");
+  var EMAIL_DEFAULT_ERROR_TEXT = emailErrorMsgEl.textContent;
+  var EMAIL_DISPOSABLE_ERROR_TEXT = "Please use your business or personal email.";
 
   // Clear a field's error state as soon as the user edits it, rather than
   // waiting for the next submit attempt.
@@ -1107,13 +1146,18 @@ fbq('track', 'PageView');
     el.addEventListener("change", function () { setFieldError(el, false); });
   });
 
+  // Restore the default email error copy as soon as the user edits the
+  // field, so a stale "disposable email" message doesn't linger.
+  form.email.addEventListener("input", function () { emailErrorMsgEl.textContent = EMAIL_DEFAULT_ERROR_TEXT; });
+
   function validateForm(data) {
     var errors = {};
     if (!data.full_name.trim()) errors.full_name = true;
     if (!data.business_name.trim()) errors.business_name = true;
     if (!PHONE_RE.test(data.phone.trim())) errors.phone = true;
-    if (!EMAIL_RE.test(data.email.trim())) errors.email = true;
+    if (!EMAIL_RE.test(data.email.trim()) || isDisposableEmail(data.email.trim())) errors.email = true;
     if (!data.business_type) errors.business_type = true;
+    if (!data.sales_channel) errors.sales_channel = true;
     if (!data.monthly_revenue) errors.monthly_revenue = true;
     if (!data.launch_timeline) errors.launch_timeline = true;
     return errors;
@@ -1131,6 +1175,7 @@ fbq('track', 'PageView');
       phone: form.phone,
       email: form.email,
       business_type: form.business_type,
+      sales_channel: form.sales_channel,
       monthly_revenue: form.monthly_revenue,
       launch_timeline: form.launch_timeline
     };
@@ -1140,6 +1185,12 @@ fbq('track', 'PageView');
 
     var errors = validateForm(data);
     var errorKeys = Object.keys(errors);
+
+    if (errors.email) {
+      emailErrorMsgEl.textContent = isDisposableEmail(data.email.trim())
+        ? EMAIL_DISPOSABLE_ERROR_TEXT
+        : EMAIL_DEFAULT_ERROR_TEXT;
+    }
 
     Object.keys(fields).forEach(function (key) {
       setFieldError(fields[key], !!errors[key]);
@@ -1162,6 +1213,7 @@ fbq('track', 'PageView');
       phone: "+91" + data.phone.trim(),
       email: data.email.trim(),
       business_type: data.business_type,
+      sales_channel: data.sales_channel,
       monthly_revenue: data.monthly_revenue,
       launch_timeline: data.launch_timeline,
       utm_source: document.getElementById("utm_source").value,
