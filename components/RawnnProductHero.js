@@ -44,7 +44,7 @@ export default function RawnnProductHero() {
           </span>
         </div>
         <img
-          src="https://modax-s3.s3.ap-south-1.amazonaws.com/DEV/landing/389b2af3-ef7a-460b-b0a2-b45ea9197d33.png"
+          src="https://modax-s3.s3.ap-south-1.amazonaws.com/DEV/landing/181d325a-0d63-4bc3-9a01-1e0dfb2ab3b6.png"
           alt="Example storefront built on Rawnn"
           className="w-full h-auto"
           loading="lazy"

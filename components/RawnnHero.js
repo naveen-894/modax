@@ -48,7 +48,7 @@ export default function RawnnHero() {
                 </span>
               </div>
               <img
-                src="https://modax-s3.s3.ap-south-1.amazonaws.com/DEV/landing/389b2af3-ef7a-460b-b0a2-b45ea9197d33.png"
+                src="https://modax-s3.s3.ap-south-1.amazonaws.com/DEV/landing/181d325a-0d63-4bc3-9a01-1e0dfb2ab3b6.png"
                 alt="Example storefront built on Rawnn — desktop view"
                 className="w-full h-auto object-cover object-top"
                 loading="lazy"
@@ -57,7 +57,7 @@ export default function RawnnHero() {
 
             <div className="absolute -bottom-10 -right-10 w-32 rounded-2xl bg-modax-navy shadow-xl p-1.5 ring-1 ring-black/10">
               <img
-                src="https://modax-s3.s3.ap-south-1.amazonaws.com/DEV/landing/638de390-3179-45dc-9c67-5956ca8f7cb7.jpeg"
+                src="https://modax-s3.s3.ap-south-1.amazonaws.com/DEV/landing/8dfe31b2-58e9-4e98-bb1d-c5ba2fedd9ae.png"
                 alt="Example storefront built on Rawnn — mobile view"
                 className="w-full h-auto rounded-xl"
                 loading="lazy"

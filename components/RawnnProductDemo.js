@@ -80,7 +80,7 @@ export default function RawnnProductDemo() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
           <div className="w-full max-w-sm rounded-xl bg-white shadow-xl overflow-hidden ring-1 ring-black/5">
             <img
-              src="https://modax-s3.s3.ap-south-1.amazonaws.com/DEV/landing/389b2af3-ef7a-460b-b0a2-b45ea9197d33.png"
+              src="https://modax-s3.s3.ap-south-1.amazonaws.com/DEV/landing/181d325a-0d63-4bc3-9a01-1e0dfb2ab3b6.png"
               alt="Paramparaa Silks — example storefront built on Rawnn, desktop view"
               className="w-full h-auto"
               loading="lazy"
@@ -88,7 +88,7 @@ export default function RawnnProductDemo() {
           </div>
           <div className="w-28 rounded-2xl bg-modax-navy-deep p-1.5 shadow-xl ring-1 ring-black/10">
             <img
-              src="https://modax-s3.s3.ap-south-1.amazonaws.com/DEV/landing/638de390-3179-45dc-9c67-5956ca8f7cb7.jpeg"
+              src="https://modax-s3.s3.ap-south-1.amazonaws.com/DEV/landing/8dfe31b2-58e9-4e98-bb1d-c5ba2fedd9ae.png"
               alt="Paramparaa Silks — example storefront built on Rawnn, mobile view"
               className="w-full h-auto rounded-xl"
               loading="lazy"
