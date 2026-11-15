@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, m } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import { CALENDLY_URL } from '../lib/constants'
 
@@ -20,7 +20,7 @@ export default function Navigation() {
   }, [])
 
   // Determine if we're on the Rawnn page
-  const isRawnnPage = pathname === '/rawnn'
+  const isRawnnPage = pathname === '/products/rawnn'
 
   const navLinks = {
     home: '/',
@@ -74,7 +74,7 @@ export default function Navigation() {
                   >
                     {item.label}
                     {active ? (
-                      <motion.span
+                      <m.span
                         layoutId="nav-underline"
                         className="absolute left-3 right-3 -bottom-[1px] h-[2px] bg-modax-aqua rounded-full"
                         transition={{ type: 'spring', stiffness: 380, damping: 30 }}
@@ -115,7 +115,7 @@ export default function Navigation() {
       {/* Mobile menu */}
       <AnimatePresence initial={false}>
         {isMenuOpen && (
-          <motion.div
+          <m.div
             key="mobile-menu"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
@@ -125,7 +125,7 @@ export default function Navigation() {
           >
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-modax-navy border-t border-modax-line">
               {linkItems.map((item, index) => (
-                <motion.div
+                <m.div
                   key={item.label}
                   initial={{ opacity: 0, x: -8 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -134,7 +134,7 @@ export default function Navigation() {
                   <Link href={item.href} className="text-modax-muted hover:text-modax-aqua block px-3 py-2 text-base font-medium transition-colors">
                     {item.label}
                   </Link>
-                </motion.div>
+                </m.div>
               ))}
               <div className="pt-4 pb-3 border-t border-modax-line">
                 <div className="flex flex-col space-y-3 px-3">
@@ -150,7 +150,7 @@ export default function Navigation() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </nav>

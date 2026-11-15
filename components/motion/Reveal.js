@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 
 const DIRECTIONS = {
   up: { y: 24, x: 0 },
@@ -20,7 +20,7 @@ export default function Reveal({
   once = true,
   amount = 'some',
 }) {
-  const MotionTag = motion[as] || motion.div
+  const MotionTag = m[as] || m.div
   const offset = DIRECTIONS[direction] || DIRECTIONS.up
 
   return (

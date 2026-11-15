@@ -1,6 +1,15 @@
 import { render, screen, waitFor, waitForElementToBeRemoved } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import ChatWidget from '../components/chatbot/ChatWidget'
+import MotionProvider from '../components/MotionProvider'
+
+function renderChatWidget() {
+  return render(
+    <MotionProvider>
+      <ChatWidget />
+    </MotionProvider>
+  )
+}
 
 function mockSessionResponse() {
   return {
@@ -23,14 +32,14 @@ afterEach(() => {
 })
 
 test('renders a closed floating button by default', () => {
-  render(<ChatWidget />)
+  renderChatWidget()
   expect(screen.getByRole('button', { name: /open chat assistant/i })).toBeInTheDocument()
   expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
 })
 
 test('opens the chat window, starts a session, and shows the greeting + suggested prompts', async () => {
   const user = userEvent.setup()
-  render(<ChatWidget />)
+  renderChatWidget()
 
   await user.click(screen.getByRole('button', { name: /open chat assistant/i }))
 
@@ -49,7 +58,7 @@ test('opens the chat window, starts a session, and shows the greeting + suggeste
 
 test('clicking the close button hides the chat window', async () => {
   const user = userEvent.setup()
-  render(<ChatWidget />)
+  renderChatWidget()
 
   await user.click(screen.getByRole('button', { name: /open chat assistant/i }))
   await waitFor(() => expect(screen.getByRole('dialog')).toBeInTheDocument())
@@ -60,7 +69,7 @@ test('clicking the close button hides the chat window', async () => {
 
 test('clicking "share project details" reveals the lead capture form', async () => {
   const user = userEvent.setup()
-  render(<ChatWidget />)
+  renderChatWidget()
 
   await user.click(screen.getByRole('button', { name: /open chat assistant/i }))
   await waitFor(() => expect(screen.getByText(/Hi! Welcome to Modax/i)).toBeInTheDocument())

@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { ArrowRight, Sparkles, Globe, Smartphone, ShoppingCart, ChevronDown } from 'lucide-react'
 import { CALENDLY_URL } from '../lib/constants'
 
@@ -36,28 +36,28 @@ export default function Hero() {
 
       <div className="container-max relative w-full py-10 lg:py-14">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <motion.div variants={leftContainer} initial="hidden" animate="show" className="max-w-2xl">
-            <motion.div variants={leftItem} className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.15em] text-modax-aqua mb-5">
+          <m.div variants={leftContainer} initial="hidden" animate="show" className="max-w-2xl">
+            <m.div variants={leftItem} className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.15em] text-modax-aqua mb-5">
               <span className="h-1.5 w-1.5 rounded-full bg-modax-aqua" />
               Ecommerce platforms, websites & AI tools, built for real work
-            </motion.div>
+            </m.div>
 
-            <motion.h1 variants={leftItem} className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-white mb-6 leading-[1.1] tracking-tight">
+            <m.h1 variants={leftItem} className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-white mb-6 leading-[1.1] tracking-tight">
               We build{' '}
               <span className="relative inline-block">
                 <span className="relative z-10 text-modax-aqua">software that ships</span>
                 <span className="absolute left-0 right-0 bottom-1 h-3 bg-modax-aqua/20 -z-0" />
               </span>
               {' '}for your business.
-            </motion.h1>
+            </m.h1>
 
-            <motion.p variants={leftItem} className="text-lg text-modax-muted mb-8 max-w-xl leading-relaxed">
+            <m.p variants={leftItem} className="text-lg text-modax-muted mb-8 max-w-xl leading-relaxed">
               Modax is a tech studio that designs and builds AI tools, websites and apps
               for growing businesses: automating repetitive workflows, reading documents,
               answering questions, and shipping the product you actually need.
-            </motion.p>
+            </m.p>
 
-            <motion.div variants={leftItem} className="flex flex-col sm:flex-row gap-4 mb-9">
+            <m.div variants={leftItem} className="flex flex-col sm:flex-row gap-4 mb-9">
               <Link href="/products/rawnn" className="btn-primary px-7 py-3.5">
                 See the ecommerce platform
                 <ArrowRight className="w-4 h-4" />
@@ -65,9 +65,9 @@ export default function Hero() {
               <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn-outline-dark px-7 py-3.5">
                 Book a 15-min call
               </a>
-            </motion.div>
+            </m.div>
 
-            <motion.div variants={leftItem} className="flex flex-wrap gap-2.5">
+            <m.div variants={leftItem} className="flex flex-wrap gap-2.5">
               {capabilities.map(({ icon: Icon, label }) => (
                 <span
                   key={label}
@@ -77,11 +77,11 @@ export default function Hero() {
                   {label}
                 </span>
               ))}
-            </motion.div>
-          </motion.div>
+            </m.div>
+          </m.div>
 
           {/* Visual: a glimpse of what we ship */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3, ease: easeOut }}
@@ -140,7 +140,7 @@ export default function Hero() {
             <div className="absolute -bottom-6 -left-6 card-surface shadow-xl px-4 py-3">
               <span className="text-xs font-semibold text-modax-body">Built by one team, start to finish</span>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </div>
 

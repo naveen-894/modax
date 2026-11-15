@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import { motion, useInView, useMotionValue, useSpring } from 'framer-motion'
+import { m, useInView, useMotionValue, useSpring } from 'framer-motion'
 
 export default function Counter({ to, suffix = '', duration = 1.2, className }) {
   const ref = useRef(null)
@@ -27,8 +27,8 @@ export default function Counter({ to, suffix = '', duration = 1.2, className }) 
   }, [spring, suffix])
 
   return (
-    <motion.span ref={ref} className={className}>
+    <m.span ref={ref} className={className}>
       <span ref={displayRef}>0{suffix}</span>
-    </motion.span>
+    </m.span>
   )
 }

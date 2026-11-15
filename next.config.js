@@ -24,6 +24,18 @@ const nextConfig = {
   //   optimizeCss: true,
   // },
 
+  // /rawnn was an early product page; it's superseded by /products/rawnn,
+  // which is the canonical URL. Redirect instead of serving a duplicate.
+  async redirects() {
+    return [
+      {
+        source: '/rawnn',
+        destination: '/products/rawnn',
+        permanent: true,
+      },
+    ]
+  },
+
   // Security headers for better SEO trust signals
   async headers() {
     return [

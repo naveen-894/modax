@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, m } from 'framer-motion'
 import { Bot, X } from 'lucide-react'
 import ChatWindow from './ChatWindow'
 
@@ -16,7 +16,7 @@ export default function ChatWidget({ contactEmail, contactWhatsapp }) {
     <div className="fixed bottom-5 right-5 z-[60] flex flex-col items-end gap-3">
       <AnimatePresence>
         {isOpen && (
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 16, scale: 0.97 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 16, scale: 0.97 }}
@@ -28,11 +28,11 @@ export default function ChatWidget({ contactEmail, contactWhatsapp }) {
               contactEmail={contactEmail}
               contactWhatsapp={contactWhatsapp}
             />
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
 
-      <motion.button
+      <m.button
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}
         aria-label={isOpen ? 'Close chat assistant' : 'Open chat assistant'}
@@ -43,7 +43,7 @@ export default function ChatWidget({ contactEmail, contactWhatsapp }) {
         className="relative flex h-14 w-14 items-center justify-center rounded-full bg-modax-navy text-modax-aqua shadow-xl shadow-modax-navy/20 hover:bg-modax-navy-2 transition-colors focus:outline-none focus:ring-2 focus:ring-modax-aqua focus:ring-offset-2"
       >
         {!isOpen && (
-          <motion.span
+          <m.span
             className="absolute inset-0 rounded-full bg-modax-aqua"
             initial={{ opacity: 0.35, scale: 1 }}
             animate={{ opacity: 0, scale: 1.6 }}
@@ -52,7 +52,7 @@ export default function ChatWidget({ contactEmail, contactWhatsapp }) {
         )}
         <AnimatePresence mode="wait" initial={false}>
           {isOpen ? (
-            <motion.span
+            <m.span
               key="close"
               initial={{ opacity: 0, rotate: -45 }}
               animate={{ opacity: 1, rotate: 0 }}
@@ -60,9 +60,9 @@ export default function ChatWidget({ contactEmail, contactWhatsapp }) {
               transition={{ duration: 0.15 }}
             >
               <X className="w-6 h-6" />
-            </motion.span>
+            </m.span>
           ) : (
-            <motion.span
+            <m.span
               key="open"
               initial={{ opacity: 0, rotate: 45 }}
               animate={{
@@ -76,10 +76,10 @@ export default function ChatWidget({ contactEmail, contactWhatsapp }) {
               }}
             >
               <Bot className="w-6 h-6" />
-            </motion.span>
+            </m.span>
           )}
         </AnimatePresence>
-      </motion.button>
+      </m.button>
     </div>
   )
 }

@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 
 const container = {
   hidden: {},
@@ -20,7 +20,7 @@ const DIRECTIONS = {
 export function RevealItem({ children, className, direction = 'up' }) {
   const offset = DIRECTIONS[direction] || DIRECTIONS.up
   return (
-    <motion.div
+    <m.div
       className={className}
       variants={{
         hidden: { opacity: 0, x: offset.x, y: offset.y },
@@ -28,13 +28,13 @@ export function RevealItem({ children, className, direction = 'up' }) {
       }}
     >
       {children}
-    </motion.div>
+    </m.div>
   )
 }
 
 export default function RevealGroup({ children, className, once = true, amount = 'some' }) {
   return (
-    <motion.div
+    <m.div
       className={className}
       initial="hidden"
       whileInView="show"
@@ -42,6 +42,6 @@ export default function RevealGroup({ children, className, once = true, amount =
       variants={container}
     >
       {children}
-    </motion.div>
+    </m.div>
   )
 }

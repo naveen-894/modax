@@ -37,7 +37,7 @@ export default function AboutProducts() {
               returns all handled automatically.
             </p>
             <Link href="/products/rawnn" className="btn-secondary inline-block">
-              Learn more
+              Learn more about Rawnn
             </Link>
           </RevealItem>
         </RevealGroup>

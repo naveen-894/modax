@@ -69,7 +69,7 @@ export default function ProductHighlight() {
               </li>
             </ul>
             <Link href="/products/rawnn" className="btn-secondary text-center">
-              Learn more
+              Learn more about Rawnn
             </Link>
           </RevealItem>
         </RevealGroup>
