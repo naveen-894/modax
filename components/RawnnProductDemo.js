@@ -37,6 +37,7 @@ export default function RawnnProductDemo() {
         },
         body: JSON.stringify({
           ...formData,
+          inquiryType: 'rawnn',
           message: `Rawnn Demo Request:\n\nBusiness Type: ${formData.businessType}\nCurrent Platform: ${formData.currentPlatform}\n\n${formData.message}\n\n[This is a Rawnn Product Demo Request]`
         }),
       })
@@ -131,13 +132,12 @@ export default function RawnnProductDemo() {
 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-modax-body mb-2">
-                    Email Address *
+                    Email Address
                   </label>
                   <input
                     type="email"
                     id="email"
                     name="email"
-                    required
                     value={formData.email}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-modax-border-lt rounded-lg focus:ring-2 focus:ring-modax-blue focus:border-transparent"
