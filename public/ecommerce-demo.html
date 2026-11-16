@@ -827,12 +827,12 @@ fbq('track', 'PageView');
           </div>
 
           <div class="field">
-            <label for="email">Email *</label>
-            <input type="email" id="email" name="email" autocomplete="email" required />
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" />
             <div class="error-msg">Please enter a valid email address.</div>
           </div>
 
-          <div class="field">
+          <div class="field full">
             <label for="business_type">Type of business *</label>
             <select id="business_type" name="business_type" required>
               <option value="">Select...</option>
@@ -842,45 +842,6 @@ fbq('track', 'PageView');
               <option value="Other">Other</option>
             </select>
             <div class="error-msg">Please select your business type.</div>
-          </div>
-
-          <div class="field">
-            <label for="sales_channel">Where do you sell today? *</label>
-            <select id="sales_channel" name="sales_channel" required>
-              <option value="">Select...</option>
-              <option value="Physical shop only">Physical shop only</option>
-              <option value="Instagram / WhatsApp">Instagram / WhatsApp</option>
-              <option value="Amazon / Flipkart / Meesho">Amazon / Flipkart / Meesho</option>
-              <option value="My own website">My own website</option>
-              <option value="Not selling yet">Not selling yet</option>
-            </select>
-            <div class="error-msg">Please select where you sell today.</div>
-          </div>
-
-          <div class="field">
-            <label for="monthly_revenue">Current monthly revenue *</label>
-            <select id="monthly_revenue" name="monthly_revenue" required>
-              <option value="">Select...</option>
-              <option value="Not selling yet">Not selling yet</option>
-              <option value="Under ₹1L">Under ₹1L</option>
-              <option value="₹1–5L">₹1–5L</option>
-              <option value="₹5–25L">₹5–25L</option>
-              <option value="₹25L–1Cr">₹25L–1Cr</option>
-              <option value="Above ₹1Cr">Above ₹1Cr</option>
-            </select>
-            <div class="error-msg">Please select your monthly revenue range.</div>
-          </div>
-
-          <div class="field">
-            <label for="launch_timeline">When do you want to launch? *</label>
-            <select id="launch_timeline" name="launch_timeline" required>
-              <option value="">Select...</option>
-              <option value="Immediately">Immediately</option>
-              <option value="Within 1 month">Within 1 month</option>
-              <option value="1–3 months">1–3 months</option>
-              <option value="Just exploring">Just exploring</option>
-            </select>
-            <div class="error-msg">Please select a launch timeline.</div>
           </div>
         </div>
 
@@ -1155,11 +1116,9 @@ fbq('track', 'PageView');
     if (!data.full_name.trim()) errors.full_name = true;
     if (!data.business_name.trim()) errors.business_name = true;
     if (!PHONE_RE.test(data.phone.trim())) errors.phone = true;
-    if (!EMAIL_RE.test(data.email.trim()) || isDisposableEmail(data.email.trim())) errors.email = true;
+    var emailVal = data.email.trim();
+    if (emailVal && (!EMAIL_RE.test(emailVal) || isDisposableEmail(emailVal))) errors.email = true;
     if (!data.business_type) errors.business_type = true;
-    if (!data.sales_channel) errors.sales_channel = true;
-    if (!data.monthly_revenue) errors.monthly_revenue = true;
-    if (!data.launch_timeline) errors.launch_timeline = true;
     return errors;
   }
 
@@ -1174,10 +1133,7 @@ fbq('track', 'PageView');
       business_name: form.business_name,
       phone: form.phone,
       email: form.email,
-      business_type: form.business_type,
-      sales_channel: form.sales_channel,
-      monthly_revenue: form.monthly_revenue,
-      launch_timeline: form.launch_timeline
+      business_type: form.business_type
     };
 
     var data = {};
@@ -1211,16 +1167,16 @@ fbq('track', 'PageView');
       full_name: data.full_name.trim(),
       business_name: data.business_name.trim(),
       phone: "+91" + data.phone.trim(),
-      email: data.email.trim(),
       business_type: data.business_type,
-      sales_channel: data.sales_channel,
-      monthly_revenue: data.monthly_revenue,
-      launch_timeline: data.launch_timeline,
       utm_source: document.getElementById("utm_source").value,
       utm_campaign: document.getElementById("utm_campaign").value,
       utm_content: document.getElementById("utm_content").value,
       timestamp: document.getElementById("timestamp").value
     };
+
+    // Email is optional — omit the key entirely when blank instead of
+    // sending an empty string, so HubSpot still creates the contact by phone.
+    if (data.email.trim()) payload.email = data.email.trim();
 
     form.style.display = "none";
     thankYou.classList.add("show");
