@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Company Info */}
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center gap-2.5 mb-5">
-              <span className="flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br from-modax-blue-deep to-modax-blue text-white font-bold text-sm">
+              <span aria-hidden="true" className="flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br from-modax-blue-deep to-modax-blue text-white font-bold text-sm">
                 M
               </span>
               <span className="text-lg font-bold text-white tracking-tight">Modax</span>

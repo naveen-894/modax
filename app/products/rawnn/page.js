@@ -20,6 +20,7 @@ export const metadata = {
     description: 'Rawnn is a complete, fully owned ecommerce platform for your brand — a customer website, store admin panel and owner control panel, on your own servers. One-time cost, no monthly fees, no commission.',
     url: '/products/rawnn',
     type: 'website',
+    images: ['/images/og-image.jpg'],
   },
 }
 

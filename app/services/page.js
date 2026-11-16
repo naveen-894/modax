@@ -18,6 +18,7 @@ export const metadata = {
     description: 'Modax builds AI tools, websites and apps for growing businesses, built around your actual needs.',
     url: '/services',
     type: 'website',
+    images: ['/images/og-image.jpg'],
   },
 }
 

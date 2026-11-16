@@ -19,6 +19,7 @@ export const metadata = {
     description: 'Modax is a founder-led tech studio in Bengaluru building AI tools, websites and apps for growing businesses.',
     url: '/about',
     type: 'website',
+    images: ['/images/og-image.jpg'],
   },
 }
 

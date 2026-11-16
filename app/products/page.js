@@ -16,6 +16,7 @@ export const metadata = {
     description: 'Products built by Modax, including Screenr, our AI resume screening tool, and Rawnn, our complete e-commerce platform.',
     url: '/products',
     type: 'website',
+    images: ['/images/og-image.jpg'],
   },
 }
 

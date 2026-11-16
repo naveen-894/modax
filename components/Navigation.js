@@ -50,7 +50,7 @@ export default function Navigation() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center gap-2.5 group">
-              <span className="flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br from-modax-blue-deep to-modax-blue text-white font-bold text-sm tracking-tight transition-all duration-200 group-hover:scale-105 group-hover:rotate-3">
+              <span aria-hidden="true" className="flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br from-modax-blue-deep to-modax-blue text-white font-bold text-sm tracking-tight transition-all duration-200 group-hover:scale-105 group-hover:rotate-3">
                 M
               </span>
               <span className="text-lg font-bold text-white tracking-tight">

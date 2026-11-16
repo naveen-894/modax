@@ -19,6 +19,7 @@ export const metadata = {
     description: 'Instantly score how well a candidate fits a job. Upload a resume and job description and get an explainable match score in seconds.',
     url: '/products/ai-resume-matcher',
     type: 'website',
+    images: ['/images/og-image.jpg'],
   },
 }
 

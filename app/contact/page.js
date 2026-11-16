@@ -17,6 +17,7 @@ export const metadata = {
     description: 'Get in touch to see how an AI tool, website or app can save your team hours of manual work.',
     url: '/contact',
     type: 'website',
+    images: ['/images/og-image.jpg'],
   },
 }
 
