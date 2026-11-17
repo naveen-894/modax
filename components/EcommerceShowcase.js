@@ -82,7 +82,7 @@ export default function EcommerceShowcase() {
         <Reveal className="flex flex-col items-center gap-5">
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/products/rawnn" className="btn-primary px-7 py-3.5">
-              See the full platform
+              See the Modax ecommerce platform
             </Link>
             <a href={RAWNN_DEMO_URL} target="_blank" rel="noopener noreferrer" className="btn-secondary px-7 py-3.5">
               Explore the Live Demo Store
