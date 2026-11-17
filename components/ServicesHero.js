@@ -6,9 +6,9 @@ export default function ServicesHero() {
   return (
     <PageHero
       eyebrow="Services"
-      title="Software development"
-      accent=" for businesses"
-      description="We design and build websites and apps for growing businesses — from marketing sites and web apps to mobile apps and the product features you need shipped."
+      title="Software, AI & websites "
+      accent="for growing businesses"
+      description="We design and build Rawnn (our ecommerce platform), custom AI solutions and websites for growing businesses in India — each one a fixed-price software development project, not an open-ended retainer."
       visual={<HeroVisualPanel />}
     >
       <div className="flex flex-col sm:flex-row gap-4 mt-10">
