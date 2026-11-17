@@ -68,7 +68,7 @@ export default function RawnnVsWoocommercePage() {
           <div className="container-max">
             <HeroImage
               src={`${S3_LANDING_URL}/rawnn-vs-woocommerce-comparison.webp`}
-              alt="Illustration of connected, unified digital workflow cards representing Rawnn's integrated ecommerce platform, unlike stitched-together WooCommerce plugins"
+              alt="Illustration moving from plugin chaos to a single unified dashboard, representing Rawnn's integrated ecommerce platform versus stitched-together WooCommerce plugins"
               className="mb-14 max-w-4xl mx-auto"
             />
             <div className="max-w-4xl mx-auto overflow-x-auto">

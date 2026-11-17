@@ -6,8 +6,8 @@ import PageHero from '../../components/PageHero'
 import Breadcrumbs from '../../components/Breadcrumbs'
 import FAQAccordion from '../../components/FAQAccordion'
 import RawnnCTA from '../../components/RawnnCTA'
-import ImagePlaceholder from '../../components/ImagePlaceholder'
-import { SITE_URL } from '../../lib/constants'
+import HeroImage from '../../components/HeroImage'
+import { SITE_URL, S3_LANDING_URL } from '../../lib/constants'
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -58,7 +58,11 @@ export default function D2cEcommercePlatformPage() {
 
         <section className="section-padding bg-white">
           <div className="container-max">
-            <ImagePlaceholder filename="d2c-ecommerce-platform-hero.webp" ratio="aspect-[16/9]" className="mb-14 max-w-4xl mx-auto" />
+            <HeroImage
+              src={`${S3_LANDING_URL}/d2c-ecommerce-platform-hero.webp`}
+              alt="Confident entrepreneur showcasing a business dashboard for their D2C ecommerce platform"
+              className="mb-14 max-w-4xl mx-auto"
+            />
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               <div className="text-center p-6">

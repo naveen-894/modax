@@ -6,8 +6,8 @@ import PageHero from '../../components/PageHero'
 import Breadcrumbs from '../../components/Breadcrumbs'
 import FAQAccordion from '../../components/FAQAccordion'
 import RawnnCTA from '../../components/RawnnCTA'
-import ImagePlaceholder from '../../components/ImagePlaceholder'
-import { SITE_URL } from '../../lib/constants'
+import HeroImage from '../../components/HeroImage'
+import { SITE_URL, S3_LANDING_URL } from '../../lib/constants'
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -79,7 +79,11 @@ export default function EcommerceWebsiteCostIndiaPage() {
 
         <section className="section-padding bg-white">
           <div className="container-max">
-            <ImagePlaceholder filename="ecommerce-website-cost-india-hero.webp" ratio="aspect-[16/9]" className="mb-14 max-w-4xl mx-auto" />
+            <HeroImage
+              src={`${S3_LANDING_URL}/ecommerce-website-cost-india-hero.webp`}
+              alt="Rupee invoice and shopping scene illustrating ecommerce website development cost in India"
+              className="mb-14 max-w-4xl mx-auto"
+            />
 
             <div className="text-center mb-12 max-w-2xl mx-auto">
               <h2 className="text-3xl sm:text-4xl font-bold text-modax-ink mb-4">

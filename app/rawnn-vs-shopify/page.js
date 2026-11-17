@@ -6,8 +6,8 @@ import PageHero from '../../components/PageHero'
 import Breadcrumbs from '../../components/Breadcrumbs'
 import FAQAccordion from '../../components/FAQAccordion'
 import RawnnCTA from '../../components/RawnnCTA'
-import ImagePlaceholder from '../../components/ImagePlaceholder'
-import { SITE_URL } from '../../lib/constants'
+import HeroImage from '../../components/HeroImage'
+import { SITE_URL, S3_LANDING_URL } from '../../lib/constants'
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -80,7 +80,11 @@ export default function RawnnVsShopifyPage() {
 
         <section className="section-padding bg-white">
           <div className="container-max">
-            <ImagePlaceholder filename="rawnn-vs-shopify-comparison.webp" ratio="aspect-[16/9]" className="mb-14 max-w-4xl mx-auto" />
+            <HeroImage
+              src={`${S3_LANDING_URL}/rawnn-vs-shopify-comparison.webp`}
+              alt="Illustration of rental versus ownership — two paths to selling online, representing Shopify's rented platform versus a custom-owned ecommerce website"
+              className="mb-14 max-w-4xl mx-auto"
+            />
             <div className="max-w-4xl mx-auto overflow-x-auto">
               <table className="w-full border-separate border-spacing-0 bg-white rounded-xl overflow-hidden shadow-sm ring-1 ring-modax-border-lt min-w-[640px]">
                 <thead>

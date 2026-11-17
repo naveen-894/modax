@@ -6,7 +6,8 @@ import PageHero from '../../components/PageHero'
 import Breadcrumbs from '../../components/Breadcrumbs'
 import FAQAccordion from '../../components/FAQAccordion'
 import RawnnCTA from '../../components/RawnnCTA'
-import { SITE_URL, RAWNN_DEMO_URL } from '../../lib/constants'
+import HeroImage from '../../components/HeroImage'
+import { SITE_URL, RAWNN_DEMO_URL, S3_LANDING_URL } from '../../lib/constants'
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -47,6 +48,12 @@ export default function EcommerceForFashionPage() {
           title="Clothing brand ecommerce "
           accent="website development"
           description="Rawnn is built for fashion: variant-level stock for every size and colour, a storefront themed for your brand, and reviews with photos that help shoppers trust a fit before they buy. Just as suited to a saree ecommerce brand or a boutique online store as a clothing label."
+          visual={
+            <HeroImage
+              src={`${S3_LANDING_URL}/ecommerce-for-fashion-hero.webp`}
+              alt="Cozy Indian online boutique scene in the evening, representing a clothing brand ecommerce website"
+            />
+          }
         >
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
             <a href={RAWNN_DEMO_URL} target="_blank" rel="noopener noreferrer" className="btn-primary">

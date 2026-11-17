@@ -24,20 +24,33 @@ below the fold).
 | `services-app-development-hero.webp` | `/services/app-development` → hero | Collaborative Office Dashboard Discussion.webp |
 | `screenr-hero.webp` (bonus, not in original list) | `/products/ai-resume-matcher` → hero visual | Confident Professional Reviewing Recruitment Dashboard.webp |
 | `blog-automate-repetitive-tasks-cover.webp` | `/blog` + that post | Document Workflow and Approval Illustration.webp |
-| `rawnn-vs-woocommerce-comparison.webp` | `/rawnn-vs-woocommerce` → comparison | Connected Digital Workflow Cards.webp |
 | `shopify-alternative-india-hero.webp` | `/shopify-alternative-india` → hero | Isometric tech workspace with floating dashboards.webp |
 | `instagram-to-website-hero.webp` | `/instagram-to-website` → hero | Warm Home Studio Analytics Scene.webp |
 | `ecommerce-website-development-bangalore-hero.webp` | `/ecommerce-website-development-bangalore` → hero | Collaborative Tech Planning Over Coffee.webp |
+| `rawnn-vs-shopify-comparison.webp` | `/rawnn-vs-shopify` → comparison | Rental vs Ownership_ Two Paths to Retail.png (converted to webp) |
+| `ecommerce-website-cost-india-hero.webp` | `/ecommerce-website-cost-india` → hero | Rupee Invoice Shopping Scene.png (converted) |
+| `d2c-ecommerce-platform-hero.webp` | `/d2c-ecommerce-platform` → hero | Confident Entrepreneur Showcasing Business Dashboard.png (converted) |
+| `ecommerce-for-retail-and-brands-hero.webp` | `/ecommerce-for-retail-and-brands` → hero | Elegant Navy Fashion Flat Lay.png (converted) |
+| `blog-sell-on-own-website-cover.webp` | `/blog` + `/blog/sell-on-your-own-website-instead-of-amazon-flipkart` | Coins to Shop_ From Decline to Growth.png (converted) |
+| `rawnn-vs-woocommerce-comparison.webp` | `/rawnn-vs-woocommerce` → comparison | **Replaced** with From Plugin Chaos to Unified Dashboard.png (converted) — a better match than the original Connected Digital Workflow Cards.webp |
+| `ecommerce-for-fashion-hero.webp` (bonus, not in original list) | `/ecommerce-for-fashion` → hero visual | Cozy Indian Online Boutique Evening.png (converted) |
 
-**Uploaded but not yet placed:** `connected-chat-support-illustration.webp`
-(source: "Connected Chat Support Illustration.webp") — uploaded to the
-same S3 prefix but no page content matched it well enough to force a
-placement. It's available at
-`https://modax-s3.s3.ap-south-1.amazonaws.com/modax-landing/connected-chat-support-illustration.webp`
-if you want to use it somewhere (an AI-chatbot-themed spot on
-`/services/ai-automation` would be the best fit).
+**Uploaded but not yet placed:**
+- `connected-chat-support-illustration.webp` (source: "Connected Chat Support Illustration.webp")
+- `ecommerce-design-workspace-spare.webp` (source: "Collaborative E-commerce Design Workspace.png", converted)
+- `ecommerce-workspace-chai-spare.webp` (source: "Cozy Ecommerce Workspace with Chai.png", converted)
 
-**Still placeholders — everything below this line.**
+All three are uploaded to the same S3 prefix but no remaining page content
+matched them well enough to force a placement. Available at
+`https://modax-s3.s3.ap-south-1.amazonaws.com/modax-landing/<filename>`
+if you want to use any of them later (the chai/workspace one would suit
+a second image on the Bangalore local page or `/services` hub; the
+chatbot illustration suits an AI-chatbot-themed spot on
+`/services/ai-automation`).
+
+**Still placeholders — only these remain:**
+- `ecommerce-for-fashion-demo-store.webp` (needs a real screenshot of demo.modax.in, not generated)
+- `website-development-portfolio-1.webp` … `-4.webp` (need real project screenshots, not generated)
 
 **On Open Graph images:** every new/updated page currently reuses the
 existing sitewide `/images/og-image.jpg` for its OG/Twitter tags (a real
@@ -52,19 +65,19 @@ candidates).
 | Filename | Page / section | Type | Size & ratio | Status |
 |---|---|---|---|---|
 | `shopify-alternative-india-hero.webp` | `/shopify-alternative-india` → hero | AI-generated photo | 1600×900, 16:9 | ✅ done |
-| `rawnn-vs-shopify-comparison.webp` | `/rawnn-vs-shopify` → comparison section | Illustration | 1600×900, 16:9 | |
+| `rawnn-vs-shopify-comparison.webp` | `/rawnn-vs-shopify` → comparison section | Illustration | 1600×900, 16:9 | ✅ done |
 | `rawnn-vs-woocommerce-comparison.webp` | `/rawnn-vs-woocommerce` → comparison section | Illustration | 1600×900, 16:9 | ✅ done |
 | `ecommerce-website-development-bangalore-hero.webp` | `/ecommerce-website-development-bangalore` → hero | AI-generated photo | 1600×900, 16:9 | ✅ done |
-| `ecommerce-website-cost-india-hero.webp` | `/ecommerce-website-cost-india` → hero | Illustration | 1600×900, 16:9 | |
-| `d2c-ecommerce-platform-hero.webp` | `/d2c-ecommerce-platform` → hero | AI-generated photo | 1600×900, 16:9 | |
+| `ecommerce-website-cost-india-hero.webp` | `/ecommerce-website-cost-india` → hero | Illustration | 1600×900, 16:9 | ✅ done |
+| `d2c-ecommerce-platform-hero.webp` | `/d2c-ecommerce-platform` → hero | AI-generated photo | 1600×900, 16:9 | ✅ done |
 | `instagram-to-website-hero.webp` | `/instagram-to-website` → hero | AI-generated photo | 1600×900, 16:9 | ✅ done |
-| `ecommerce-for-retail-and-brands-hero.webp` | `/ecommerce-for-retail-and-brands` → hero | AI-generated photo | 1600×900, 16:9 | |
+| `ecommerce-for-retail-and-brands-hero.webp` | `/ecommerce-for-retail-and-brands` → hero | AI-generated photo | 1600×900, 16:9 | ✅ done |
 | `ecommerce-for-fashion-demo-store.webp` | `/ecommerce-for-fashion` → demo store screenshot | Product UI screenshot | 1600×900, 16:9 | |
 | `services-ai-automation-hero.webp` | `/services/ai-automation` → hero | AI-generated photo | 1600×900, 16:9 | ✅ done |
 | `services-website-development-hero.webp` | `/services/website-development` → hero | AI-generated photo | 1600×900, 16:9 | ✅ done |
 | `services-app-development-hero.webp` | `/services/app-development` → hero | AI-generated photo | 1600×900, 16:9 | ✅ done |
 | `website-development-portfolio-1.webp` … `-4.webp` | `/services/website-development` → portfolio grid (×4) | Product UI screenshot | 800×600, 4:3 | |
-| `blog-sell-on-own-website-cover.webp` | `/blog` + `/blog/sell-on-your-own-website-instead-of-amazon-flipkart` → cover | Illustration | 1600×900, 16:9 | |
+| `blog-sell-on-own-website-cover.webp` | `/blog` + `/blog/sell-on-your-own-website-instead-of-amazon-flipkart` → cover | Illustration | 1600×900, 16:9 | ✅ done |
 | `blog-automate-repetitive-tasks-cover.webp` | `/blog` + `/blog/how-to-automate-repetitive-tasks-with-ai` → cover | Illustration | 1600×900, 16:9 | ✅ done |
 
 ---
@@ -78,7 +91,7 @@ candidates).
 - **Generation prompt:** A confident Indian small business owner (30s, casual business attire) sitting at a wooden desk in a bright home-office setting, looking at a laptop screen showing a clean ecommerce storefront dashboard. Soft natural window light from the left, shallow depth of field. Colour palette: navy blue, soft aqua and warm gold accents reflected in the screen glow, matching a modern SaaS brand. Composition: subject and laptop positioned left-of-centre, with calm empty space on the right third for a headline overlay. Style: realistic, warm, professional photography, not corporate-stock-cheesy. No text, no logos, no watermarks.
 - **Avoid:** Any visible Shopify branding, logos or competitor UI; fake dashboard numbers that look like a real brand's data.
 
-### rawnn-vs-shopify-comparison.webp
+### rawnn-vs-shopify-comparison.webp — ✅ done, see Done table above for actual alt text used
 - **Page / section:** `/rawnn-vs-shopify` → comparison table section
 - **Purpose:** Visually frame "two paths" — renting a platform vs owning one
 - **Size & ratio:** 1600×900, 16:9
@@ -105,7 +118,7 @@ candidates).
 - **Generation prompt:** A small team of two Indian tech professionals (mixed gender, casual-professional attire) collaborating around a laptop and a tablet showing a storefront UI, in a bright modern co-working space with a hint of Bengaluru's skyline or greenery visible softly out of a window in the background (indistinct, not a specific real landmark). Natural daylight, warm and optimistic mood. Colour palette: navy, blue and gold accents in clothing or screen glow, matching a modern SaaS brand. Composition: subjects slightly left-of-frame, open negative space on the right for a text overlay. Style: realistic editorial photography. No text, no logos, no watermarks.
 - **Avoid:** Any real, identifiable building, landmark or signage; fabricated company logos on clothing or laptops.
 
-### ecommerce-website-cost-india-hero.webp
+### ecommerce-website-cost-india-hero.webp — ✅ done, see Done table above for actual alt text used
 - **Page / section:** `/ecommerce-website-cost-india` → hero
 - **Purpose:** Signal "transparent pricing guide," not a sales pitch
 - **Size & ratio:** 1600×900, 16:9
@@ -114,7 +127,7 @@ candidates).
 - **Generation prompt:** A clean flat-style illustration of a simple invoice/receipt card with a few abstract line-item bars of varying length (no real numbers or currency symbols needed, or a single generic ₹ symbol if natural) next to a small storefront icon, suggesting "transparent pricing breakdown." Navy, blue and gold palette on an off-white background. Composition: centred, with clear open space above for a heading. Style: vector-flat illustration, minimal, friendly. No text, no logos, no watermarks.
 - **Avoid:** Specific fabricated prices rendered as text in the image; any real brand's invoice template.
 
-### d2c-ecommerce-platform-hero.webp
+### d2c-ecommerce-platform-hero.webp — ✅ done, see Done table above for actual alt text used
 - **Page / section:** `/d2c-ecommerce-platform` → hero
 - **Purpose:** Convey "brand ownership" — a D2C founder in control of their own storefront and customer data
 - **Size & ratio:** 1600×900, 16:9
@@ -132,7 +145,7 @@ candidates).
 - **Generation prompt:** An Indian small business owner (20s–30s) sitting cross-legged on a sofa at home, phone in one hand showing a generic chat-app interface (no real app logos), laptop open on a coffee table beside them showing a clean storefront page — visually bridging "phone selling" and "website selling." Warm, cozy home lighting, late afternoon. Colour palette: navy, blue and gold accents in the laptop screen glow and soft furnishings. Composition: subject centred, laptop screen angled toward camera with open space above for a heading. Style: realistic lifestyle photography. No text, no logos, no watermarks.
 - **Avoid:** Real Instagram or WhatsApp logos/UI chrome; any recognisable app branding.
 
-### ecommerce-for-retail-and-brands-hero.webp
+### ecommerce-for-retail-and-brands-hero.webp — ✅ done, see Done table above for actual alt text used
 - **Page / section:** `/ecommerce-for-retail-and-brands` → hero
 - **Purpose:** Represent the three featured categories (retail, jewellery, cosmetics) in one cohesive visual
 - **Size & ratio:** 1600×900, 16:9
@@ -186,7 +199,7 @@ candidates).
 - **Instructions:** These 4 slots are intentionally left for **real** screenshots of completed Modax projects, once you've confirmed which ones are OK to show publicly. Capture each at 1280px wide, cropped to the homepage above-the-fold area, then resize to 800×600.
 - **Avoid:** Do not fill these with AI-generated "fake portfolio" images — a fabricated portfolio would mislead visitors about actual past work.
 
-### blog-sell-on-own-website-cover.webp
+### blog-sell-on-own-website-cover.webp — ✅ done, see Done table above for actual alt text used
 - **Page / section:** `/blog` (card thumbnail) and `/blog/sell-on-your-own-website-instead-of-amazon-flipkart` (post header)
 - **Purpose:** Visualise "commission cost" vs "owning your own sales channel"
 - **Size & ratio:** 1600×900, 16:9
