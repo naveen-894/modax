@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Shirt, Sparkles, Store } from 'lucide-react'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
@@ -85,12 +86,14 @@ export default function EcommerceForFashionPage() {
                   demo.modax.in
                 </span>
               </div>
-              <div className="aspect-[16/9] w-full bg-modax-blue-tint flex items-center justify-center">
-                {/* TODO: replace with /images/ecommerce-for-fashion-demo-store.webp — screenshot of demo.modax.in storefront, 1440px wide */}
-                <span className="text-xs font-medium text-modax-blue-deep text-center px-4">
-                  Image placeholder — /images/ecommerce-for-fashion-demo-store.webp
-                </span>
-              </div>
+              <Image
+                src={`${S3_LANDING_URL}/ecommerce-for-fashion-demo-store.webp`}
+                alt="Rawnn demo store homepage showing the clothing brand ecommerce website storefront"
+                width={1600}
+                height={900}
+                className="w-full h-auto"
+                loading="lazy"
+              />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">

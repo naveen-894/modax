@@ -6,9 +6,16 @@ import PageHero from '../../../components/PageHero'
 import Breadcrumbs from '../../../components/Breadcrumbs'
 import FAQAccordion from '../../../components/FAQAccordion'
 import ServicesCTA from '../../../components/ServicesCTA'
-import ImagePlaceholder from '../../../components/ImagePlaceholder'
+import Image from 'next/image'
 import HeroImage from '../../../components/HeroImage'
 import { SITE_URL, CALENDLY_URL, S3_LANDING_URL } from '../../../lib/constants'
+
+const portfolioProjects = [
+  { filename: 'website-development-portfolio-1.webp', name: 'Malenadu Amruth Chaha', alt: 'Screenshot of the Malenadu Amruth Chaha homepage, a website built by Modax' },
+  { filename: 'website-development-portfolio-2.webp', name: 'Markyvichara', alt: 'Screenshot of the Markyvichara homepage, a website built by Modax' },
+  { filename: 'website-development-portfolio-3.webp', name: 'Kaapi & Crumb', alt: 'Screenshot of the Kaapi & Crumb homepage, a website built by Modax' },
+  { filename: 'website-development-portfolio-4.webp', name: 'Netgaint', alt: 'Screenshot of the Netgaint homepage, a website built by Modax' },
+]
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -113,11 +120,20 @@ export default function WebsiteDevelopmentPage() {
                 <Rocket className="w-6 h-6 text-modax-blue-deep" /> Recent work
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                {[1, 2, 3, 4].map((n) => (
-                  <ImagePlaceholder key={n} filename={`website-development-portfolio-${n}.webp`} ratio="aspect-[4/3]" />
+                {portfolioProjects.map((project) => (
+                  <div key={project.filename} className="rounded-lg overflow-hidden ring-1 ring-modax-border-lt">
+                    <Image
+                      src={`${S3_LANDING_URL}/${project.filename}`}
+                      alt={project.alt}
+                      width={800}
+                      height={600}
+                      className="w-full h-auto aspect-[4/3] object-cover"
+                      loading="lazy"
+                    />
+                    <p className="text-xs font-semibold text-modax-body text-center py-2 bg-white">{project.name}</p>
+                  </div>
                 ))}
               </div>
-              {/* TODO: swap the 4 placeholders above for real project screenshots once approved for the portfolio */}
             </div>
           </div>
         </section>

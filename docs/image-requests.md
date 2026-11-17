@@ -1,19 +1,19 @@
 # Image requests
 
-**Status update:** 9 of the hero/section images below (plus one bonus
-Screenr hero not originally scoped here) have been uploaded to the
-`modax-s3` bucket under `modax-landing/` and wired into their pages via
-the new `components/HeroImage.js` + `lib/constants.js:S3_LANDING_URL`,
-using `next/image` (the bucket's host is already allowlisted in
-`next.config.js`). They're marked **✅ done** below, with the actual
-source file used (since the generated images didn't always match the
-original filenames 1:1) and the alt text actually shipped. Everything
-else is still a grey-box placeholder in the code (see
-`components/ImagePlaceholder.js`), marked with a `TODO` comment and the
-exact filename it expects. For those, drop the finished WebP into
-`/images/<filename>` and swap `<ImagePlaceholder filename="..." />` for
-a real `<Image src="/images/..." ... />` (width/height set, `loading="lazy"`
-below the fold).
+**Status: every image originally requested here is now done.** All hero,
+section, comparison and blog-cover images are uploaded to the `modax-s3`
+bucket under `modax-landing/` and wired into their pages via
+`components/HeroImage.js` + `lib/constants.js:S3_LANDING_URL` (or a
+direct `next/image` call for the two multi-image grids), using
+`next/image` throughout (the bucket's host is already allowlisted in
+`next.config.js`). No more grey-box `ImagePlaceholder` usages remain
+anywhere on the site.
+
+The demo-store screenshot and the 4 website-development portfolio shots
+are real screenshots (demo.modax.in and 4 actual Modax client sites),
+not generated — cropped to the target aspect ratio and converted to
+WebP with Pillow before upload, per the "must be a real capture, not
+generated" instruction for those slots.
 
 ## Done
 
@@ -34,23 +34,25 @@ below the fold).
 | `blog-sell-on-own-website-cover.webp` | `/blog` + `/blog/sell-on-your-own-website-instead-of-amazon-flipkart` | Coins to Shop_ From Decline to Growth.png (converted) |
 | `rawnn-vs-woocommerce-comparison.webp` | `/rawnn-vs-woocommerce` → comparison | **Replaced** with From Plugin Chaos to Unified Dashboard.png (converted) — a better match than the original Connected Digital Workflow Cards.webp |
 | `ecommerce-for-fashion-hero.webp` (bonus, not in original list) | `/ecommerce-for-fashion` → hero visual | Cozy Indian Online Boutique Evening.png (converted) |
+| `ecommerce-for-fashion-demo-store.webp` | `/ecommerce-for-fashion` → "See it live" screenshot | Real screenshot of demo.modax.in, cropped to 1600×900 |
+| `website-development-portfolio-1.webp` | `/services/website-development` → portfolio | Real screenshot, Malenadu Amruth Chaha homepage, cropped to 800×600 |
+| `website-development-portfolio-2.webp` | `/services/website-development` → portfolio | Real screenshot, Markyvichara homepage, cropped to 800×600 |
+| `website-development-portfolio-3.webp` | `/services/website-development` → portfolio | Real screenshot, Kaapi & Crumb homepage, cropped to 800×600 |
+| `website-development-portfolio-4.webp` | `/services/website-development` → portfolio | Real screenshot, Netgaint homepage, cropped to 800×600 |
 
 **Uploaded but not yet placed:**
 - `connected-chat-support-illustration.webp` (source: "Connected Chat Support Illustration.webp")
 - `ecommerce-design-workspace-spare.webp` (source: "Collaborative E-commerce Design Workspace.png", converted)
 - `ecommerce-workspace-chai-spare.webp` (source: "Cozy Ecommerce Workspace with Chai.png", converted)
+- `malenadu-amruth-chaha-our-story-spare.webp` (real screenshot of the Malenadu "Our Story" page, not used since only one shot per portfolio project was needed)
 
-All three are uploaded to the same S3 prefix but no remaining page content
+All four are uploaded to the same S3 prefix but no remaining page content
 matched them well enough to force a placement. Available at
 `https://modax-s3.s3.ap-south-1.amazonaws.com/modax-landing/<filename>`
 if you want to use any of them later (the chai/workspace one would suit
 a second image on the Bangalore local page or `/services` hub; the
 chatbot illustration suits an AI-chatbot-themed spot on
 `/services/ai-automation`).
-
-**Still placeholders — only these remain:**
-- `ecommerce-for-fashion-demo-store.webp` (needs a real screenshot of demo.modax.in, not generated)
-- `website-development-portfolio-1.webp` … `-4.webp` (need real project screenshots, not generated)
 
 **On Open Graph images:** every new/updated page currently reuses the
 existing sitewide `/images/og-image.jpg` for its OG/Twitter tags (a real
@@ -72,11 +74,11 @@ candidates).
 | `d2c-ecommerce-platform-hero.webp` | `/d2c-ecommerce-platform` → hero | AI-generated photo | 1600×900, 16:9 | ✅ done |
 | `instagram-to-website-hero.webp` | `/instagram-to-website` → hero | AI-generated photo | 1600×900, 16:9 | ✅ done |
 | `ecommerce-for-retail-and-brands-hero.webp` | `/ecommerce-for-retail-and-brands` → hero | AI-generated photo | 1600×900, 16:9 | ✅ done |
-| `ecommerce-for-fashion-demo-store.webp` | `/ecommerce-for-fashion` → demo store screenshot | Product UI screenshot | 1600×900, 16:9 | |
+| `ecommerce-for-fashion-demo-store.webp` | `/ecommerce-for-fashion` → demo store screenshot | Product UI screenshot | 1600×900, 16:9 | ✅ done |
 | `services-ai-automation-hero.webp` | `/services/ai-automation` → hero | AI-generated photo | 1600×900, 16:9 | ✅ done |
 | `services-website-development-hero.webp` | `/services/website-development` → hero | AI-generated photo | 1600×900, 16:9 | ✅ done |
 | `services-app-development-hero.webp` | `/services/app-development` → hero | AI-generated photo | 1600×900, 16:9 | ✅ done |
-| `website-development-portfolio-1.webp` … `-4.webp` | `/services/website-development` → portfolio grid (×4) | Product UI screenshot | 800×600, 4:3 | |
+| `website-development-portfolio-1.webp` … `-4.webp` | `/services/website-development` → portfolio grid (×4) | Product UI screenshot | 800×600, 4:3 | ✅ done |
 | `blog-sell-on-own-website-cover.webp` | `/blog` + `/blog/sell-on-your-own-website-instead-of-amazon-flipkart` → cover | Illustration | 1600×900, 16:9 | ✅ done |
 | `blog-automate-repetitive-tasks-cover.webp` | `/blog` + `/blog/how-to-automate-repetitive-tasks-with-ai` → cover | Illustration | 1600×900, 16:9 | ✅ done |
 
@@ -154,7 +156,7 @@ candidates).
 - **Generation prompt:** An overhead flat-lay photo of a curated product arrangement representing three categories: a neatly folded retail garment, a small elegant piece of jewellery on a soft cloth, and a cosmetics bottle/compact — arranged with generous negative space between them on a soft neutral backdrop with subtle navy and gold styling accents (a ribbon, a small card). Bright, even studio lighting, soft shadows. Composition: items arranged along the bottom third, open space at the top for a heading. Style: clean product/editorial flat-lay photography. No text, no logos, no watermarks.
 - **Avoid:** Any real brand packaging, logos or recognisable jewellery/cosmetics brand design.
 
-### ecommerce-for-fashion-demo-store.webp
+### ecommerce-for-fashion-demo-store.webp — ✅ done, see Done table above for actual alt text used
 - **Page / section:** `/ecommerce-for-fashion` → "See it live on our demo store" section
 - **Purpose:** Prove the storefront is real and working, not a mockup
 - **Size & ratio:** 1600×900, 16:9
@@ -190,7 +192,7 @@ candidates).
 - **Generation prompt:** Two Indian startup team members (casual attire) standing around a large desktop monitor showing a clean web app dashboard with charts and cards (abstract, generic UI), in a small modern office. Energetic but focused mood, bright daylight. Colour palette: navy, blue and gold accents in the dashboard UI. Composition: subjects and monitor centred, open space above for a heading. Style: realistic editorial startup photography. No text, no logos, no watermarks.
 - **Avoid:** Any phone/mobile-app mockups or app-store iconography — this page is web apps only, not mobile apps.
 
-### website-development-portfolio-1.webp … website-development-portfolio-4.webp
+### website-development-portfolio-1.webp … website-development-portfolio-4.webp — ✅ done, see Done table above for actual alt text used
 - **Page / section:** `/services/website-development` → "Recent work" portfolio grid (4 slots)
 - **Purpose:** Show real past project screenshots once specific projects are approved for public display
 - **Size & ratio:** 800×600, 4:3 (×4)
