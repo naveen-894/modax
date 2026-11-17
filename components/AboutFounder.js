@@ -14,15 +14,16 @@ export default function AboutFounder() {
             <div className="text-center sm:text-left">
               <h3 className="text-2xl font-bold text-modax-ink mb-1">Naveen V</h3>
               <p className="text-modax-blue-deep font-medium mb-4">Founder, Modax</p>
-              {/* TODO: "years of building software for businesses" is a placeholder —
-                  replace with real specifics (years of experience, notable
-                  companies/projects) once provided; not invented here per the brief. */}
               <p className="text-modax-body leading-relaxed mb-4">
-                Naveen founded Modax after years of building software for businesses
-                and seeing the same pattern everywhere: teams buried in manual, repetitive
-                work, or stuck waiting months for a website or app to ship. Modax exists
-                to build the specific tool a team needs, ship it fast, and keep improving
-                it after launch — not to force your business into a template that half-fits.
+                Naveen founded Modax after four years as a software developer at Appiness
+                Interactive in Bengaluru, building and shipping production systems in
+                Django, FastAPI and AWS, then moving into generative and agentic AI —
+                LangChain, LangGraph, OpenAI and Gemini — to build automation workflows
+                and conversational systems. Along the way he saw the same pattern
+                everywhere: teams buried in manual, repetitive work, or stuck waiting
+                months for a website or app to ship. Modax exists to build the specific
+                tool a team needs, ship it fast, and keep improving it after launch —
+                not to force your business into a template that half-fits.
               </p>
               <a
                 href="https://www.linkedin.com/in/naveen-v-89011421b/"

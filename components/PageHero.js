@@ -30,12 +30,12 @@ export default function PageHero({ eyebrow, title, accent, description, stats, i
             {eyebrow}
           </m.div>
         )}
-        <m.h1 variants={item} className="text-4xl sm:text-5xl font-bold text-modax-ink mb-5 leading-[1.1] tracking-tight">
+        <m.h1 variants={item} initial={false} className="text-4xl sm:text-5xl font-bold text-modax-ink mb-5 leading-[1.1] tracking-tight">
           {title}
           {accent && <span className="text-modax-blue">{accent}</span>}
         </m.h1>
         {description && (
-          <m.p variants={item} className="text-lg text-modax-body leading-relaxed max-w-2xl">
+          <m.p variants={item} initial={false} className="text-lg text-modax-body leading-relaxed max-w-2xl">
             {description}
           </m.p>
         )}

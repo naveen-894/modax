@@ -20,9 +20,12 @@ export default function AboutProducts() {
         <RevealGroup className="max-w-4xl mx-auto grid sm:grid-cols-2 gap-8">
           <RevealItem className="bg-white rounded-xl p-8 shadow-sm card-hover">
             <h3 className="text-xl font-bold text-modax-ink mb-3">Screenr</h3>
-            <p className="text-modax-body mb-6 leading-relaxed">
+            <p className="text-modax-body mb-2 leading-relaxed">
               Our lead product. Explainable 0–100% resume-to-job match scores for
               recruiters and hiring managers.
+            </p>
+            <p className="text-xs text-modax-muted-2 mb-6">
+              A Modax product — not affiliated with any other tool of the same name.
             </p>
             <a href={SCREENR_URL} target="_blank" rel="noopener noreferrer" className="btn-primary inline-block">
               Try it free

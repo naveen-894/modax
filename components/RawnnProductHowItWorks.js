@@ -17,8 +17,8 @@ export default function RawnnProductHowItWorks() {
     },
     {
       step: "03",
-      title: "Get approved & go live",
-      description: "Your listing moves through the owner approval pipeline, then publishes straight to your own customer-facing store.",
+      title: "Publish & go live",
+      description: "Review the draft listing and publish it straight to your own customer-facing store — no approval step in between.",
       icon: <CreditCard className="w-8 h-8 text-modax-blue-deep" />
     },
     {

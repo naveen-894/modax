@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { CheckCircle2 } from 'lucide-react'
 import PageHero from './PageHero'
 import { RAWNN_STARTING_PRICE, RAWNN_DEMO_URL } from '../lib/constants'
@@ -43,9 +44,11 @@ export default function RawnnProductHero() {
             yourbrand.com
           </span>
         </div>
-        <img
+        <Image
           src="https://modax-s3.s3.ap-south-1.amazonaws.com/DEV/landing/181d325a-0d63-4bc3-9a01-1e0dfb2ab3b6.png"
           alt="Example storefront built on Rawnn"
+          width={3580}
+          height={2044}
           className="w-full h-auto"
           loading="lazy"
         />

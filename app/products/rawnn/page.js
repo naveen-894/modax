@@ -24,9 +24,54 @@ export const metadata = {
   },
 }
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Rawnn",
+  "description": "Rawnn is a complete, fully owned ecommerce platform — a customer website, store admin panel and owner control panel, on your own servers. One-time cost, no monthly fees, no commission.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Modax",
+  },
+  "url": "https://www.modax.in/products/rawnn",
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Rawnn Basic",
+      "description": "Single SKU store, does it all with one login.",
+      "price": "99000",
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.modax.in/products/rawnn#pricing",
+    },
+    {
+      "@type": "Offer",
+      "name": "Rawnn Growth",
+      "description": "Growing brand automating ops & adding staff roles.",
+      "price": "189000",
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.modax.in/products/rawnn#pricing",
+    },
+    {
+      "@type": "Offer",
+      "name": "Rawnn Premium",
+      "description": "Established brand, full ops control & reporting.",
+      "price": "299000",
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.modax.in/products/rawnn#pricing",
+    },
+  ],
+}
+
 export default function RawnnProductPage() {
   return (
     <div className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Navigation />
       <main>
         <RawnnProductHero />

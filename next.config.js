@@ -16,6 +16,12 @@ const nextConfig = {
   // Image optimization for better SEO
   images: {
     domains: ['modax.in'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'modax-s3.s3.ap-south-1.amazonaws.com',
+      },
+    ],
     formats: ['image/webp', 'image/avif'],
   },
 

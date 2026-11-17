@@ -42,7 +42,7 @@ export default function Hero() {
               Ecommerce platforms, websites & AI tools, built for real work
             </m.div>
 
-            <m.h1 variants={leftItem} className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-white mb-6 leading-[1.1] tracking-tight">
+            <m.h1 variants={leftItem} initial={false} className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-white mb-6 leading-[1.1] tracking-tight">
               We build{' '}
               <span className="relative inline-block">
                 <span className="relative z-10 text-modax-aqua">software that ships</span>
@@ -51,7 +51,7 @@ export default function Hero() {
               {' '}for your business.
             </m.h1>
 
-            <m.p variants={leftItem} className="text-lg text-modax-muted mb-8 max-w-xl leading-relaxed">
+            <m.p variants={leftItem} initial={false} className="text-lg text-modax-muted mb-8 max-w-xl leading-relaxed">
               Modax is a tech studio that designs and builds AI tools, websites and apps
               for growing businesses: automating repetitive workflows, reading documents,
               answering questions, and shipping the product you actually need.
