@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { AnimatePresence, m } from 'framer-motion'
@@ -11,6 +11,7 @@ export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const pathname = usePathname()
+  const navRef = useRef(null)
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 8)
@@ -18,6 +19,28 @@ export default function Navigation() {
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
+  // Lock body scroll while the mobile menu is open
+  useEffect(() => {
+    if (!isMenuOpen) return
+    const { overflow } = document.body.style
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = overflow
+    }
+  }, [isMenuOpen])
+
+  // Close the mobile menu on outside click/tap
+  useEffect(() => {
+    if (!isMenuOpen) return
+    const onPointerDown = (e) => {
+      if (navRef.current && !navRef.current.contains(e.target)) {
+        setIsMenuOpen(false)
+      }
+    }
+    document.addEventListener('pointerdown', onPointerDown)
+    return () => document.removeEventListener('pointerdown', onPointerDown)
+  }, [isMenuOpen])
 
   // Determine if we're on the Rawnn page
   const isRawnnPage = pathname === '/products/rawnn'
@@ -41,6 +64,7 @@ export default function Navigation() {
 
   return (
     <nav
+      ref={navRef}
       className={`sticky top-0 z-50 px-3 sm:px-4 lg:px-6 transition-all duration-200 ${
         isScrolled ? 'bg-modax-navy/95 backdrop-blur-md border-b border-modax-line shadow-sm' : 'bg-modax-navy/85 backdrop-blur-md'
       }`}
