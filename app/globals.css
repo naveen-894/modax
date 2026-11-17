@@ -101,6 +101,42 @@
     background-size: 36px 36px;
   }
 
+  .prose-modax {
+    @apply text-modax-body leading-relaxed;
+  }
+
+  .prose-modax h2 {
+    @apply text-2xl sm:text-3xl font-bold text-modax-ink mt-10 mb-4;
+  }
+
+  .prose-modax h3 {
+    @apply text-xl font-bold text-modax-ink mt-8 mb-3;
+  }
+
+  .prose-modax p {
+    @apply mb-5;
+  }
+
+  .prose-modax ul, .prose-modax ol {
+    @apply mb-5 pl-6 space-y-2;
+  }
+
+  .prose-modax ul {
+    @apply list-disc;
+  }
+
+  .prose-modax ol {
+    @apply list-decimal;
+  }
+
+  .prose-modax a {
+    @apply text-modax-blue-deep font-semibold hover:underline;
+  }
+
+  .prose-modax strong {
+    @apply text-modax-ink font-semibold;
+  }
+
   .bg-grid-dark {
     background-image: linear-gradient(to right, rgb(var(--modax-line) / 0.18) 1px, transparent 1px),
       linear-gradient(to bottom, rgb(var(--modax-line) / 0.18) 1px, transparent 1px);
