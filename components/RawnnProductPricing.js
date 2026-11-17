@@ -5,7 +5,7 @@ export default function RawnnProductPricing() {
     {
       name: 'Basic',
       price: '₹99,000',
-      tagline: 'Single SKU store, does it all with one login',
+      tagline: 'An ecommerce website under ₹1 lakh — single SKU store, does it all with one login',
       features: [
         'Full storefront: catalog, search & filters, cart, checkout',
         'Razorpay (UPI/cards/netbanking) + Cash on Delivery',
