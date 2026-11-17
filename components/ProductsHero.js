@@ -5,9 +5,9 @@ export default function ProductsHero() {
   return (
     <PageHero
       eyebrow="Products"
-      title="Products"
-      accent=" built by Modax"
-      description="We don't just build tools for others — we create and run our own products, from AI to a fully owned ecommerce platform. See what we've shipped."
+      title="Products we've "
+      accent="built and run"
+      description="We don't just build tools for others — we create and run our own products: Rawnn, our pay-once ecommerce platform, and Screenr, our AI resume-to-job-description matcher."
       visual={<HeroVisualPanel />}
     >
       <div className="mt-10">

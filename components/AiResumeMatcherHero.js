@@ -6,17 +6,22 @@ import { SCREENR_URL, SCREENR_PRICING_NOTE } from '../lib/constants'
 export default function AiResumeMatcherHero() {
   return (
     <PageHero
-      eyebrow="AI-powered resume & job description matching"
-      title="Meet "
-      accent="Screenr"
-      description="Find the right fit, faster. Give it a job description and a resume — in about 15 seconds it reads both, compares them, and returns a clear match score with a plain-English explanation of why."
+      eyebrow="AI resume screening tool"
+      title="Screen resumes against any job description "
+      accent="in 15 seconds"
+      description="Screenr is an AI resume screening tool that gives you a resume job description match score — a 0-100% score with a plain-English explanation — in about 15 seconds. Free during beta, no signup needed for your first match."
       stats={[
         { value: '~15s', label: 'Per match' },
-        { value: '0-100%', label: 'Explainable score' },
+        { value: '0-100%', label: 'Match score' },
       ]}
       visual={<HeroVisualPanel />}
     >
-      <div className="flex flex-col sm:flex-row gap-4 mt-10">
+      <div className="inline-flex items-center gap-2 bg-modax-gold-tint text-modax-navy px-4 py-2.5 rounded-md text-sm font-semibold mb-6">
+        <CheckCircle2 className="w-4 h-4" />
+        Free during beta — no signup for your first match
+      </div>
+
+      <div className="flex flex-col sm:flex-row gap-4">
         <a href={SCREENR_URL} target="_blank" rel="noopener noreferrer" className="btn-primary">
           Try it free
         </a>

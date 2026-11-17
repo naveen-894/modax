@@ -6,41 +6,6 @@ import { RAWNN_STARTING_PRICE, SCREENR_URL } from '../lib/constants'
 export default function ProductsShowcase() {
   const products = [
     {
-      id: "ai-resume-matcher",
-      name: "Screenr",
-      tagline: "AI Resume & Job Description Matching",
-      description: "An AI tool that instantly tells you how well a candidate's resume fits a job. Upload a resume and a job description and in about 15 seconds get a clear 0-100% match score with a plain-English explanation — built for recruiters and hiring managers, and just as useful for job seekers checking their own resume before they apply.",
-      features: [
-        "AI resume & JD parsing",
-        "Explainable 0-100% match score",
-        "Skills gap analysis",
-        "Live streaming analysis",
-        "Follow-up chat about any match",
-        "PDF, Word & text uploads",
-        "Saved match history",
-        "Free first match, no signup"
-      ],
-      benefits: [
-        "Screen candidates in seconds, not hours",
-        "Consistent, explainable scoring for every candidate",
-        "Works for recruiters, hiring managers, and job seekers alike",
-        "Real AI understanding, not a keyword search",
-        "Ask follow-up questions about any match"
-      ],
-      badges: ["Lead Product", "AI Powered", "Hiring & Recruitment"],
-      // TODO: no Screenr product screenshot exists in the codebase yet — add one
-      // (e.g. the match-score result screen) and set `screenshot` below, matching
-      // the Rawnn card's admin panel screenshot.
-      screenshot: null,
-      cta: {
-        primary: "Try it free",
-        secondary: "View details",
-        primaryLink: SCREENR_URL,
-        secondaryLink: "/products/ai-resume-matcher"
-      },
-      footerNote: "Screenr is a product built and owned by Modax. We maintain full control over development, security, and feature roadmap."
-    },
-    {
       id: "rawnn",
       name: "Rawnn",
       tagline: "Own Your Ecommerce Platform, Pay Once",
@@ -74,6 +39,41 @@ export default function ProductsShowcase() {
         secondaryLink: "/products/rawnn"
       },
       footerNote: `Rawnn is built by Modax. You get a full source code licence for your business, running on your own servers; Modax provides updates and support under a separate plan. ${RAWNN_STARTING_PRICE}.`
+    },
+    {
+      id: "ai-resume-matcher",
+      name: "Screenr",
+      tagline: "AI Resume Screening & Job Description Match Score",
+      description: "An AI tool that instantly tells you how well a candidate's resume fits a job. Upload a resume and a job description and in about 15 seconds get a clear 0-100% match score with a plain-English explanation — built for recruiters and hiring managers, and just as useful for job seekers checking their own resume before they apply.",
+      features: [
+        "AI resume & JD parsing",
+        "Explainable 0-100% match score",
+        "Skills gap analysis",
+        "Live streaming analysis",
+        "Follow-up chat about any match",
+        "PDF, Word & text uploads",
+        "Saved match history",
+        "Free first match, no signup"
+      ],
+      benefits: [
+        "Screen candidates in seconds, not hours",
+        "Consistent, explainable scoring for every candidate",
+        "Works for recruiters, hiring managers, and job seekers alike",
+        "Real AI understanding, not a keyword search",
+        "Ask follow-up questions about any match"
+      ],
+      badges: ["AI Resume Screening Tool", "Free During Beta", "Hiring & Recruitment"],
+      // TODO: no Screenr product screenshot exists in the codebase yet — add one
+      // (e.g. the match-score result screen) and set `screenshot` below, matching
+      // the Rawnn card's admin panel screenshot.
+      screenshot: null,
+      cta: {
+        primary: "Try it free",
+        secondary: "View details",
+        primaryLink: SCREENR_URL,
+        secondaryLink: "/products/ai-resume-matcher"
+      },
+      footerNote: "Screenr is a product built and owned by Modax. We maintain full control over development, security, and feature roadmap."
     }
   ]
 

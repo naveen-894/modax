@@ -2,18 +2,20 @@ import Navigation from '../../components/Navigation'
 import ProductsHero from '../../components/ProductsHero'
 import ProductsShowcase from '../../components/ProductsShowcase'
 import Footer from '../../components/Footer'
+import Breadcrumbs from '../../components/Breadcrumbs'
+import { SITE_URL } from '../../lib/constants'
 
 export const metadata = {
-  metadataBase: new URL('https://www.modax.in'),
-  title: 'Products | Screenr & Rawnn | Modax',
-  description: 'Products built by Modax: Screenr, our AI resume & job description matching tool, and Rawnn, our complete e-commerce platform for your own premium online store.',
-  keywords: ['modax products', 'screenr', 'resume matcher', 'ai resume screening', 'rawnn', 'ecommerce platform', 'd2c platform'],
+  metadataBase: new URL(SITE_URL),
+  title: "Rawnn Ecommerce & Screenr AI Resume Matcher | Modax",
+  description: "Software Modax builds and runs: Rawnn, a pay-once ecommerce platform with no commission, and Screenr, an AI resume to job description matcher.",
+  keywords: ['modax products', 'rawnn', 'ecommerce platform', 'screenr', 'ai resume screening tool', 'resume job description match score'],
   alternates: {
-    canonical: 'https://www.modax.in/products',
+    canonical: `${SITE_URL}/products`,
   },
   openGraph: {
-    title: 'Products | Screenr & Rawnn | Modax',
-    description: 'Products built by Modax, including Screenr, our AI resume screening tool, and Rawnn, our complete e-commerce platform.',
+    title: "Rawnn Ecommerce & Screenr AI Resume Matcher | Modax",
+    description: "Software Modax builds and runs: Rawnn, a pay-once ecommerce platform with no commission, and Screenr, an AI resume to job description matcher.",
     url: '/products',
     type: 'website',
     images: ['/images/og-image.jpg'],
@@ -24,6 +26,7 @@ export default function ProductsPage() {
   return (
     <div className="min-h-screen">
       <Navigation />
+      <Breadcrumbs items={[{ name: 'Products' }]} />
       <main>
         <ProductsHero />
         <ProductsShowcase />
