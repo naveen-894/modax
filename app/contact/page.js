@@ -3,18 +3,20 @@ import ContactHero from '../../components/ContactHero'
 import ContactForm from '../../components/ContactForm'
 import ContactInfo from '../../components/ContactInfo'
 import Footer from '../../components/Footer'
+import Breadcrumbs from '../../components/Breadcrumbs'
+import { SITE_URL } from '../../lib/constants'
 
 export const metadata = {
-  metadataBase: new URL('https://www.modax.in'),
-  title: 'Contact Modax | Book a Call About AI, Web & App Development',
-  description: 'Have a task your team does manually every day, or need a website or app built? Contact Modax to see how we can help.',
-  keywords: ['contact modax', 'AI tools inquiry', 'website development inquiry', 'app development inquiry', 'custom AI consultation'],
+  metadataBase: new URL(SITE_URL),
+  title: 'Contact Modax | Book a Free 15-Min Call, Bengaluru',
+  description: "Tell us what your team does manually or what you want built. Free, no-obligation 15-minute call. We reply within 24 hours. WhatsApp +91 91645 79092.",
+  keywords: ['contact modax', 'AI tools inquiry', 'website development inquiry', 'ecommerce platform inquiry', 'custom AI consultation'],
   alternates: {
-    canonical: 'https://www.modax.in/contact',
+    canonical: `${SITE_URL}/contact`,
   },
   openGraph: {
-    title: 'Contact Modax | Book a Call About AI, Web & App Development',
-    description: 'Get in touch to see how an AI tool, website or app can save your team hours of manual work.',
+    title: 'Contact Modax | Book a Free 15-Min Call, Bengaluru',
+    description: 'Tell us what your team does manually or what you want built. Free, no-obligation 15-minute call.',
     url: '/contact',
     type: 'website',
     images: ['/images/og-image.jpg'],
@@ -25,6 +27,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen">
       <Navigation />
+      <Breadcrumbs items={[{ name: 'Contact' }]} />
       <main>
         <ContactHero />
         <ContactForm />

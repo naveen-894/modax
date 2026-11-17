@@ -6,20 +6,6 @@ import RevealGroup, { RevealItem } from './motion/RevealGroup'
 export default function ServicesList() {
   const services = [
     {
-      icon: <Globe className="w-8 h-8 text-modax-blue-deep" />,
-      title: "Website development",
-      description: "We design, build and deploy fast, modern websites — marketing sites, landing pages and web apps that are easy to maintain and built to convert.",
-      useCases: ["Startups: a launch-ready marketing site and landing pages", "Established brands: a redesign that loads fast and converts better", "Products: a web app front-end for an existing backend or API"],
-      youGet: ["A responsive, SEO-ready site built on modern tooling", "Clean handoff with docs, or we host and maintain it for you", "Analytics and tracking set up from day one"]
-    },
-    {
-      icon: <Smartphone className="w-8 h-8 text-modax-blue-deep" />,
-      title: "App development",
-      description: "We build web and mobile apps end to end — from an internal tool your team needs tomorrow to a customer-facing product you can scale.",
-      useCases: ["Internal tools: a dashboard or ops tool your team logs into daily", "Startups: an MVP you can put in front of users fast", "Existing products: a new feature or platform built on your current stack"],
-      youGet: ["A working app, not just a prototype or mockup", "Your choice of stack, with code you own outright", "Ongoing support as you add features and scale"]
-    },
-    {
       icon: <ShoppingBag className="w-8 h-8 text-modax-blue-deep" />,
       title: "Ecommerce platform (Rawnn)",
       description: "A fully owned ecommerce platform for established businesses — customer website, store admin panel and owner control panel, on your own servers. One-time cost, no commission.",
@@ -29,10 +15,27 @@ export default function ServicesList() {
     },
     {
       icon: <Sparkles className="w-8 h-8 text-modax-blue-deep" />,
-      title: "AI services",
+      title: "AI automation",
       description: "We add AI where it actually saves your team time — reading documents, scoring and matching, answering questions, and automating the repetitive steps around a process.",
       useCases: ["HR: parse resumes and score candidates against a job description", "Support: an assistant that answers questions from your own docs and data", "Ops/finance: automate approvals, reports and repetitive data entry"],
-      youGet: ["Explainable output you can trust, not a black box", "Built around your own data and criteria", "Added to your existing product, or run as a standalone tool"]
+      youGet: ["Explainable output you can trust, not a black box", "Built around your own data and criteria", "Added to your existing product, or run as a standalone tool"],
+      link: "/services/ai-automation"
+    },
+    {
+      icon: <Globe className="w-8 h-8 text-modax-blue-deep" />,
+      title: "Website development",
+      description: "We design, build and deploy fast, modern websites — marketing sites, landing pages and web apps that are easy to maintain and built to convert.",
+      useCases: ["Startups: a launch-ready marketing site and landing pages", "Established brands: a redesign that loads fast and converts better", "Products: a web app front-end for an existing backend or API"],
+      youGet: ["A responsive, SEO-ready site built on modern tooling", "Clean handoff with docs, or we host and maintain it for you", "Analytics and tracking set up from day one"],
+      link: "/services/website-development"
+    },
+    {
+      icon: <Smartphone className="w-8 h-8 text-modax-blue-deep" />,
+      title: "Web app & MVP development",
+      description: "We build web apps end to end — from an internal tool your team needs tomorrow to a startup MVP you can put in front of users fast.",
+      useCases: ["Internal tools: a dashboard or ops tool your team logs into daily", "Startups: an MVP you can put in front of users fast", "Existing products: a new feature or platform built on your current stack"],
+      youGet: ["A working app, not just a prototype or mockup", "Your choice of stack, with code you own outright", "Ongoing support as you add features and scale"],
+      link: "/services/app-development"
     },
   ]
 

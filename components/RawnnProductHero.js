@@ -9,7 +9,7 @@ export default function RawnnProductHero() {
       eyebrow="For established businesses, not marketplaces"
       title="Own your ecommerce platform. "
       accent="Pay once, keep it forever."
-      description="Rawnn is Modax's complete e-commerce platform — a customer website, store admin panel and owner control panel, all in one. Your brand, your servers, your customer data. No monthly fees, no commission. Payments, shipping and returns are handled automatically."
+      description="Rawnn is Modax's ecommerce platform with one-time payment — a customer website, store admin panel and owner control panel, all in one. Your brand, your servers, your customer data. No monthly fees, no commission, no subscription. Payments, shipping and returns are handled automatically."
       stats={[
         { value: '₹0', label: 'Commission on sales' },
         { value: '2–6 wks', label: 'Time to launch' },

@@ -2,84 +2,131 @@ import Navigation from '../../../components/Navigation'
 import RawnnProductHero from '../../../components/RawnnProductHero'
 import RawnnProductFeatures from '../../../components/RawnnProductFeatures'
 import RawnnProductBenefits from '../../../components/RawnnProductBenefits'
+import RawnnSourceCode from '../../../components/RawnnSourceCode'
+import RawnnServiceApproach from '../../../components/RawnnServiceApproach'
 import RawnnProductHowItWorks from '../../../components/RawnnProductHowItWorks'
 import RawnnProductPricing from '../../../components/RawnnProductPricing'
 import RawnnProductDemo from '../../../components/RawnnProductDemo'
 import Footer from '../../../components/Footer'
+import Breadcrumbs from '../../../components/Breadcrumbs'
+import FAQAccordion from '../../../components/FAQAccordion'
+import JsonLd from '../../../components/JsonLd'
+import { SITE_URL } from '../../../lib/constants'
 
 export const metadata = {
-  metadataBase: new URL('https://www.modax.in'),
-  title: 'Rawnn — Own Your Ecommerce Platform, Pay Once | Book a Free Demo',
-  description: 'Rawnn is a complete, fully owned ecommerce platform for your brand — a customer website, store admin panel and owner control panel, on your own servers. One-time cost, no monthly fees, no commission. Book a free demo.',
-  keywords: ['rawnn', 'e-commerce platform', 'premium online store', 'd2c platform', 'online store', 'store admin panel', 'e-commerce software', 'own your ecommerce platform'],
+  metadataBase: new URL(SITE_URL),
+  title: 'Rawnn: Ecommerce Platform, Pay Once, No Commission | Modax',
+  description: 'A complete ecommerce platform on your own domain: storefront, admin and owner panels, Razorpay and Shiprocket built in. One-time fee from ₹99,000.',
+  keywords: ['rawnn', 'rawnn ecommerce platform', 'ecommerce platform one time payment', 'ecommerce website one time cost', 'ecommerce platform without monthly fee', 'no commission ecommerce platform', 'zero commission ecommerce website india', 'own your ecommerce platform', 'ecommerce website with source code', 'self hosted ecommerce platform india', 'custom ecommerce website development india'],
   alternates: {
-    canonical: 'https://www.modax.in/products/rawnn',
+    canonical: `${SITE_URL}/products/rawnn`,
   },
   openGraph: {
-    title: 'Rawnn — Own Your Ecommerce Platform, Pay Once | Book a Free Demo',
-    description: 'Rawnn is a complete, fully owned ecommerce platform for your brand — a customer website, store admin panel and owner control panel, on your own servers. One-time cost, no monthly fees, no commission.',
+    title: 'Rawnn: Ecommerce Platform, Pay Once, No Commission | Modax',
+    description: 'A complete ecommerce platform on your own domain: storefront, admin and owner panels, Razorpay and Shiprocket built in. One-time fee from ₹99,000.',
     url: '/products/rawnn',
     type: 'website',
     images: ['/images/og-image.jpg'],
   },
 }
 
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Rawnn",
-  "description": "Rawnn is a complete, fully owned ecommerce platform — a customer website, store admin panel and owner control panel, on your own servers. One-time cost, no monthly fees, no commission.",
-  "brand": {
-    "@type": "Brand",
-    "name": "Modax",
+const softwareApplicationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Rawnn',
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web',
+  description: 'Rawnn is a complete ecommerce platform — a customer website, store admin panel and owner control panel, on your own servers. One-time fee, no monthly cost, no commission, with full source code handed over.',
+  brand: {
+    '@type': 'Brand',
+    name: 'Modax',
   },
-  "url": "https://www.modax.in/products/rawnn",
-  "offers": [
-    {
-      "@type": "Offer",
-      "name": "Rawnn Basic",
-      "description": "Single SKU store, does it all with one login.",
-      "price": "99000",
-      "priceCurrency": "INR",
-      "availability": "https://schema.org/InStock",
-      "url": "https://www.modax.in/products/rawnn#pricing",
-    },
-    {
-      "@type": "Offer",
-      "name": "Rawnn Growth",
-      "description": "Growing brand automating ops & adding staff roles.",
-      "price": "189000",
-      "priceCurrency": "INR",
-      "availability": "https://schema.org/InStock",
-      "url": "https://www.modax.in/products/rawnn#pricing",
-    },
-    {
-      "@type": "Offer",
-      "name": "Rawnn Premium",
-      "description": "Established brand, full ops control & reporting.",
-      "price": "299000",
-      "priceCurrency": "INR",
-      "availability": "https://schema.org/InStock",
-      "url": "https://www.modax.in/products/rawnn#pricing",
-    },
-  ],
+  url: `${SITE_URL}/products/rawnn`,
+  offers: {
+    '@type': 'AggregateOffer',
+    priceCurrency: 'INR',
+    lowPrice: '99000',
+    highPrice: '299000',
+    offerCount: '3',
+    offers: [
+      {
+        '@type': 'Offer',
+        name: 'Rawnn Basic',
+        description: 'Single SKU store, does it all with one login.',
+        price: '99000',
+        priceCurrency: 'INR',
+        availability: 'https://schema.org/InStock',
+        url: `${SITE_URL}/products/rawnn#pricing`,
+      },
+      {
+        '@type': 'Offer',
+        name: 'Rawnn Growth',
+        description: 'Growing brand automating ops & adding staff roles.',
+        price: '189000',
+        priceCurrency: 'INR',
+        availability: 'https://schema.org/InStock',
+        url: `${SITE_URL}/products/rawnn#pricing`,
+      },
+      {
+        '@type': 'Offer',
+        name: 'Rawnn Premium',
+        description: 'Established brand, full ops control & reporting.',
+        price: '299000',
+        priceCurrency: 'INR',
+        availability: 'https://schema.org/InStock',
+        url: `${SITE_URL}/products/rawnn#pricing`,
+      },
+    ],
+  },
 }
+
+const faqs = [
+  {
+    question: 'Is there a monthly subscription?',
+    answer: "No. Rawnn is an ecommerce platform with a one-time payment — you pay the project fee once and own the platform, with no monthly fee or subscription afterwards. You're billed at actual cost only for things like hosting, your domain, and third-party services such as Razorpay or Shiprocket.",
+  },
+  {
+    question: 'Do I get the source code?',
+    answer: "Yes. Rawnn is an ecommerce website with source code included — the full codebase for your storefront, admin panel and owner panel is handed over on final payment, on every plan, so you can self-host it anywhere.",
+  },
+  {
+    question: 'Is there any commission on sales?',
+    answer: "No. Rawnn is a no-commission ecommerce platform — Modax takes zero commission on your sales, unlike marketplaces that typically charge 20-30% per order.",
+  },
+  {
+    question: 'Does it support Cash on Delivery (COD)?',
+    answer: 'Yes, Cash on Delivery is available on every plan alongside Razorpay for UPI, cards and net banking.',
+  },
+  {
+    question: 'Does it integrate Razorpay and Shiprocket?',
+    answer: 'Yes. Razorpay integration handles payments on every plan, and Growth and Premium are Shiprocket-integrated for automatic courier booking, labels, tracking and RTO handling.',
+  },
+  {
+    question: 'Does Rawnn have an admin panel?',
+    answer: 'Yes — every plan ships with a store admin panel for day-to-day operations plus a separate owner control panel for oversight and reporting.',
+  },
+  {
+    question: 'Can AI list my products for me?',
+    answer: 'On Growth and Premium, yes — upload a product photo and AI drafts the title, description and variants for you to review and publish.',
+  },
+]
 
 export default function RawnnProductPage() {
   return (
     <div className="min-h-screen">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
+      <JsonLd data={softwareApplicationSchema} />
       <Navigation />
+      <Breadcrumbs items={[{ name: 'Products', href: '/products' }, { name: 'Rawnn' }]} />
       <main>
         <RawnnProductHero />
         <RawnnProductFeatures />
         <RawnnProductBenefits />
+        <RawnnSourceCode />
+        <RawnnServiceApproach />
         <RawnnProductHowItWorks />
         <RawnnProductPricing />
         <RawnnProductDemo />
+        <FAQAccordion items={faqs} />
       </main>
       <Footer />
     </div>

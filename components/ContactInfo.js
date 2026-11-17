@@ -20,6 +20,33 @@ export default function ContactInfo() {
         <RevealGroup className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <RevealItem className="bg-modax-blue-tint rounded-xl p-8 text-center card-hover">
             <div className="w-16 h-16 bg-modax-blue-deep rounded-lg flex items-center justify-center mx-auto mb-6">
+              <ShoppingBag className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-2xl font-bold text-modax-ink mb-4">Rawnn</h3>
+            <p className="text-modax-body mb-6">
+              Own your ecommerce platform — a customer website, store admin panel and owner control panel, on your own servers.
+            </p>
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center justify-center">
+                <CheckCircle2 className="w-4 h-4 text-green-600 mr-2" />
+                <span className="text-sm">One-time cost, no commission</span>
+              </div>
+              <div className="flex items-center justify-center">
+                <CheckCircle2 className="w-4 h-4 text-green-600 mr-2" />
+                <span className="text-sm">Your own servers & domain</span>
+              </div>
+              <div className="flex items-center justify-center">
+                <CheckCircle2 className="w-4 h-4 text-green-600 mr-2" />
+                <span className="text-sm">Built by Modax</span>
+              </div>
+            </div>
+            <Link href="/products/rawnn#demo" className="btn-primary inline-block">
+              Own your ecommerce platform
+            </Link>
+          </RevealItem>
+
+          <RevealItem className="bg-modax-blue-tint rounded-xl p-8 text-center card-hover">
+            <div className="w-16 h-16 bg-modax-blue-deep rounded-lg flex items-center justify-center mx-auto mb-6">
               <Settings className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-2xl font-bold text-modax-ink mb-4">Custom AI tools</h3>
@@ -49,9 +76,9 @@ export default function ContactInfo() {
             <div className="w-16 h-16 bg-modax-blue-deep rounded-lg flex items-center justify-center mx-auto mb-6">
               <Globe className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-2xl font-bold text-modax-ink mb-4">Websites & apps</h3>
+            <h3 className="text-2xl font-bold text-modax-ink mb-4">Websites & web apps</h3>
             <p className="text-modax-body mb-6">
-              Need a marketing site, web app, or mobile app built? We design, build and deploy it end to end.
+              Need a marketing site or web app built? We design, build and deploy it end to end.
             </p>
             <div className="space-y-3 mb-6">
               <div className="flex items-center justify-center">
@@ -60,7 +87,7 @@ export default function ContactInfo() {
               </div>
               <div className="flex items-center justify-center">
                 <CheckCircle2 className="w-4 h-4 text-green-600 mr-2" />
-                <span className="text-sm">Web & mobile apps</span>
+                <span className="text-sm">Web apps & startup MVPs</span>
               </div>
               <div className="flex items-center justify-center">
                 <CheckCircle2 className="w-4 h-4 text-green-600 mr-2" />
@@ -69,33 +96,6 @@ export default function ContactInfo() {
             </div>
             <Link href="/services" className="btn-primary inline-block">
               View services
-            </Link>
-          </RevealItem>
-
-          <RevealItem className="bg-modax-blue-tint rounded-xl p-8 text-center card-hover">
-            <div className="w-16 h-16 bg-modax-blue-deep rounded-lg flex items-center justify-center mx-auto mb-6">
-              <ShoppingBag className="w-8 h-8 text-white" />
-            </div>
-            <h3 className="text-2xl font-bold text-modax-ink mb-4">Rawnn</h3>
-            <p className="text-modax-body mb-6">
-              Own your ecommerce platform — a customer website, store admin panel and owner control panel, on your own servers.
-            </p>
-            <div className="space-y-3 mb-6">
-              <div className="flex items-center justify-center">
-                <CheckCircle2 className="w-4 h-4 text-green-600 mr-2" />
-                <span className="text-sm">One-time cost, no commission</span>
-              </div>
-              <div className="flex items-center justify-center">
-                <CheckCircle2 className="w-4 h-4 text-green-600 mr-2" />
-                <span className="text-sm">Your own servers & domain</span>
-              </div>
-              <div className="flex items-center justify-center">
-                <CheckCircle2 className="w-4 h-4 text-green-600 mr-2" />
-                <span className="text-sm">Built by Modax</span>
-              </div>
-            </div>
-            <Link href="/products/rawnn#demo" className="btn-primary inline-block">
-              Own your ecommerce platform
             </Link>
           </RevealItem>
 

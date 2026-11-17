@@ -35,10 +35,10 @@ export default function AboutMission() {
               <h3 className="text-2xl font-bold text-modax-ink mb-4">Why we build AI, websites and apps</h3>
               <p className="text-modax-body leading-relaxed">
                 Most &ldquo;AI features&rdquo; are demos, and most websites take months to ship.
-                We&apos;ve seen ops teams retyping the same data between systems, support
-                teams answering the same questions over and over, and businesses stuck
-                waiting on a site or app they need now. That&apos;s the work we target —
-                not because it&apos;s flashy, but because it&apos;s where we save the most real hours.
+                At the Modax tech studio, we&apos;ve seen ops teams retyping the same data
+                between systems, support teams answering the same questions over and over, and
+                businesses stuck waiting on a site or app they need now. That&apos;s the work we
+                target — not because it&apos;s flashy, but because it&apos;s where we save the most real hours.
               </p>
             </RevealItem>
 

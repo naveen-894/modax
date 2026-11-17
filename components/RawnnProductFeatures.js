@@ -14,21 +14,21 @@ export default function RawnnProductFeatures() {
       icon: <LayoutDashboard className="w-8 h-8 text-modax-blue-deep" />,
       title: "One Admin Panel",
       badge: "All plans",
-      description: "Every plan ships with a single Admin Panel for running the business — no separate retailer and owner apps to juggle.",
+      description: "Rawnn is an ecommerce website with an admin panel built in — a store admin panel plus a separate owner control panel, not bolt-on apps.",
       details: ["Store profile, catalog taxonomy & product management", "Products publish immediately — no approval step", "Per-variant inventory with low-stock alerts", "Owner vs Staff roles (Growth & Premium)", "Custom roles & unlimited staff logins (Premium)"]
     },
     {
       icon: <CreditCard className="w-8 h-8 text-modax-blue-deep" />,
       title: "Payments ready",
       badge: "All plans",
-      description: "Razorpay comes integrated from day one, so payments work out of the box.",
-      details: ["UPI, cards & net banking", "Cash on Delivery", "Refund status tracking", "Coupon & discount codes (Growth & Premium)"]
+      description: "An ecommerce website with Razorpay integration from day one, plus a Cash on Delivery option, so payments work out of the box.",
+      details: ["UPI, cards & net banking via Razorpay", "Cash on Delivery (COD) option", "Refund status tracking", "Coupon & discount codes (Growth & Premium)"]
     },
     {
       icon: <Truck className="w-8 h-8 text-modax-blue-deep" />,
-      title: "Shipping, your way",
+      title: "Shiprocket-integrated shipping",
       badge: "Basic: manual · Growth & Premium: automatic",
-      description: "Basic keeps shipping simple with manual tracking entry. Growth and Premium automate booking, labels and tracking end-to-end via Shiprocket.",
+      description: "Basic keeps shipping simple with manual tracking entry. Growth and Premium are a Shiprocket-integrated ecommerce website — automated booking, labels, tracking and RTO handling end-to-end.",
       details: ["Manual courier name & tracking entry (Basic)", "Automatic courier booking & pickup (Growth & Premium)", "Live tracking & downloadable labels (Growth & Premium)", "RTO handling (Growth & Premium)"]
     },
     {

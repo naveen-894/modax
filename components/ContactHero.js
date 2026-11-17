@@ -30,9 +30,9 @@ export default function ContactHero() {
   return (
     <PageHero
       eyebrow="Contact"
-      title="Let's build something"
-      accent=" together"
-      description="Have a task your team does manually every day, or need a website or app built? Tell us about it — we're here to help."
+      title="Let's talk about "
+      accent="what you want built"
+      description="Tell us what your team does manually, or what you want built — a website, app or ecommerce platform. Free, no-obligation 15-minute call. We reply within 24 hours."
       visual={<HeroVisualPanel />}
     >
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-10">
