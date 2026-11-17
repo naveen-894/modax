@@ -6,8 +6,8 @@ import PageHero from '../../components/PageHero'
 import Breadcrumbs from '../../components/Breadcrumbs'
 import FAQAccordion from '../../components/FAQAccordion'
 import RawnnCTA from '../../components/RawnnCTA'
-import ImagePlaceholder from '../../components/ImagePlaceholder'
-import { SITE_URL } from '../../lib/constants'
+import HeroImage from '../../components/HeroImage'
+import { SITE_URL, S3_LANDING_URL } from '../../lib/constants'
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -78,9 +78,9 @@ export default function ShopifyAlternativeIndiaPage() {
 
         <section className="section-padding bg-white">
           <div className="container-max">
-            <ImagePlaceholder
-              filename="shopify-alternative-india-hero.webp"
-              ratio="aspect-[16/9]"
+            <HeroImage
+              src={`${S3_LANDING_URL}/shopify-alternative-india-hero.webp`}
+              alt="Isometric illustration of a modern tech workspace with floating dashboard screens, representing a Shopify alternative ecommerce platform in India"
               className="mb-14 max-w-4xl mx-auto"
             />
 

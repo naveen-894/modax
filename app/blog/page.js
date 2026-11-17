@@ -3,9 +3,10 @@ import { ArrowRight, Calendar } from 'lucide-react'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 import Breadcrumbs from '../../components/Breadcrumbs'
+import Image from 'next/image'
 import ImagePlaceholder from '../../components/ImagePlaceholder'
 import { blogPosts } from '../../lib/blogPosts'
-import { SITE_URL } from '../../lib/constants'
+import { SITE_URL, S3_LANDING_URL } from '../../lib/constants'
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -54,7 +55,18 @@ export default function BlogIndexPage() {
                   href={`/blog/${post.slug}`}
                   className="card-surface card-hover overflow-hidden flex flex-col"
                 >
-                  <ImagePlaceholder filename={post.coverImage} ratio="aspect-[16/9]" className="rounded-none border-0" />
+                  {post.coverImageReady ? (
+                    <Image
+                      src={`${S3_LANDING_URL}/${post.coverImage}`}
+                      alt={post.coverImageAlt || post.title}
+                      width={1600}
+                      height={900}
+                      className="w-full h-auto aspect-[16/9] object-cover"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <ImagePlaceholder filename={post.coverImage} ratio="aspect-[16/9]" className="rounded-none border-0" />
+                  )}
                   <div className="p-6 flex flex-col flex-1">
                   <div className="flex items-center gap-2 text-xs text-modax-muted-2 font-medium uppercase tracking-wide mb-3">
                     <Calendar className="w-3.5 h-3.5" />

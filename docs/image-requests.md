@@ -1,12 +1,43 @@
 # Image requests
 
-Every image below is currently a grey-box placeholder in the code (see
+**Status update:** 9 of the hero/section images below (plus one bonus
+Screenr hero not originally scoped here) have been uploaded to the
+`modax-s3` bucket under `modax-landing/` and wired into their pages via
+the new `components/HeroImage.js` + `lib/constants.js:S3_LANDING_URL`,
+using `next/image` (the bucket's host is already allowlisted in
+`next.config.js`). They're marked **✅ done** below, with the actual
+source file used (since the generated images didn't always match the
+original filenames 1:1) and the alt text actually shipped. Everything
+else is still a grey-box placeholder in the code (see
 `components/ImagePlaceholder.js`), marked with a `TODO` comment and the
-exact filename it expects at `/images/<filename>`. Drop the finished WebP
-files into `/images/` using these exact filenames and they can be swapped
-in directly — just replace each `<ImagePlaceholder filename="..." />` with
+exact filename it expects. For those, drop the finished WebP into
+`/images/<filename>` and swap `<ImagePlaceholder filename="..." />` for
 a real `<Image src="/images/..." ... />` (width/height set, `loading="lazy"`
-below the fold, as the rest of the site already does).
+below the fold).
+
+## Done
+
+| Filename (S3 key under `modax-landing/`) | Page / section | Source file used |
+|---|---|---|
+| `services-ai-automation-hero.webp` | `/services/ai-automation` → hero | AI-Powered Invoice Processing Workspace.webp |
+| `services-website-development-hero.webp` | `/services/website-development` → hero | Modern UI_UX Designer Workspace.webp |
+| `services-app-development-hero.webp` | `/services/app-development` → hero | Collaborative Office Dashboard Discussion.webp |
+| `screenr-hero.webp` (bonus, not in original list) | `/products/ai-resume-matcher` → hero visual | Confident Professional Reviewing Recruitment Dashboard.webp |
+| `blog-automate-repetitive-tasks-cover.webp` | `/blog` + that post | Document Workflow and Approval Illustration.webp |
+| `rawnn-vs-woocommerce-comparison.webp` | `/rawnn-vs-woocommerce` → comparison | Connected Digital Workflow Cards.webp |
+| `shopify-alternative-india-hero.webp` | `/shopify-alternative-india` → hero | Isometric tech workspace with floating dashboards.webp |
+| `instagram-to-website-hero.webp` | `/instagram-to-website` → hero | Warm Home Studio Analytics Scene.webp |
+| `ecommerce-website-development-bangalore-hero.webp` | `/ecommerce-website-development-bangalore` → hero | Collaborative Tech Planning Over Coffee.webp |
+
+**Uploaded but not yet placed:** `connected-chat-support-illustration.webp`
+(source: "Connected Chat Support Illustration.webp") — uploaded to the
+same S3 prefix but no page content matched it well enough to force a
+placement. It's available at
+`https://modax-s3.s3.ap-south-1.amazonaws.com/modax-landing/connected-chat-support-illustration.webp`
+if you want to use it somewhere (an AI-chatbot-themed spot on
+`/services/ai-automation` would be the best fit).
+
+**Still placeholders — everything below this line.**
 
 **On Open Graph images:** every new/updated page currently reuses the
 existing sitewide `/images/og-image.jpg` for its OG/Twitter tags (a real
@@ -18,27 +49,27 @@ candidates).
 
 ## Summary
 
-| Filename | Page / section | Type | Size & ratio |
-|---|---|---|---|
-| `shopify-alternative-india-hero.webp` | `/shopify-alternative-india` → hero | AI-generated photo | 1600×900, 16:9 |
-| `rawnn-vs-shopify-comparison.webp` | `/rawnn-vs-shopify` → comparison section | Illustration | 1600×900, 16:9 |
-| `rawnn-vs-woocommerce-comparison.webp` | `/rawnn-vs-woocommerce` → comparison section | Illustration | 1600×900, 16:9 |
-| `ecommerce-website-development-bangalore-hero.webp` | `/ecommerce-website-development-bangalore` → hero | AI-generated photo | 1600×900, 16:9 |
-| `ecommerce-website-cost-india-hero.webp` | `/ecommerce-website-cost-india` → hero | Illustration | 1600×900, 16:9 |
-| `d2c-ecommerce-platform-hero.webp` | `/d2c-ecommerce-platform` → hero | AI-generated photo | 1600×900, 16:9 |
-| `instagram-to-website-hero.webp` | `/instagram-to-website` → hero | AI-generated photo | 1600×900, 16:9 |
-| `ecommerce-for-retail-and-brands-hero.webp` | `/ecommerce-for-retail-and-brands` → hero | AI-generated photo | 1600×900, 16:9 |
-| `ecommerce-for-fashion-demo-store.webp` | `/ecommerce-for-fashion` → demo store screenshot | Product UI screenshot | 1600×900, 16:9 |
-| `services-ai-automation-hero.webp` | `/services/ai-automation` → hero | AI-generated photo | 1600×900, 16:9 |
-| `services-website-development-hero.webp` | `/services/website-development` → hero | AI-generated photo | 1600×900, 16:9 |
-| `services-app-development-hero.webp` | `/services/app-development` → hero | AI-generated photo | 1600×900, 16:9 |
-| `website-development-portfolio-1.webp` … `-4.webp` | `/services/website-development` → portfolio grid (×4) | Product UI screenshot | 800×600, 4:3 |
-| `blog-sell-on-own-website-cover.webp` | `/blog` + `/blog/sell-on-your-own-website-instead-of-amazon-flipkart` → cover | Illustration | 1600×900, 16:9 |
-| `blog-automate-repetitive-tasks-cover.webp` | `/blog` + `/blog/how-to-automate-repetitive-tasks-with-ai` → cover | Illustration | 1600×900, 16:9 |
+| Filename | Page / section | Type | Size & ratio | Status |
+|---|---|---|---|---|
+| `shopify-alternative-india-hero.webp` | `/shopify-alternative-india` → hero | AI-generated photo | 1600×900, 16:9 | ✅ done |
+| `rawnn-vs-shopify-comparison.webp` | `/rawnn-vs-shopify` → comparison section | Illustration | 1600×900, 16:9 | |
+| `rawnn-vs-woocommerce-comparison.webp` | `/rawnn-vs-woocommerce` → comparison section | Illustration | 1600×900, 16:9 | ✅ done |
+| `ecommerce-website-development-bangalore-hero.webp` | `/ecommerce-website-development-bangalore` → hero | AI-generated photo | 1600×900, 16:9 | ✅ done |
+| `ecommerce-website-cost-india-hero.webp` | `/ecommerce-website-cost-india` → hero | Illustration | 1600×900, 16:9 | |
+| `d2c-ecommerce-platform-hero.webp` | `/d2c-ecommerce-platform` → hero | AI-generated photo | 1600×900, 16:9 | |
+| `instagram-to-website-hero.webp` | `/instagram-to-website` → hero | AI-generated photo | 1600×900, 16:9 | ✅ done |
+| `ecommerce-for-retail-and-brands-hero.webp` | `/ecommerce-for-retail-and-brands` → hero | AI-generated photo | 1600×900, 16:9 | |
+| `ecommerce-for-fashion-demo-store.webp` | `/ecommerce-for-fashion` → demo store screenshot | Product UI screenshot | 1600×900, 16:9 | |
+| `services-ai-automation-hero.webp` | `/services/ai-automation` → hero | AI-generated photo | 1600×900, 16:9 | ✅ done |
+| `services-website-development-hero.webp` | `/services/website-development` → hero | AI-generated photo | 1600×900, 16:9 | ✅ done |
+| `services-app-development-hero.webp` | `/services/app-development` → hero | AI-generated photo | 1600×900, 16:9 | ✅ done |
+| `website-development-portfolio-1.webp` … `-4.webp` | `/services/website-development` → portfolio grid (×4) | Product UI screenshot | 800×600, 4:3 | |
+| `blog-sell-on-own-website-cover.webp` | `/blog` + `/blog/sell-on-your-own-website-instead-of-amazon-flipkart` → cover | Illustration | 1600×900, 16:9 | |
+| `blog-automate-repetitive-tasks-cover.webp` | `/blog` + `/blog/how-to-automate-repetitive-tasks-with-ai` → cover | Illustration | 1600×900, 16:9 | ✅ done |
 
 ---
 
-### shopify-alternative-india-hero.webp
+### shopify-alternative-india-hero.webp — ✅ done, see Done table above for actual alt text used
 - **Page / section:** `/shopify-alternative-india` → hero, below the headline
 - **Purpose:** Signal "Indian ecommerce brand switching away from Shopify's recurring costs" at a glance
 - **Size & ratio:** 1600×900, 16:9
@@ -56,7 +87,7 @@ candidates).
 - **Generation prompt:** A clean, modern flat-style illustration showing two paths diverging from a single storefront icon: one path labelled conceptually by a subscription/cloud icon with a recurring arrow loop (representing a rented platform), the other by a key or ownership icon leading to a solid building/storefront (representing full ownership). Use a navy (#001848), blue (#0088F8) and gold (#FFB020) palette on a soft off-white background, consistent with a modern SaaS brand. Composition: the fork/diverging-paths visual centred, with open space at the top for a heading. Style: vector-flat illustration, minimal, geometric, no gradients overload. No text, no logos, no watermarks.
 - **Avoid:** Any Shopify logo, wordmark or brand colours (Shopify green); do not depict a real company's UI.
 
-### rawnn-vs-woocommerce-comparison.webp
+### rawnn-vs-woocommerce-comparison.webp — ✅ done, see Done table above for actual alt text used
 - **Page / section:** `/rawnn-vs-woocommerce` → comparison section
 - **Purpose:** Visualise "one integrated platform" vs "many stitched-together plugins"
 - **Size & ratio:** 1600×900, 16:9
@@ -65,7 +96,7 @@ candidates).
 - **Generation prompt:** A flat vector illustration split in two halves: the left half shows several small disconnected puzzle-piece icons (representing separate plugins for payments, shipping, inventory) loosely scattered and slightly misaligned; the right half shows the same functions merged into one single smooth rounded rectangle/module, solid and unified. Navy, blue and gold colour palette on an off-white background, consistent with a modern SaaS brand. Composition: clear visual contrast between messy-left and clean-right, with open space at the top for a heading. Style: vector-flat illustration, minimal, geometric. No text, no logos, no watermarks.
 - **Avoid:** WordPress or WooCommerce logos/branding; any real plugin names or marketplace icons.
 
-### ecommerce-website-development-bangalore-hero.webp
+### ecommerce-website-development-bangalore-hero.webp — ✅ done, see Done table above for actual alt text used
 - **Page / section:** `/ecommerce-website-development-bangalore` → hero
 - **Purpose:** Ground the page locally — Bengaluru/Bangalore, India — without using a fabricated office address
 - **Size & ratio:** 1600×900, 16:9
@@ -92,7 +123,7 @@ candidates).
 - **Generation prompt:** An Indian D2C brand founder (late 20s–30s, stylish casual outfit reflecting a fashion/lifestyle brand) standing in a small studio/warehouse space surrounded by neatly arranged product boxes, holding a tablet that shows a clean storefront and a customer-data dashboard. Warm, confident mood, soft studio lighting. Colour palette: navy, blue and gold accents woven into the scene (packaging ribbon, product labels — abstract, not real brand logos). Composition: subject centred-left, open space on the right for text. Style: realistic lifestyle/editorial photography. No text, no logos, no watermarks.
 - **Avoid:** Any real brand names, logos or recognisable packaging designs.
 
-### instagram-to-website-hero.webp
+### instagram-to-website-hero.webp — ✅ done, see Done table above for actual alt text used
 - **Page / section:** `/instagram-to-website` → hero
 - **Purpose:** Show the transition from DM-based selling to a real storefront
 - **Size & ratio:** 1600×900, 16:9
@@ -119,7 +150,7 @@ candidates).
 - **Screenshot instructions:** Capture **demo.modax.in** homepage at **1440px wide**, scrolled to show the hero banner plus the first row of 4–6 product cards (price and product image must be visible on each card). Use whatever catalogue is live on the demo store at the time — do not relabel it as a specific named brand.
 - **Avoid:** Capturing any real customer/order data if the demo store ever has live test orders; crop out any browser chrome/bookmarks bar that could reveal unrelated tabs.
 
-### services-ai-automation-hero.webp
+### services-ai-automation-hero.webp — ✅ done, see Done table above for actual alt text used
 - **Page / section:** `/services/ai-automation` → hero
 - **Purpose:** Convey "AI automating real office work," explainably — not a sci-fi robot cliché
 - **Size & ratio:** 1600×900, 16:9
@@ -128,7 +159,7 @@ candidates).
 - **Generation prompt:** An Indian office professional (30s, business-casual) at a desk, looking at a laptop screen that shows a document being scanned/highlighted with clean, abstract AI-style overlay annotations (boxes, lines — no real UI chrome), with a small stack of physical papers nearby. Bright, modern office setting, soft daylight. Colour palette: navy, blue and gold accents in the UI overlay glow. Composition: subject and laptop left-of-centre, open space on the right for a heading. Style: realistic editorial tech photography, calm and trustworthy (not futuristic/sci-fi). No text, no logos, no watermarks.
 - **Avoid:** Humanoid robots, glowing brain/circuit clichés, or anything implying AI replacing the person rather than assisting them.
 
-### services-website-development-hero.webp
+### services-website-development-hero.webp — ✅ done, see Done table above for actual alt text used
 - **Page / section:** `/services/website-development` → hero
 - **Purpose:** Convey "fast, modern website development," craft-focused
 - **Size & ratio:** 1600×900, 16:9
@@ -137,7 +168,7 @@ candidates).
 - **Generation prompt:** An Indian web developer/designer (20s–30s) at a clean desk with two monitors — one showing a wireframe/design mockup, the other showing code — in a bright, modern studio space. Natural light, focused and calm mood. Colour palette: navy, blue and gold accents reflected in the screens. Composition: subject centred-left, open space on the right for a heading. Style: realistic editorial tech photography. No text, no logos, no watermarks.
 - **Avoid:** Specific real website UIs or recognisable brand templates on the screens; generic "coding matrix" clichés.
 
-### services-app-development-hero.webp
+### services-app-development-hero.webp — ✅ done, see Done table above for actual alt text used
 - **Page / section:** `/services/app-development` → hero
 - **Purpose:** Convey "a working web app/MVP," not a mobile-app visual (Modax does not build mobile apps)
 - **Size & ratio:** 1600×900, 16:9
@@ -164,7 +195,7 @@ candidates).
 - **Generation prompt:** A flat vector illustration of a stack of coins/currency being split by a large percentage-sign wedge cut out of it (representing commission taken), next to a separate, whole, uncut stack representing full ownership of sales. Navy, blue and gold palette on an off-white background. Composition: centred, open space at the top for a heading. Style: vector-flat illustration, clean and conceptual. No text, no logos, no watermarks.
 - **Avoid:** Amazon or Flipkart logos, brand colours (Amazon orange/Flipkart blue-yellow) or any recognisable marketplace UI.
 
-### blog-automate-repetitive-tasks-cover.webp
+### blog-automate-repetitive-tasks-cover.webp — ✅ done, see Done table above for actual alt text used
 - **Page / section:** `/blog` (card thumbnail) and `/blog/how-to-automate-repetitive-tasks-with-ai` (post header)
 - **Purpose:** Visualise "repetitive manual task becoming automated," calmly and explainably
 - **Size & ratio:** 1600×900, 16:9

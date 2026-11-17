@@ -1,7 +1,7 @@
 import { CheckCircle2 } from 'lucide-react'
 import PageHero from './PageHero'
-import HeroVisualPanel from './HeroVisualPanel'
-import { SCREENR_URL, SCREENR_PRICING_NOTE } from '../lib/constants'
+import HeroImage from './HeroImage'
+import { SCREENR_URL, SCREENR_PRICING_NOTE, S3_LANDING_URL } from '../lib/constants'
 
 export default function AiResumeMatcherHero() {
   return (
@@ -14,7 +14,12 @@ export default function AiResumeMatcherHero() {
         { value: '~15s', label: 'Per match' },
         { value: '0-100%', label: 'Match score' },
       ]}
-      visual={<HeroVisualPanel />}
+      visual={
+        <HeroImage
+          src={`${S3_LANDING_URL}/screenr-hero.webp`}
+          alt="Confident recruiter reviewing a candidate match score on a resume screening dashboard"
+        />
+      }
     >
       <div className="inline-flex items-center gap-2 bg-modax-gold-tint text-modax-navy px-4 py-2.5 rounded-md text-sm font-semibold mb-6">
         <CheckCircle2 className="w-4 h-4" />
