@@ -6,6 +6,7 @@ import PageHero from '../../../components/PageHero'
 import Breadcrumbs from '../../../components/Breadcrumbs'
 import FAQAccordion from '../../../components/FAQAccordion'
 import ServicesCTA from '../../../components/ServicesCTA'
+import ImagePlaceholder from '../../../components/ImagePlaceholder'
 import { SITE_URL, CALENDLY_URL } from '../../../lib/constants'
 
 export const metadata = {
@@ -86,6 +87,7 @@ export default function AppDevelopmentPage() {
 
         <section className="section-padding bg-white">
           <div className="container-max">
+            <ImagePlaceholder filename="services-app-development-hero.webp" ratio="aspect-[16/9]" className="mb-14 max-w-4xl mx-auto" />
             <div className="text-center mb-14 max-w-2xl mx-auto">
               <h2 className="text-3xl sm:text-4xl font-bold text-modax-ink mb-4">What we build</h2>
             </div>

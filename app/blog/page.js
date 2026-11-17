@@ -3,6 +3,7 @@ import { ArrowRight, Calendar } from 'lucide-react'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 import Breadcrumbs from '../../components/Breadcrumbs'
+import ImagePlaceholder from '../../components/ImagePlaceholder'
 import { blogPosts } from '../../lib/blogPosts'
 import { SITE_URL } from '../../lib/constants'
 
@@ -51,8 +52,10 @@ export default function BlogIndexPage() {
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="card-surface card-hover p-6 flex flex-col"
+                  className="card-surface card-hover overflow-hidden flex flex-col"
                 >
+                  <ImagePlaceholder filename={post.coverImage} ratio="aspect-[16/9]" className="rounded-none border-0" />
+                  <div className="p-6 flex flex-col flex-1">
                   <div className="flex items-center gap-2 text-xs text-modax-muted-2 font-medium uppercase tracking-wide mb-3">
                     <Calendar className="w-3.5 h-3.5" />
                     {new Date(post.date).toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' })}
@@ -62,6 +65,7 @@ export default function BlogIndexPage() {
                   <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-modax-blue-deep">
                     Read more <ArrowRight className="w-3.5 h-3.5" />
                   </span>
+                  </div>
                 </Link>
               ))}
             </div>

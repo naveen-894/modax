@@ -72,6 +72,7 @@ export default function WebsiteDevelopmentPage() {
 
         <section className="section-padding bg-white">
           <div className="container-max">
+            <ImagePlaceholder filename="services-website-development-hero.webp" ratio="aspect-[16/9]" className="mb-14 max-w-4xl mx-auto" />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
               <div className="text-center p-6">
                 <Gauge className="w-9 h-9 text-modax-blue-deep mx-auto mb-4" />

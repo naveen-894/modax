@@ -6,6 +6,7 @@ import PageHero from '../../../components/PageHero'
 import Breadcrumbs from '../../../components/Breadcrumbs'
 import FAQAccordion from '../../../components/FAQAccordion'
 import ServicesCTA from '../../../components/ServicesCTA'
+import ImagePlaceholder from '../../../components/ImagePlaceholder'
 import { SITE_URL, CALENDLY_URL } from '../../../lib/constants'
 
 export const metadata = {
@@ -87,6 +88,7 @@ export default function AiAutomationPage() {
 
         <section className="section-padding bg-white">
           <div className="container-max">
+            <ImagePlaceholder filename="services-ai-automation-hero.webp" ratio="aspect-[16/9]" className="mb-14 max-w-4xl mx-auto" />
             <div className="text-center mb-14 max-w-2xl mx-auto">
               <h2 className="text-3xl sm:text-4xl font-bold text-modax-ink mb-4">Where AI automation actually saves time</h2>
               <p className="text-lg text-modax-body">As an AI automation agency, we scope this around one real bottleneck first — not a platform rollout.</p>

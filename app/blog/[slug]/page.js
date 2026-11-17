@@ -7,6 +7,7 @@ import Navigation from '../../../components/Navigation'
 import Footer from '../../../components/Footer'
 import Breadcrumbs from '../../../components/Breadcrumbs'
 import JsonLd from '../../../components/JsonLd'
+import ImagePlaceholder from '../../../components/ImagePlaceholder'
 import { blogPosts, getBlogPostBySlug } from '../../../lib/blogPosts'
 import { SITE_URL } from '../../../lib/constants'
 
@@ -70,6 +71,7 @@ export default function BlogPostPage({ params }) {
       <main>
         <article className="section-padding bg-white">
           <div className="container-max max-w-2xl">
+            <ImagePlaceholder filename={post.coverImage} ratio="aspect-[16/9]" className="mb-10" />
             <h1 className="text-3xl sm:text-4xl font-bold text-modax-ink mb-5 leading-tight tracking-tight">
               {post.title}
             </h1>
