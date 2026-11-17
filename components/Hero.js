@@ -43,12 +43,12 @@ export default function Hero() {
             </m.div>
 
             <m.h1 variants={leftItem} initial={false} className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-white mb-6 leading-[1.1] tracking-tight">
-              We build{' '}
+              AI tools, websites &amp;{' '}
               <span className="relative inline-block">
-                <span className="relative z-10 text-modax-aqua">software that ships</span>
+                <span className="relative z-10 text-modax-aqua">ecommerce that ship</span>
                 <span className="absolute left-0 right-0 bottom-1 h-3 bg-modax-aqua/20 -z-0" />
               </span>
-              {' '}for your business.
+              {' '}for your business
             </m.h1>
 
             <m.p variants={leftItem} initial={false} className="text-lg text-modax-muted mb-8 max-w-xl leading-relaxed">
