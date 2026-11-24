@@ -33,7 +33,7 @@ const softwareApplicationSchema = {
   name: 'Screenr',
   applicationCategory: 'BusinessApplication',
   operatingSystem: 'Web',
-  description: 'Screenr is an AI resume screening tool that scores how well a resume matches a job description — a 0-100% match score with skills gap analysis, in about 15 seconds.',
+  description: 'Screenr is an AI resume screening tool built by Modax that scores how well a resume matches a job description — a 0-100% match score with skills gap analysis, in about 15 seconds. Unrelated to Articulate\'s discontinued screen-recording tool of the same name.',
   brand: {
     '@type': 'Brand',
     name: 'Modax',
@@ -64,6 +64,10 @@ const faqs = [
   {
     question: 'What does the skills gap analysis actually show?',
     answer: 'The skills gap analysis tool highlights which required skills from the job description are present, missing, or only partially matched in the resume, alongside the overall score.',
+  },
+  {
+    question: 'Is Modax\'s Screenr related to Articulate\'s Screenr?',
+    answer: 'No. Modax\'s Screenr is an AI resume-to-job-description matcher. It\'s unrelated to Articulate\'s Screenr, a screen-recording tool that was discontinued in 2015.',
   },
 ]
 
