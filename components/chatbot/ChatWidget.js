@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, m } from 'framer-motion'
 import { Bot, X } from 'lucide-react'
 import ChatWindow from './ChatWindow'
@@ -11,9 +11,32 @@ const easeOut = [0.21, 0.47, 0.32, 0.98]
  * available on every page without blocking the initial page render. */
 export default function ChatWidget({ contactEmail, contactWhatsapp }) {
   const [isOpen, setIsOpen] = useState(false)
+  const [isScrolling, setIsScrolling] = useState(false)
+  const scrollTimeout = useRef(null)
+
+  // Fade the closed bubble out while the page is actively scrolling — on
+  // mobile it otherwise sits on top of whatever heading/button happens to
+  // land in that bottom-right corner mid-scroll, not just at the very
+  // bottom of the page.
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolling(true)
+      clearTimeout(scrollTimeout.current)
+      scrollTimeout.current = setTimeout(() => setIsScrolling(false), 400)
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      clearTimeout(scrollTimeout.current)
+    }
+  }, [])
+
+  const fadeForScroll = isScrolling && !isOpen
 
   return (
-    <div className="fixed bottom-5 right-5 z-[60] flex flex-col items-end gap-3">
+    <div
+      className={`fixed bottom-5 right-5 z-[60] flex flex-col items-end gap-3 transition-opacity duration-200 ${fadeForScroll ? 'opacity-30 pointer-events-none' : 'opacity-100'}`}
+    >
       <AnimatePresence>
         {isOpen && (
           <m.div

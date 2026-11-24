@@ -183,4 +183,13 @@
       animation: none;
     }
   }
+
+  /* Reserve space at the bottom of every page's main content on mobile so
+     the fixed chat widget (bottom-5 right-5, ~76px footprint) never sits
+     on top of a final CTA heading or button once the user stops scrolling. */
+  @media (max-width: 640px) {
+    main {
+      padding-bottom: 5.5rem;
+    }
+  }
 }
