@@ -10,12 +10,15 @@ Disallow: /api/
 # Allow all major search engine bots
 User-agent: Googlebot
 Allow: /
+Disallow: /api/
 
 User-agent: Bingbot
 Allow: /
+Disallow: /api/
 
 User-agent: Slurp
 Allow: /
+Disallow: /api/
 
 # Sitemap location
 Sitemap: https://www.modax.in/sitemap.xml
