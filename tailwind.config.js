@@ -53,6 +53,9 @@ module.exports = {
           'border-lt': 'rgb(var(--modax-border-lt) / <alpha-value>)',
           'blue-tint': 'rgb(var(--modax-blue-tint) / <alpha-value>)',
           'blue-tint-2': 'rgb(var(--modax-blue-tint-2) / <alpha-value>)',
+          accent: 'rgb(var(--modax-accent) / <alpha-value>)',
+          'accent-dark': 'rgb(var(--modax-accent-dark) / <alpha-value>)',
+          'accent-light': 'rgb(var(--modax-accent-light) / <alpha-value>)',
         },
       },
       fontFamily: {

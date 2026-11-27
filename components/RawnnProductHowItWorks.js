@@ -1,5 +1,4 @@
 import { UserPlus, Package, CreditCard, Zap } from 'lucide-react'
-import { RAWNN_STARTING_PRICE } from '../lib/constants'
 
 export default function RawnnProductHowItWorks() {
   const steps = [
@@ -12,7 +11,7 @@ export default function RawnnProductHowItWorks() {
     {
       step: "02",
       title: "Snap a photo, let AI list it",
-      description: "Pick a category and upload a product photo. AI drafts the title, description, specs and sizes/variants for you to review and adjust.",
+      description: "Pick a category and upload a product photo, and AI drafts the title, description, specs and sizes/variants for you to review.",
       icon: <Package className="w-8 h-8 text-modax-blue-deep" />
     },
     {
@@ -30,9 +29,9 @@ export default function RawnnProductHowItWorks() {
   ]
 
   return (
-    <section className="section-padding bg-modax-blue-tint-2">
+    <section className="section-padding py-10 sm:py-14 lg:py-16 bg-modax-blue-tint-2">
       <div className="container-max">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-modax-ink mb-4">
             How Rawnn works
           </h2>
@@ -42,7 +41,7 @@ export default function RawnnProductHowItWorks() {
         </div>
 
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-8">
             {steps.map((step, index) => (
               <div key={index} className="relative">
                 {/* Connector Line for desktop */}
@@ -50,53 +49,25 @@ export default function RawnnProductHowItWorks() {
                   <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-modax-border-lt" style={{width: 'calc(100% - 4rem)'}}></div>
                 )}
 
-                <div className="bg-white rounded-xl p-6 shadow-sm h-full">
-                  <div className="flex items-center mb-4">
-                    <div className="w-16 h-16 bg-modax-blue-tint rounded-lg flex items-center justify-center mr-4">
+                <div className="bg-white rounded-xl p-3 sm:p-6 shadow-sm h-full">
+                  <div className="flex items-center mb-2 sm:mb-4">
+                    <div className="w-10 h-10 sm:w-16 sm:h-16 bg-modax-blue-tint rounded-lg flex items-center justify-center mr-2 sm:mr-4">
                       {step.icon}
                     </div>
-                    <div className="text-2xl font-bold text-modax-blue-deep">{step.step}</div>
+                    <div className="text-lg sm:text-2xl font-bold text-modax-blue-deep">{step.step}</div>
                   </div>
 
-                  <h3 className="text-xl font-bold text-modax-ink mb-3">
+                  <h3 className="text-sm sm:text-xl font-bold text-modax-ink mb-1.5 sm:mb-3">
                     {step.title}
                   </h3>
 
-                  <p className="text-modax-body leading-relaxed">
+                  <p className="text-xs sm:text-base text-modax-body leading-relaxed">
                     {step.description}
                   </p>
                 </div>
               </div>
             ))}
           </div>
-        </div>
-
-        {/* Timeline visual for mobile */}
-        <div className="mt-12 lg:hidden">
-          <div className="flex justify-center">
-            <div className="flex items-center space-x-4">
-              <div className="w-3 h-3 bg-modax-blue-deep rounded-full"></div>
-              <div className="w-8 h-0.5 bg-modax-border-lt"></div>
-              <div className="w-3 h-3 bg-modax-blue rounded-full"></div>
-              <div className="w-8 h-0.5 bg-modax-border-lt"></div>
-              <div className="w-3 h-3 bg-modax-blue rounded-full"></div>
-              <div className="w-8 h-0.5 bg-modax-border-lt"></div>
-              <div className="w-3 h-3 bg-modax-blue-deep rounded-full"></div>
-            </div>
-          </div>
-        </div>
-
-        {/* Call to action */}
-        <div className="text-center mt-16">
-          <h3 className="text-2xl font-bold text-modax-ink mb-4">
-            Ready to start selling online?
-          </h3>
-          <p className="text-modax-body mb-8 max-w-2xl mx-auto">
-            Book a demo and we&apos;ll set up your own store, ready for your first AI-drafted listing in minutes. {RAWNN_STARTING_PRICE}.
-          </p>
-          <a href="#demo" className="btn-primary text-lg px-8 py-4">
-            Book a Free Demo
-          </a>
         </div>
       </div>
     </section>

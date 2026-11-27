@@ -9,12 +9,12 @@ const easeOut = [0.21, 0.47, 0.32, 0.98]
 
 const leftContainer = {
   hidden: {},
-  show: { transition: { staggerChildren: 0.12, delayChildren: 0.05 } },
+  show: { transition: { staggerChildren: 0.05 } },
 }
 
 const leftItem = {
-  hidden: { opacity: 0, y: 18 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: easeOut } },
+  hidden: { opacity: 0, y: 10 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.3, ease: easeOut } },
 }
 
 const capabilities = [
@@ -31,22 +31,22 @@ export default function Hero() {
       className="relative overflow-hidden bg-modax-navy px-3 sm:px-4 lg:px-6 flex items-center min-h-[calc(100vh-4rem)]"
     >
       <div className="absolute inset-0 bg-grid-dark [mask-image:linear-gradient(to_bottom,black,transparent)]" aria-hidden="true" />
-      <div className="absolute -top-40 right-0 w-[520px] h-[520px] bg-modax-blue rounded-full blur-3xl opacity-[0.07] animate-blob-pulse" aria-hidden="true" />
-      <div className="absolute -bottom-32 -left-32 w-[420px] h-[420px] bg-modax-blue rounded-full blur-3xl opacity-[0.05] animate-blob-pulse" aria-hidden="true" />
+      <div className="absolute -top-40 right-0 w-64 h-64 sm:w-[520px] sm:h-[520px] bg-modax-blue rounded-full blur-3xl opacity-[0.04] sm:opacity-[0.07] animate-blob-pulse" aria-hidden="true" />
+      <div className="absolute -bottom-32 -left-32 w-56 h-56 sm:w-[420px] sm:h-[420px] bg-modax-blue rounded-full blur-3xl opacity-[0.03] sm:opacity-[0.05] animate-blob-pulse" aria-hidden="true" />
 
       <div className="container-max relative w-full py-10 lg:py-14">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <m.div variants={leftContainer} initial="hidden" animate="show" className="max-w-2xl">
-            <m.div variants={leftItem} className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.15em] text-modax-aqua mb-5">
-              <span className="h-1.5 w-1.5 rounded-full bg-modax-aqua" />
+            <m.div variants={leftItem} className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.15em] text-modax-accent-light mb-5">
+              <span className="h-1.5 w-1.5 rounded-full bg-modax-accent-light" />
               Ecommerce platforms, websites & AI tools, built for real work
             </m.div>
 
             <m.h1 variants={leftItem} initial={false} className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-white mb-6 leading-[1.1] tracking-tight">
               AI tools, websites &amp;{' '}
               <span className="relative inline-block">
-                <span className="relative z-10 text-modax-aqua">ecommerce that ship</span>
-                <span className="absolute left-0 right-0 bottom-1 h-3 bg-modax-aqua/20 -z-0" />
+                <span className="relative z-10 text-modax-accent-light">ecommerce that ship</span>
+                <span className="absolute left-0 right-0 bottom-1 h-3 bg-modax-accent-light/20 -z-0" />
               </span>
               {' '}for your business
             </m.h1>
@@ -104,7 +104,7 @@ export default function Hero() {
                       <p className="text-xs text-modax-muted">Own your ecommerce platform</p>
                     </div>
                   </div>
-                  <span className="text-[11px] font-semibold text-modax-aqua border border-modax-aqua/60 bg-modax-aqua/10 px-2 py-1 rounded-full flex-shrink-0">Live</span>
+                  <span className="text-[11px] font-semibold text-modax-accent-light border border-modax-accent-light/60 bg-modax-accent-light/10 px-2 py-1 rounded-full flex-shrink-0">Live</span>
                 </div>
                 <div className="flex items-center justify-between bg-modax-navy-2 border border-modax-line rounded-lg px-4 py-3.5">
                   <div className="flex items-center gap-3">
@@ -116,7 +116,7 @@ export default function Hero() {
                       <p className="text-xs text-modax-muted">Resume ↔ JD matching</p>
                     </div>
                   </div>
-                  <span className="text-[11px] font-semibold text-modax-aqua border border-modax-aqua/60 bg-modax-aqua/10 px-2 py-1 rounded-full flex-shrink-0">Live</span>
+                  <span className="text-[11px] font-semibold text-modax-accent-light border border-modax-accent-light/60 bg-modax-accent-light/10 px-2 py-1 rounded-full flex-shrink-0">Live</span>
                 </div>
                 <div className="flex items-center gap-3 bg-modax-navy-2 border border-modax-line rounded-lg px-4 py-3.5">
                   <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-modax-blue-deep text-white flex-shrink-0">

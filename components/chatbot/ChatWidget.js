@@ -35,7 +35,7 @@ export default function ChatWidget({ contactEmail, contactWhatsapp }) {
 
   return (
     <div
-      className={`fixed bottom-5 right-5 z-[60] flex flex-col items-end gap-3 transition-opacity duration-200 ${fadeForScroll ? 'opacity-30 pointer-events-none' : 'opacity-100'}`}
+      className={`fixed bottom-3 right-3 sm:bottom-5 sm:right-5 z-[60] flex flex-col items-end gap-3 transition-opacity duration-200 ${fadeForScroll ? 'opacity-30 pointer-events-none' : 'opacity-100'}`}
     >
       <AnimatePresence>
         {isOpen && (
@@ -63,7 +63,7 @@ export default function ChatWidget({ contactEmail, contactWhatsapp }) {
         whileHover={{ scale: 1.08 }}
         whileTap={{ scale: 0.92 }}
         transition={{ type: 'spring', stiffness: 400, damping: 17 }}
-        className="relative flex h-14 w-14 items-center justify-center rounded-full bg-modax-navy text-modax-aqua shadow-xl shadow-modax-navy/20 hover:bg-modax-navy-2 transition-colors focus:outline-none focus:ring-2 focus:ring-modax-aqua focus:ring-offset-2"
+        className="relative flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-modax-navy text-modax-aqua shadow-xl shadow-modax-navy/20 hover:bg-modax-navy-2 transition-colors focus:outline-none focus:ring-2 focus:ring-modax-aqua focus:ring-offset-2"
       >
         {!isOpen && (
           <m.span

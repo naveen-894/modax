@@ -7,8 +7,8 @@ import JsonLd from './JsonLd'
 /** Accordion of Q&A pairs + matching FAQPage JSON-LD.
  * `items` is [{ question, answer }]. `answer` is rendered as plain text —
  * keep it to a sentence or two per item. */
-export default function FAQAccordion({ items, title = 'Frequently asked questions', id }) {
-  const [openIndex, setOpenIndex] = useState(0)
+export default function FAQAccordion({ items, title = 'Frequently asked questions', id, compact }) {
+  const [openIndex, setOpenIndex] = useState(compact ? -1 : 0)
 
   const faqSchema = {
     '@context': 'https://schema.org',
@@ -24,10 +24,10 @@ export default function FAQAccordion({ items, title = 'Frequently asked question
   }
 
   return (
-    <section id={id} className="section-padding bg-white">
+    <section id={id} className={`bg-white ${compact ? 'py-10 sm:py-14 lg:py-16 px-3 sm:px-4 lg:px-6' : 'section-padding'}`}>
       <JsonLd data={faqSchema} />
       <div className="container-max max-w-3xl">
-        <h2 className="text-3xl sm:text-4xl font-bold text-modax-ink mb-10 text-center">{title}</h2>
+        <h2 className={`text-3xl sm:text-4xl font-bold text-modax-ink text-center ${compact ? 'mb-6' : 'mb-10'}`}>{title}</h2>
         <div className="space-y-3">
           {items.map((item, index) => {
             const isOpen = openIndex === index
