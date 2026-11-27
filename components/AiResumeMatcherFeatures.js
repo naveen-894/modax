@@ -68,19 +68,17 @@ export default function AiResumeMatcherFeatures() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {features.map((feature, index) => (
             <div key={index} className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
-              <div className="flex items-start mb-6">
+              <div className="flex items-center mb-4">
                 <div className="flex-shrink-0 w-16 h-16 bg-modax-blue-tint rounded-lg flex items-center justify-center mr-6">
                   {feature.icon}
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-modax-ink mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-modax-body mb-4 leading-relaxed">
-                    {feature.description}
-                  </p>
-                </div>
+                <h3 className="text-xl font-bold text-modax-ink">
+                  {feature.title}
+                </h3>
               </div>
+              <p className="text-modax-body mb-6 leading-relaxed">
+                {feature.description}
+              </p>
 
               <div className="border-t border-modax-border-lt pt-6">
                 <ul className="space-y-2">

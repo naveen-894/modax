@@ -1,9 +1,7 @@
 import Navigation from '../../../components/Navigation'
 import RawnnProductHero from '../../../components/RawnnProductHero'
 import RawnnProductFeatures from '../../../components/RawnnProductFeatures'
-import RawnnProductBenefits from '../../../components/RawnnProductBenefits'
-import RawnnSourceCode from '../../../components/RawnnSourceCode'
-import RawnnServiceApproach from '../../../components/RawnnServiceApproach'
+import RawnnOwnership from '../../../components/RawnnOwnership'
 import RawnnProductHowItWorks from '../../../components/RawnnProductHowItWorks'
 import RawnnProductPricing from '../../../components/RawnnProductPricing'
 import RawnnProductDemo from '../../../components/RawnnProductDemo'
@@ -109,6 +107,22 @@ const faqs = [
     question: 'Can AI list my products for me?',
     answer: 'On Growth and Premium, yes — upload a product photo and AI drafts the title, description and variants for you to review and publish.',
   },
+  {
+    question: 'What does Rawnn cost to run after launch?',
+    answer: "You pay only your own hosting costs directly to your hosting provider, plus actual charges for things like your domain and third-party services such as Razorpay or Shiprocket. There's no monthly fee or subscription from Modax.",
+  },
+  {
+    question: 'Who manages the servers once it is live?',
+    answer: "Rawnn is a self-hosted ecommerce platform for the Indian market — it runs on servers you choose and control, not a shared multi-tenant platform. You can move hosts any time since the full source code is yours.",
+  },
+  {
+    question: 'How long does setup take, and what happens after launch?',
+    answer: 'Delivery is 3–10 weeks depending on plan. Setup is hands-on and founder-led, with a dedicated store built and themed for your brand — not a one-size-fits-all install. The source code is handed over on final payment, and ongoing free support continues for the period listed on your plan.',
+  },
+  {
+    question: 'Is Rawnn built for D2C brands or retail businesses?',
+    answer: "Both. Rawnn is a readymade ecommerce website in India, set up for your brand in 3–10 weeks — equally suited as a D2C brand store or a b2c ecommerce website for a retail business. It's custom ecommerce website development in India, not a shared template: we handle design, build, payments, shipping and launch end to end, as a turnkey ecommerce solution for India.",
+  },
 ]
 
 export default function RawnnProductPage() {
@@ -120,13 +134,11 @@ export default function RawnnProductPage() {
       <main>
         <RawnnProductHero />
         <RawnnProductFeatures />
-        <RawnnProductBenefits />
-        <RawnnSourceCode />
-        <RawnnServiceApproach />
+        <RawnnOwnership />
         <RawnnProductHowItWorks />
         <RawnnProductPricing />
         <RawnnProductDemo />
-        <FAQAccordion items={faqs} />
+        <FAQAccordion items={faqs} compact />
       </main>
       <Footer />
     </div>

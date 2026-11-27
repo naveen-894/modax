@@ -46,6 +46,11 @@
   --modax-border-lt: 227 232 240;
   --modax-blue-tint: 230 241 254;
   --modax-blue-tint-2: 242 248 255;
+
+  /* Single accent token (currently blue) + variants for contrast on light/dark backgrounds */
+  --modax-accent: 0 136 248;
+  --modax-accent-dark: 0 56 168;
+  --modax-accent-light: 115 190 251;
 }
 
 @layer base {

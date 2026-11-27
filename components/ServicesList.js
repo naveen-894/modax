@@ -55,19 +55,17 @@ export default function ServicesList() {
         <RevealGroup className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {services.map((service, index) => (
             <RevealItem key={index} className="bg-white rounded-xl p-8 shadow-sm card-hover">
-              <div className="flex items-start mb-6">
+              <div className="flex items-center mb-4">
                 <div className="flex-shrink-0 w-16 h-16 bg-modax-blue-tint rounded-lg flex items-center justify-center mr-6">
                   {service.icon}
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-modax-ink mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-modax-body mb-4 leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
+                <h3 className="text-xl font-bold text-modax-ink">
+                  {service.title}
+                </h3>
               </div>
+              <p className="text-modax-body mb-6 leading-relaxed">
+                {service.description}
+              </p>
 
               <div className="border-t border-modax-border-lt pt-6 mb-6">
                 <h4 className="text-sm font-semibold text-modax-ink mb-3 uppercase tracking-wide">Example use cases</h4>

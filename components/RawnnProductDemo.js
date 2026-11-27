@@ -66,9 +66,9 @@ export default function RawnnProductDemo() {
   }
 
   return (
-    <section id="demo" className="section-padding bg-modax-navy text-white">
+    <section id="demo" className="section-padding py-10 sm:py-14 lg:py-16 bg-modax-navy text-white">
       <div className="container-max">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
             Experience Rawnn firsthand
           </h2>
@@ -78,7 +78,7 @@ export default function RawnnProductDemo() {
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-8 sm:mb-10">
           <div className="w-full max-w-sm rounded-xl bg-white shadow-xl overflow-hidden ring-1 ring-black/5">
             <img
               src="https://modax-s3.s3.ap-south-1.amazonaws.com/DEV/landing/181d325a-0d63-4bc3-9a01-1e0dfb2ab3b6.png"
@@ -87,7 +87,7 @@ export default function RawnnProductDemo() {
               loading="lazy"
             />
           </div>
-          <div className="w-28 rounded-2xl bg-modax-navy-deep p-1.5 shadow-xl ring-1 ring-black/10">
+          <div className="hidden sm:block w-28 rounded-2xl bg-modax-navy-deep p-1.5 shadow-xl ring-1 ring-black/10">
             <img
               src="https://modax-s3.s3.ap-south-1.amazonaws.com/DEV/landing/8dfe31b2-58e9-4e98-bb1d-c5ba2fedd9ae.png"
               alt="Example storefront built on Rawnn — mobile view"
@@ -106,7 +106,7 @@ export default function RawnnProductDemo() {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 text-modax-ink">
+          <div className="bg-white rounded-2xl shadow-2xl p-6 md:p-8 text-modax-ink">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold mb-2">Request your free demo</h3>
               <p className="text-modax-body">See Rawnn in action with your own products and brand</p>

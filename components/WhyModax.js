@@ -32,7 +32,7 @@ export default function WhyModax() {
       <div className="container-max relative">
         <div className="grid lg:grid-cols-3 gap-16">
           <Reveal direction="right" className="lg:col-span-1">
-            <div className="eyebrow mb-4 !text-modax-aqua">Why Modax</div>
+            <div className="eyebrow mb-4 !text-modax-accent-light">Why Modax</div>
             <h2 className="text-3xl sm:text-4xl font-bold mb-6 tracking-tight">
               A technology partner, not just a vendor
             </h2>
@@ -50,7 +50,7 @@ export default function WhyModax() {
                   index === reasons.length - 1 && reasons.length % 2 !== 0 ? 'sm:col-span-2' : ''
                 }`}
               >
-                <span className="flex-shrink-0 mt-1 flex h-6 w-6 items-center justify-center rounded-full bg-modax-aqua/15 text-modax-aqua">
+                <span className="flex-shrink-0 mt-1 flex h-6 w-6 items-center justify-center rounded-full bg-modax-accent-light/15 text-modax-accent-light">
                   <CheckCircle2 className="w-3.5 h-3.5" />
                 </span>
                 <div>

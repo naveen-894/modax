@@ -6,15 +6,15 @@ const easeOut = [0.21, 0.47, 0.32, 0.98]
 
 const container = {
   hidden: {},
-  show: { transition: { staggerChildren: 0.1, delayChildren: 0.05 } },
+  show: { transition: { staggerChildren: 0.05 } },
 }
 
 const item = {
-  hidden: { opacity: 0, y: 18 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: easeOut } },
+  hidden: { opacity: 0, y: 10 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.3, ease: easeOut } },
 }
 
-export default function PageHero({ eyebrow, title, accent, description, stats, image, imageAlt, visual, children }) {
+export default function PageHero({ eyebrow, title, accent, description, stats, image, imageAlt, visual, children, compact }) {
   const content = (
     <>
       {image && (
@@ -57,7 +57,7 @@ export default function PageHero({ eyebrow, title, accent, description, stats, i
   )
 
   return (
-    <section className="relative bg-modax-blue-tint-2 pt-28 pb-16 lg:pt-32 lg:pb-20 px-3 sm:px-4 lg:px-6 overflow-hidden">
+    <section className={`relative bg-modax-blue-tint-2 px-3 sm:px-4 lg:px-6 overflow-hidden ${compact ? 'pt-8 pb-10 sm:pt-20 sm:pb-16 lg:pt-32 lg:pb-20' : 'pt-28 pb-16 lg:pt-32 lg:pb-20'}`}>
       <div className="absolute inset-0 bg-grid [mask-image:linear-gradient(to_bottom,black,transparent)]" aria-hidden="true" />
       <m.div className="container-max relative" variants={container} initial="hidden" animate="show">
         {visual ? (

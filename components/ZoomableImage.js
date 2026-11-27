@@ -5,7 +5,7 @@ import { X } from 'lucide-react'
 
 /** Click-to-expand image lightbox. Keyboard-closable with Esc, or by clicking
  * the backdrop/close button. */
-export default function ZoomableImage({ src, alt, className }) {
+export default function ZoomableImage({ src, alt, className, loading = 'lazy' }) {
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function ZoomableImage({ src, alt, className }) {
         className="block w-full cursor-zoom-in"
         aria-label={`Expand image: ${alt}`}
       >
-        <img src={src} alt={alt} className={className} loading="lazy" />
+        <img src={src} alt={alt} className={className} loading={loading} />
       </button>
 
       {open && (

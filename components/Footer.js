@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { MessageCircle } from "lucide-react";
+import FooterResourcesList from "./FooterResourcesList";
 
 export default function Footer() {
   return (
     <footer className="bg-modax-navy text-white px-3 sm:px-4 lg:px-6">
-      <div className="container-max py-16">
+      <div className="container-max pt-16 pb-24 sm:pb-16">
         <div className="grid grid-cols-1 md:grid-cols-6 gap-10">
           {/* Company Info */}
           <div className="md:col-span-2">
@@ -78,18 +79,7 @@ export default function Footer() {
           {/* Resources */}
           <div>
             <h3 className="text-sm font-semibold text-white uppercase tracking-wide mb-4">Resources</h3>
-            <ul className="space-y-2 text-xs">
-              <li><Link href="/blog" className="text-modax-muted hover:text-white transition-colors">Blog</Link></li>
-              <li><Link href="/ecommerce-website-cost-india" className="text-modax-muted hover:text-white transition-colors">Ecommerce Website Cost in India</Link></li>
-              <li><Link href="/shopify-alternative-india" className="text-modax-muted hover:text-white transition-colors">Shopify Alternative India</Link></li>
-              <li><Link href="/rawnn-vs-shopify" className="text-modax-muted hover:text-white transition-colors">Shopify vs Custom Website</Link></li>
-              <li><Link href="/rawnn-vs-woocommerce" className="text-modax-muted hover:text-white transition-colors">WooCommerce Alternative</Link></li>
-              <li><Link href="/ecommerce-website-development-bangalore" className="text-modax-muted hover:text-white transition-colors">Ecommerce Dev in Bangalore</Link></li>
-              <li><Link href="/d2c-ecommerce-platform" className="text-modax-muted hover:text-white transition-colors">D2C Ecommerce Platform</Link></li>
-              <li><Link href="/instagram-to-website" className="text-modax-muted hover:text-white transition-colors">Instagram Seller to Website</Link></li>
-              <li><Link href="/ecommerce-for-fashion" className="text-modax-muted hover:text-white transition-colors">Ecommerce for Fashion</Link></li>
-              <li><Link href="/ecommerce-for-retail-and-brands" className="text-modax-muted hover:text-white transition-colors">Ecommerce for Retail & Brands</Link></li>
-            </ul>
+            <FooterResourcesList />
           </div>
 
           {/* Contact Info */}
